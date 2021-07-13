@@ -1,0 +1,13 @@
+#content td, #content th { border: none; }
+.no-close .ui-dialog-titlebar { display: none; }
+.ui-dialog-buttonset button { height: auto; }
+@media screen and (max-width: 480px) {
+	#content tr {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	tr td:first-child {
+		flex-basis: 153px;
+		flex-grow: 1;
+	}
+}

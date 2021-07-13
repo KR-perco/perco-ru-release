@@ -1,0 +1,44 @@
+#STP, #AI {
+	text-align: center;
+	width: 49%;
+}
+#SC { text-align: center; }
+.first { float: left; }
+.second { float: right; }
+.box {
+	background-color: #F5F5F5;
+	border: 1px solid #CCCCCC;
+	border-radius: 8px 8px 8px 8px;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	margin: auto;
+	padding: 10px;
+	max-width: 160px;
+}
+.strelka-down-1 { margin: auto;}
+.case {
+	border: 1px dashed black;
+	display: inline-flex;
+	padding: 5px;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+.case > div {
+	margin: 2px;
+	text-align: center;
+}
+#status_info { display: flex; }
+#status_info > div { padding: 5px; }
+.complete { background-color: #7CD1BA; }
+.error { background-color: #C88395; }
+.wait { background-color: #AFCFEE; }
+.strelka-down-1 {
+	background: url("/images/e-learning/arrow-down-1.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	height: 30px;
+	width: 3px;
+}
+@media screen and (max-width: 720px) {
+	.case > div { flex-basis: 160px; }
+}

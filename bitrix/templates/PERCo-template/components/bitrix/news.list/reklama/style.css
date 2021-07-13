@@ -1,0 +1,23 @@
+.advert-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: 40px;
+}
+.zakaz {
+	display: inline-block;
+	vertical-align: top;
+}
+.komplekt {
+	color: #214288;
+	cursor: pointer;
+	text-decoration: underline;
+}
+.komplekt + div tr td:last-child { width: 40px; }
+.advert-list > div {
+	flex-basis: 280px;
+	margin-right: 10px;
+}
+.zakaz input[type=text] { width: 25px; }
+@media screen and (max-width: 720px) {
+	select { max-width: 220px; }
+}

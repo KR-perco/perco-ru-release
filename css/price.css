@@ -1,0 +1,7 @@
+body #container { max-width: none; }
+.banner_image {
+	background-image: url(/images/banners/banner_price.jpg);
+	height: 435px;
+	background-size: cover;
+}
+#main_catalog_list { margin-top: 80px; }

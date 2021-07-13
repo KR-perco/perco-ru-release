@@ -1,0 +1,364 @@
+#mapBlock {
+    align-self: center;
+    margin-top: 20px;
+    position: relative;
+    width: 974px;
+}
+
+#mapBlock g {
+    cursor: pointer;
+}
+
+#mapBlock g>circle {
+    display: none;
+}
+
+#countries {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.country {
+    position: absolute;
+    z-index: 200;
+}
+
+.country_name {
+    /*flex-basis: 140px;*/
+    flex-basis: 165px;
+    margin: 2px 0;
+}
+
+.country_name img {
+    display: none;
+}
+
+.dop_text_wtb {
+    border-top: 2px solid #BCBEC0;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.dop_text_wtb>p:last-child {
+    font-size: 11px;
+}
+
+#wtb_banner {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.descrip::before,
+.descrip::after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: calc(50% - 5px);
+    border: 5px solid transparent;
+    border-right: 5px solid #BCBEC0;
+}
+
+.descrip::after {
+    border-right: 5px solid white;
+    left: -9px;
+}
+
+.descrip {
+    border: 1px solid #BCBEC0;
+    border-bottom: 2px solid #BCBEC0;
+    background: white;
+    font-weight: bold;
+    padding: 5px 20px;
+}
+
+#rossiyaText {
+    left: 920px;
+    top: 36px;
+}
+
+#AUText {
+    left: 928px;
+    top: 366px;
+}
+
+#CNText {
+    left: 836px;
+    top: 103px;
+}
+
+#PHText {
+    left: 857px;
+    top: 243px;
+}
+
+#NZText {
+    left: 988px;
+    top: 398px;
+}
+
+#JPText {
+    left: 886px;
+    top: 103px;
+}
+
+#INText {
+    left: 753px;
+    top: 168px;
+}
+
+#KZText {
+    left: 697px;
+    top: 94px;
+}
+
+#AEText {
+    left: 629px;
+    top: 177px;
+}
+
+#SAText {
+    left: 627px;
+    top: 192px;
+}
+
+#SYText {
+    left: 580px;
+    top: 136px;
+}
+
+#LYText {
+    left: 529px;
+    top: 157px;
+}
+
+#UZText {
+    left: 645px;
+    top: 119px;
+}
+
+#NGText {
+    left: 498px;
+    top: 226px;
+}
+
+#COText {
+    left: 234px;
+    top: 250px;
+}
+
+#MXText {
+    left: 179px;
+    top: 193px;
+}
+
+#FIText {
+    left: 537px;
+    top: 46px;
+}
+
+#SEText {
+    left: 517px;
+    top: 33px;
+}
+
+#UKText {
+    left: 462px;
+    top: 80px;
+}
+
+#IEText {
+    left: 442px;
+    top: 73px;
+}
+
+#BYText {
+    left: 542px;
+    top: 76px;
+}
+
+#LTText {
+    left: 528px;
+    top: 71px;
+}
+
+#UAText {
+    left: 568px;
+    top: 94px;
+}
+
+#PLText {
+    left: 521px;
+    top: 80px;
+}
+
+#ROText {
+    left: 539px;
+    top: 107px;
+}
+
+#BGText {
+    left: 536px;
+    top: 115px;
+}
+
+#GRText {
+    left: 533px;
+    top: 121px;
+}
+
+#ITText {
+    left: 509px;
+    top: 124px;
+}
+
+#FRText {
+    left: 476px;
+    top: 95px;
+}
+
+#ESText {
+    left: 464px;
+    top: 118px;
+}
+
+#PTText {
+    left: 435px;
+    top: 120px;
+}
+
+#HUText {
+    left: 518px;
+    top: 96px;
+}
+
+#HRText {
+    left: 510px;
+    top: 106px;
+}
+
+#CZText {
+    left: 508px;
+    top: 91px;
+}
+
+#KRText {
+    left: 845px;
+    top: 142px;
+}
+
+#EEText {
+    left: 531px;
+    top: 60px;
+}
+
+#LVText {
+    left: 533px;
+    top: 67px;
+}
+
+#SKText {
+    left: 519px;
+    top: 93px;
+}
+
+#BENText {
+    left: 476px;
+    top: 79px;
+}
+
+#ISText {
+    left: 427px;
+    top: 38px;
+}
+
+#DEText {
+    left: 496px;
+    top: 81px;
+}
+
+#ALText {
+    left: 516px;
+    top: 120px;
+}
+
+#MTText {
+    left: 501px;
+    top: 140px;
+}
+
+#DKText {
+    left: 492px;
+    top: 66px;
+}
+
+#MYText {
+    left: 835px;
+    top: 248px;
+}
+
+#HKText {
+    left: 815px;
+    top: 181px;
+}
+
+#LKText {
+    left: 716px;
+    top: 240px;
+}
+
+#RSText {
+    left: 521px;
+    top: 107px;
+}
+
+#MAText {
+    left: 443px;
+    top: 147px;
+}
+
+#TMText {
+    left: 643px;
+    top: 131px;
+}
+
+#QAText {
+    left: 608px;
+    top: 174px;
+}
+
+#CLText {
+    left: 240px;
+    top: 395px;
+}
+
+@media screen and (max-width: 900px) {
+    #mapBlock {
+        display: none;
+    }
+    .country_name {
+        flex-basis: 30%;
+        margin: 15px 10px 15px 0;
+    }
+    .country_name a {
+        display: flex;
+        align-items: flex-start;
+    }
+    .country_name img {
+        display: block;
+        flex-shrink: 0;
+        margin-right: 10px;
+        width: 29px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    #mapBlock {
+        display: none;
+    }
+    .country_name {
+        flex-basis: 46%;
+    }
+    #wtb_banner img {
+        max-width: 340px;
+    }
+}

@@ -1,0 +1,9 @@
+table td, th { border: none; }
+@media screen and (max-width: 720px) {
+	tr {
+		display: flex;
+		flex-direction: column;
+	}
+	td[align="center"] strong { display: none; }
+	input[type="text"], textarea { width: 320px; }
+}

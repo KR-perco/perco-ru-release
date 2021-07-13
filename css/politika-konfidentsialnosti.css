@@ -1,0 +1,30 @@
+.politica, .cookie{
+	margin: 0px;
+	margin-bottom: 30px;
+}
+
+.plus span{
+	margin-right: 10px;
+}
+
+.icon { float: left }
+.list_files { padding: 10px; }
+
+.plus{ display: flex; flex-wrap: wrap; }
+
+.plus > input { display: none; }
+
+.plus > label { cursor: pointer; flex: 9 10 10px; margin: auto; text-decoration: underline; }
+
+.plus > input:checked + label + div { 
+	max-height: 500px; 
+	/*margin: 10px 0 10px 20px;*/
+}
+
+.plus > div {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 1s;
+	/*margin: 10px 0 10px 20px;*/
+	width: 100%;
+}

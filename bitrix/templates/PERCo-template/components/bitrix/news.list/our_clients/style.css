@@ -1,0 +1,39 @@
+#countries {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+.country_name {
+	cursor: pointer;
+	flex-basis: 25%;
+	margin: 4px 0;
+}
+.country_name img {
+	float: left;
+	margin-right: 10px;
+}
+.country_name > span {
+	display: table-cell;
+	text-decoration: underline;
+}
+#country > div { display: none; }
+#country #rossiya { display: block; }
+.v_active .country_name {
+	color: #666;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+@media screen and (max-width: 900px) {
+	.country_name {
+		flex-basis: 30%;
+		margin: 15px 10px 15px 0;
+	}
+	.country_name a {
+		display: flex;
+		align-items: flex-start;
+	}
+}
+@media screen and (max-width: 720px) {
+	.country_name { flex-basis: 46%; }
+}

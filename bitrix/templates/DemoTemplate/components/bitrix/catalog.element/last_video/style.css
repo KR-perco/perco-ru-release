@@ -1,0 +1,40 @@
+#video_element > video {
+	display: block;
+	margin: auto;
+	max-width: 100%;
+}
+.dop_info {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+.dop_info > div:last-child { flex-shrink: 0; }
+
+.v_el h2 { padding-left: 15px; } 
+
+.breadcrumb-navigation li:last-child, .breadcrumb-navigation :nth-last-child(2){
+	display: none;
+}
+
+.turnikets-video .video-block{
+	margin: 30px 0;
+}
+
+.video-block{
+	display: flex; 
+	flex-wrap: wrap;
+}
+
+#video_element{
+	flex: 2 2 300px; 
+	margin-top: 0px
+}
+
+.v_el{
+	flex: 2 2 300px; 
+	margin-left: 15px;
+}
+
+.v_el .description ul{
+	padding: 0 0 0 15px;
+}

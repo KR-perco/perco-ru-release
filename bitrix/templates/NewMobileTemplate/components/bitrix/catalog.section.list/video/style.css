@@ -1,0 +1,8 @@
+.nav-tabs {display: flex; position: relative; margin-top: 16px; width: 100%; overflow: hidden;}
+.nav-tabs * {all: initial; box-sizing: border-box;}
+.nav-tabs .inner {display: flex; position: relative;}
+.nav-tabs .selector {position: absolute; top: 0; height: 32px; border-bottom: 2px solid #214289; z-index: 1; /*transition: all .1s ease-out;*/}
+.nav-tabs button {flex: 1; margin-right: 16px; padding: 0 4px; height: 32px; white-space: nowrap; cursor: pointer;}
+.nav-tabs button:last-child {margin-right: 0;}
+.nav-tabs button img {height: 24px; vertical-align: text-bottom;}
+.nav-tabs button span.text {font: 16px "FuturaPTWeb", sans-serif; color: #214289; white-space: nowrap;}

@@ -1,0 +1,18 @@
+Options -Indexes
+AddDefaultCharset UTF-8
+php_value mbstring.func_overload 2
+
+RewriteEngine on
+Options +FollowSymlinks
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^www.export.perco.ru$
+RewriteRule ^(.*)$ http://export.perco.ru/$1 [R=301,L]
+
+RewriteRule ^([0-9a-zA-Z]+)$ /urlrewrite.php?link=$1 [NE]
+
+php_value upload_max_filesize 20G
+php_value post_max_size 20G
+php_value max_execution_time 400
+php_value max_input_time 4000
+php_value memory_limit 512M

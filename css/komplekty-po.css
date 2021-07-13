@@ -1,0 +1,31 @@
+tbody td {
+	min-width: 60px;
+	position: relative;
+}
+td > img {
+	width: 30px;
+	height: 30px;
+}
+td > b { white-space: nowrap; }
+.footnote {
+	background: #e5f5fe none repeat scroll 0 0;
+	border: 1px solid #1593db;
+	right: -310px;
+	top: 0;
+	display: none;
+	padding: 5px;
+	position: absolute;
+	width: 300px;
+	z-index: 10;
+}
+.vertical div {
+	height: 225px;
+	writing-mode: vertical-rl;
+	writing-mode: bt-rl;
+	-webkit-writing-mode: vertical-rl;
+	transform: rotate(180deg);
+}
+.viborkom { background: rgba(0, 0, 0, 0) url("/images/icons/galka.gif") no-repeat scroll center center; }
+@media screen and (max-width: 900px) {
+	table { display: none; }
+}

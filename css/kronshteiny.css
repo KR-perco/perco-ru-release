@@ -1,0 +1,15 @@
+select {
+	font-family: inherit;
+	font-size: inherit;
+	border: 1px solid #BDBEC0;
+	width: 100%;
+	max-width: 550px;
+	padding: 10px;
+	margin: 15px 0;
+	text-align: right
+}
+select:not(:first-child) { display: none; }
+.kronshteiny {display: flex; flex-wrap: wrap;}
+.secel_item {flex-basis: 246px;}
+.secel_item:hover p {text-decoration: none;}
+.image_icon img {margin: auto;}

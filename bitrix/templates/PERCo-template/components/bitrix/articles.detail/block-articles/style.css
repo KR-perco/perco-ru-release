@@ -1,0 +1,26 @@
+.news-date {
+	color: #929497;
+	margin-top: 20px;
+}
+.news-imges {
+	align-items: flex-start;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 20px;
+}
+.news-imges img { margin: 0 10px; }
+
+thead td{
+	text-align: center;
+}
+
+.viborkom {
+    background: rgba(0, 0, 0, 0) url(/images/icons/galka.gif) no-repeat scroll center center;
+}
+@media screen and (max-width: 720px) {
+	.news-imges img {
+		margin: auto;
+		max-width: 340px;
+	}
+}

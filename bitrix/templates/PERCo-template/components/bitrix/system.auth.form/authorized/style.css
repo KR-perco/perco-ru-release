@@ -1,0 +1,26 @@
+td, th { dorder: none; }
+.bx-system-auth-form {
+	background-color: #F1F2F2;
+	width: 270px;
+	padding-bottom: 20px;
+}
+#authorized input, #authorized button {
+	border: none;
+	height: 25px;
+	width: 200px;
+	text-indent: 5px;
+}
+#authorized input:first-child { margin-bottom: 5px; }
+#authorized input[name="logout_butt"] { margin-bottom: 0; }
+#authorized button[type="submit"] div, .register {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+#authorized button[type="submit"] img, .register img { margin-right: 5px; }
+.register {
+	color: black;
+	margin-bottom: 5px;
+}
+.image { position: relative; }
+.image .frame { background-image: url("/images/other/frame_270g.svg"); }

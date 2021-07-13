@@ -1,0 +1,10 @@
+#o-sisteme { display: flex; }
+body #content { min-width: 340px; }
+body #content > * {
+	margin-left: 0;
+	margin-right: 0;
+}
+@media screen and (max-width: 720px) {
+	.img_items { margin: 0; }
+	.img_items > * { max-width: 340px; }
+}

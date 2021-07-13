@@ -1,0 +1,143 @@
+body #container { max-width: none; }
+h1, h2 {
+	color: #214288;
+	margin: 10px 0;
+}
+h1 { font-size: 32px; }
+h2 {
+	font-size: 28px;
+	font-weight: normal;
+}
+.banner_image {
+	background-image: url(/images/banners/banner_katalog.jpg);
+	height: 435px;
+}
+.product_elements {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 28px;
+	margin-bottom: 25px;
+}
+.product_elements.prod_first { margin-bottom: 50px; }
+.product_elements a { color: black; }
+.product_item {
+	flex-basis: 200px;
+	position: relative;
+}
+
+.product_item, .item_img {
+	text-align: center;
+}
+
+.item_img > img {
+	align-self: center;
+	flex-shrink: 0;
+	width: 72px;
+	height: 80px;
+}
+
+.item_box { text-align: left; }
+
+.item_name { font-size: 18px; }
+
+.elements_list {
+	justify-content: space-around;
+	margin-top: 25px;
+	max-width: 1090px;
+	min-width: 340px;
+}
+.elements_list  > div {
+	font-size: 18px;
+	flex-basis: 420px;
+}
+
+.block-links{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 30px 0;
+}
+
+.block-links .link{
+	background: #E6E7E8;
+	padding: 10px 10px 7px;
+	width: 30%;
+}
+
+.block-links .link > a {
+	font-size: 17px;
+	color: #1a5b9e;
+	text-decoration: none;
+}
+
+.block-links .link .svg{
+	width: 70px;
+	height: auto;
+	margin-right: 10px;
+	float: left;
+}
+
+.block-links .m-r{
+	margin-right: 5%;
+}
+
+.block-links .ico{
+    margin: 20px 0 0 0;
+}
+
+.block-links .new{
+    margin-top: 25px;
+}
+
+.block-links .ico img{
+	margin-right: 10px;
+	float: left;
+	width: 26px;
+}
+
+@media screen and (max-width: 1120px) {
+	.product_item { flex-basis: 190px; }
+	.banner_image { background-size: cover; }
+}
+@media screen and (max-width: 900px) {
+	#content h1 { margin-bottom: 10px; }
+	.product_elements {
+		justify-content: space-between;
+		margin-top: 0;
+	}
+	.product_elements, .product_elements.prod_first { margin-bottom: auto; }
+	.product_item { flex-basis: 120px; }
+	.elements_list { margin: 0; }
+	.elements_list .video { margin-top: 20px; }
+	.elements_list  > div { font-size: 14px; }
+	.elements_list  > div img { width: 340px; }
+	.block-links {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.block-links .link {
+		margin: 10px;
+		width: 40%;
+	}
+}
+@media screen and (max-width: 720px) {
+	.product_item {
+		flex-basis: 80px;
+		margin-right: 4px;
+	}
+	.item_img > img {
+		width: 55px;
+		height: 60px;
+	}
+	.item_name { font-size: 11px; }
+	.banner_image { height: 145px; }
+	.block-links{
+		flex-direction: column;
+	}
+	.block-links .link{
+		margin: 15px 10%;
+		width: calc(80% - 7px);
+		padding: 7px;
+	}
+}

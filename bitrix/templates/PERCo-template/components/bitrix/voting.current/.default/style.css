@@ -1,0 +1,231 @@
+.vote-form-box-button-last {margin-left: 1em;}
+
+div.forum-header-box { 
+	background-color: #214288;
+}
+
+textarea{
+	max-width: 90%;
+	min-width: 200px;
+}
+
+button, input[type="submit"]{
+	text-decoration: none !important;
+}
+
+.voting-form-box .vote-item-vote:nth-child(3) input[type="radio"]{
+	float: left;
+}
+
+h3{
+	margin-top: 35px;
+}
+
+.voting-form-box .vote-item-vote:nth-child(4) li,
+.voting-form-box .vote-item-vote:nth-child(5) li,
+.voting-form-box .vote-item-vote:nth-child(6) li,
+.voting-form-box .vote-item-vote:nth-child(7) li,
+.voting-form-box .vote-item-vote:nth-child(8) li {
+	display: inline-block;
+	padding-right: 18px; 
+}
+
+.vote-answer-item-memo{
+	margin-top: 20px;
+}
+
+.voting-form-box .vote-item-vote:nth-child(4) p,
+.voting-form-box .vote-item-vote:nth-child(4) .vote-items-list{
+	/*padding-left: 25px; */
+}
+
+.voting-form-box  .vote-item-vote:nth-child(4) .vote-item-vote-last,
+.voting-form-box  .vote-item-vote:nth-child(5) .vote-item-vote-last,
+.voting-form-box  .vote-item-vote:nth-child(6) .vote-item-vote-last,
+.voting-form-box  .vote-item-vote:nth-child(7) .vote-item-vote-last,
+.voting-form-box  .vote-item-vote:nth-child(8) .vote-item-vote-last
+/*.voting-form-box .vote-item-vote:nth-child(5),
+.voting-form-box .vote-item-vote:nth-child(6),
+.voting-form-box .vote-item-vote:nth-child(7)*/ {
+	display: block !important;
+	margin-top: 40px;
+}
+
+form > ol > li.vote-item-vote{
+	margin: 20px 0 !important;
+}
+
+.voting-form-box label{
+	width: 50px;
+	height: 50px;
+}
+
+.voting-form-box .vote-item-vote label p{
+	display: unset;
+}
+
+.voting-form-box .vote-question-list > .vote-item-vote:nth-child(4) label p,
+.voting-form-box .vote-item-vote:nth-child(5) label p,
+.voting-form-box .vote-item-vote:nth-child(6) label p,
+.voting-form-box .vote-item-vote:nth-child(7) label p,
+.voting-form-box .vote-item-vote:nth-child(8) label p{
+	display: none;
+}
+
+.voting-form-box .vote-item-vote:nth-child(4) li input[type="checkbox"],
+.voting-form-box .vote-item-vote:nth-child(5) li input[type="checkbox"],
+.voting-form-box .vote-item-vote:nth-child(6) li input[type="checkbox"],
+.voting-form-box .vote-item-vote:nth-child(7) li input[type="checkbox"],
+.voting-form-box .vote-item-vote:nth-child(8) li input[type="checkbox"] {
+	/*display: none;*/
+	position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 20px 0 0 25px;
+}
+
+.voting-form-box .vote-item-vote:nth-child(4) li input[type="checkbox"] + label,
+.voting-form-box .vote-item-vote:nth-child(5) li input[type="checkbox"] + label, 
+.voting-form-box .vote-item-vote:nth-child(6) li input[type="checkbox"] + label, 
+.voting-form-box .vote-item-vote:nth-child(7) li input[type="checkbox"] + label, 
+.voting-form-box .vote-item-vote:nth-child(8) li input[type="checkbox"] + label {
+  position: relative;
+  padding: 0 0 0 35px;
+  cursor: pointer;
+}
+
+.voting-form-box .vote-item-vote:nth-child(4) li label:before,
+.voting-form-box .vote-item-vote:nth-child(5) li label:before,
+.voting-form-box .vote-item-vote:nth-child(6) li label:before,
+.voting-form-box .vote-item-vote:nth-child(7) li label:before,
+.voting-form-box .vote-item-vote:nth-child(8) li label:before {
+	position: absolute;
+    left: 0;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    z-index: 5;
+    content: '';
+    transition: .2s;
+}
+
+.voting-form-box .vote-item-vote:nth-child(4) li label:after,
+.voting-form-box .vote-item-vote:nth-child(5) li label:after,
+.voting-form-box .vote-item-vote:nth-child(6) li label:after,
+.voting-form-box .vote-item-vote:nth-child(7) li label:after,
+.voting-form-box .vote-item-vote:nth-child(8) li label:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  transition: .2s;
+}
+
+.voting-form-box .vote-item-vote:nth-child(4) li:nth-child(1) label:before,
+.voting-form-box .vote-item-vote:nth-child(5) li:nth-child(1) label:before,
+.voting-form-box .vote-item-vote:nth-child(6) li:nth-child(1) label:before,
+.voting-form-box .vote-item-vote:nth-child(7) li:nth-child(1) label:before,
+.voting-form-box .vote-item-vote:nth-child(8) li:nth-child(1) label:before{
+	background: rgba(0, 0, 0, 0) url('/images/icons/smile/1-blue.png') no-repeat;
+	background-size: cover;
+}
+
+.voting-form-box .vote-item-vote:nth-child(4) li:nth-child(1) label:after,
+.voting-form-box .vote-item-vote:nth-child(5) li:nth-child(1) label:after,
+.voting-form-box .vote-item-vote:nth-child(6) li:nth-child(1) label:after,
+.voting-form-box .vote-item-vote:nth-child(7) li:nth-child(1) label:after,
+.voting-form-box .vote-item-vote:nth-child(8) li:nth-child(1) label:after{
+	background: rgba(0, 0, 0, 0) url('/images/icons/smile/1-orange.png') no-repeat;
+	background-size: cover;
+}
+
+.voting-form-box .vote-item-vote:nth-child(4) li:nth-child(2) label:before,
+.voting-form-box .vote-item-vote:nth-child(5) li:nth-child(2) label:before,
+.voting-form-box .vote-item-vote:nth-child(6) li:nth-child(2) label:before,
+.voting-form-box .vote-item-vote:nth-child(7) li:nth-child(2) label:before,
+.voting-form-box .vote-item-vote:nth-child(8) li:nth-child(2) label:before{
+	background: rgba(0, 0, 0, 0) url('/images/icons/smile/2-blue.png') no-repeat;
+	background-size: cover;
+}
+
+.voting-form-box .vote-item-vote:nth-child(4) li:nth-child(2) label:after,
+.voting-form-box .vote-item-vote:nth-child(5) li:nth-child(2) label:after,
+.voting-form-box .vote-item-vote:nth-child(6) li:nth-child(2) label:after,
+.voting-form-box .vote-item-vote:nth-child(7) li:nth-child(2) label:after,
+.voting-form-box .vote-item-vote:nth-child(8) li:nth-child(2) label:after {
+	background: rgba(0, 0, 0, 0) url('/images/icons/smile/2-orange.png') no-repeat;
+	background-size: cover;
+}
+
+.voting-form-box .vote-item-vote:nth-child(4) li:nth-child(3) label:before,
+.voting-form-box .vote-item-vote:nth-child(5) li:nth-child(3) label:before,
+.voting-form-box .vote-item-vote:nth-child(6) li:nth-child(3) label:before,
+.voting-form-box .vote-item-vote:nth-child(7) li:nth-child(3) label:before,
+.voting-form-box .vote-item-vote:nth-child(8) li:nth-child(3) label:before{
+	background: rgba(0, 0, 0, 0) url('/images/icons/smile/3-blue.png') no-repeat;
+	background-size: cover;
+}
+
+.voting-form-box .vote-item-vote:nth-child(4) li:nth-child(3) label:after,
+.voting-form-box .vote-item-vote:nth-child(5) li:nth-child(3) label:after,
+.voting-form-box .vote-item-vote:nth-child(6) li:nth-child(3) label:after,
+.voting-form-box .vote-item-vote:nth-child(7) li:nth-child(3) label:after,
+.voting-form-box .vote-item-vote:nth-child(8) li:nth-child(3) label:after {
+	background: rgba(0, 0, 0, 0) url('/images/icons/smile/3-orange.png') no-repeat;
+	background-size: cover;
+}
+
+.voting-form-box .vote-item-vote:nth-child(4) li:nth-child(4) label:before,
+.voting-form-box .vote-item-vote:nth-child(5) li:nth-child(4) label:before,
+.voting-form-box .vote-item-vote:nth-child(6) li:nth-child(4) label:before,
+.voting-form-box .vote-item-vote:nth-child(7) li:nth-child(4) label:before,
+.voting-form-box .vote-item-vote:nth-child(8) li:nth-child(4) label:before{
+	background: rgba(0, 0, 0, 0) url('/images/icons/smile/4-blue.png') no-repeat;
+	background-size: cover;
+}
+
+.voting-form-box .vote-item-vote:nth-child(4) li:nth-child(4) label:after,
+.voting-form-box .vote-item-vote:nth-child(5) li:nth-child(4) label:after,
+.voting-form-box .vote-item-vote:nth-child(6) li:nth-child(4) label:after,
+.voting-form-box .vote-item-vote:nth-child(7) li:nth-child(4) label:after,
+.voting-form-box .vote-item-vote:nth-child(8) li:nth-child(4) label:after {
+	background: rgba(0, 0, 0, 0) url('/images/icons/smile/4-orange.png') no-repeat;
+	background-size: cover;
+}
+
+.voting-form-box .vote-item-vote:nth-child(4) li:nth-child(5) label:before,
+.voting-form-box .vote-item-vote:nth-child(5) li:nth-child(5) label:before,
+.voting-form-box .vote-item-vote:nth-child(6) li:nth-child(5) label:before,
+.voting-form-box .vote-item-vote:nth-child(7) li:nth-child(5) label:before,
+.voting-form-box .vote-item-vote:nth-child(8) li:nth-child(5) label:before{
+	background: rgba(0, 0, 0, 0) url('/images/icons/smile/5-blue.png') no-repeat;
+	background-size: cover;
+}
+
+.voting-form-box .vote-item-vote:nth-child(4) li:nth-child(5) label:after,
+.voting-form-box .vote-item-vote:nth-child(5) li:nth-child(5) label:after, 
+.voting-form-box .vote-item-vote:nth-child(6) li:nth-child(5) label:after, 
+.voting-form-box .vote-item-vote:nth-child(7) li:nth-child(5) label:after, 
+.voting-form-box .vote-item-vote:nth-child(8) li:nth-child(5) label:after {
+	background: rgba(0, 0, 0, 0) url('/images/icons/smile/5-orange.png') no-repeat;
+	background-size: cover;
+}
+
+.voting-form-box .vote-item-vote:nth-child(4) input[type="checkbox"]:checked + label:after,
+.voting-form-box .vote-item-vote:nth-child(5) input[type="checkbox"]:checked + label:after,
+.voting-form-box .vote-item-vote:nth-child(6) input[type="checkbox"]:checked + label:after,
+.voting-form-box .vote-item-vote:nth-child(7) input[type="checkbox"]:checked + label:after,
+.voting-form-box .vote-item-vote:nth-child(8) input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+.voting-form-box .vote-item-vote:nth-child(4) input[type="checkbox"]:checked + label:before,
+.voting-form-box .vote-item-vote:nth-child(5) input[type="checkbox"]:checked + label:before,
+.voting-form-box .vote-item-vote:nth-child(6) input[type="checkbox"]:checked + label:before,
+.voting-form-box .vote-item-vote:nth-child(7) input[type="checkbox"]:checked + label:before,
+.voting-form-box .vote-item-vote:nth-child(8) input[type="checkbox"]:checked + label:before {
+  opacity: 0;
+}

@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+	<script type="text/javascript" src="bxlocal://jquery.min.js"></script>
+	<script type="text/javascript" src="bxlocal://__deviceload__/cordova.js"></script>
+	<script type="text/javascript" src="bxlocal://bitrix_mobile_core.js"></script>
+
+	<link type="text/css" href="bxlocal://template_styles.css" rel="stylesheet">
+</head>
+
+<body>
+	<script>
+		app.setPageTitle({
+			title: "Документация"
+		});
+	</script>
+
+	<div id="content">
+		<div class="catalog-section-list">
+			<h2 style="display: none;">Каталог запчастей к оборудованию</h2>
+			<div class="download_item" style="display: none;">
+				<div class="icon"><img alt="Иконка" src="bxlocal://pdf.png"></div>
+				<div><a href="bxlocal://katalog-zapchastej-PERCo.pdf">Иллюстрированный каталог запчастей к оборудованию PERCo</a></div>
+			</div>
+			<div class="download_item" style="display: none;">
+				<div class="icon"><img alt="Иконка" src="bxlocal://pdf.png"></div>
+				<div><a href="bxlocal://katalog-dlya-kp.pdf">Прайс запчастей к оборудованию PERCo</a></div>
+			</div>
+			<h2>Сертификаты системы качества PERCo</h2>
+			<div class="download_item">
+				<div class="icon"><img alt="Иконка" src="bxlocal://pdf.png"></div>
+				<div><a href="bxlocal://Certificates_IQNet.pdf">Сертификат IQNet</a></div>
+			</div>
+			<div class="download_item">
+				<div class="icon"><img alt="Иконка" src="bxlocal://pdf.png"></div>
+				<div><a href="bxlocal://Certificates_ACCREDIA.pdf">Сертификат ACCREDIA/ТЕСТ-С</a></div>
+			</div>
+			<div class="download_item">
+				<div class="icon"><img alt="Иконка" src="bxlocal://pdf.png"></div>
+				<div><a href="bxlocal://gost-iso-9001-2015.pdf">Сертификат ГОСТ ISO9001-2015 (ISO9001:2015)</a></div>
+			</div>
+			<h2 style="display: none;">Технический каталог оборудования</h2>
+			<div class="download_item" style="display: none;">
+				<div class="icon"><img alt="Иконка" src="bxlocal://pdf.png"></div>
+				<div><a href="bxlocal://technical-catalog-perco.pdf">Технический каталог А4</a></div>
+			</div>
+		</div>
+		<div>
+			<h2>Выбор документации по товарам</h2>
+			<div id="select_documents">
+				<select id="section" name="section">
+					<option value="">Выбрать</option>
+					<option value="turnikety">Турникеты, калитки, ограждения</option>
+					<option value="elektronnye-prokhodnye">Электронные проходные</option>
+					<option value="elektromekhanicheskie-zamki">Электромеханические замки</option>
+					<option value="kontrollery-schityvateli">Контроллеры и считыватели</option>
+					<option  style="display: none;" value="lokalnoe-programmnoe-obespechenie">Локальное программное обеспечение</option>
+					<option value="kompleksnaya-sistema-bezopasnosti-perco-s-20">Комплексная система безопасности PERCo-S-20</option>
+					<option value="sistema-dlya-bankomatov-perco-s-800">Система для банкоматов PERCo-S-800</option>
+					<option  style="display: none;" value="sistema-bezopasnosti-perco-s-20-shkola">Система безопасности PERCo-S-20 Школа</option>
+					<option  style="display: none;" value="sistema-kontrolya-dostupa-perco-web">Система контроля доступа PERCo-Web</option>
+				</select>
+				<button type="submit" value="Найти">Найти</button>
+			</div>
+			<div id="download_items"></div>
+		</div>
+	</div>
+
+	
+  
+<script>
+function unselect(id)
+{
+	section = $(id).prev().val();
+	if (section == undefined && id == "#section")
+	{
+		$("button").css("background", "#BDBEC0");
+		$("button").css("border-bottom", "2px solid grey");
+		$("button").unbind("click");
+	}
+	if ($("select").is(id + "+ select"))
+	{
+		$("select").last().remove();
+		return unselect(id);
+	}
+}
+$(function(){
+	$(document).on("change", "#select_documents select", function(){
+		$("#download_items").html("");
+		section = $(this).val();
+		id = "#" + $(this).attr("id");
+		if (section == "")
+			unselect(id);
+		else
+		{
+			if (id == "#section" && $("select").is(id + "+ select"))
+				$("select").last().remove();
+			$("button").css("background", "#214288");
+			$("button").css("border-bottom", "2px solid #00295B");
+		}
+	});
+	$("button").bind("click", function(){
+		$("#download_items").html("");
+		$.getJSON("data_download.json", { "section": section }, function(json){
+			var documents = [];
+			$.each(json[section], function(key, val) {
+				documents.push('<p id="' + key + '">' + val.NAME + '</p>');
+				if (val.ELEMENTS){
+
+					$.each(val.ELEMENTS, function(el){
+						if (val.ELEMENTS[el].SPECIFICATIONS.DOWNLOAD){
+							documents.push('<div style="margin-left: 15px;"><p>' + val.ELEMENTS[el].NAME + '</a></p>');
+							$.each(val.ELEMENTS[el].SPECIFICATIONS.DOWNLOAD, function(k){
+								file = val.ELEMENTS[el].SPECIFICATIONS.DOWNLOAD[k].VALUE.substring(4);
+								name = val.ELEMENTS[el].SPECIFICATIONS.DOWNLOAD[k].NAME
+								documents.push('<div class="download_item"><div class="icon"><img alt="Иконка" src="bxlocal://pdf.png"></div><a href="bxlocal://' + file + '">' + name + '</a></div>');
+							});
+							documents.push('</div>');
+						}
+					});
+				}else{
+					$.each(val.SPECIFICATIONS.DOWNLOAD, function(k){
+						file = val.SPECIFICATIONS.DOWNLOAD[k].VALUE.substring(4);
+						name = val.SPECIFICATIONS.DOWNLOAD[k].NAME
+						documents.push('<div class="download_item"><div class="icon"><img alt="Иконка" src="bxlocal://pdf.png"></div><a href="bxlocal://' + file + '">' + name + '</a></div>');
+					});
+				}
+			});
+
+			$('<div/>', {
+				'class': 'documents',
+				html: documents.join('')
+			}).appendTo('#download_items');
+
+		});
+	});
+});
+</script>
+</body>
+
+</html>

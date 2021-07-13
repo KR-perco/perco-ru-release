@@ -1,0 +1,6 @@
+@media screen and (max-width: 900px) {
+	.link_img img {
+		width: 340px;
+		height: auto;
+	}
+}

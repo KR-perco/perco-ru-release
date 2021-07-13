@@ -1,0 +1,38 @@
+#select_documents {
+	display: flex;
+	flex-direction: column;
+}
+select {
+	font-family: inherit;
+	font-size: inherit;
+	border: 1px solid #BDBEC0;
+	width: 448px;
+	padding: 10px;
+	margin: 15px 0;
+	text-align: right
+}
+select:not(:first-child) { display: none; }
+#select_documents button {
+	background: #BDBEC0;
+	border-bottom: 2px solid grey;
+	width: 200px;
+	height: 40px;
+	font-size: 20px;
+}
+#download_items { margin: 50px 0; }
+
+#container .catalog-section-list ul li:before{
+	background-image: url('/images/icons/download-soft.svg') !important;
+    height: 24px;
+    width: 20px;
+    margin-right: 10px;
+    background-size: 20px;
+    top: 4px;
+    position: relative;
+}
+
+
+@media screen and (max-width: 900px) {
+	select { width: 340px; }
+	#download_items { margin: 20px 0; }
+}

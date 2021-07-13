@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=320">
+
+	<script type="text/javascript" src="bxlocal://__deviceload__/cordova.js"></script>
+	<script type="text/javascript" src="bxlocal://bitrix_mobile_core.js"></script>
+	<script type="text/javascript" src="bxlocal://jquery.min.js"></script>
+	<script type="text/javascript" src="bxlocal://fastclick.js"></script>
+	<script type="text/javascript" src="bxlocal://script.js"></script>
+	
+	<link href="bxlocal://template_styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<script>
+
+	app.setPageTitle({
+		title: "Производитель оборудования безопасности"
+	});
+
+	BXMobileApp.UI.Slider.setStateEnabled(BXMobileApp.UI.Slider.state.LEFT, true);
+
+	BX.ready(function ()
+		{
+			new MenuCatalog(BX("product_items")).init();
+		}
+	);
+
+</script>
+<script>
+		app.setPageTitle({
+			title: "Производитель оборудования безопасности"
+		});
+	
+		BXMobileApp.UI.Slider.setStateEnabled(BXMobileApp.UI.Slider.state.LEFT, true);
+		//var fileTransfer = new FileTransfer();
+	
+	var index = 0;
+	var i;
+	var statusStr = "";
+	var update;
+	var files = [];
+	var params = {
+			title: "Обновление",
+			cache: false,
+			url: "bxlocal://update.html",
+			update: update,
+		};
+	
+		var checkFileEntry = function (entry) {
+			//alert('mew');
+			//alert(entry);
+			var checkFile = entry.getFile('/download/data_documentation.json', {create: false, exclusive: false}, success, fail);
+	
+			function success(entries) {
+				
+				var serverFileData = '';
+				//check file's date from server 
+				var serverFile = $.ajax({
+					url: "https://www.perco.ru/percoDemo/offline/data_documentation.json",
+					success: function(response) {
+						serverFileData = serverFile.getResponseHeader("Last-Modified");
+						alert(serverFileData);
+					}
+				});
+	
+				
+				//check file's date from gadget
+				entry.getMetadata(win, null);
+	
+				var gadgetFileData = function win(metadata) {
+					console.log(metadata.modificationTime);
+					return metadata.modificationTime;
+				}
+	
+				console.log(params.title);
+				console.log(gadgetFileData);
+				console.log(serverFileData);
+				console.log(params.title);
+				if (gadgetFileData == serverFileData){
+					console.log("обновление не нужно!");
+				}else{
+					update = true;
+					BXMobileApp.PageManager.loadPageModal(params);
+				}		
+			}
+	
+			function fail(error) {
+				update = false;
+				BXMobileApp.PageManager.loadPageModal(params);
+			}
+		}
+	
+		var addError = function (error) {
+			alert("Ошибка. Код: " + error.code);
+		};
+	
+		function downloadFile() {
+			console.log('mew');
+			window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, checkFileEntry, addError);
+		}
+	
+		//setTimeout(downloadFile(), 10000);
+	
+		//downloadFile(files);
+	
+	</script>
+<div>
+	<img src="bxlocal://banner.png" width="100%" alt="banner" />
+</div>
+
+<div id="product_items">
+<div class="product_block">
+	<h2>Оборудование безопасности PERCo</h2>
+	<div class="product_items">
+		<div class="product_item button" data-section="turnikety" data-title="Турникеты" style="background-image: url(bxlocal://main-turnstile.png);">
+			Турникеты
+		</div>
+		<div class="product_item button" data-section="elektronnye-prokhodnye" data-title="Электронные проходные" style="background-image: url(bxlocal://main-ip-stiles.png);">
+			Электронные проходные
+		</div>
+		<div class="product_item button" data-section="elektromekhanicheskie-zamki" data-title="Электро-механические замки" style="background-image: url(bxlocal://main-locks.png);">
+			Электро-механические замки
+		</div>
+		<div class="product_item button" data-section="kontrollery-schityvateli" data-title="Контроллеры и считыватели" style="background-image: url(bxlocal://main-kontrollery.png);">
+			Контроллеры и считыватели
+		</div>
+	</div>
+</div>
+
+<div class="product_block">
+	<h2>Системы безопасности и повышения эффективности PERCo</h2>
+	<div class="product_items">
+		<div class="product_item button" data-section="kompleksnaya-sistema-bezopasnosti-perco-s-20" data-title="Комплексная система безопасности PERCo-S-20" style="background-image: url(bxlocal://main-ksb-s-20_2.png);">
+			Комплексная система безопасности <span class="nospace">PERCo-S-20</span>
+		</div>
+		<div class="product_item button" data-section="sistema-kontrolya-dostupa-perco-web" data-title="Система контроля доступа PERCo-Web" style="background-image: url(bxlocal://main-skd-web.png);">
+			Система контроля доступа <span class="nospace">PERCo-Web</span>
+		</div>
+		<div class="product_item button" data-section="sistema-bezopasnosti-perco-s-20-shkola" data-title="Система безопасности PERCo-S-20 Школа" style="background-image: url(bxlocal://main-sb-s-20-school.png);">
+			Система безопасности <span class="nospace">PERCo-S-20</span> Школа
+		</div>
+		<div class="product_item button" data-section="sistema-dlya-bankomatov-perco-s-800" data-title="Система для банкоматов PERCo-S-800" style="background-image: url(bxlocal://main-skd-S-800.png);">
+			Система для банкоматов <span class="nospace">PERCo-S-800</span>
+		</div>
+	</div>
+</div>
+
+<div class="workers">
+	<div class="button worker" data-title="Каталог" data-worker="manager" style="background-image: url(bxlocal://worker-manager.png);">
+		Менеджеру
+	</div>
+	<div class="button worker" data-title="Каталог" data-worker="installer" style="background-image: url(bxlocal://worker-services.png);">
+		Инсталлятору
+	</div>
+</div>
+</div>
+
+<div id="main_about_block">
+	<h2>О компании</h2>
+	<div class="tabs">
+		<input type="checkbox" id="main_about" name="vkladki">
+		<label for="main_about"><span class="dashed">Компания PERCo</span></label>
+		<div>
+			<p>PERCo специализируется на серийном производстве оборудования и систем безопасности собственной разработки с 1988 года.</p>
+			<p>Высокое качество обеспечило продукции PERCo признание как в России, так и за рубежом – товары PERCo экспортируются в 87 стран мира.</p>
+			<p>Сегодня PERCo – лидер в производстве систем и оборудования безопасности.</p>
+			<p>Система менеджмента качества PERCo сертифицирована на соответствие международным стандартам ISO 9001:2015.</p>
+			<p>Все оборудование систем безопасности PERCo проходит необходимые ресурсные испытания. Такие испытания гарантируют безотказную работу оборудования безопасности на объектах у покупателей.</p>
+			<p>Собственное производство систем безопасности PERCo оснащено современным высокоточным и высокотехнологичным оборудованием ведущих мировых производителей.</p>
+			<p>Это позволяет разрабатывать, выпускать и успешно представлять на рынке широкий ассортимент товаров, отвечающих мировым стандартам в области оборудования и систем безопасности.</p>
+			<p>Производство осуществляется на собственном заводе PERCo, построенном в 2010 году в Пскове.</p>
+		</div>
+		<input type="checkbox" id="main_mission" name="vkladki">
+		<label for="main_mission"><span class="dashed">Миссия</span></label>
+		<div>
+			<p>Удовлетворение потребностей наших клиентов в качественном оборудовании для решения задач безопасности и эффективного управления бизнесом.</p>
+		</div>
+		<input type="checkbox" id="main_tovgroup" name="vkladki">
+		<label for="main_tovgroup"><span class="dashed">Основные товарные группы</span></label>
+		<div class="text_item">
+			<ul>
+				<li>Комплексные системы безопасности</li>
+				<li>Системы контроля доступа и повышения эффективности (СКУД, система безопасности «Школа», система безопасности для автотранспортной проходной, система ограничения доступа к банкомату и т.п.)</li>
+				<li>Электронные проходные</li>
+				<li>Турникеты, калитки и ограждения</li>
+				<li>Электромеханические замки</li>
+			</ul>
+			<p>Комплексные системы безопасности представлены Единой системой PERCo-S-20. Это инновационное решение, предназначенное для обеспечения безопасности и повышения эффективности работы предприятия. S-20 построена на Ethernet-технологиях, что дает существенные преимущества перед традиционными системами.</p>
+			<p>Возможности системы безопасности позволяют компаниям, разрабатывающим собственное программное обеспечение, осуществлять интеграцию оборудования системы обеспечения безопасности S-20 со сторонними системами безопасности.</p>
+			<p>Системы контроля доступа PERCo представляют собой широкий спектр решений для предприятий, учреждений, образовательных организаций, спорткомплексов и т.п.</p>
+			<p>СКУД PERCo построены на Ethernet-технологиях, что позволяет использовать стандартное сетевое оборудование.</p>
+			<p>Наряду с безопасностью системы PERCo позволяют на базе того же оборудования организовать учет рабочего времени и контроль трудовой дисциплины.</p>
+			<p>Электронные проходные – это полностью готовые к работе СКУД, построенные на IP-технологиях.</p>
+			<p>Турникеты PERCo – самая продаваемая в России и ближнем зарубежье марка турникетов и одна из самых продаваемых в мире. Модельный ряд турникетов включает триподы, тумбовые турникеты, полуростовые и полноростовые роторные турникеты, калитки и скоростные проходы.</p>
+			<p>Электромеханические замки PERCo разработаны специально для использования в системах безопасности. Инновационная разработка компании – замки с подводом питания через засов. Установка таких замков позволяет сохранить целостность дверного полотна, гарантировать защиту от удара засова по косяку двери и обеспечить работу с контроллерами PERCo без датчика положения двери.</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

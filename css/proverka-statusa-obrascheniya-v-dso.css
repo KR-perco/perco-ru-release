@@ -1,0 +1,22 @@
+#status_dso input { text-align: center; }
+#status_dso input[type=submit] {
+	margin-top: 10px;
+	width: 135px;
+}
+#form_result > div {
+	border-bottom: 1px solid #BDBEC0;
+	padding: 5px 0;
+}
+#form_result .result > div:nth-child(n+3) { background-color: #F3F5F4; }
+#form_result .result > div:nth-child(n+3) div:last-child {
+	color: #214288;
+	font-weight: bold;
+}
+#form_result > .row:last-child { border-bottom: none; }
+.row { display: flex; }
+.row > div {
+	flex-basis: 50%;
+	margin: 5px 0;
+	padding: 0 10px;
+}
+.row > div:first-child { font-weight: bold; }

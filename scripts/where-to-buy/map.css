@@ -1,0 +1,210 @@
+#loadlist
+{
+	display: none;
+	position: relative;
+	left: 479px;
+	width: 32px;
+	z-index: 300;
+	margin-top: 35px;
+	height: 100px;
+}
+#divWTB{
+	padding: 0 9px;
+}
+#wheretobuy{
+	width:797px;
+	height: 393px;
+	margin-left: 70px;
+}
+.mapa{
+	background-position: 0 0 !important;
+}
+.maparus
+{
+	background:url("/images/where-to-buy/map_rus.png") no-repeat;
+}
+.severo-zapadnyj-federalnyj-okrug{
+	background-image: url("/images/where-to-buy/severo-zapadnyj-okrug.png");
+}
+.centralnyj-federalnyj-okrug{
+	background-image: url("/images/where-to-buy/centralnyj-okrug.png");
+}
+.privolzhskij-federalnyj-okrug{
+	background-image: url("/images/where-to-buy/privolzhskij-okrug.png");
+}
+.yuzhnyj-severo-kavkazskij-federalnyj-okrug, .krymskij-federalnyj-okrug{
+	background-image: url("/images/where-to-buy/yuzhnyj-severo-kavkazskij-okrug.png");
+}
+.uralskij-federalnyj-okrug{
+	background-image: url("/images/where-to-buy/uralskij-okrug.png");
+}
+
+.sibirskij-federalnyj-okrug{
+	background:url("/images/where-to-buy/sibirskij-okrug.png") no-repeat;
+}
+.dalnevostochnyj-federalnyj-okrug{
+	background:url("/images/where-to-buy/dalnevostochnyj-okrug.png") no-repeat;
+}
+//.krymskij-federalnyj-okrug{
+//	background:url("/images/where-to-buy/krymskij-okrug.png") no-repeat;
+//}
+.dealerslist {
+	margin-bottom: 0;
+	margin-top: 0;
+	padding-bottom: 40px;
+}
+.dealerslist div{font-size: 12px;font-family: Arial,Helvetica,sans-serif;}
+#dealers_column1{float:left;margin-right:10px;}
+#dealers_column2{padding-left:30px;padding-top: 3px;line-height: 145%;}
+#dealers_column2 .dealerlist_link {cursor: pointer;text-decoration: underline;}
+#dealers_column2 .dealerlist_link:hover {text-decoration: none;}
+#dealers_column2 a {cursor: pointer;text-decoration: underline;}
+#dealers_column2 a:hover {text-decoration: none;}
+.dealerlist_link {color: #0971FF !important;}
+#dealer_1, #dealer_2, #dealer_3, #dealer_4  {position: relative; top: 2px;left: -3px;}
+#button_ok {margin-top: 20px; margin-left: -1px; width: 70px;}
+.clear2 {height: 10px;}
+#map_description
+{
+	color: #5169A7;
+	font-family: Arial;
+	font-size: 14px;
+	left: 380px;
+	position: absolute;
+	text-align: center;
+	top: 330px;
+	margin-left: 70px;
+}
+#map_description > span
+{
+	color: white;
+}
+#severo-zapadnyj-okrug, #centralnyj-okrug, #privolzhskij-okrug, #yuzhnyj-okrug, #severo-kavkazskij-okrug, #uralskij-okrug, #sibirskij-okrug, #dalnevostochnyj-okrug, #krymskij-okrug
+{
+	position: relative;
+	font-size: 10px;
+}
+#severo-zapadnyj-okrug
+{
+	left: -223px;
+	top: -44px;
+}
+#centralnyj-okrug
+{
+	left: -315px;
+	top: -27px;
+}
+#privolzhskij-okrug
+{
+	left: -250px;
+	top: -12px;
+}
+#yuzhnyj-okrug
+{
+	left: -329px;
+	top: -6px;
+}
+#severo-kavkazskij-okrug
+{
+	left: -345px;
+	top: -3px;
+}
+#uralskij-okrug
+{
+	left: -108px;
+	top: -134px;
+}
+#sibirskij-okrug
+{
+	left: 14px;
+	top: -92px;
+}
+#dalnevostochnyj-okrug
+{
+	left: 192px;
+	top: -214px;
+}
+#krymskij-okrug
+{
+	left: -403px;
+	top: -184px;
+}
+.select-okrug
+{
+	color: white;
+}
+
+#mapBlock
+{
+	text-align: center;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+#mapBlock g { cursor: pointer; }
+div.descrip
+{
+	background-color: white;
+	border: 1px solid #8aa5cf;
+	border-radius: 5px;
+	color: #576fad;
+	cursor: default;
+	font-family: Arial;
+	font-weight: bold;
+	letter-spacing: 0;
+	padding: 5px;
+	position: absolute;
+	text-align: left;
+	white-space: nowrap;
+	z-index: 200;
+}
+div.descrip div img
+{
+	left: -6px;
+	position: absolute;
+}
+#AUText { left: 910px; top: 290px; }
+#CNText { left: 836px; top: 73px; }
+#rossiyaText { left: 915px; top: 10px; }
+#PHText { left: 840px; top: 179px; }
+#NZText { left: 983px; top: 374px; }
+#JPText { left: 878px; top: 87px; }
+#INText { left: 755px; top: 143px; }
+#KZText { left: 697px; top: 69px; }
+#AEText { left: 632px; top: 150px; }
+#SAText { left: 628px; top: 166px; }
+#SYText { left: 582px; top: 110px; }
+#LYText { left: 532px; top: 131px; }
+#NGText { left: 500px; top: 198px; }
+#COText { left: 226px; top: 201px; }
+#MXText { left: 180px; top: 168px; }
+#FIText { left: 527px; top: 0; }
+#SEText { left: 513px; top: 2px; }
+#UKText { left: 455px; top: 37px; }
+#IEText { left: 439px; top: 47px; }
+#BYText { left: 544px; top: 50px; }
+#LTText { left: 530px; top: 43px; }
+#UAText { left: 570px; top: 66px; }
+#PLText { left: 522px; top: 51px; }
+#ROText { left: 534px; top: 72px; }
+#BGText { left: 539px; top: 85px; }
+#GRText { left: 535px; top: 94px; }
+#ITText { left: 497px; top: 76px; }
+#FRText { left: 480px; top: 67px; }
+#ESText { left: 466px; top: 92px; }
+#PTText { left: 438px; top: 93px; }
+#HUText { left: 521px; top: 70px; }
+#HRText { left: 512px; top: 80px; }
+#CZText { left: 509px; top: 65px; }
+#KRText { left: 841px; top: 105px; }
+#EEText { left: 534px; top: 31px; }
+#LVText { left: 530px; top: 44px; }
+#SKText { left: 521px; top: 66px; }
+#BENText { left: 479px; top: 52px; }
+#ISText { left: 425px; top: 9px; }
+#DEText { left: 496px; top: 48px; }
+#ALText { left: 517px; top: 90px; }
+#MTText { left: 503px; top: 112px; }
+#ATText { left: 504px; top: 70px; }
+#CHText { left: 485px; top: 72px; }
+#DKText { left: 493px; top: 44px; }

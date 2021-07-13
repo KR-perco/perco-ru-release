@@ -1,0 +1,138 @@
+body #container { max-width: none; }
+body #container > #main_block {
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+}
+#secel_list {
+	margin-top: 20px;
+	order: 1;
+	display: none;
+}
+h2 {
+	margin-bottom: 12px;
+	margin-top: 30px;
+}
+.two_blocks {
+	display: flex;
+	margin-bottom: 80px;
+}
+.two_blocks img { margin: 0 10px; }
+.two_blocks > div { width: 50%; }
+.two_blocks > div:first-child { margin-right: 10px; }
+.rubezhi th, .rubezhi td { width: 50%; }
+.tr_img div {
+	background-color: #EFF2F7;
+	color: #044B7F;
+	margin: 5px auto 15px auto;
+	padding: 5px;
+	position: relative;
+	text-align: center;
+	width: 120px;
+}
+
+.download_item_img a {
+    font-weight: bold;
+}
+.tr_img div:before {
+	content: "";
+	border: 10px solid transparent;
+	border-top: 10px solid #EFF2F7;
+	bottom: -22px;
+	left: calc(50% - 10px);
+	position: absolute;
+}
+#elements_list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 30px auto;
+	justify-content: space-around;
+}
+.element_item {
+	display: flex;
+	flex-basis: 185px;
+	justify-content: center;
+	margin: 10px;
+}
+.element_item a {
+	color: black;
+	text-align: center;
+}
+.element_item img {
+	width: 53px;
+	height: 60px;
+}
+.visit { text-align: center; }
+#horizontal_scroll {
+	margin: auto;
+	margin-top: 35px;
+}
+#container #horizontal_scroll ul {
+	padding-left: 0;
+	display: flex;
+}
+#container #horizontal_scroll ul li {
+	list-style: none;
+	margin: auto;
+	text-align: center;
+	padding-left: 0;
+}
+#horizontal_scroll .lSAction > a {
+	background-repeat: no-repeat;
+	background-position: 10px 0px;
+	height: 45px;
+	width: 30px;
+}
+#horizontal_scroll .lSAction > .lSPrev, #horizontal_scroll .lSAction > .lSNext { background-image: url("/images/icons/arrow.svg"); }
+#horizontal_scroll .lSAction > .lSPrev, #horizontal_scroll .lSAction > .lSNext { background-position: 10px 0; }
+#horizontal_scroll .lSAction > .lSPrev { transform: rotate(180deg); }
+@media screen and (max-width: 1200px) {
+	body #container { max-width: 1200px; }
+	body #container > #main_block {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+@media screen and (max-width: 1120px) {
+	.banner_image { height: 310px; }
+}
+@media screen and (max-width: 900px) {
+	.banner_image { background-size: cover; }
+	.element_item {
+		flex-basis: 130px;
+		margin: 5px;
+	}
+	.two_blocks img {
+		margin: 0;
+		width: 340px;
+	}
+	#horizontal_scroll li img { width: 600px; }
+}
+@media screen and (max-width: 720px) {
+	body #container > #main_block {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.banner_image { height: 145px; }
+	.two_blocks {
+		flex-direction: column;
+		margin-bottom: 20px;
+	}
+	.two_blocks > div { width: 100%; }
+	.into_img { order: 1; }
+	#elements_list { margin: 20px auto; }
+	.element_item {
+		flex-basis: 80px;
+		font-size: 11px;
+		margin: 0 5px 20px 0;
+	}
+	#presentation { display: none; }
+	.elements_list .download_item_img { margin: auto; }
+}
+
+@media screen and (max-width: 520px){
+	.width_all .banner_image {
+		background-image: url(/images/banners/ksb-perco-s-20_mini.jpg) !important;
+	}
+}

@@ -1,0 +1,86 @@
+body #container { max-width: none; }
+#obuchenie {
+	display: flex;
+	margin-bottom: 30px;
+}
+h1 { color: #214288; }
+.banner_image {
+	background-image: url(/images/banners/banner_obuchenie.jpg);
+	height: 510px;
+	background-size: cover;
+}
+.about_obuchenie {
+	max-width: 800px;
+	margin-right: 10px;
+}
+#elements_list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-bottom: 20px;
+}
+.element_item {
+	display: flex;
+	justify-content: center;
+}
+.element_item a {
+	color: black;
+	text-align: center;
+}
+.element_item img {
+	width: 93px;
+	height: 77px;
+}
+#elements_list .element_item {
+    flex-basis: 230px!important;
+}
+#authorized {
+	display: flex;
+	align-self: flex-start;
+	flex-shrink: 0;
+	flex-grow: 1;
+	justify-content: flex-end;
+	text-align: center;
+}
+@media screen and (max-width: 2000px) {
+	.banner_image {
+		height: 510px;
+	}
+}
+
+@media screen and (max-width: 1500px) {
+	.banner_image {
+		height: 410px;
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.banner_image {
+		height: 310px;
+	}
+}
+
+@media screen and (max-width: 1120px) {
+	.banner_image {
+		background-image: url(/images/banners/banner_obuchenie_mini.jpg);
+	}
+}
+
+@media screen and (max-width: 930px) {
+	.banner_image {
+		background-size: cover;
+		height: 260px;
+	}
+}
+@media screen and (max-width: 720px) {
+	.banner_image {
+		background-size: cover;
+		height: 145px;
+	}
+	#authorized { margin: auto; }
+	#obuchenie {
+		flex-direction: column-reverse;
+		margin-bottom: 0;
+	}
+	.about_obuchenie { margin-top: 10px; }
+}

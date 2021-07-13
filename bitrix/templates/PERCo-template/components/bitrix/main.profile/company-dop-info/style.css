@@ -1,0 +1,50 @@
+.profile-table td {
+	vertical-align: top;
+	width:49%;
+}
+.no-close .ui-dialog-titlebar { display: none; }
+div.bx-auth-profile span.bx-auth-secure {
+	background-color:#FFFAE3;
+	border:1px solid #DEDBC8;
+	padding:2px;
+	display:inline-block;
+	vertical-align:middle;
+}
+input[type=button]
+{
+	background: url(/images/icons/blue-button.jpg);
+	border-radius: 4px;
+	height: 34px;
+	color: white;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: Arial,Helvetica,sans-serif;
+}
+#obuch_schet, #schet { display: none; }
+#main_UF_SCAN_ZAPROS, #main_UF_SCAN_ZAPROS_TP { display: inline-block; }
+.ui-dialog-buttonset > button { height: auto; }
+@media screen and (max-width: 720px) {
+	.ui-dialog { width: auto !important; }
+	form input { max-width: 220px; }
+}
+
+.webform-field-upload::before {
+	top: 0;
+	margin-top: 8px;
+	margin-left: 24px;
+	display: block;
+	content: '';
+	background: white;
+	inline-size: 112px;
+	block-size: 20px;
+	border: 1px solid grey;
+	border-radius: 4px;
+	text-align: center;
+	line-height: 20px;
+}
+
+.webform-field-upload .webform-small-button{
+	left: -88px!important;
+}

@@ -1,0 +1,5 @@
+<div class="use">
+	<input id="hide-1" type="checkbox">
+	<label for="hide-1">название</label>
+	<div>текст, что скрыт</div>
+</div>

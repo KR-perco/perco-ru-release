@@ -1,0 +1,94 @@
+#container #horizontal_scroll ul {
+	display: flex;
+	padding-left: 0;
+}
+#container #scroll ul { padding-left: 0; }
+#container #scroll li {
+	cursor: pointer;
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+}
+#scroll #scrollGallery a, #horizontal_scroll #scrollGallery a { text-decoration: none; }
+#scroll {
+	align-self: flex-start;
+	flex-shrink: 0;
+	position: relative;
+	margin-right: 16px !important;
+}
+#container #horizontal_scroll li {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#horizontal_scroll li > div {
+	margin-bottom: 5px;
+	display: flex;
+	flex-direction: column;
+	width: 272px;
+}
+#horizontal_scroll .lSAction {
+	left: 0;
+	margin: -120px auto auto;
+	max-width: 1330px;
+	min-width: 360px;
+	position: absolute;
+	right: 0;
+}
+#scroll .lSAction > a, #horizontal_scroll .lSAction > a {
+	background-repeat: no-repeat;
+	background-position: 10px 0px;
+	height: 45px;
+}
+#scroll .lSAction > a { margin-left: -22px; }
+#scroll .lSAction > .lSPrev, #scroll .lSAction > .lSNext, #horizontal_scroll .lSAction > .lSPrev, #horizontal_scroll .lSAction > .lSNext { background-image: url("/images/icons/arrow_grey.svg"); }
+#horizontal_scroll .lSAction > .lSPrev, #horizontal_scroll .lSAction > .lSNext { background-position: 10px 0; }
+#scroll .lSAction > .lSPrev {
+	transform: rotate(270deg);
+	top: 0;
+	margin-top: 13px;
+}
+#scroll .lSAction > .lSNext {
+	transform: rotate(90deg);
+	bottom: 0;
+}
+#horizontal_scroll .lSAction > .lSPrev { transform: rotate(180deg); }
+#horizontal_scroll .lSSlideWrapper { position: static; }
+#scroll .lSAction > a {
+	background-repeat: no-repeat;
+	background-position: 10px 0px;
+	height: 45px;
+	margin-left: -22px;
+}
+#scroll .lSAction > .lSPrev, #scroll .lSAction > .lSNext { background-image: url("/images/icons/arrow_grey.svg"); }
+#scroll .lSAction > .lSPrev {
+	transform: rotate(270deg);
+	top: 0;
+	margin-top: 13px;
+}
+#scroll .lSAction > .lSNext {
+	transform: rotate(90deg);
+	bottom: 0;
+}
+#scroll .lSSlideOuter, #scroll .lSSlideWrapper { position: static; }
+#scroll .lSSlideOuter {
+	margin: 58px 0;
+}
+.podpis {
+	color: black;
+	flex-grow: 1;
+	font-size: 12px;
+	text-align: left;
+	padding: 5px;
+	border-bottom: 2px solid #BCBEC0;
+	width: 262px;
+}
+@media screen and (max-width: 900px) {
+	#scroll { display: none; }
+	#horizontal_scroll .lSAction > a {
+		width: 30px;
+		height: 40px;
+	}
+}

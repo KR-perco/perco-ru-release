@@ -1,0 +1,9 @@
+#container #list_img ul li {
+	max-width: 83px;
+}
+#container #list_img ul:first-child {
+	padding-bottom: 81.8356%!important;
+}
+#container #list_img ul:first-child li {
+	max-width: initial;
+}

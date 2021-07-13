@@ -1,0 +1,16 @@
+.identifikatory{
+	margin: 20px 0;
+}
+
+.identifikatory thead td{
+	font-weight: bold; 
+	text-align: center;
+}
+
+.identifikatory td{
+	text-align: center;
+}
+
+.identifikatory tbody td:nth-child(1){
+	text-align: left;
+}

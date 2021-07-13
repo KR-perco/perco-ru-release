@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=320">
+	<!--Include mobile platform-->
+	<script type="text/javascript" src="bxlocal://__deviceload__/cordova.js"></script>
+	<script type="text/javascript" src="bxlocal://bitrix_mobile_core.js"></script>
+    <script type="text/javascript" src="bxlocal://jquery.min.js"></script>
+    <script type="text/javascript" src="bxlocal://fastclick.js"></script>
+	<script type="text/javascript" src="bxlocal://script.js"></script>
+
+	<link href="bxlocal://template_styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="writerError">empty</div>
+	<script>
+		
+        var worker;
+        var search = 'sistema-kontrolya-dostupa-perco-web';
+
+        app.getPageParams({
+		    callback: function(data)
+            {
+                worker = data.worker;
+                search = data.section;
+            }
+        });
+		
+        setTimeout(function(){ getData()}, 500);
+		
+        BX.ready(function ()
+            {
+                new MenuPO(BX("section-list")).init();
+            }
+        );
+
+        BX.ready(function ()
+            {
+                new MenuElement(BX("section-list")).init();
+            }
+        );
+
+	</script>
+	
+	<div id="content">
+		<div class="scrollmenu" id="scrollmenu"></div>
+        <div class="section-list" id="section-list"></div>
+	</div>
+
+	<script>
+	
+	const goToSection = (sec, t) => { //переход в раздел каталога (аргументы: символьный идентификатор раздела, заголовок в разделе)
+		BXMobileApp.PageManager.loadPageBlank({
+			title: t,
+			cache: false,
+			url: 'bxlocal://offline/catalog-section.html',
+			data: {
+				section: sec
+			}
+		});
+	};
+
+    function getData() {
+        once = 0;
+		$.getJSON('data_catalog.json', function(json){
+			/*json = '';
+			try {
+				json = JSON.parse(localStorage.getItem('dataCatalog').replace('/', '\/')); //здесь подменяется json заполненый вручную в файле на сформированный автоматически, который хранится в переменной localStorage
+			} catch(e) {
+				document.querySelector('.writerError').innerText = e; //вывод ошибки
+			}*/
+            for (var prop in json[search])
+            {
+                if (json[search][prop].ELEMENTS)
+                {
+                    sectionName = json[search][prop].NAME;
+                    sectionCode = json[search][prop].CODE;
+
+                    if (/*(search == "sistema-kontrolya-dostupa-perco-web") || */(search == "sistema-bezopasnosti-perco-s-20-shkola") || (search == "sistema-dlya-bankomatov-perco-s-800")){
+                        sectionName = json[search][prop].NAME_PARENT;
+                        getPage(search);
+                    }else{
+                        getPage(sectionCode);
+                    }
+                    if (once == 0){
+                        if (search == "turnikety"){
+                            getPage(search);
+                        }
+                        once++;
+                    }
+
+
+                    link = '<a class="link" onclick="changeSection(this)" data-filter="'+ sectionCode +'">' + sectionName + '</a>';
+                    scrollmenu = document.getElementById('scrollmenu');
+                    scrollmenu.insertAdjacentHTML('beforeend', link);
+
+                    section = '<div class="section" data-cat="'+ sectionCode +'" id="'+ sectionCode +'"></div>';
+                    sectionList = document.getElementById('section-list');
+                    sectionList.insertAdjacentHTML('beforeend', section);
+
+                    for(var element in json[search][prop].ELEMENTS)
+                    {
+                        image = 'bxlocal://' + json[search][prop].ELEMENTS[element].IMAGE_PREVIEW;
+                        name = json[search][prop].ELEMENTS[element].NAME;
+                        code = json[search][prop].ELEMENTS[element].CODE;
+                        if (sectionName = "turnikety-tripody"){
+                            dopName = '<p>' + json[search][prop].ELEMENTS[element].DOP_NAME + '</p>';
+                        } else { dopName = '' }
+
+                        elementList = '<div class="element button" data-section="'+ search +'" data-title="'+ name +'" data-worker="'+ worker +'" data-element="'+ code +'" style="background-image: url('+ image +');">'+ name + dopName +'</div>';
+
+                        sec = document.getElementById(sectionCode);
+                        sec.insertAdjacentHTML('beforeend', elementList);
+                    }
+                 
+                } else if (json[search][prop].CHILD)
+                {
+                    sectionName = json[search][prop].NAME_PARENT;
+                    sectionCode = json[search][prop].CODE;
+
+                    link = '<a class="link" onclick="changeSection(this)" data-filter="'+ search +'">' + sectionName + '</a>';
+                    scrollmenu = document.getElementById('scrollmenu');
+                    scrollmenu.insertAdjacentHTML('beforeend', link);
+
+                    section = '<div class="section" data-cat="'+ search +'" id="'+ search +'"></div>';
+                    sectionList = document.getElementById('section-list');
+                    sectionList.insertAdjacentHTML('beforeend', section);
+
+                    for(var element in json[search][prop].CHILD)
+                    {
+                        name = json[search][prop].CHILD[element].NAME;
+                        code = json[search][prop].CHILD[element].CODE;
+                        image = 'bxlocal://' + code + '.png';
+                        
+                        elementList = '<div class="element button-po" data-section="'+ code +'" data-title="'+ name +'" data-worker="'+ worker +'" style="background-image: url('+ image +');">'+ name +'</div>';
+
+                        sec = document.getElementById(search);
+                        sec.insertAdjacentHTML('beforeend', elementList);
+                    }
+                    getPage(search);
+                } else {
+                    if (!document.getElementById(search))
+                    {
+                        section = '<div class="section" id="'+ search +'"></div>';
+                        sec = document.getElementById('section-list');
+                        sec.insertAdjacentHTML('beforeend', section);
+                        if (!document.getElementById(''+ search +'-information')){
+                            getPage(search);
+                        }
+                    }
+                    if(json[search][prop].IMAGE_PREVIEW)
+                    {
+                        image = 'bxlocal://' + json[search][prop].IMAGE_PREVIEW;
+                    }else{
+                        image = 'bxlocal://' + json[search][prop].CODE + '.png';
+                    }
+                    name = json[search][prop].NAME;
+                    code = json[search][prop].CODE;
+
+                    elementList = '<div class="element button" data-section="'+ search +'" data-title="'+ name +'" data-worker="'+ worker +'" data-element="'+ code +'" style="background-image: url('+ image +');">'+ name +'</div>';
+
+                    sec = document.getElementById(search);
+                    sec.insertAdjacentHTML('beforeend', elementList);  
+                }
+            }
+            if (search == "sistema-dlya-bankomatov-perco-s-800"){
+
+                link = '<a class="link"  data-filter="'+ search +'">Система для банкоматов PERCo-S-800</a>';
+                scrollmenu = document.getElementById('scrollmenu');
+                scrollmenu.insertAdjacentHTML('beforeend', link);
+
+            }
+            if ((search == 'lokalnoe-po') || (search == 'setevoe-po'))
+            {
+                for(var element in json["kompleksnaya-sistema-bezopasnosti-perco-s-20"]["po-kompleksnoy-sistemy-bezopasnosti-perco-s-20"].CHILD[search].ELEMENTS)
+                {
+                    name = json["kompleksnaya-sistema-bezopasnosti-perco-s-20"]["po-kompleksnoy-sistemy-bezopasnosti-perco-s-20"].CHILD[search].ELEMENTS[element].NAME;
+                    code = json["kompleksnaya-sistema-bezopasnosti-perco-s-20"]["po-kompleksnoy-sistemy-bezopasnosti-perco-s-20"].CHILD[search].ELEMENTS[element].CODE;
+                    image = 'bxlocal://' + json["kompleksnaya-sistema-bezopasnosti-perco-s-20"]["po-kompleksnoy-sistemy-bezopasnosti-perco-s-20"].CHILD[search].ELEMENTS[element].IMAGE_PREVIEW;
+
+                    section = '<div class="section" data-cat="'+ search +'" id="'+ search +'"></div>';
+                    sectionList = document.getElementById('section-list');
+                    sectionList.insertAdjacentHTML('beforeend', section);
+
+                    elementList = '<div class="element button" data-section="'+ search +'" data-title="'+ name +'" data-worker="'+ worker +'" data-element="'+ code +'" style="background-image: url('+ image +');"><a href="bxlocal://catalog-element.html?section='+ search +'&product='+ code +'&worker='+ worker +'">'+ name +'</a></div>';
+
+                    sec = document.getElementById(search);
+                    sec.insertAdjacentHTML('beforeend', elementList);
+                }
+                getPage(search);
+            }
+			
+			if (search == 'koren-dopolnitelnoe-oborudovanie') {
+				document.querySelector(`#scrollmenu`).style.display = `none`;
+			}
+			
+			if (search == 'bloki-pitaniya') {
+				products = {
+					"Poliservis BRP-24-9-TI" : {
+						"name" : "Полисервис БРП-24-9-ТИ",
+						"image" : "bxlocal://Poliservis-BRP-24-9-TI.png",
+						"description" : "",
+						"price" : "113"
+					},
+					"K-Inzhenering BIRP-24-6-0" : {
+						"name" : "К-Инженеринг БИРП 24/6",
+						"image" : "bxlocal://K-Inzhenering-BIRP-24-6-0.png",
+						"description" : "",
+						"price" : "97"
+					},
+					"K-Inzhenering BIRP-24-2-5" : {
+						"name" : "К-Инженеринг БИРП 24/2,5",
+						"image" : "bxlocal://K-Inzhenering-BIRP-24-2-5.png",
+						"description" : "",
+						"price" : "65"
+					},
+					"K-Inzhenering BIRP-12-2-5" : {
+						"name" : "К-Инженеринг БИРП 12-2,5/7",
+						"image" : "bxlocal://K-Inzhenering-BIRP-12-2-5.png",
+						"description" : "",
+						"price" : "34"
+					},
+					"K-Inzhenering BIRP-12-10-0" : {
+						"name" : "К-Инженеринг БИРП 12-10",
+						"image" : "bxlocal://K-Inzhenering-BIRP-12-10-0.png",
+						"description" : "",
+						"price" : "83"
+					},
+					"LRS-150-24 Blok pitaniya" : {
+						"name" : "LRS-150-24 Блок питания",
+						"image" : "bxlocal://LS-100-24.png",
+						"description" : "",
+						"price" : "34"
+					},
+					"LRS-100-12 Blok pitaniya" : {
+						"name" : "LRS-100-12 Блок питания",
+						"image" : "bxlocal://LS-100-12.png",
+						"description" : "",
+						"price" : "24"
+					},
+					"BP-ZA Blok pitaniya" : {
+						"name" : "БП-3А Блок питания",
+						"image" : "bxlocal://BP-ZA.png",
+						"description" : "",
+						"price" : "14"
+					},
+					"BP-1A Blok pitaniya" : {
+						"name" : "БП-1А Блок питания",
+						"image" : "bxlocal://BP-1AM.png",
+						"description" : "",
+						"price" : "10"
+					},
+					"BP-24 Blok pitaniya" : {
+						"name" : "БП-24 Блок питания",
+						"image" : "bxlocal://BP-24-5.png",
+						"description" : "",
+						"price" : "22"
+					}
+				};
+				
+				date = ' € (по курсу ЦБ РФ на )';
+				elemetsList = "";
+				
+				for (product in products) {
+					elemetsList += `
+						<div class="element" style="background-image: url(${products[product]['image']});">${products[product][['name']]}</div>
+					`;
+				}
+				
+				section = '<div class="section" data-cat="'+ search +'" id="'+ search +'"></div>';
+				sectionList = document.getElementById('section-list');
+				sectionList.insertAdjacentHTML('beforeend', section);
+				sec = document.getElementById(search);
+				sec.insertAdjacentHTML('beforeend', elemetsList);
+				sec.insertAdjacentHTML('beforeend', `<style>
+					div.scrollbar {
+						overflow: auto;
+						width: calc(100% - 20px);
+					}
+
+					div.scrollbar table {
+						width: 100%;
+					}
+				</style>
+
+				<div class="scrollbar">
+					<table>
+						<tbody>
+							<tr>
+								<td>
+									<p><strong>Тип БИРП</strong></p>
+								</td>
+								<td>
+									<p><strong>Напряжение питания</strong></p>
+								</td>
+								<td>
+									<p><strong>Напряжение выхода</strong></p>
+								</td>
+								<td>
+									<p><strong>Ток нагрузки</strong></p>
+								</td>
+								<td>
+									<p><strong>Производитель</strong></p>
+								</td>
+								<td>
+									<p><strong>Соответствие продукции</strong></p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>БИРП 12-2,5/7</p>
+								</td>
+								<td>
+									<p>150&hellip;265 В, 50 Гц</p>
+								</td>
+								<td>
+									<p>12&plusmn;0,12 В</p>
+								</td>
+								<td>
+									<p>2,5 А / 5 А</p>
+								</td>
+								<td>
+									<p>К-Инженеринг</p>
+								</td>
+								<td>
+									<p>Турникеты серий: TTR, TTD, TB, TBC, турникет T-5</p>
+									<p>Электронные проходные серии KT, KTC</p>
+									<p>Калитки серии WHD</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>БИРП 12-10</p>
+								</td>
+								<td>
+									<p>150&hellip;265 В, 50 Гц</p>
+								</td>
+								<td>
+									<p>12&plusmn;0,12 В</p>
+								</td>
+								<td>
+									<p>9,5 A / 10A</p>
+								</td>
+								<td>
+									<p>К-Инженеринг</p>
+								</td>
+								<td>
+									<p>Турникеты с автоматическими планками «Антипаника» серии TTR, TTD, TB, TBC</p>
+									<p>Электронные проходные с автоматическими планками «Антипаника» серии KT, KTC</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>БИРП 24/2,5</p>
+								</td>
+								<td>
+									<p>150&hellip;265 В, 50 Гц</p>
+								</td>
+								<td>
+									<p>24&plusmn;0,24 В</p>
+								</td>
+								<td>
+									<p>2,5 А / 2,7 А</p>
+								</td>
+								<td>
+									<p>К-Инженеринг</p>
+								</td>
+								<td>
+									<p>Полноростовые турникеты без привода серии RTD</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>БИРП 24/6</p>
+								</td>
+								<td>
+									<p>150&hellip;242 В, 50 Гц</p>
+								</td>
+								<td>
+									<p>24&plusmn;0,24 В</p>
+								</td>
+								<td>
+									<p>6,0 А / 6,2 А</p>
+								</td>
+								<td>
+									<p>К-Инженеринг</p>
+								</td>
+								<td>
+									<p>Полноростовые турникеты с приводом серии RTD</p>
+									<p>Калитка WMD-06</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>БРП-24-9-ТИ</p>
+								</td>
+								<td>
+									<p>160&hellip;240 В, 50 Гц</p>
+								</td>
+								<td>
+									<p>24&plusmn;3,6 В</p>
+								</td>
+								<td>
+									<p>5,6 А / 9 А</p>
+								</td>
+								<td>
+									<p>Полисервис</p>
+								</td>
+								<td>
+									<p>Скоростные проходы серии ST</p>
+									<p>Турникет TTR-10A</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Блок питания LRS-150-24</p>
+								</td>
+								<td>
+									<p>220 В, 50 Гц</p>
+								</td>
+								<td>
+									<p>24 В</p>
+								</td>
+								<td>
+									<p>6,5 А</p>
+								</td>
+								<td>
+									<p>Mean well</p>
+								</td>
+								<td>
+									<p>Скоростные проходы ST</p>
+									<p>калитки WMD-06</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Блок питания LRS-100-12</p>
+								</td>
+								<td>
+									<p>220 В, 50 Гц</p>
+								</td>
+								<td>
+									<p>12 В</p>
+								</td>
+								<td>
+									<p>8,5 А</p>
+								</td>
+								<td>
+									<p>Mean well</p>
+								</td>
+								<td>
+									<p>Электронные проходные</p>
+									<p>турникеты с автоматической "Антипаникой"</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Блок питания БП-3А</p>
+								</td>
+								<td>
+									<p>220 В, 50 Гц</p>
+								</td>
+								<td>
+									<p>12 В</p>
+								</td>
+								<td>
+									<p>1,4 А</p>
+								</td>
+								<td>
+									<p>Телеинформсвязь</p>
+								</td>
+								<td>
+									<p>Электронные проходные со стандартными планками</p>
+									<p>картоприемники</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Блок питания БП-1А</p>
+								</td>
+								<td>
+									<p>220 В, 50 Гц</p>
+								</td>
+								<td>
+									<p>12 В</p>
+								</td>
+								<td>
+									<p>1 А</p>
+								</td>
+								<td>
+									<p>Телеинформсвязь</p>
+								</td>
+								<td>
+									<p>Турникеты-триподы</p>
+									<p>тумбовые турникеты со стандартными планками</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Блок питания БП-24-5</p>
+								</td>
+								<td>
+									<p>220 В, 50 Гц</p>
+								</td>
+								<td>
+									<p>24 В</p>
+								</td>
+								<td>
+									<p>4 А</p>
+								</td>
+								<td>
+									<p>Телеинформсвязь</p>
+								</td>
+								<td>
+									<p>Система терморегуляции турникетов TTR-04CW</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="space"></div>`);
+			}
+			
+			if (search == 'karty-dostupa') {
+				products = {
+					"beskontaktnyy-brelok-plastik-abs-em-marin" : {
+						"name" : "Бесконтактный брелок (пластик ABS) EM-Marin",
+						"image" : "11_card_small.png",
+						"description" : "Рабочая частота: 125 КГц",
+						"price" : "0.27"
+					},
+					"beskontaktnyy-brelok-plastik-abs-mifare-classic-1k" : {
+						"name" : "Бесконтактный брелок (пластик ABS) Mifare Classic 1K",
+						"image" : "9_card_small.png",
+						"description" : "Рабочая частота: 13,56 МГц",
+						"price" : "0.29"
+					},
+					"beskontaktnyy-brelok-kozha-em-marin" : {
+						"name" : "Бесконтактный брелок (кожа) EM-Marin",
+						"image" : "10_card_small.png",
+						"description" : "Рабочая частота: 125 КГц",
+						"price" : "0.83"
+						// "info" : "*только для использования на дверных контроллерах"
+					},
+					"beskontaktnyy-brelok-kozha-mifare-classic-1k" : {
+						"name" : "Бесконтактный брелок (кожа) Mifare Classic 1K ",
+						"image" : "10_card_small.png",
+						"description" : "Рабочая частота: 13,56 МГц ",
+						"price" : "0.97",
+						"info" : "*только для использования на дверных контроллерах"
+					},
+					"beskontaktnaya-karta-dostupa-em-marin-slim" : {
+						"name" : "Бесконтактная карта доступа EM-Marin Slim",
+						"image" : "3_card_small.png",
+						"description" : "Рабочая частота: 125 КГц",
+						"price" : "0.32"
+					},
+					"beskontaktnaya-karta-dostupa-mifare-classic-1k-slim" : {
+						"name" : "Бесконтактная карта доступа Mifare Classic 1K Slim",
+						"image" : "2_card_small.png",
+						"description" : "Рабочая частота: 13,56 МГц",
+						"price" : "0.34"
+					},
+					"beskontaktnaya-karta-dostupa-mifare-plus-x-4k-slim" : {
+						"name" : "Бесконтактная карта доступа Mifare Plus X 4K Slim",
+						"image" : "1_card_small.png",
+						"description" : "Рабочая частота: 13,56 МГц",
+						"price" : "0.94"
+					},
+					"beskontaktnaya-karta-dostupa-em-marin" : {
+						"name" : "Бесконтактная карта доступа EM-Marin",
+						"image" : "5_card_small.png",
+						"description" : "Рабочая частота: 125 КГц",
+						"price" : "0.27"
+					},
+					"beskontaktnaya-karta-dostupa-mifare-classic-1k" : {
+						"name" : "Бесконтактная карта доступа Mifare Classic 1K",
+						"image" : "4_card_small.png",
+						"description" : "Рабочая частота: 13,56 МГц ",
+						"price" : "0.3"
+					},
+					"radiochastotnaya-metka-iso18000-860-960mgts-saat-t821l-bumaga" : {
+						"name" : "Радиочастотная метка ISO18000 (860-960МГЦ) SAAT-T821l (бумага)",
+						"image" : "7_card_small.png",
+						"description" : "Дальность считывания до 8 м",
+						"price" : "1"
+					},
+					"radiochastotnaya-metka-iso18000-860-960mgts-saat-822-plastikovaya-karta" : {
+						"name" : "Радиочастотная метка ISO18000 (860-960МГЦ) SAAT-T822 (пластиковая карта)",
+						"image" : "6_card_small.png",
+						"description" : "Дальность считывания до 8 м",
+						"price" : "1.49"
+					},
+					"radiochastotnaya-metka-iso18000-860-960mgts-saat-824l-plastikovyy-korpus" : {
+						"name" : "Радиочастотная метка ISO18000 (860-960МГЦ) SAAT-T824L (пластиковый корпус)",
+						"image" : "8_card_small.png",
+						"description" : "Дальность считывания до 8 м",
+						"price" : "4.59"
+					}
+				};
+				
+				date = ' € (по курсу ЦБ РФ на )';
+				elemetsList = "";
+				
+				for (product in products) {
+					elemetsList += `
+						<div class="element" style="background-image: url(${products[product]['image']});">${products[product][['name']]}</div>
+					`;
+				}
+				
+				section = '<div class="section" data-cat="'+ search +'" id="'+ search +'"></div>';
+				sectionList = document.getElementById('section-list');
+				sectionList.insertAdjacentHTML('beforeend', section);
+				sec = document.getElementById(search);
+				sec.insertAdjacentHTML('beforeend', elemetsList);
+				
+				sec.insertAdjacentHTML('beforeend', `<p>В системах PERCo применяются бесконтактные карты доступа форматов EMM, HID (HID ProxCard II, ISO prox II; EM-Marin IL-05ELR, ЕМ4100) и MIFARE.</p>
+				<p>Бесконтактные карты используются в системах контроля доступа для идентификации. Сотрудникам выдаются постоянные карты-пропуска, для посетителей предусмотрены временные карты доступа. </p>
+				<table class="identifikatory">
+					<thead>
+						<tr>
+							<td rowspan="2">Тип карты</td>
+							<td rowspan="2">Защита от копирования</td>
+							<td rowspan="2">Рабочая частота</td>
+							<td rowspan="2">Габариты, мм</td>
+							<td colspan="2">Дальность считывания*, см</td>
+						</tr>
+						<tr>
+							<td>Уникального идентификатора UID</td>
+							<td style="width: 200px;">ID – данных из внутренней (зашифрованной) области памяти карты</td>
+						</tr>
+					</thead>
+					<tr>
+						<td>Брелок EMM (пластик)</td>
+						<td>нет</td>
+						<td>125 кГц</td>
+						<td>32х40х5 (без кольца)</td>
+						<td>6,5</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>Брелок EMM (кожа)</td>
+						<td>нет</td>
+						<td>125 кГц</td>
+						<td>50х55х5 (без кольца)</td>
+						<td>6,5</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>Карта EM-Marin Slim</td>
+						<td>нет</td>
+						<td>125 кГц</td>
+						<td>86х54х0,9</td>
+						<td>9</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>Карта EM-Marin</td>
+						<td>нет</td>
+						<td>125 кГц</td>
+						<td>86х54х2</td>
+						<td>12</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>Брелок Mifare Classic 1K (пластик)</td>
+						<td>да</td>
+						<td>13,56 МГц</td>
+						<td>32х40х5 (без кольца)</td>
+						<td>2</td>
+						<td>1,5-2</td>
+					</tr>
+					<tr>
+						<td>Брелок Mifare Classic 1K (кожа)</td>
+						<td>да</td>
+						<td>13,56 МГц</td>
+						<td>50х55х5 (без кольца)</td>
+						<td>1,5</td>
+						<td>1-1,5</td>
+					</tr>
+					<tr>
+						<td>Карта Mifare Classic 1K Slim</td>
+						<td>да</td>
+						<td>13,56 МГц</td>
+						<td>86х54х0,9</td>
+						<td>5</td>
+						<td>4</td>
+					</tr>
+					<tr>
+						<td>MIFARE Plus X 4K Slim</td>
+						<td>да</td>
+						<td>13,56 МГц</td>
+						<td>86х54х0,9</td>
+						<td>5</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>Карта Mifare Classic 1K </td>
+						<td>да</td>
+						<td>13,56 МГц</td>
+						<td>86х54х2</td>
+						<td>5</td>
+						<td>4,5</td>
+					</tr>
+				</table>
+				<p>* дальность считывания для встроенных считывателей и для считывателей дальнего действия будет отличаться</p>
+				<p>Каждой карте присвоен уникальный идентификатор UID (Unique Identifier). В некоторых случаях его наносят на карту. В картах доступа, работающих на частоте 125 кГц, для идентификации в СКУД используется только UID, этот способ не дает полноценной защиты от несанкционированного доступа. Существуют карты, позволяющие записать известный UID на уже новую карту и использовать ее как дубликат.</p>
+				<p>Для обеспечения высокого уровня безопасности в качестве идентификаторов используются карты доступа MIFARE с защитой от копирования, работающие на частоте 13,56 МГц. Главное отличие таких карт – защита от копирования, всегда защищенной ключом, во внутреннюю память записывается идентификатор доступа, использующийся в СКУД.</p>
+				<p>Для использования карт с защитой от копирования необходимо наличие в системе считывателей, поддерживающих режим чтения идентификаторов с защищенной области, например, PERCo-MR07.</p>
+				<p>Карту доступа можно оформить в виде пропуска с указанием ФИО, должности, подразделения, добавлением фотографии владельца и логотипа компании. Для печати на картах используются специальные принтеры, например, Evolis Zenius для односторонней печати или Evolis Primacy Duplex для двусторонней печати.</p>
+				<p>Для организации автоматического сбора карт доступа посетителей обычно используется картоприемник. Посетители пользуются бесконтактной картой, как временным пропуском, а на выходе опускают ее в картоприемник.
+				Кроме бесконтактных карт доступа в качестве ключей в системах PERCo могут использоваться бесконтактные брелоки.</p>
+				<table class="identifikatory">
+					<thead>
+						<tr>
+							<td>Тип карты</td>
+							<td>Защита от копирования</td>
+							<td>Рабочая частота</td>
+							<td>Объем памяти, EEPROM, байт</td>
+							<td>Криптоалгоритм</td>
+							<td>Циклы перезаписи</td>
+							<td>Уровни безопасности SL</td>
+						</tr>
+					</thead>
+					<tr>
+						<td>EM-Marin и HID (HID ProxCard II, ISO prox II; EM-Marin IL-05ELR, ЕМ4100).</td>
+						<td>нет</td>
+						<td>125 кГц</td>
+						<td>нет</td>
+						<td>нет</td>
+						<td>нет</td>
+						<td>нет</td>
+					</tr>
+					<tr>
+						<td>MIFARE Ultralight</td>
+						<td>да</td>
+						<td>13,56 МГц</td>
+						<td>64</td>
+						<td>нет</td>
+						<td>10 000</td>
+						<td>нет</td>
+					</tr>
+					<tr>
+						<td>MIFARE Ultralight C</td>
+						<td>да</td>
+						<td>13,56 МГц</td>
+						<td>192</td>
+						<td>3DES</td>
+						<td>10 000</td>
+						<td>нет</td>
+					</tr>
+					<tr>
+						<td>MIFARE Classic EV1 1K/4К </td>
+						<td>да</td>
+						<td>13,56 МГц</td>
+						<td>1024 / 4096</td>
+						<td>CRYPTO1</td>
+						<td>100 000</td>
+						<td>нет</td>
+					</tr>
+					<tr>
+						<td>MIFARE Plus S 2К/4K  </td>
+						<td>да</td>
+						<td>13,56 МГц</td>
+						<td>2048 / 4096</td>
+						<td>CRYPTO1/AES</td>
+						<td>200 000</td>
+						<td>1,3</td>
+					</tr>
+					<tr>
+						<td>MIFARE Plus X 2К/4K  </td>
+						<td>да</td>
+						<td>13,56 МГц</td>
+						<td>2048 / 4096</td>
+						<td>CRYPTO1/AES</td>
+						<td>200 000</td>
+						<td>1,2,3</td>
+					</tr>
+					<tr>
+						<td>MIFARE  DESFire EV1 2К/4K/8К </td>
+						<td>да</td>
+						<td>13,56 МГц</td>
+						<td>2048 / 4096 / 8192</td>
+						<td>3DES</td>
+						<td>500 000</td>
+						<td>нет</td>
+					</tr>
+				</table>`);
+			}
+			
+			if (search == "kompleksnaya-sistema-bezopasnosti-perco-s-20" || search == "sistema-bezopasnosti-perco-s-20-shkola" || search == "sistema-dlya-bankomatov-perco-s-800" || search == "sistema-kontrolya-dostupa-perco-web") {
+				document.querySelector(`#scrollmenu`).style.display = `none`;
+			}
+
+            showActive();
+            
+        });
+    }
+
+    function getPage(section){
+        $.getJSON('data_page.json', function(json){
+            sec = document.getElementById(section);
+            switch(section){
+                case "kompleksnaya-sistema-bezopasnosti-perco-s-20":
+                    sec = document.getElementById("content");
+                    break;
+                case "sistema-kontrolya-dostupa-perco-web":
+                    sec = document.getElementById("content");
+                    //console.log(sec);
+                    break;
+                case "sistema-bezopasnosti-perco-s-20-shkola":
+                    sec = document.getElementById("content");
+                    break;
+                case "sistema-dlya-bankomatov-perco-s-800":
+                    sec = document.getElementById("content");
+                    break;
+                case "elektromekhanicheskie-zamki":
+                    sec = document.getElementById("content");
+                    break;
+                case "turnikety":
+                    sec = document.getElementById("content");
+                    break;
+            }
+            console.log(section);
+            ///rrr = document.getElementById("content");
+            pageInfo = '<div class="section-information" id="'+ section +'-information"></div>';
+            //sec = document.getElementById(section);
+            sec.insertAdjacentHTML('beforeend', pageInfo);
+            //console.log(sec);
+            if (json[section].PREVIEW_TEXT){
+                preview = json[section].PREVIEW_TEXT;
+                sec = document.getElementById( ''+ section +'-information' );
+                sec.insertAdjacentHTML('beforeend', preview);
+            }
+            if (json[section].DETAIL_TEXT){
+                detail = json[section].DETAIL_TEXT;
+                sec = document.getElementById( ''+ section +'-information' );
+                sec.insertAdjacentHTML('beforeend', detail);
+            }
+            var tabsContent = '';
+            if(json[section].TEXT.VALUE){
+
+                for (tab in json[section].TEXT.VALUE){
+                    text = json[section].TEXT.VALUE[tab];
+                    textTiltle = json[section].TEXT.DESCRIPTION[tab];
+                    
+                    tabsContent += '<input name="vkladki" type="checkbox" id="tab'+ textTiltle +'"><label for="tab'+ textTiltle +'"><span class="dashed">'+ textTiltle +'</span></label><div>'+ text +'</div>';                   
+                }
+                tabs = '<div class="tabs product-tabs">'+ tabsContent +'</div>';
+                sec = document.getElementById( ''+ section +'-information' );
+                sec.insertAdjacentHTML('beforeend', tabs);
+            }
+        });
+    }
+
+    function showActive(){
+        posts = $('.section-list .section');
+        posts.hide();
+
+        $('a.link:first-child').addClass('active');
+        $('.section:first-child').show();
+    }
+
+    function changeSection(obj){
+        $('.scrollmenu a').removeClass('active');
+        $(obj).addClass('active');
+    
+        var customType = $(obj).data('filter'); // category
+        posts
+            .hide()
+            .filter(function () {
+                return $(this).data('cat') === customType;
+            })
+            .fadeIn();
+    }
+    </script>
+
+
+</body>
+
+</html>

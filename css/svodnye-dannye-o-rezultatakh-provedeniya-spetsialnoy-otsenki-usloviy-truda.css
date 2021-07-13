@@ -1,0 +1,56 @@
+#horizontal_scroll {
+    margin: auto;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#container #horizontal_scroll ul {
+    padding-left: 0;
+    display: flex;
+}
+
+#container #horizontal_scroll ul li {
+    list-style: none;
+    margin: auto;
+    text-align: center;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+#horizontal_scroll .lSAction>a {
+    background-repeat: no-repeat;
+    background-position: 10px 0px;
+    height: 45px;
+    width: 30px;
+}
+
+#horizontal_scroll .lSAction>.lSPrev,
+#horizontal_scroll .lSAction>.lSNext {
+    background-image: url("/images/icons/arrow.svg");
+}
+
+#horizontal_scroll .lSAction>.lSPrev,
+#horizontal_scroll .lSAction>.lSNext {
+    background-position: 10px 0;
+}
+
+#horizontal_scroll .lSAction>.lSPrev {
+    transform: rotate(180deg);
+}
+
+#horizontal_scroll h3 {
+    text-align: left;
+    margin-left: 5%;
+}
+
+#horizontal_scroll img {
+    border: 1px solid #cecece;
+}
+
+@media screen and (max-width: 900px) {
+    #horizontal_scroll li img {
+        max-width: 600px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,36 @@
+body #container { max-width: none; }
+.banner_image {
+	background-image: url(/images/banners/solution-e-institute.jpg);
+	height: 501px;
+}
+#news_feed {
+	margin-top: 10px;
+	position: relative;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+.lSAction {
+	left: 0;
+	margin: auto;
+	max-width: 1330px;
+	min-width: 360px;
+	position: absolute;
+	right: 0;
+	top: calc(50% - 50px);
+	width: 100%;
+}
+.lSAction > a {
+	height: 50px;
+	background-repeat: no-repeat;
+	opacity: 1;
+}
+.lSAction > .lSPrev { transform: rotate(180deg); }
+@media screen and (max-width: 900px) {
+	.banner_image {
+		background-size: cover;
+		height: 310px;
+	}
+}
+@media screen and (max-width: 720px) {
+	.banner_image { height: 145px; }
+}

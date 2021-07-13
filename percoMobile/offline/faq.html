@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <link type="text/css" rel="stylesheet" href="template_styles.css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="__deviceload__/cordova.js"></script>
+    <script type="text/javascript" src="bitrix_mobile_core.js"></script>
+</head>
+
+<body>
+    <script>
+        app.setPageTitle({
+          title: "FAQ"
+        });
+    </script>
+
+    <div class="faq" id="content">
+		<div class="scrollmenu" id="scrollmenu"></div>
+		<div class="section-list" id="section-list"></div>
+  	</div>
+  
+    <script>
+        var posts;
+
+        $.getJSON('data_faq.json', function(json){      
+            for (var prop in json) {
+                sectionName = json[prop].NAME;
+                sectionCode = json[prop].CODE;
+                image = json[prop].DESCRIPTION.substr(14).replace(".svg", "");
+                
+                link = '<a class="link" onclick="changeSection(this)" data-filter="'+ sectionCode +'" ><img alt="'+ sectionName +'" src="bxlocal://catalog-'+ image +'.png">' + sectionName + '</a>';
+                scrollmenu = document.getElementById("scrollmenu");
+                scrollmenu.insertAdjacentHTML('beforeend', link);
+                section = '<div class="section tabs" data-cat="'+ sectionCode +'" id="'+ sectionCode +'"></div>';
+                sectionList = document.getElementById("section-list");
+                sectionList.insertAdjacentHTML('beforeend', section);
+
+                if (json[prop].ITEMS){
+                    for(var item in json[prop].ITEMS){
+                        var questionList = "";
+                        for (var question in json[prop].ITEMS[item].ELEMENTS){
+                            questionList += '<p class="question">'+ json[prop].ITEMS[item].ELEMENTS[question].NAME +'</p><p class="answer">'+ json[prop].ITEMS[item].ELEMENTS[question].PREVIEW_TEXT +'</p>';
+                        }
+
+                        itemSection = '<input name="vkladki" type="checkbox" id="'+ json[prop].ITEMS[item].CODE +'"><label for="'+ json[prop].ITEMS[item].CODE +'"><span class="dashed">'+ json[prop].ITEMS[item].NAME +'</span></label><div>'+ questionList +'</div>';
+                        sec = document.getElementById(sectionCode);
+                        sec.insertAdjacentHTML('beforeend', itemSection);
+                    }
+                }
+                if (json[prop].ELEMENTS){
+                    for (var question in json[prop].ELEMENTS){
+                        questionList += '<p class="question">'+ json[prop].ELEMENTS[question].NAME +'</p><p class="answer">'+ json[prop].ELEMENTS[question].PREVIEW_TEXT +'</p>';
+                    }
+                    sec = document.getElementById(sectionCode);
+                    sec.insertAdjacentHTML('beforeend', questionList);
+                }
+            }
+
+            showActive();
+            
+        });
+
+        function showActive(){
+            posts = $('.section-list .section');
+            posts.hide();
+
+            $('a.link:first-child').addClass('active');
+            $('.section:first-child').show();
+        }
+
+        function changeSection(obj){
+            $('.scrollmenu a').removeClass('active');
+            $(obj).addClass('active');
+        
+            var customType = $(obj).data('filter'); // category
+            posts
+                .hide()
+                .filter(function () {
+                    return $(this).data('cat') === customType;
+                })
+                .fadeIn();
+        }
+    </script>
+</body>
+
+</html>

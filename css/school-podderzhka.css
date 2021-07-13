@@ -1,0 +1,20 @@
+body #container { max-width: none; }
+.banner_image {
+	background-image: url(/images/banners/banner_support.jpg);
+	height: 435px;
+}
+.imagesSupport { display: flex; }
+.imagesSupport > * {
+	flex-basis: 270px;
+	margin-right: 20px;
+}
+@media screen and (max-width: 900px) {
+	.banner_image {
+		background-image: url(/images/banners/banner_support_mini.jpg);
+		background-size: cover;
+		height: 310px;
+	}
+}
+@media screen and (max-width: 720px) {
+	.banner_image { height: 145px; }
+}

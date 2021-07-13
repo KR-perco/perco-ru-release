@@ -1,0 +1,284 @@
+body #container { max-width: none; }
+.dop_menu {
+	max-width: 1200px;
+	min-width: 360px;
+	width: 100%;
+	margin: auto !important;
+}
+.banner_image {
+	background-image: url(/images/banners/banner_about.jpg);
+	height: 510px;
+	background-size: cover;
+}
+.banner_text {
+	bottom: 28px;
+	color: #fff;
+	display: flex;
+	left: 0;
+	margin: auto;
+	max-width: 1200px;
+	min-width: 360px;
+	width: 100%;
+	position: absolute;
+	right: 0;
+}
+.banner_text div {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	width: 50%;
+}
+.banner_text img {
+	height: 65px;
+	margin-bottom: 3px;
+	margin-right: 20px;
+}
+.bleft { margin-left: 39px; }
+.bright { margin-left: 142px; }
+#state_banner, .b_item { display: flex; }
+.b_item img {
+	flex-shrink: 0;
+	margin-right: 14px;
+	width: 90px;
+	height: 50px;
+}
+#state_banner {
+	background: #F1F1F2;
+	background: linear-gradient(to top, #E6E7E8, white);
+	margin-top: -20px;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	padding: 10px;
+	position: relative;
+	z-index: 10;
+}
+#state_banner ul li { margin: 5px 0 !important; }
+.fon_img { position: relative; }
+.years, .text_on_map {
+	color: #fff;
+	position: absolute;
+	text-shadow: -1px -1px 0 #a1b2cb, 1px -1px 0 #a1b2cb, -1px 1px 0 #a1b2cb, 1px 1px 0 #02316b;
+}
+.years {
+	font-size: 23px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	top: 14px;
+	margin-right: 14px;
+}
+.text_on_map {
+	font-size: 28px;
+	left: 48px;
+	top: -8px;
+}
+.blue {
+	font-size: 33px;
+	font-weight: bold;
+	color: #214288;
+}
+.text_item {
+	margin: 0 30px;
+	width: 47%;
+}
+.image_items {
+	display: flex;
+	flex-basis: 55%;
+	flex-wrap: wrap;
+}
+.image_items > div {
+	display: flex;
+	margin: 20px 0;
+}
+.b_item:nth-child(2n+1) {
+	flex-basis: 59%;
+}
+.b_item:nth-child(2n) {
+	flex-basis: 41%;
+}
+.h2 {
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+#proizvodstvo_banner { background-image: url(/images/banners/proizvodstvo_banner.jpg); }
+#gruppi_tovarov_banner { background-image: url(/images/banners/gruppi_tovarov_banner.jpg); }
+#kachestvo_banner { background-image: url(/images/banners/kachestvo_banner.jpg); }
+#obuchenie_banner { background-image: url(/images/banners/obuchenie_banner.jpg); }
+.vkladka_banner {
+	background-position: center;
+	height: 428px;
+}
+.vkladka_banner > .border {
+	border-color: #F1F2F2;
+	cursor: default;
+	border-width: 1px;
+	margin: 5px;
+	top: 5px;
+	width: calc(100% - 12px);
+	height: calc(100% - 10px);
+}
+#preview_content { display: flex; }
+#preview_content .left {
+	flex-basis: 45%;
+	margin-right: 30px;
+}
+#preview_content .right {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	flex-basis: 55%;
+}
+#preview_content .right .border > span {
+	left: -23px;
+	top: -35px;
+	position: absolute;
+}
+.video_text{
+	padding-left: 15px;
+}
+.video_text > p {
+	align-items: center;
+	display: flex;
+}
+.video_text > p:first-child { color: #214288;}
+.video_item { display: flex; }
+.video_item > img {
+	width: 19px;
+	height: 17px;
+	margin-top: 5px;
+}
+.border {
+	cursor: pointer;
+	align-items: flex-end;
+	display: flex;
+	border: 1px solid #F1F2F2;
+	border-bottom: 2px solid #BCBEC0;
+	width: 315px;
+	height: 245px;
+	position: relative;
+}
+#virtual-tour-block {
+	margin-bottom: 70px;
+	margin-top: 48px;
+	width: 100%;
+}
+#virtual-tour {
+	width: 100%;
+	height: 360px;
+}
+#virtual-tour > div { z-index: 100 !important; }
+#virtual_text {
+	display: flex;
+	align-items: center;
+	margin-top: 5px;
+}
+#virtual_text img {
+	width: 32px;
+	/* height: 17px; */
+	margin-right: 8px;
+}
+.grey, .grey a {
+	color: #929497;
+	text-decoration: none;
+}
+.dop_block {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+#horizontal_scroll { margin: 30px 0; }
+#horizontal_scroll .lSSlideOuter { margin-top: 10px; }
+.vkladka_menu { margin-top: 30px; }
+#kachestvo { cursor: pointer; }
+/*.lg-video-cont:not(.lg-has-html5) { max-width: 100% !important; }*/
+#container #html5-videos p,
+#container #kachestvo
+{
+	font-size: 15px;
+}
+@media screen and (max-width: 2000px) {
+	.banner_image {
+		height: 510px;
+	}
+}
+
+@media screen and (max-width: 1500px) {
+	.banner_image {
+		height: 410px;
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.banner_image {
+		height: 310px;
+	}
+}
+
+@media screen and (max-width: 1120px) {
+	.banner_image {
+		background-image: url(/images/banners/banner_about_mini.jpg);
+	}
+	.banner_text img { margin-bottom: -5px; }
+}
+@media screen and (max-width: 930px) {
+		.banner_image {
+		background-size: cover;
+		height: 260px;
+	}
+}
+@media screen and (max-width: 900px) {
+	#proizvodstvo_banner { background-image: url(/images/banners/proizvodstvo_banner_mini.jpg); }
+	#gruppi_tovarov_banner { background-image: url(/images/banners/gruppi_tovarov_banner_mini.jpg); }
+	#kachestvo_banner { background-image: url(/images/banners/kachestvo_banner_mini.jpg); }
+	#obuchenie_banner { background-image: url(/images/banners/obuchenie_banner_mini.jpg); }
+	.vkladka_banner { height: 321px; }
+	#state_banner,  #preview_content { flex-direction: column; }
+	#preview_content .left, #preview_content .right, .image_items { flex-basis: auto; }
+	.image_items { flex-wrap: wrap; }
+	.b_item:nth-child(2n+1) { flex-basis: 50%; }
+	.text_item {
+		margin: 0;
+		width: 100%;
+	}
+	#preview_content .left { margin-right: 0; }
+}
+@media screen and (max-width: 720px) {
+	.banner_image {
+		background-size: cover;
+		height: 220px;
+	}
+	.banner_text { bottom: 4px; }
+	html:lang(en) .banner_text div, html:lang(es) .banner_text div { width: auto; }
+	html:lang(en) .banner_text .bright { margin-left: 68px; }
+	.bleft { margin-left: 10px; }
+	.bright { margin-left: 50px; }
+	.vkladka_banner {
+		background-size: cover;
+		height: 145px;
+	}
+	.image_items { display: none; }
+	#state_banner { margin-top: 0; }
+	.dop_block { flex-direction: column; }
+	#virtual-tour { height: 280px; }
+}
+@media screen and (max-width: 680px) {
+	.banner_image {
+		background-size: cover;
+		height: 180px;
+	}
+}
+
+@media screen and (max-width: 530px) {
+	.banner_image {
+		background-size: cover;
+		height: 145px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.banner_image {
+		background-size: cover;
+		height: 115px;
+	}
+}

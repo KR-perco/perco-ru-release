@@ -1,0 +1,22 @@
+.mobile #mapBlock { display: none; }
+#countries { display: flex; }
+#countries, #cities {
+	border-bottom: 2px solid #BCBEC0;
+	padding: 20px 0;
+}
+#countries .region_name {
+	display: block;
+	margin-right: 50px;
+}
+.active {
+	color: #003C8E;
+	font-weight: bold;
+}
+#allcity, #allcity + label { display: none; }
+body:not(.mobile) g:hover > g { display: block !important;}
+@media screen and (max-width: 720px) {
+	#countries .region_name { margin-right: 20px; }
+	#cities { padding: 0; }
+	#content input:checked + label + div{ padding-bottom: 20px; }
+	.company_name { width: 230px; }
+}

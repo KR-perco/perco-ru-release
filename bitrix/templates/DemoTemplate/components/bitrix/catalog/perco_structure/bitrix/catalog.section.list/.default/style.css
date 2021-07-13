@@ -1,0 +1,56 @@
+h1 { 
+	margin: 10px 0; 
+}
+
+.section{
+	display: flex;
+    flex-wrap: wrap;
+}
+
+.section .element{
+	width: 32%
+}
+
+.section .element:nth-child(3n-1){
+	margin: 0 2%;
+}
+
+.section .element a{
+	text-decoration: none;
+}
+
+.section .element img{
+	width: 100%;
+}
+
+.section .element p{
+	font-size: 12px;
+	margin: 0 0 15px;
+	color: #000;
+}
+
+.section .detail_text ul li:before {
+    content: "\2022";
+    color: #00295b;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+@media screen and (max-width: 425px) {
+	.section .element{
+		width: 48%
+	}
+	
+	.section .element:nth-child(3n-1){
+		margin: 0;
+	}
+
+	.section .element:nth-child(2n){
+		margin-left: 4%;
+	}
+}
+
+
+

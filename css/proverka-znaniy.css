@@ -1,0 +1,14 @@
+#container #content { display: block; }
+.auth { text-decoration: none; }
+#content li { margin-bottom: 5px; }
+.right {
+	font-size: 12px;
+	float: right;
+	margin-left: 30px;
+	text-align: center;
+}
+.icon {
+	height: 16px;
+	margin-right: 10px;
+	width: 20px;
+}

@@ -1,0 +1,11 @@
+#elements_list {
+	display: flex;
+	flex-wrap: wrap;
+}
+#elements_list .element_item {
+	display: flex;
+	flex-basis: 314px;
+	flex-direction: column;
+	font-size: 14px;
+	margin-top: 20px;
+}

@@ -1,0 +1,50 @@
+body #container { max-width: none; }
+body #container > #main_block {
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+}
+#secel_list {
+	margin-top: 20px;
+	order: 1;
+}
+#elements_list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 30px auto;
+}
+.element_item {
+	display: flex;
+	flex-basis: 185px;
+	justify-content: center;
+	margin: 10px;
+}
+.element_item a {
+	color: black;
+	text-align: center;
+}
+.element_item img {
+	width: 53px;
+	height: 60px;
+}
+@media screen and (max-width: 1120px) {
+	.banner_image { height: 310px; }
+}
+@media screen and (max-width: 900px) {
+	.banner_image { background-size: cover; }
+	.element_item { flex-basis: 145px; }
+}
+@media screen and (max-width: 720px) {
+	.banner_image { height: 145px; }
+	.element_item {
+		flex-basis: 80px;
+		font-size: 11px;
+		margin: 0 5px 20px 0;
+	}
+	.tabs > div { flex-direction: column; }
+	.tabs > div > .img_items { justify-content: flex-start; }
+	.img_item { margin-left: 0; }
+	.img_items > img { max-width: 320px; }
+	#main_block .tabs > input:checked + label + div { max-height: 100%; }
+}

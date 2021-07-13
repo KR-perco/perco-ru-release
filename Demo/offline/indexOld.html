@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=320">
+
+	<script type="text/javascript" src="__deviceload__/cordova.js"></script>
+	<script type="text/javascript" src="bitrix_mobile_core.js"></script>
+	<script type="text/javascript" src="core_db.js"></script>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="fastclick.js"></script>
+	<!--script type="text/javascript" src="script.js"></script-->
+	<script type="text/javascript" src="core_promise.js"></script>
+	<link href="template_styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div>
+	<button onclick="showLocalStorage()">Посмотреть localStorage</button>
+	<button onclick="getDataFromJson()">Посмотреть список данных для скачивания</button>
+</div>
+
+
+
+
+
+<script>
+
+	/*$.getJSON("bxlocal://data_documentation.json", function(json){
+			alert(json);
+		})*/
+	document.addEventListener("deviceready", downloadBasicData, false);
+	localStorage.setItem("sortKey", "NAME", 111);
+
+	//скачивание основных данных
+	function downloadBasicData() {
+		let apiPath = "https://www.perco.ru/percoDemo/offline/data_download.json";
+		var fileurl = cordova.file.documentsDirectory + 'data_documentation.json'; //ios
+		//var fileurl = cordova.file.externalDataDirectory + 'data_documentation.json'; //android
+		alert(fileurl);
+		downloadFile(apiPath, fileurl);
+	}
+
+	function readTextFile(file, callback) {
+		var rawFile = new XMLHttpRequest();
+		rawFile.overrideMimeType("application/json");
+		rawFile.open("GET", file, true);
+		rawFile.onreadystatechange = function() {
+			if (rawFile.readyState === 4 && rawFile.status == "200") {
+				callback(rawFile.responseText);
+			}
+		}
+		rawFile.send(null);
+	}
+
+
+
+	//разбор json файла c основными данными
+	function getDataFromJson() {
+		let jsonPath = localStorage.getItem("dataPath");
+		alert(jsonPath);
+		//BXMobileApp.UI.Document.open({"url": jsonPath});
+		//BXMobileApp.UI.Document.
+
+			//usage:
+	/*readTextFile(jsonPath, function(text){
+		var data = JSON.parse(text);
+		alert(data);
+	});*/
+
+	$.getJSON("https://www.perco.ru/percoDemo/offline/data_documentation.json", function(json){
+			alert(json);
+		})
+
+		//eadFile(jsonPath);
+
+		/*$.getJSON("https://www.perco.ru/percoDemo/offline/data_download.json", function(json) {
+			//console.log(json); // this will show the info in firebug console 
+			alert(json);
+		});*?
+
+		//var obj = JSON.parse(jsonPath);
+		//alert(obj);
+		/*$.getJSON(jsonPath, function(json) {
+			alert(json); // this will show the info it in firebug console
+		});*/
+	}
+
+	function readFile(fileEntry) {
+		alert(fileEntry.file);
+
+		fileEntry.file(function (file) {
+			var reader = new FileReader();
+
+			reader.onloadend = function() {
+				alert(fileEntry.fullPath);
+				alert("Successful file read: " + this.result);
+				//displayFileData(fileEntry.fullPath + ": " + this.result);
+			};
+
+			reader.readAsText(file);
+
+		}, onErrorReadFile);
+	}
+
+
+	//скачивание одного файла
+	function downloadFile(uri, fileURL){
+
+		var fileTransfer = new FileTransfer();
+
+		fileTransfer.download(
+			uri, 
+			fileURL, 
+			function(entry) {
+				filelink = entry.toURL();
+				localStorage.setItem("dataPath", filelink, 111);
+
+				//alert("download complete: " + filelink);
+				//docHref = '<button onclick="openFile(' + filelink + ')">ссылка на файл</button><p>'+ filelink +'</p>';
+
+				/*docHref = '<input type="button" id="elem" onclick="alert("dsf")" value="Нажми меня">';
+				
+
+				//alert(docHref);
+				//mew("sad");
+				//docHref = '<button onclick="alert(' + filelink + ')">ссылка на файл</button><p>'+ filelink +'</p>';
+				//BXMobileApp.UI.Document.open({"url":"/mysite.com/text.txt"})
+				BXMobileApp.UI.Document.open({"url": filelink})
+
+				//docHref = "<a href='bxlocal://"+ filelink +"'>ссылка на " + name + "</a><p>"+ filelink +"</p>";
+				doc = document.getElementById("results");
+				doc.insertAdjacentHTML('beforeend', docHref);	
+
+				elem = document.getElementById("elem");
+				elem.onclick = function() { BXMobileApp.UI.Document.open({"url": filelink}) };*/
+			},
+		
+			function(error) {
+				alert("error" + filelink);
+				alert("download error code" + error.code);
+			},
+				
+			false, {
+				headers: {
+					"Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+				}
+			}
+		);
+	}
+
+	//преобразование данных
+	function formatSize(length){
+		var i = 0, type = ['б','Кб','Мб','Гб','Тб','Пб'];
+		while((length / 1000 | 0) && i < type.length - 1) {
+			length /= 1024;
+			i++;
+		}
+		return length.toFixed(2) + ' ' + type[i];
+	}
+
+	//посмотреть записан ли путь до основных данных
+	function showLocalStorage() {
+		let jsonPath = localStorage.getItem("dataPath")
+		alert(jsonPath);
+	}
+	
+	//проверка связи
+	function checkConnection() {
+	    var networkState = navigator.connection.type;
+		if (networkState == 'none'){
+			alert('Для скачивания материалов следует подключиться к сети!');
+		}
+	}
+
+</script>
+</body>
+</html>

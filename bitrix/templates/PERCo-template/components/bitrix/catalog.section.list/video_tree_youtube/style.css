@@ -1,0 +1,137 @@
+.catalog-section-list{
+	margin-bottom: 20px;
+}
+
+#container .slider .lSSlideWrapper{
+	min-height: 300px;
+	margin-bottom: 20px;
+}
+
+#container .slider ul#lightSlider{
+	padding-left: 0 !important;
+	margin-bottom:0;
+	/* height: 330px !important; */
+	/* height: max-content !important; */
+}
+
+#container .slider ul#lightSlider > li{
+	display: block;
+	float: left;
+	height: 100%;
+	margin: 0;
+    padding-left: 0px !important;
+}
+
+#container .slider ul#lightSlider li iframe{
+	/*flex: 2 2 200px; */
+	margin-top: 0px;
+	/*height: 330px;*/
+}
+
+#container .slider ul#lightSlider li .description{
+	width: 50%;
+	/*flex: 2 2 200px; */
+	margin-left: 25px;
+	font-size: 14px;
+}
+
+#container .slider ul#lightSlider li .description li{
+	margin: 0;
+}
+
+#container .slider .lSGallery{
+	width: 100% !important;
+	display: flex !important;
+	flex-wrap: wrap !important;
+	padding-left: 0 !important;
+	margin: 0;
+	transform: none !important;
+}
+
+#container .slider .lSGallery li{
+	border-radius: 0;
+	display: block;
+    float: left;
+    cursor: pointer;
+	width: 196px !important;
+	margin: 0 40px 10px 0 !important;
+	padding: 0;
+}
+
+.video-block{
+	display: flex; 
+	flex-wrap: wrap;
+}
+
+.video-block h3{
+	margin: 7px 0;
+}
+
+.iframe {
+	width: 50%;
+	position: relative;
+	height: 0;
+	padding-bottom: 28.1%;;
+}
+
+iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	margin: auto;
+	max-width: 100%;
+}
+
+.description{
+	flex: 2 2 300px;
+	margin-left: 15px;
+}
+
+.new_files {
+	color: #D10024;
+	font-weight: bold;
+	margin-right: 5px;
+}
+
+@media screen and (max-width: 930px) {
+	#container .slider ul#lightSlider{
+		padding-left: 0 !important;
+		margin-bottom:0;
+		/* height: 100% !important; */
+	}
+
+	#container .slider ul#lightSlider li iframe{
+		flex: none;
+		/*width: 80%;*/
+	}
+
+	#container .slider ul#lightSlider li .description{
+		flex: none;
+		width: 100%;
+		margin: 0px;
+	}
+}
+
+@media screen and (max-width: 780px) {
+	.iframe {
+		width: 100%;
+		padding-bottom: 56.2%;;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#container .slider .lSGallery li{
+		width: 48% !important;
+		margin: 1% !important;
+	}
+}
+
+
+@media screen and (max-width: 440px) {
+	.scroll-btn{
+		display: block;
+	}
+}

@@ -1,0 +1,88 @@
+img[src="/images/icons/video.svg"]:nth-child(even) {
+	display: none;
+}
+
+.text_items {
+	inline-size: 100%;
+}
+
+.iconsTitle {margin-block-end: 32px;}
+
+.iconsTitle_big {margin-block-end: 40px;}
+
+.tabIcons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	inline-size: 100%;
+}
+
+.tabIcon {
+	display: flex;
+	flex-direction: column;
+	margin-right: 30px;
+	margin-bottom: 32px;
+	inline-size: 300px;
+}
+
+.tabIcon_upravlenie {
+	inline-size: 216px;
+}
+
+.tabIcon_complect {
+	inline-size: 252px;
+}
+
+.tabIcon_complect .tabIcon__img {
+	border: 1px solid #9da1a364;
+}
+
+.tabIcon__title {
+	padding-block-end: 8px;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: 600;
+}
+
+.tabIcon__title {
+	inline-size: 100%;
+	border-block-end: 1px solid #d4d4d4;
+}
+
+.tabIcon__imgLink, .tabIcon__img {
+	inline-size: 100%;
+	max-inline-size: 252px;
+}
+
+.tabIcon__text {
+	margin-block-start: 16px;
+	inline-size: 100%;
+	max-inline-size: 300px;
+	color: #222;
+	font-size: 18px;
+}
+
+.tabIcon__text_complect {
+	max-inline-size: 252px;
+}
+
+@media (min-width: 512px) {
+	.tabIcon_upravlenie .tabIcon__title {
+		block-size: 40px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.tabIcon {
+		margin-right: 80px;
+		margin-bottom: 64px;
+	}
+	
+	.tabIcon_upravlenie {
+		margin-right: 16px;
+	}
+	
+	.tabIcon_complect {
+		margin-right: 32px;
+	}
+}

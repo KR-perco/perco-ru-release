@@ -1,0 +1,40 @@
+body #container { max-width: none; }
+.banner_image {
+	background-image: url(/images/banners/banner_vacancies.jpg);
+	height: 380px;
+}
+.banner_text {
+	bottom: 15px;
+	color: #214288;
+	display: flex;
+	left: 0;
+	margin: auto;
+	max-width: 1200px;
+	min-width: 360px;
+	position: absolute;
+	right: 0;
+}
+.banner_text div { width: 50%; }
+.bleft { margin-left: 10px; }
+.bright { margin-left: 142px; }
+.link {color: inherit; text-decoration: none;}
+#vacancies { display: flex; }
+#vacancies > div { flex-basis: 50%; }
+@media screen and (max-width: 1120px) {
+	.banner_image {
+		background-image: url(/images/banners/banner_vacancies_mini.jpg);
+		height: 310px;
+	}
+}
+@media screen and (max-width: 900px) {
+	#container #vacancies li { margin-right: 5px; }
+}
+@media screen and (max-width: 720px) {
+	.banner_image {
+		background-size: cover;
+		height: 145px;
+	}
+	.banner_text { bottom: 4px; }
+	.bleft { margin-left: 10px; }
+	.bright { margin-left: 50px; }
+}

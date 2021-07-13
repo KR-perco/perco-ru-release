@@ -1,0 +1,32 @@
+<?
+$MESS['LEARNING_QUESTION_TITLE'] = 'Klausimas';
+$MESS['LEARNING_QUESTION_OF'] = 'iр';
+$MESS['LEARNING_QUESTION_DESCRIPTION'] = 'Apraрymas';
+$MESS['LEARNING_CHOOSE_ANSWER'] = 'Pasirinkite atsakymа';
+$MESS['LEARNING_BTN_START'] = 'Pradлti';
+$MESS['LEARNING_BTN_NEXT'] = 'Sekantis';
+$MESS['LEARNING_BTN_PREVIOUS'] = 'Grбюti';
+$MESS['LEARNING_BTN_FINISH'] = 'Baigti';
+$MESS['LEARNING_BTN_CONTINUE'] = 'Tжsti';
+$MESS['LEARNING_BTN_CONFIRM_FINISH'] = 'Ar tikrai norite baigti testа?';
+$MESS['LEARNING_COMPLETED'] = 'Testas baigtas.';
+$MESS['LEARNING_NO_RESPONSE_CONFIRM'] = 'Jыs nepasirinkote atsakymo! OK - pereiti prie kito klausimo. Tuo paиiu atsakymas yra laikoma neteisingu. Atрaukti - pasirinkti atsakymа.';
+$MESS['LEARNING_PROFILE'] = 'Perюiыrлti testavimo rezultatus';
+$MESS['LEARNING_QBAR_CURRENT_TITLE'] = 'Einamasis klausimas';
+$MESS['LEARNING_QBAR_ANSWERED_TITLE'] = 'Atsakytas klausimas';
+$MESS['LEARNING_QBAR_NOANSWERED_TITLE'] = 'Neatsakytas klausimas';
+$MESS['LEARNING_QBAR_NEXT_TITLE'] = 'Pereiti prie kito klausimo';
+$MESS['LEARNING_QBAR_NEXT_NOANSWER_TITLE'] = 'Pereiti prie kito neatsakyto klausimo';
+$MESS['LEARNING_QBAR_PREVIOUS_TITLE'] = 'Pereiti prie ankstesnio klausimo';
+$MESS['LEARNING_QBAR_PREVIOUS_NOANSWER_TITLE'] = 'Pereiti prie ankstesnio neatsakyto klausimo';
+$MESS['LEARNING_TEST_NAME'] = 'Testo pavadinimas';
+$MESS['LEARNING_TEST_ATTEMPT_LIMIT'] = 'Bandymш skaiиius';
+$MESS['LEARNING_TEST_ATTEMPT_UNLIMITED'] = 'neribotas';
+$MESS['LEARNING_TEST_TIME_LIMIT'] = 'Laiko apribojimai';
+$MESS['LEARNING_TEST_TIME_LIMIT_UNLIMITED'] = 'be apribojimш';
+$MESS['LEARNING_TEST_TIME_LIMIT_MIN'] = 'min.';
+$MESS['LEARNING_PASSAGE_TYPE'] = 'Testo sprendimo tipas';
+$MESS['LEARNING_PASSAGE_NO_FOLLOW_NO_EDIT'] = 'draudюiama pereiti prie kito klausimo neatsakius б einamаjб klausimа, <b>negalima</b> pakeisti savo atsakymш.';
+$MESS['LEARNING_PASSAGE_FOLLOW_NO_EDIT'] = 'leidюiama perkelti б kitа klausimа neatsakius б einamаjб, <b>negalima</b> pakeisti savo atsakymш.';
+$MESS['LEARNING_PASSAGE_FOLLOW_EDIT'] = 'leidюiama pereiti б kitа klausimа neatsakius б einamаjб, <b>galima</b> pakeisti savo atsakymus.';
+?>

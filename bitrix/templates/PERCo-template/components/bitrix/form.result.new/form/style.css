@@ -1,0 +1,13 @@
+.form_row { display: flex; }
+.form_row > div:first-child {
+	flex-basis: 210px;
+	flex-shrink: 0;
+}
+.form_row > div { padding: 3px 5px 3px 0; }
+/*.form_row input, .form_row textarea { width: 250px; }*/
+.form_row input[name="captcha_word"] { width: 190px; }
+div input[type="submit"] { margin-top: 0; }
+@media screen and (max-width: 720px) {
+	.form_row  { flex-direction: column; }
+	.form_row > div:first-child { flex-basis: auto; }
+}

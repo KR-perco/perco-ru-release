@@ -1,0 +1,24 @@
+#contacts, #change_products, #qrcode { display: flex; }
+#contacts { margin-top: -20px; }
+#contacts > div { width: 50%; }
+#contacts > div:first-child { margin-right: 30px; }
+#change_products { justify-content: space-between; }
+#qrcode {
+	flex-direction: column;
+	margin-right: 20px;
+	margin-top: 70px;
+	text-align: center;
+}
+#contacts table td { border: none; }
+#content > div:last-child { margin-top: 30px; }
+#feedback { margin-top: 20px; }
+.nowrap { white-space: nowrap; }
+@media screen and (max-width: 900px) {
+	#contacts {
+		flex-direction: column;
+		margin-top: 0;
+	}
+	#contacts > div:first-child { margin-right: 0; }
+	#contacts > div { width: auto; }
+	#qrcode { display: none; }
+}

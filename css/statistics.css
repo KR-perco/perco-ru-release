@@ -1,0 +1,45 @@
+.table_sort table {
+    border-collapse: collapse;
+}
+
+.table_sort th:hover {
+    background: #4562A2;
+}
+.table_sort th {
+    color: #fff;
+    background: #214288;
+    cursor: pointer;
+    height: 40px;
+    padding-left:40px;
+    padding-right:40px;
+}
+
+.table_sort td,
+.table_sort th {
+    text-align: center;
+    border: 1px solid #BDBEC0;
+}
+
+.table_sort tbody tr:nth-child(even) {
+    background: #e3e3e3;
+}
+
+th.sorted[data-order="1"],
+th.sorted[data-order="-1"] {
+    position: relative;
+}
+
+th.sorted[data-order="1"]::after,
+th.sorted[data-order="-1"]::after {
+    right: 8px;
+    top:14px;
+    position: absolute;
+}
+
+th.sorted[data-order="-1"]::after {
+	content: "▼"
+}
+
+th.sorted[data-order="1"]::after {
+	content: "▲"
+}

@@ -1,0 +1,81 @@
+body #container { flex-direction: row; }
+.years { margin-top: 20px; }
+.year { position: relative; }
+.year > input { display: none; }
+.year > label {
+	border-right: 2px solid #BCBEC0;
+	cursor: pointer;
+	display: block;
+	padding: 15px 0;
+	position: relative;
+	width: 100px;
+}
+.year > input:checked + label + .year_content {
+	max-height: 3000px;
+	padding-bottom: 20px;
+}
+.year > label > div {
+	position: absolute;
+	top: -6px;
+}
+.year > label > span {
+	background-color: #214288;
+	border-radius: 5px;
+	border: 2px solid #214288;
+	display: inline-block;
+	height: 5px;
+	right: -5px;
+	top: 0;
+	position: absolute;
+	width: 5px;
+}
+.year > input:checked + label > span { background-color: white; }
+.year_content {
+	border-left: 2px solid #BCBEC0;
+	max-height: 0;
+	margin-left: 100px;
+	padding-bottom: 0;
+	padding-left: 20px;
+	overflow: hidden;
+	transition: all 2s;
+}
+.year p {
+	margin: 0;
+	padding: 5px 0;
+}
+@media screen and (max-width: 900px) {
+	.year_content {
+		border-left: none;
+		margin-left: 0;
+		padding-left: 0;
+	}
+	.year { border-bottom: 1px dashed #231f20; }
+	.year > label { border-right: none; }
+	.year > label {
+		padding: 0;
+		width: 100%;
+	}
+	.year > label > div {
+		padding: 10px 20px;
+		position: static;
+	}
+	.year > label > span { display: none; }
+	.year label:before {
+		content: url(/images/menu/li.menu.svg);
+		position: absolute;
+		width: 6px;
+		left: 0;
+		top: calc(50% - 9px);
+		transform: rotate(0);
+		transition: transform .5s;
+	}
+	.year > input:checked + label {
+		background: none;
+		border-bottom: none;
+	}
+	.year > input:hover + label { background: none; }
+	.year > input:checked + label + .year_content { max-height: 3000px; }
+	.year input:checked + label:before {
+		transform: rotate(90deg);
+	}
+}

@@ -1,0 +1,25 @@
+.breadcrumb-navigation
+{
+	list-style: outside none none;
+	padding: 0;
+	margin: 5px 10px;
+}
+.breadcrumb-navigation li { display: inline; }
+.navlink
+{
+	color: #929497;
+	font-size: 12px;
+}
+li.navlink { color: black; }
+.breadcrumb-navigation img { vertical-align: middle; }
+
+a.last-link {
+	color: black;
+	text-decoration: none;
+	cursor: default;
+}
+
+a.last-link:hover {
+	text-decoration: none;
+	cursor: default;
+}

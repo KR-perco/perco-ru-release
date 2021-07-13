@@ -1,0 +1,7 @@
+body #container { flex-direction: row; }
+h1 { font-size: 18px !important; }
+.preview_text { margin-top: 20px; }
+.img_items {
+	margin: 20px 0;
+	text-align: center;
+}

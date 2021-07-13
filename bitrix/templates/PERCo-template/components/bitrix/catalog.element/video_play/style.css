@@ -1,0 +1,19 @@
+#video_element > video {
+	display: block;
+	margin: auto;
+	max-width: 100%;
+}
+.dop_info {
+	margin-top: 10px;
+}
+
+.dop_info .meta{
+    text-align: right;
+}
+
+.dop_info > div:last-child { flex-shrink: 0; }
+
+
+.description{
+	margin: 20px 0;
+}

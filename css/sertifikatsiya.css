@@ -1,0 +1,13 @@
+#container #content { display: block; }
+.left_block {
+	float: left;
+	margin-right: 10px;
+}
+.right_block { float: right; }
+.left_block, .right_block { width: calc(50% - 20px); }
+h1, h2, h3 { text-align: center; }
+.clear { clear: both; }
+
+@media screen and (max-width: 720px) {
+	#content h2 { font-size: 17px; }
+}

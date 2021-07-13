@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.1, maximum-scale=3">
+		<meta name="robots" content="all">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE-Edge">
+		<link href="css/main.css" rel="stylesheet">
+		<script src="js/main.js" async></script>
+		<script src="https://www.youtube.com/iframe_api" async></script>
+		<script src='https://cdn.babylonjs.com/babylon.js' async></script>
+		<title>Шлагбаум GS04</title>
+		<style>* {margin: 0; padding: 0;}</style>
+	</head>
+	<body>
+		<div style="display: flex; flex-direction: column; align-items: center; inline-size: 100%; font-size: 16px;">
+			<div style="display: flex; flex-direction: column; align-items: center; inline-size: 100%; max-inline-size: 1400px; background: red;">
+				1400px
+				<div style="display: flex; flex-direction: column; align-items: center; inline-size: 100%; max-inline-size: 1140px; background: orange;">
+					1140px
+					<div style="display: flex; flex-direction: column; align-items: center; inline-size: 100%; max-inline-size: 920px; background: yellow;">
+						920px
+						<div style="display: flex; flex-direction: column; align-items: center; inline-size: 100%; max-inline-size: 720px; background: green;">
+							720px
+							<div style="display: flex; flex-direction: column; align-items: center; inline-size: 100%; max-inline-size: 540px; background: lightBlue;">
+								540px
+								<div style="display: flex; flex-direction: column; align-items: center; inline-size: 100%; max-inline-size: 320px; background: blue;">
+									320px
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="text"></div>
+		</div>
+	</body>
+	<script>
+		document.querySelector('.text').innerText = `Количество пиксель монитора в одном css пикселе: ${window.devicePixelRatio}`;
+	</script>
+</html>

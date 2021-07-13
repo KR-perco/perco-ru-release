@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=250">
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<meta charset="UTF-8">
+	<script></script>
+	<script type="text/javascript" src="__deviceload__/cordova.js"></script>
+	<script type="text/javascript" src="bitrix_mobile_core.js"></script>
+	<script type="text/javascript" src="fastclick.js"></script>
+	<script type="application/javascript" src="script.js"></script>
+	<title>Menu</title>
+	<script>
+		BXMSlider.setStateEnabled(BXMSlider.state.LEFT, true);
+
+		BX.ready(function ()
+		{
+			new Menu(BX("menu")).init();
+		});
+	</script>
+</head>
+<body>
+<div>
+	<div id="menu" class="menu-block">
+		<div class="menu-logo"></div>
+		<div data-news-title="Новости кино" data-news-id="movie" class="item-menu">
+			<span class="item-menu-icon"></span>
+				<span class="item-menu-text">
+					Кино
+				</span>
+		</div>
+		<div data-news-title="Новости спорта" data-news-id="sport" class="item-menu">
+			<span class="item-menu-icon"></span>
+				<span class="item-menu-text">
+					Спорт
+				</span>
+		</div>
+		<div data-news-title="Новости культуры" data-news-id="culture" class="item-menu">
+			<span class="item-menu-icon"></span>
+				<span class="item-menu-text">
+					Культура
+				</span>
+		</div>
+		<div data-news-title="Интернет" data-news-id="internet" class="item-menu">
+			<span class="item-menu-icon"></span>
+				<span class="item-menu-text">
+					Интернет
+				</span>
+		</div>
+		<div data-news-title="Наука" data-news-id="science" class="item-menu">
+			<span class="item-menu-icon"></span>
+				<span class="item-menu-text">
+					Наука
+				</span>
+		</div>
+		<div data-news-title="Nasa" data-news-id="nasa" class="item-menu">
+			<span class="item-menu-icon"></span>
+				<span class="item-menu-text">
+					Nasa
+				</span>
+		</div>
+	</div>
+	<div class="menu-line"></div>
+</div>
+
+
+</body>
+</html>

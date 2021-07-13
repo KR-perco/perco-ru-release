@@ -1,0 +1,9 @@
+h1, h2 {
+	color: #214288;
+	margin: 10px 0;
+}
+.banner_image {
+	background-image: url(/images/banners/banner_support.jpg);
+	height: 435px;
+}
+.download_item_img { text-align: center; }

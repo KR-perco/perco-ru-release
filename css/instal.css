@@ -1,0 +1,52 @@
+#sistema-instal { display: flex; }
+#sistema-instal > div { align-self: center; }
+.obuch-strelka1 {
+	background:url(/images/e-learning/obuch-r-strelka.gif) no-repeat;
+	width: 19px;
+	height: 8px;
+}
+.obuch-strelka2 {
+	background:url(/images/e-learning/obuch-2-2-strelka.gif) no-repeat;
+	width: 17px;
+	height: 72px;
+}
+.obuch-strelka3 {
+	background:url(/images/e-learning/obuch-2-strelka.gif) no-repeat;
+	width: 17px;
+	height: 74px;
+}
+.obuch-strelka1, .obuch-strelka2, .obuch-strelka3, .box { flex-shrink: 0; }
+.box {
+	border: 1px solid #B7C8D9;
+	background-color:#EFF3F6;
+	border-radius: 8px;
+	font-size:14px;
+	margin: 5px 0;
+	padding: 10px;
+}
+@media screen and (max-width: 900px) {
+	#sistema-instal { flex-direction: column; }
+	#sistema-instal > div { display: flex; }
+	#sistema-instal > div > .box:first-child { margin-right: 5px; }
+	#sistema-instal > div > .box:last-child { margin-left: 5px; }
+	#sistema-instal > div > div { flex-basis: 50%; }
+	.box {
+		flex-shrink: 1;
+		margin: 0;
+	}
+	.obuch-strelka1 {
+		background:url(/images/e-learning/obuch-r-strelka_horizont.gif) no-repeat;
+		height: 19px;
+		width: 8px;
+	}
+	.obuch-strelka2 {
+		background:url(/images/e-learning/obuch-2-2-strelka_horizont.gif) no-repeat;
+		width: 72px;
+		height: 17px;
+	}
+	.obuch-strelka3 {
+		background:url(/images/e-learning/obuch-2-strelka_horizont.gif) no-repeat;
+		width: 74px;
+		height: 17px;
+	}
+}

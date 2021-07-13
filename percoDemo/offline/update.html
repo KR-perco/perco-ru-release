@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=320">
+
+	<script type="text/javascript" src="bxlocal://__deviceload__/cordova.js"></script>
+	<script type="text/javascript" src="bxlocal://bitrix_mobile_core.js"></script>
+	<script type="text/javascript" src="bxlocal://core_db.js"></script>
+	<script type="text/javascript" src="bxlocal://jquery.min.js"></script>
+	<script type="text/javascript" src="bxlocal://fastclick.js"></script>
+	<script type="text/javascript" src="bxlocal://script.js"></script>
+    <script type="text/javascript" src="bxlocal://core_promise.js"></script>
+	<link href="bxlocal://template_styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+	<div id="content">
+
+	<div id="progress">
+		<div id="bar"></div>
+	</div>
+
+	<div id="results"></div>
+
+	<p>Для полноценной работы с офлайн версией приложения, вам необходимо скачать разделы документов, которые вам потребуются в дальнейшем. </p>
+	<p>Выберите разделы:</p>
+
+	<div>
+		<input type="checkbox" value="certificates" name="docType">
+		<label for="certificates">Сертификаты</label>
+	</div>
+
+	<div>
+		<input type="checkbox" value="techspec" name="docType">
+		<label for="techspec">Технические спецификаци</label>
+	</div>
+
+	<div>
+		<input type="checkbox" value="documentation" name="docType">
+		<label for="documentation">Руководства пользователя</label>
+	</div>
+
+	<div>
+		<input type="checkbox" value="booklets" name="docType">
+		<label for="booklets">Буклеты и каталоги</label>
+	</div>
+
+<button id="downloadButton" onclick="downloadFile(files)">Скачать</button>
+
+
+<script>
+
+/*document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    //скачивание файла с основными данными(заменить файл)
+	fileurl = cordova.file.externalDataDirectory + '/download/data_documentation.json';
+
+	download('https://www.perco.ru/percoDemo/offline/data_documentation.json', fileurl);
+
+
+}*/
+
+//window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, download('https://www.perco.ru/percoDemo/offline/data_documentation.json', fileurl), addError);
+	//alert("dsfsdf");
+	/*var notifyBar = new BXMobileApp.UI.NotificationBar(
+	{
+		message: 'Загрузка началась, пожалуйста, подождите',
+		useLoader: true,
+		align: "center",
+		color: "#76088c",
+		autoHideTimeout: false,
+		hideOnTap: false,
+	});*/
+
+
+	//fileurl = cordova.file.externalDataDirectory + '/download/data_documentation.json';
+	//alert(fileurl);
+	//alert("Failed to retrieve file: " + error.code);
+	//download('https://www.perco.ru/percoDemo/offline/data_documentation.json', fileurl);
+
+
+var index = 0;
+var i;
+var statusStr = "";
+
+/*var checkFileEntry = function (entry) {
+	alert("dsfdf");
+	var checkFile = entry.getFile('/download/data_documentation.json', {create: false, exclusive: false}, success, fail);
+
+	function success(entries) {
+		alert("Parent Name: " + entries.name);
+	}
+
+	function fail(error) {
+
+
+		BXMobileApp.PageManager.loadPageModal({
+			url: "update.html",
+			title: "Обновление",
+		});
+
+		//alert(cordova.file.externalDataDirectory);
+		fileurl = cordova.file.externalDataDirectory + '/download/data_documentation.json';
+		alert("Failed to retrieve file: " + error.code);
+		download('https://www.perco.ru/percoDemo/offline/data_documentation.json', fileurl);
+		
+	}
+}*/
+
+
+/*var addFileEntry = function (entry) {
+
+	var checkFile = entry.getFile('/download/techspec/rus/WMD-05S_TechSpec.pdf', {create: false, exclusive: false}, success, fail);
+
+	function success(entries) {
+		alert("Parent Name: " + entries.name);
+	}
+
+	function fail(error) {
+		alert("Failed to retrieve file: " + error.code);
+	}
+
+    var dirReader = entry.createReader();
+    dirReader.readEntries(
+        function (entries) {
+            var fileStr = "";
+            var i;
+            for (i = 0; i < entries.length; i++) {
+				//alert(entries[i].fullPath);
+				if(entries[i].fullPath == '/download/techspec/rus/WMD-05S_TechSpec.pdf'){
+					alert('pew');
+				
+				}
+                if (entries[i].isDirectory === true) {
+                    // Recursive -- call back into this subdirectory
+                    addFileEntry(entries[i]);
+                } else {
+					entries[i].fullPath
+                   	fileStr += (entries[i].fullPath + "<br>"); // << replace with something useful
+                   	index++;
+                }
+            }
+            // add this directory's contents to the status
+            statusStr += fileStr;
+            // display the file list in #results
+            if (statusStr.length > 0) {
+                $("#results").html(statusStr);
+            } 
+        },
+        function (error) {
+            alert("readEntries error: " + error.code);
+            statusStr += "<p>readEntries error: " + error.code + "</p>";
+        }
+    );
+};*/
+
+/*var addError = function (error) {
+    console.log("getDirectory error: " + error.code);
+    statusStr += "<p>getDirectory error: " + error.code + ", " + error.message + "</p>";
+};*/
+
+
+
+
+
+
+
+	var files = { documentation: [], techspec: [], certificates: [], booklets: []};
+	var size = 0;
+	
+	var elem = document.getElementById('bar'); 
+
+	function downloadFile(files) {
+		
+		var fields = $("input[name='docType']").serializeArray(); 
+		if (fields.length === 0) 
+		{ 
+			alert('Выберите раздел для скачивания!'); 
+			return false;
+		} 
+		else 
+		{ 
+			//notifyBar.show();
+			//document.getElementById('progress').style.display = "block";
+			//alert(files); 
+		
+
+			var currentSize = 1;
+			
+			var fileTransfer = new FileTransfer();
+			
+			for (var element in files) {	
+
+				var filename = files[element];
+				alert(filename);
+				var uri = encodeURI("https://www.perco.ru"+ filename);
+
+				
+
+				// We are going to check if the file exists
+				//reader.readAsDataURL(fileSource); 
+
+
+				
+				//alert(cordova.file.externalDataDirectory);
+				var fileURL = cordova.file.externalDataDirectory + filename;
+				//alert(cordova.file.externalDataDirectory);
+				
+				fileTransfer.download(
+					uri, 
+					fileURL, 
+					function(entry) {
+						filelink = entry.toURL();
+						//filelink = entry.toInternalURL()
+						//link = entry.getAbsolutePath();
+						
+						currentSize += 1;
+						//alert(currentSize);
+						x = (100 * currentSize / files.length).toFixed(2);
+						elem.style.width = x + '%';
+						elem.innerHTML = x * 1 + '%';
+						if (currentSize == files.length) {
+							notifyBar.hide();
+							alert('все скачалось!');
+						}
+						
+						//alert("download complete: " + filelink);
+
+						//docHref = "<a href='bxlocal://"+ filelink +"'>ссылка на " + name + "</a><p>"+ filelink +"</p>";
+
+						//doc = document.getElementById("doc");
+						//doc.insertAdjacentHTML('beforeend', docHref);			
+					},
+				
+					function(error) {
+						alert("error" + filelink);
+						alert("download error code" + error.code);
+					},
+						
+					false, {
+						headers: {
+							"Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+						}
+					}
+				);
+			}
+		}
+
+		fileurl = cordova.file.externalDataDirectory + '/download/data_documentation.json';
+		//alert("Failed to retrieve file: " + error.code);
+		//;
+
+		window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, download('https://www.perco.ru/percoDemo/offline/data_documentation.json', fileurl), addError);
+	}
+
+	function download(uri, fileURL){
+
+		var fileTransfer = new FileTransfer();
+
+		fileTransfer.download(
+			uri, 
+			fileURL, 
+			function(entry) {
+				filelink = entry.toURL();
+				alert(filelink);
+				win(filelink);
+			},
+		
+			function(error) {
+				alert("error" + filelink);
+				alert("download error code" + error.code);
+			},
+			
+			false, {
+				headers: {
+					"Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+				}
+			}
+		);
+	} 
+
+	/*function win(file) {
+		var reader = new FileReader();
+		reader.onloadend = function (evt) {
+			alert("read success");
+			alert(evt.target.result);
+		};
+		reader.readAsDataURL(file);
+	};
+
+	function readFile(fileEntry) {
+		fileEntry.file(function (file) {
+			var reader = new FileReader();
+
+			reader.onloadend = function() {
+				console.log("Successful file read: " + this.result);
+				displayFileData(fileEntry.fullPath + ": " + this.result);
+			};
+
+			reader.readAsText(file);
+
+		}, onErrorReadFile);
+	}*/
+
+
+
+	var getJSON = function(url, callback) {
+		alert("dsf");
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', url, true);
+		xhr.responseType = 'json';
+		xhr.onload = function() {
+			var status = xhr.status;
+			if (status === 200) {
+				callback(null, xhr.response);
+			} else {
+				callback(status, xhr.response);
+			}
+		};
+		xhr.send();
+	};
+
+	getJSON('https://www.perco.ru/percoDemo/offline/data_documentation.json',
+		function(err, data) {
+		if (err !== null) {
+			alert('Something went wrong: ' + err);
+		} else {
+			getFiles(data);
+		} 
+	});
+
+	function checkConnection() {
+	    var networkState = navigator.connection.type;
+		if (networkState == 'none'){
+			alert('Для скачивания материалов следует подключиться к сети!');
+		}
+	}
+
+	checkConnection();
+
+	function getFiles(data){
+		for (var element in data) {
+			if(data[element].download){
+				docTable = '';
+				for (doc in data[element].download){
+					
+					docValue = data[element].download[doc].value;
+					var res = docValue.split("/");
+					files[res[2]].push(docValue);
+					/*if (docValue.indexOf("documentation") ) {
+						//files["documentation"].push(docValue);
+						files[res[2]].push(docValue);
+					} else if (docValue.indexOf("techspec")) {
+						files["techspec"].push(docValue);
+					} else if (docValue.indexOf("certificates")) {
+						files["certificates"].push(docValue);
+					} else {
+						alert(docValue);
+					}*/
+
+					//docValue = data[element].download[doc].value;
+					//docTitle = data[element].download[doc].name;
+					size += data[element].download[doc].size;
+
+					/*if (files.indexOf(docValue) == -1) {
+						files.push(docValue);
+					}*/
+				}
+			}
+		}
+
+		console.log(files);
+
+		var dataStorage = 'Скачанные файлы займут ' + formatSize(size) + ' свободного места.';
+
+		str = document.getElementById("storageInform");
+		str.insertAdjacentHTML('beforeend', dataStorage);
+	}
+	
+	function formatSize(length){
+		var i = 0, type = ['б','Кб','Мб','Гб','Тб','Пб'];
+		while((length / 1000 | 0) && i < type.length - 1) {
+			length /= 1024;
+			i++;
+		}
+		return length.toFixed(2) + ' ' + type[i];
+	}
+
+
+
+
+
+
+
+
+
+	/*var db  = new BX.dataBase({
+        name: "MyDatabase",
+        displayName: "MyDatabase",
+        capacity: 1024 * 1024 * 4,
+        version: "1.2"
+	});
+
+	var createTableParams = {
+		tableName: "mytable",
+		fields: [
+			{name: "id", unique: true},
+			"name",
+			"data"
+		],
+		success: function (res)
+		{
+			alert("success");
+
+		},
+		fail: function (e)
+		{
+			alert("some error");
+			alert(e);
+		}
+	};
+	
+	db.createTable(createTableParams);    
+	alert('test');
+
+	db.addRow(
+   {
+      tableName: "mytable",
+      insertFields: {
+         id: 10,
+         name: "newRecord",
+         data: "sadasd"
+      },
+      success: function (res)
+      {
+		alert("success");
+      },
+      fail: function (e)
+      {
+		alert("some error");
+		alert(e);
+      }
+   });
+
+
+
+   db.getRows({
+      tableName: "mytable",
+      filter: {
+         id: 10
+      },
+      success: function (res)
+      { 
+         //res.items - массив записей
+         alert(res);
+         if (res.items.length > 0)
+		 	alert("Success");
+
+      },
+      fail: function (e)
+      {
+         alert(e);
+      }
+   });*/
+
+</script>
+</div>
+</body>
+</html>

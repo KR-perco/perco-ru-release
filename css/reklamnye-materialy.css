@@ -1,0 +1,42 @@
+body #container { max-width: none; }
+#interactive {
+	display: flex;
+	flex-wrap: wrap;
+}
+#interactive > div {
+	margin-bottom: 10px;
+	margin-right: 50px;
+}
+.banner_image {
+	background-image: url(/images/banners/banner_reclama.jpg);
+	height: 435px;
+}
+#free_catalog { margin: 20px 0 30px 0; }
+#free_catalog .icon {
+	display: flex;
+	font-weight: bold;
+	font-size: 20px;
+	width: auto;
+	height: auto;
+}
+#free_catalog .icon img {
+	width: 51px;
+	height: 46px;
+}
+#free_catalog .icon_text {
+	align-self: center;
+	margin-left: 10px;
+}
+@media screen and (max-width: 1120px) {
+	.banner_image {
+		background-image: url(/images/banners/banner_reclama_mini.jpg);
+		height: 310px;
+	}
+}
+@media screen and (max-width: 720px) {
+	.banner_image {
+		background-size: cover;
+		height: 145px;
+	}
+	#interactive img { max-width: 340px; }
+}

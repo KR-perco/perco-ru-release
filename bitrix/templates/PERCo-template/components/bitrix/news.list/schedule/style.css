@@ -1,0 +1,59 @@
+.spb .event-info{
+	display: none;
+}
+.seminar_info_block {
+	display: flex;
+	padding: 5px 0;
+}
+.block_sem {
+	border-bottom: 1px solid #BDBEC0;
+	padding-bottom: 10px;
+}
+.seminar_about_block {
+	flex-shrink: 0;
+	width: 220px;
+}
+.seminar_about_block p strong { color: #929497; }
+.seminar_content_block { margin-top: 5px; }
+.seminar_content_block p img
+{
+	cursor: pointer;
+	margin-right: 5px;
+}
+.head_p {
+	color: #929497;
+	font-weight: bold;
+}
+#container ul li.ochnyi {
+	color: #31AB98;
+	list-style-image: url(/images/e-learning/schedule-list-01.png);
+}
+#container ul li.internet_seminar {
+	color: #307ABC;
+	list-style-image: url(/images/e-learning/schedule-list-02.png);
+}
+#container ul li.vyezdnoi {
+	/* color: #31AB98; */
+	list-style-image: url(/images/e-learning/schedule-list-03.png);
+}
+
+.name {
+	padding-top: 20px;
+	font-weight: 600;
+}
+
+.pskov .name{
+	color: #49639b; 
+}
+
+.veb .name{
+	color: #909090;
+}
+
+.spb .name{
+	color: #218873;
+}
+
+@media screen and (max-width: 720px) {
+	.seminar_about_block { width: 150px; }
+}

@@ -1,0 +1,77 @@
+#search
+{
+	border: 1px solid #003C8E;
+	height: 28px;
+	width: 162px;
+}
+#search form {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+#searchForm {
+	display: flex;
+	width: 100%;
+}
+#searchText
+{
+	border: none;
+	color: #000;
+	flex-grow: 1;
+	font-size: 12px;
+	height: 80%;
+	margin-left: 3px;
+	outline:  none;
+}
+#searchbutton, #searchlabel + label
+{
+	background: #fff url("/images/icons/loup.svg") no-repeat scroll 0 0;
+	border: none;
+	cursor: pointer;
+	margin: auto;
+	margin-right: 3px;
+	height: 18px;
+	width: 18px;
+}
+#searchlabel, #searchlabel + label { display: none; }
+@media screen and (max-width: 900px) {
+	#search {
+		border: none;
+		margin-left: 10px;
+		width: auto;
+		height: auto;
+	}
+	#searchForm {
+		display: none;
+		justify-content: center;
+		background-color: #F3F5F4;
+		border-bottom: 1px solid #214288;
+		padding: 10px;
+		position: absolute;
+		width: auto;
+		left: 0;
+		right: 0;
+		top: 42px;
+		z-index: 100;
+	}
+	#searchText {
+		flex-grow: 0;
+		padding: 5px;
+		width: 60%;
+	}
+	#searchbutton {
+		background: #fff url("/images/icons/search-mobile.svg") no-repeat scroll 0 0;
+		margin-left: 0;
+		width: 24px;
+		height: 25px;
+	}
+	#searchlabel + label {
+		display: block;
+		background-color: #214288;
+		margin: auto;
+		padding: 11px;
+	}
+	#searchlabel + label g > * { stroke: white }
+	#search input:checked + label { background: #4562A2; }
+	#search input:checked + label + div { display: flex; }
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <script type="text/javascript" src="bxlocal://jquery.min.js"></script>
+  <script type="text/javascript" src="bxlocal://__deviceload__/cordova.js"></script>
+  <script type="text/javascript" src="bxlocal://bitrix_mobile_core.js"></script>
+  <script type="text/javascript" src="bxlocal://lightslider.min.js"></script>
+
+  <link type="text/css" href="bxlocal://lightslider.min.css" rel="stylesheet" />
+  <link type="text/css" rel="stylesheet" href="bxlocal://template_styles.css">
+</head>
+
+<body>
+	<script>
+		app.setPageTitle({
+			title: "Фотогаллерея"
+		});
+	</script>
+
+	<div id="gallery">
+		<div class="scrollmenu">
+			<a id="biznes_centry" onclick="changeSection('biznes_centry')"><img alt="Бизнес-центры" src="bxlocal://gallery-bc.png">Бизнес-центры</a>
+
+			<a id="promyshlennye-predpriyatiya" onclick="changeSection('promyshlennye-predpriyatiya')"><img alt="Промышленные предприятия" src="bxlocal://gallery-pp.png">Промышленные предприятия</a>
+
+			<a id="sportivnye-i-razvlekatelnye-obekty" onclick="changeSection('sportivnye-i-razvlekatelnye-obekty')"><img alt="Спортивные и развлекательные объекты" src="bxlocal://gallery-sp.png">Спортивные и развлекательные объекты</a>
+
+			<a id="gosudarstvennye-uchrezhdeniya" onclick="changeSection('gosudarstvennye-uchrezhdeniya')"><img alt="Государственные учреждения" src="bxlocal://gallery-gu.png">Государственные учреждения</a>
+
+			<a id="shkoly" onclick="changeSection('shkoly')"><img alt="Школы" src="bxlocal://gallery-sh.png">Школы</a>
+
+			<a id="vuzy" onclick="changeSection('vuzy')"><img alt="ВУЗы" src="bxlocal://gallery-v.png">ВУЗы</a>
+
+			<a id="ofisy-kompaniy" onclick="changeSection('ofisy-kompaniy')"><img alt="Офисы компаний" src="bxlocal://gallery-ok.png">Офисы компаний</a>
+
+			<a id="transportnye-obekty" onclick="changeSection('transportnye-obekty')"><img alt="Транспортные объекты" src="bxlocal://gallery-tu.png">Транспортные объекты</a>
+
+			<a id="prochie" onclick="changeSection('prochie')"><img alt="Прочие" src="bxlocal://gallery-p.png">Прочие</a>
+		</div>
+		
+		<div id="scroll">
+		</div>	  
+
+	</div>
+  
+<script>
+	function changeSection(section){                           
+		$('.scrollmenu a').removeClass('active');
+		$('#' + section).addClass('active');
+		$('#scroll').empty();
+		
+		document.getElementById('scroll').insertAdjacentHTML('afterbegin', '<ul id="scrollGallery"></ul>');
+
+		$.getJSON('data_gallery.json', {}, function(json){
+			
+			var scroll = '';
+			var slide, filename;
+
+			for (var i = json[section].length - 1; i >= 0; i--) {
+				filename = json[section][i].FULL.VALUE.replace('jpg', 'png');
+
+				slide = '<li style="background-image: url(bxlocal://' + filename + ');" data-thumb="bxlocal://' + filename + '" data-img="bxlocal://' + filename + '"><div class="caption-container"><p>' + json[section][i].NAME; + '</p></div></li>';
+		
+				scroll += slide;
+			}
+
+			document.getElementById('scrollGallery').insertAdjacentHTML('afterbegin', scroll);
+
+			slider = $("#scrollGallery").lightSlider({
+				gallery: true,
+				item: 1,
+				loop: true,
+				enableDrag: true,
+				thumbItem: 4,
+				mode: "fade",
+			});
+			slider.refresh();
+		});
+	}
+
+	changeSection('biznes_centry');
+	</script>
+</body>
+
+</html>
