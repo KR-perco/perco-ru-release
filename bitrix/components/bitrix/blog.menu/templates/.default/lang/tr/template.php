@@ -1,0 +1,31 @@
+<?
+$MESS ['BLOG_MENU_BLOGS_LIST'] = "blog listesi";
+$MESS ['BLOG_MENU_BLOGS_LIST_TITLE'] = "Blog ana sayfasэ";
+$MESS ['BLOG_MENU_CURRENT_BLOG'] = "Geзerli blog";
+$MESS ['BLOG_MENU_MY_BLOG'] = "Benim blogum";
+$MESS ['BLOG_MENU_MY_BLOG_TITLE'] = "Benim blogum";
+$MESS ['BLOG_MENU_PROFILE'] = "Benim profilim";
+$MESS ['BLOG_MENU_PROFILE_TITLE'] = "Benim profilim";
+$MESS ['BLOG_MENU_FRIENDS'] = "Arkadaю sayfasэ";
+$MESS ['BLOG_MENU_FRIENDS_TITLE'] = "Arkadaю sayfasэ";
+$MESS ['BLOG_MENU_LOGOUT'] = "Зэkэю";
+$MESS ['BLOG_MENU_LOGOUT_TITLE'] = "Зэkэю";
+$MESS ['BLOG_MENU_LOGIN'] = "Giriю";
+$MESS ['BLOG_MENU_LOGIN_TITLE'] = "Giriю";
+$MESS ['BLOG_MENU_REGISTER'] = "Kayэt";
+$MESS ['BLOG_MENU_REGISTER_TITLE'] = "Kayэt";
+$MESS ['BLOG_MENU_ADD_MESSAGE'] = "Yeni ileti";
+$MESS ['BLOG_MENU_ADD_MESSAGE_TITLE'] = "Yeni ileti ekle";
+$MESS ['BLOG_MENU_DRAFT_MESSAGES'] = "Tamamlanmamэю iletiler";
+$MESS ['BLOG_MENU_DRAFT_MESSAGES_TITLE'] = "Tamamlanmamэю iletiler";
+$MESS ['BLOG_MENU_USER_SETTINGS'] = "Kullanэcэ ayarlarэ";
+$MESS ['BLOG_MENU_USER_SETTINGS_TITLE'] = "Benim blogun kullanэcэ ayarlarэ";
+$MESS ['BLOG_MENU_GROUP_EDIT'] = "Grup ayarlarэ";
+$MESS ['BLOG_MENU_GROUP_EDIT_TITLE'] = "Benim blogun grup ayarlarэ";
+$MESS ['BLOG_MENU_CATEGORY_EDIT'] = "Etiket ayarlarэ";
+$MESS ['BLOG_MENU_CATEGORY_EDIT_TITLE'] = "Benim blogun etiket ayarlarэ";
+$MESS ['BLOG_MENU_BLOG_EDIT'] = "Blog ayarlarэ";
+$MESS ['BLOG_MENU_BLOG_EDIT_TITLE'] = "Benim blogun ayarlarэ";
+$MESS ['BLOG_MENU_FR_B_F'] = "Arkadaю olmak";
+$MESS ['BLOG_MENU_FR_A_F'] = "Arkadaюlarэma ekle";
+?>

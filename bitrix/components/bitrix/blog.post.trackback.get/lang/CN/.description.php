@@ -1,0 +1,5 @@
+<?
+$MESS['BPTG_DEFAULT_TEMPLATE_NAME']="Ч·ЧЩ";
+$MESS['BPTG_DEFAULT_TEMPLATE_DESCRIPTION']="ЧўІбНѕѕ¶µЅУКјю";
+$MESS['BPTG_NAME']="І©їН";
+?>

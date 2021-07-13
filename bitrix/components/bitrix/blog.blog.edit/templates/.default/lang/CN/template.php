@@ -1,0 +1,30 @@
+<?
+$MESS ['BLOG_TITLE'] = "Blog name:";
+$MESS ['BLOG_TITLE_DESCR'] = "Цё¶ЁТ»ёц¶АМШµДГыЧЦЅ«ГиКцДгµДІ©їН";
+$MESS ['BLOG_DESCR'] = "Blog description:";
+$MESS ['BLOG_DESCR_TITLE'] = " ИОТвГиКцЛµГчДгµДІ©їН";
+$MESS ['BLOG_URL'] = "Pseudo name (Latin letters):";
+$MESS ['BLOG_GRP'] = "Blog group:";
+$MESS ['BLOG_GRP_TITLE'] = "ДъµДІ©їН№ШБ¬µДІ©їНРЎЧй";
+$MESS ['BLOG_AUTO_MSG'] = "Auto messages:";
+$MESS ['BLOG_AUTO_MSG_TITLE'] = "К№УГЧФ¶ЇПыПўМбЅ»±Ј»¤";
+$MESS ['BLOG_CAPTHA'] = "Из№ыЖАВЫУЙОґ±»КЪИЁµДУГ»§Ј¬ФцјУТЄЗуМШ±рґъВл±»јьИл";
+$MESS ['BLOG_OPENED_GRPS'] = "Open groups:";
+$MESS ['BLOG_OPENED_TITLE'] = "Цё¶ЁИОєОИЛїЙТФјУИлЈ¬І»УГДъµДИПН¬µДРЎЧй";
+$MESS ['BLOG_DEF_PERMS'] = "Default access:";
+$MESS ['BLOG_GROUPS'] = "Чй";
+$MESS ['BLOG_MESSAGES'] = "ПыПў";
+$MESS ['BLOG_COMMENTS'] = "ЧўКН";
+$MESS ['BLOG_ALL_USERS'] = "И«ІїУГ»§";
+$MESS ['BLOG_REGISTERED'] = "ТСЧўІбУГ»§";
+$MESS ['BLOG_PERMS_TITLE'] = "·ЦЕд·ГОКИЁПЮµЅУГ»§ИєОЄДъµДІ©їНЎЈ Из№ы±ШРлЈ¬ДъДЬОЄГїФтПыПўµҐ¶АµШЦё¶ЁФКРнЎЈ";
+$MESS ['BLOG_SAVE'] = "±Јґж";
+$MESS ['BLOG_CREATE'] = "РВІ©їН";
+$MESS ['BLOG_URL_TITLE'] = "Specify pseudo name for your blog (with Latin letters). The pseudo name will be used to build an URL to your blog in the form <nobr>http://this-site.com/blog/[blog name]</nobr>";
+$MESS ['BLOG_APPLY'] = "У¦УГ";
+$MESS ['BLOG_CANCEL'] = "ИЎПы";
+$MESS ['BLOG_EMAIL_NOTIFY'] = "НЁЦЄ";
+$MESS ['BLOG_EMAIL_NOTIFY_TITLE'] = "·ўЛННЁЦЄУКјю";
+$MESS ['BLOG_EMAIL_NOTIFY_HELP'] = "ґтїЄХвёцСЎПоѕНТвО¶ЧЕДъЅ«КХµЅНЁЦЄУР№ШЖАВЫєНРВµДУКјюФЪДгµДІ©їНЎЈ";
+$MESS ['STOF_REQUIED_FIELDS_NOTE'] = "Required fields are marked with asterisk (<font color=\"#FF0000\">*</font>).";
+?>

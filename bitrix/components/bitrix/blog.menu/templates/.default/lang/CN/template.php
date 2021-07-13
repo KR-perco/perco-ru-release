@@ -1,0 +1,32 @@
+<?
+$MESS ['BLOG_MENU_BLOGS_LIST'] = "І©їН БР±н";
+$MESS ['BLOG_MENU_BLOGS_LIST_TITLE'] = "І©їН";
+$MESS ['BLOG_MENU_CURRENT_BLOG'] = "µ±З°І©їН";
+$MESS ['BLOG_MENU_CURRENT_BLOG_TITLE'] = "Home page of the blog &quot;#NAME#&quot;";
+$MESS ['BLOG_MENU_MY_BLOG'] = "ОТµДІ©їН";
+$MESS ['BLOG_MENU_MY_BLOG_TITLE'] = "ОТµДІ©їН";
+$MESS ['BLOG_MENU_PROFILE'] = "ОТµДКфРФ";
+$MESS ['BLOG_MENU_PROFILE_TITLE'] = "ОТµДКфРФ";
+$MESS ['BLOG_MENU_FRIENDS'] = "єГУС ТіГж";
+$MESS ['BLOG_MENU_FRIENDS_TITLE'] = "єГУС ТіГж";
+$MESS ['BLOG_MENU_LOGOUT'] = "ЧўПъ";
+$MESS ['BLOG_MENU_LOGOUT_TITLE'] = "ЧўПъ";
+$MESS ['BLOG_MENU_LOGIN'] = "µЗВј";
+$MESS ['BLOG_MENU_LOGIN_TITLE'] = "µЗВј";
+$MESS ['BLOG_MENU_REGISTER'] = "ЧўІб";
+$MESS ['BLOG_MENU_REGISTER_TITLE'] = "ЧўІб";
+$MESS ['BLOG_MENU_ADD_MESSAGE'] = "РВПыПў";
+$MESS ['BLOG_MENU_ADD_MESSAGE_TITLE'] = "РВПыПў";
+$MESS ['BLOG_MENU_DRAFT_MESSAGES'] = "ІЭёеПыПў";
+$MESS ['BLOG_MENU_DRAFT_MESSAGES_TITLE'] = "ІЭёеПыПў";
+$MESS ['BLOG_MENU_USER_SETTINGS'] = "УГ»§ ЙиЦГ";
+$MESS ['BLOG_MENU_USER_SETTINGS_TITLE'] = "ОТµДІ©їН УГ»§ ЙиЦГ";
+$MESS ['BLOG_MENU_GROUP_EDIT'] = "ЧйЙиЦГ";
+$MESS ['BLOG_MENU_GROUP_EDIT_TITLE'] = "ОТµДІ©їН Чй ЙиЦГ";
+$MESS ['BLOG_MENU_CATEGORY_EDIT'] = "±кЗ© ЙиЦГ";
+$MESS ['BLOG_MENU_CATEGORY_EDIT_TITLE'] = "My blog tags settings";
+$MESS ['BLOG_MENU_BLOG_EDIT'] = "І©їНЙиЦГ";
+$MESS ['BLOG_MENU_BLOG_EDIT_TITLE'] = "ОТµДІ©їН ЙиЦГ";
+$MESS ['BLOG_MENU_FR_B_F'] = "±діЙAєГУС";
+$MESS ['BLOG_MENU_FR_A_F'] = "јУОЄєГУС";
+?>
