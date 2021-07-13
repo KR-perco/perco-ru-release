@@ -1,0 +1,2002 @@
+{
+    "kalitka-avtomaticheskaya-wmd-05s-ag-650": {
+        "name": "Калитка автоматическая WMD-05S со створкой AG-650",
+        "download": {
+            "0": {
+                "value": "\/download\/techspec\/rus\/WMD-05S_TechSpec.pdf",
+                "name": "Краткое техническое описание WMD-05S",
+                "size": 810577
+            },
+            "1": {
+                "value": "\/download\/documentation\/rus\/WMD-05S_ApplicGuide.pdf",
+                "name": "Автоматическая калитка PERCo-WMD-05S. Руководство по эксплуатации",
+                "size": 2031165
+            },
+            "2": {
+                "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+                "name": "Сертификат транспортной безопасности",
+                "size": 2530853
+            },
+            "5": {
+                "value": "\/download\/certificates\/rus\/WMD_Certificate.pdf",
+                "name": "Сертификат на автоматическую калитку PERCo-WMD-05S(SW)",
+                "size": 770345
+            }
+        }
+    },
+    "avtomaticheskaya-kalitka-wmd-06-agg-650": {
+        "name": "Автоматическая калитка WMD-06 со створкой AGG-650",
+        "download": {
+            "0": {
+                "value": "\/download\/techspec\/rus\/WMD-06_TechSpec.pdf",
+                "name": "Краткое техническое описание WMD-06",
+                "size": 824809
+            },
+            "1": {
+                "value": "\/download\/documentation\/rus\/WMD-06_ApplicGuide.pdf",
+                "name": "Автоматическая калитка PERCo-WMD-06. Руководство по эксплуатации",
+                "size": 1752777
+            },
+            "2": {
+                "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+                "name": "Сертификат транспортной безопасности",
+                "size": 2530853
+            },
+            "6": {
+                "value": "\/download\/certificates\/rus\/WMD_Certificate.pdf",
+                "name": "Сертификат на автоматическую калитку PERCo-WMD-06",
+                "size": 770345
+            }
+        }
+    },
+    "kalitka-poluavtomaticheskaya-whd-05-asg-650": {
+        "name": "Калитка полуавтоматическая WHD-05 со створкой ASG-650",
+        "download": {
+            "0": {
+                "value": "\/download\/techspec\/rus\/WHD-05_TechSpec.pdf",
+                "name": "Краткое техническое описание WHD-05",
+                "size": 1220736
+            },
+            "1": {
+                "value": "\/download\/documentation\/rus\/WHD-05_ApplicGuide.pdf",
+                "name": "Полуавтоматическая калитка PERCo-WHD-05. Руководство по эксплуатации",
+                "size": 2238100
+            },
+            "2": {
+                "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+                "name": "Сертификат транспортной безопасности",
+                "size": 2530853
+            },
+            "6": {
+                "value": "\/download\/certificates\/rus\/WHD-05_Certificate.pdf",
+                "name": "Сертификат на калитку PERCo-WHD-05",
+                "size": 753814
+            }
+        }
+    },
+    "polnorostovoe-ograzhdenie-mb-15": {
+        "name": "Полноростовое ограждение MB-15",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/MB-15_TechSpec.pdf",
+            "name": "Краткое техническое описание MB15",
+            "size": 1068473
+        }, {
+            "value": "\/download\/documentation\/rus\/MB-15_ApplicGuide.pdf",
+            "name": "Ограждение полноростовое PERCo-МВ-15. Руководство по эксплуатации",
+            "size": 948781
+        }, {
+            "value": "\/download\/documentation\/rus\/nomenklatura-soedinitelnykh-nakladok.pdf",
+            "name": "Номенклатурный лист на соединительные элементы полноростовых исполнительных устройств и ограждений",
+            "size": 374721
+        }]
+    },
+    "ograzhdenie-polurostovoe-bh02": {
+        "name": "Ограждение полуростовое BH02",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/BH02_TechSpec.pdf",
+            "name": "Краткое техническое описание BH02",
+            "size": 1334000
+        }, {
+            "value": "\/download\/documentation\/rus\/BH-02_UsersGuide.pdf",
+            "name": "Ограждение полуростовое PERCo-BH02. Руководство по эксплуатации",
+            "size": 1656308
+        }]
+    },
+    "kalitka-polnorostovaya-whd-15": {
+        "name": "Калитка полноростовая WHD-15",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/WHD-15_TechSpec.pdf",
+            "name": "Краткое техническое описание WHD-15",
+            "size": 366623
+        }, {
+            "value": "\/download\/documentation\/rus\/WHD-15_ApplicGuide.pdf",
+            "name": "Калитка полноростовая PERCo-WHD-15. Руководство по монтажу и эксплуатации",
+            "size": 978715
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/documentation\/rus\/nomenklatura-soedinitelnykh-nakladok.pdf",
+            "name": "Номенклатурный лист на соединительные элементы полноростовых исполнительных устройств и ограждений",
+            "size": 374721
+        }]
+    },
+    "polnorostovyy-rotornyy-turniket-rtd-15.1": {
+        "name": "Полноростовый моторизованный роторный турникет RTD-15.1",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/RTD-15_TechSpec.pdf",
+            "name": "Краткое техническое описание RTD-15",
+            "size": 1025173
+        }, {
+            "value": "\/download\/documentation\/rus\/MB-15_ApplicGuide.pdf",
+            "name": "Ограждение полноростовое PERCo-МВ-15. Руководство по эксплуатации",
+            "size": 948781
+        }, {
+            "value": "\/download\/documentation\/rus\/RTD-15_ApplicGuide.pdf",
+            "name": "Турникет роторный полноростовый PERCo-RTD-15. Руководство по эксплуатации",
+            "size": 2940651
+        }, {
+            "value": "\/download\/documentation\/rus\/RTC-15_ApplicGuide.pdf",
+            "name": "Крыша PERCo-RTC-15. Руководство по эксплуатации",
+            "size": 1506378
+        }, {
+            "value": "\/download\/certificates\/rus\/RTD_Certification.pdf",
+            "name": "Сертификат на полноростовые турникеты серии RTD",
+            "size": 751126
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/documentation\/rus\/RF01-0-01_Passport.pdf",
+            "name": "Рама монтажная PERCo-RF01 0-01 турникета PERCo-RTD-15. Паспорт",
+            "size": 609021
+        }, {
+            "value": "\/download\/documentation\/rus\/nomenklatura-soedinitelnykh-nakladok.pdf",
+            "name": "Номенклатурный лист на соединительные элементы полноростовых исполнительных устройств и ограждений",
+            "size": 374721
+        }]
+    },
+    "polurostovyy-rotornyy-turniket-rtd-03s-rb-03s": {
+        "name": "Полуростовый роторный турникет RTD-03S с формирователем прохода RB-03S",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/RTD-03S_TechSpec.pdf",
+            "name": "Краткое техническое описание RTD-03S",
+            "size": 1557993
+        }, {
+            "value": "\/download\/documentation\/rus\/RTD-03S_ApplicGuide.pdf",
+            "name": "Роторный полуростовый турникет PERCo-RTD-03S. Руководство по эксплуатации",
+            "size": 1592201
+        }, {
+            "value": "\/download\/certificates\/rus\/RTD-03_Certification.pdf",
+            "name": "Сертификат на роторный полуростовый турникет PERCo-RTD-03",
+            "size": 756121
+        }, {
+            "value": "\/download\/documentation\/rus\/RB-03S_ApplicGuide.pdf",
+            "name": "Формирователь прохода PERCo-RB-03S. Руководство по эксплуатации",
+            "size": 2037801
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "polurostovyy-rotornyy-turniket-rtd-03s-rb-03tp": {
+        "name": "Полуростовый роторный турникет RTD-03S с формирователем прохода RB-03TP",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/RTD-03S_TechSpec.pdf",
+            "name": "Краткое техническое описание RTD-03S",
+            "size": 1557993
+        }, {
+            "value": "\/download\/documentation\/rus\/RTD-03S_ApplicGuide.pdf",
+            "name": "Роторный полуростовый турникет PERCo-RTD-03S. Руководство по эксплуатации",
+            "size": 1592201
+        }, {
+            "value": "\/download\/documentation\/rus\/RB-03TP_ApplicGuide.pdf",
+            "name": "Формирователь прохода PERCo-RB-03TP. Руководство по эксплуатации",
+            "size": 1356584
+        }, {
+            "value": "\/download\/certificates\/rus\/RTD-03_Certification.pdf",
+            "name": "Сертификат на роторный полуростовый турникет PERCo-RTD-03",
+            "size": 756121
+        }]
+    },
+    "tumbovye-turnikety-tripody-tb01.1": {
+        "name": "Тумбовый турникет-трипод TB01.1",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/TB01.1_TechSpec.pdf",
+            "name": "Краткое техническое описание TB01.1",
+            "size": 832579
+        }, {
+            "value": "\/download\/documentation\/rus\/TB01_ApplicGuide.pdf",
+            "name": "Тумбовый турникет-трипод PERCo-TB01.1. Руководство по эксплуатации",
+            "size": 1962931
+        }, {
+            "value": "\/download\/certificates\/rus\/TTD_TB_TBC_Certificate.pdf",
+            "name": "Сертификат на тумбовые турникеты",
+            "size": 756710
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "tumbovyy-turniket-tripod-tbc01.1": {
+        "name": "Тумбовый турникет-трипод TBC01.1",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/TBC01.1_TechSpec.pdf",
+            "name": "Краткое техническое описание TBC01.1",
+            "size": 1145760
+        }, {
+            "value": "\/download\/documentation\/rus\/TBC01_ApplicGuide.pdf",
+            "name": "Тумбовый турникет-трипод с картоприемником PERCo-TBC01. Руководство по эксплуатации",
+            "size": 1967162
+        }, {
+            "value": "\/download\/certificates\/rus\/TTD_TB_TBC_Certificate.pdf",
+            "name": "Сертификат на тумбовые турникеты",
+            "size": 756710
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "tumbovyy-turniket-tripod-ttd-03.1s": {
+        "name": "Тумбовый турникет-трипод TTD-03.1S",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/TTD-03-1_TechSpec.pdf",
+            "name": "Краткое техническое описание TTD-03.1",
+            "size": 974032
+        }, {
+            "value": "\/download\/documentation\/rus\/TTD-03-1_ApplicGuide.pdf",
+            "name": "Тумбовый турникет-трипод PERCo-TTD-03.1. Руководство по эксплуатации",
+            "size": 1887413
+        }, {
+            "value": "\/download\/certificates\/rus\/TTD_TB_TBC_Certificate.pdf",
+            "name": "Сертификат на тумбовые турникеты",
+            "size": 756710
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "tumbovyy-turniket-tripod-ttd-03.2s": {
+        "name": "Тумбовый турникет-трипод TTD-03.2S",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/TTD-03-2_TechSpec.pdf",
+            "name": "Краткое техническое описание TTD-03.2",
+            "size": 908614
+        }, {
+            "value": "\/download\/documentation\/rus\/TTD-03-2_ApplicGuide.pdf",
+            "name": "Тумбовый Турникет-трипод PERCo-TTD-03.2. Руководство по эксплуатации",
+            "size": 2327381
+        }, {
+            "value": "\/download\/certificates\/rus\/TTD_TB_TBC_Certificate.pdf",
+            "name": "Сертификат на тумбовые турникеты",
+            "size": 756710
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "turniket-tripod-t-5": {
+        "name": "Турникет-трипод T-5",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/T-5_TechSpec.pdf",
+            "name": "Краткое техническое описание T-5",
+            "size": 846712
+        }, {
+            "value": "\/download\/documentation\/rus\/T-5_ApplicGuide.pdf",
+            "name": "Турникет-трипод PERCo-T-5 Руководство по эксплуатации",
+            "size": 2427860
+        }, {
+            "value": "\/download\/certificates\/rus\/Turnikety-tripody_Certificate.pdf",
+            "name": "Сертификат на турникеты-триподы",
+            "size": 770479
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "turniket-tripod-ttr-04": {
+        "name": "Турникет-трипод TTR-04.1",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/TTR-04-1_TechSpec.pdf",
+            "name": "Краткое техническое описание TTR-04.1",
+            "size": 772285
+        }, {
+            "value": "\/download\/documentation\/rus\/TTR-04-1_ApplicGuide.pdf",
+            "name": "Турникет-трипод PERCo-TTR-04. Руководство по эксплуатации",
+            "size": 2544452
+        }, {
+            "value": "\/download\/certificates\/rus\/Turnikety-tripody_Certificate.pdf",
+            "name": "Сертификат на турникеты-триподы",
+            "size": 770479
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "turniket-tripod-ttr-04cw": {
+        "name": "Турникет-трипод TTR-04CW",
+        "download": {
+            "0": {
+                "value": "\/download\/documentation\/rus\/TTR-04CW_ApplicGuide.pdf",
+                "name": "Турникет-трипод PERCo-TTR-04CW. Руководство по эксплуатации",
+                "size": 2324865
+            },
+            "1": {
+                "value": "\/download\/certificates\/rus\/Turnikety-tripody_Certificate.pdf",
+                "name": "Сертификат на турникеты-триподы",
+                "size": 770479
+            },
+            "2": {
+                "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+                "name": "Сертификат транспортной безопасности",
+                "size": 2530853
+            },
+            "7": {
+                "value": "\/download\/techspec\/rus\/TTR-04CW_TechSpec.pdf",
+                "name": "Краткое техническое описание TTR-04CW",
+                "size": 836440
+            }
+        }
+    },
+    "turniket-tripod-ttr-07.1": {
+        "name": "Турникет-трипод TTR-07.1",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/TTR-07.1_TechSpec.pdf",
+            "name": "Краткое техническое описание TTR-07.1",
+            "size": 623310
+        }, {
+            "value": "\/download\/documentation\/rus\/TTR-07_ApplicGuide.pdf",
+            "name": "Турникет-трипод PERCo-TTR-07.1. Руководство по эксплуатации",
+            "size": 2539276
+        }, {
+            "value": "\/download\/certificates\/rus\/Turnikety-tripody_Certificate.pdf",
+            "name": "Сертификат на турникеты-триподы",
+            "size": 770479
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "turniket-tripod-ttr-08a": {
+        "name": "Турникет-трипод TTR-08A",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/TTR-08A_TechSpec.pdf",
+            "name": "Краткое техническое описание TTR-08A",
+            "size": 764436
+        }, {
+            "value": "\/download\/documentation\/rus\/TTR-08A_ApplicGuide.pdf",
+            "name": "Турникет-трипод PERCo-TTR-08A. Руководство по эксплуатации",
+            "size": 2288570
+        }, {
+            "value": "\/download\/certificates\/rus\/Turnikety-tripody_Certificate.pdf",
+            "name": "Сертификат на турникеты-триподы",
+            "size": 770479
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "tumbovyy-turniket-tripod-ttd-08a": {
+        "name": "Тумбовый турникет-трипод TTD-08A",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/TTD-08A_TechSpec.pdf",
+            "name": "Краткое техническое описание TTD-08A",
+            "size": 835444
+        }, {
+            "value": "\/download\/documentation\/rus\/TTD-08A_ApplicGuide.pdf",
+            "name": "Тумбовый турникет-трипод PERCo-TTD-08A. Руководство по эксплуатации",
+            "size": 1759446
+        }, {
+            "value": "\/download\/certificates\/rus\/TTD_TB_TBC_Certificate.pdf",
+            "name": "Сертификат на тумбовые турникеты",
+            "size": 756710
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "skorostnoy-prokhod-st-01-atg-300h": {
+        "name": "Скоростной проход ST-01 со створками увеличенной высоты",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/ST-01_TechSpec.pdf",
+            "name": "Краткое техническое описание ST-01",
+            "size": 1238797
+        }, {
+            "value": "\/download\/certificates\/rus\/ST-01_Declaration.pdf",
+            "name": "Декларация о соответствии на скоростной турникет ST-01",
+            "size": 815205
+        }, {
+            "value": "\/download\/documentation\/rus\/ST-01_ApplicGuide.pdf",
+            "name": "Скоростной проход PERCo-ST-01 и центральная секция PERCo-STD-01. Руководство по эксплуатации",
+            "size": 3707192
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "tumbovye-turnikety-tripody-tb01a": {
+        "name": "Тумбовый турникет-трипод TB01.1A",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/TB01.1A_TechSpec.pdf",
+            "name": "Краткое техническое описание TB01.1A",
+            "size": 820077
+        }, {
+            "value": "\/download\/documentation\/rus\/TB01A_ApplicGuide.pdf",
+            "name": "Тумбовый турникет-трипод PERCo-TB01A. Руководство по эксплуатации",
+            "size": 2046141
+        }, {
+            "value": "\/download\/certificates\/rus\/TTD_TB_TBC_Certificate.pdf",
+            "name": "Сертификат на тумбовые турникеты",
+            "size": 756710
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "tumbovyy-turniket-tripod-tbc01a": {
+        "name": "Тумбовый турникет-трипод TBC01.1A",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/TBC01.1A_TechSpec.pdf",
+            "name": "Краткое техническое описание TBC01.1A",
+            "size": 870940
+        }, {
+            "value": "\/download\/documentation\/rus\/TBC01A_ApplicGuide.pdf",
+            "name": "Тумбовый турникет-трипод с картоприемником PERCo-TBC01A. Руководство по эксплуатации",
+            "size": 2080453
+        }, {
+            "value": "\/download\/certificates\/rus\/TTD_TB_TBC_Certificate.pdf",
+            "name": "Сертификат на тумбовые турникеты",
+            "size": 756710
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "tumbovyy-turniket-tripod-ttd-03.1g": {
+        "name": "Тумбовый турникет-трипод TTD-03.1G",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/TTD-03-1_TechSpec.pdf",
+            "name": "Краткое техническое описание TTD-03.1",
+            "size": 974032
+        }, {
+            "value": "\/download\/documentation\/rus\/TTD-03-1_ApplicGuide.pdf",
+            "name": "Тумбовый турникет-трипод PERCo-TTD-03.1. Руководство по эксплуатации",
+            "size": 1887413
+        }, {
+            "value": "\/download\/certificates\/rus\/TTD_TB_TBC_Certificate.pdf",
+            "name": "Сертификат на тумбовые турникеты",
+            "size": 756710
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "tumbovyy-turniket-tripod-ttd-03.2g": {
+        "name": "Тумбовый турникет-трипод TTD-03.2G",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/TTD-03-2_TechSpec.pdf",
+            "name": "Краткое техническое описание TTD-03.2",
+            "size": 908614
+        }, {
+            "value": "\/download\/documentation\/rus\/TTD-03-2_ApplicGuide.pdf",
+            "name": "Тумбовый Турникет-трипод PERCo-TTD-03.2. Руководство по эксплуатации",
+            "size": 2327381
+        }, {
+            "value": "\/download\/certificates\/rus\/TTD_TB_TBC_Certificate.pdf",
+            "name": "Сертификат на тумбовые турникеты",
+            "size": 756710
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "skorostnoy-prokhod-st-01-atg-300": {
+        "name": "Скоростной проход ST-01 со стандартными створками",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/ST-01_TechSpec.pdf",
+            "name": "Краткое техническое описание ST-01",
+            "size": 1238797
+        }, {
+            "value": "\/download\/certificates\/rus\/ST-01_Declaration.pdf",
+            "name": "Декларация о соответствии на скоростной турникет ST-01",
+            "size": 815205
+        }, {
+            "value": "\/download\/documentation\/rus\/ST-01_ApplicGuide.pdf",
+            "name": "Скоростной проход PERCo-ST-01 и центральная секция PERCo-STD-01. Руководство по эксплуатации",
+            "size": 3707192
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "skorostnoy-prokhod-st-01-atg-425": {
+        "name": "Скоростной проход ST-01 со створками увеличенной ширины",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/ST-01_TechSpec.pdf",
+            "name": "Краткое техническое описание ST-01",
+            "size": 1238797
+        }, {
+            "value": "\/download\/certificates\/rus\/ST-01_Declaration.pdf",
+            "name": "Декларация о соответствии на скоростной турникет ST-01",
+            "size": 815205
+        }, {
+            "value": "\/download\/documentation\/rus\/ST-01_ApplicGuide.pdf",
+            "name": "Скоростной проход PERCo-ST-01 и центральная секция PERCo-STD-01. Руководство по эксплуатации",
+            "size": 3707192
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "polnorostovyy-rotornyy-turniket-rtd-15.2": {
+        "name": "Полноростовый роторный турникет RTD-15.2",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/RTD-15_TechSpec.pdf",
+            "name": "Краткое техническое описание RTD-15",
+            "size": 1025173
+        }, {
+            "value": "\/download\/documentation\/rus\/MB-15_ApplicGuide.pdf",
+            "name": "Ограждение полноростовое PERCo-МВ-15. Руководство по эксплуатации",
+            "size": 948781
+        }, {
+            "value": "\/download\/documentation\/rus\/RTD-15_ApplicGuide.pdf",
+            "name": "Турникет роторный полноростовый PERCo-RTD-15. Руководство по эксплуатации",
+            "size": 2940651
+        }, {
+            "value": "\/download\/documentation\/rus\/RTC-15_ApplicGuide.pdf",
+            "name": "Крыша PERCo-RTC-15. Руководство по эксплуатации",
+            "size": 1506378
+        }, {
+            "value": "\/download\/certificates\/rus\/RTD_Certification.pdf",
+            "name": "Сертификат на полноростовые турникеты серии RTD",
+            "size": 751126
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/documentation\/rus\/RF01-0-01_Passport.pdf",
+            "name": "Рама монтажная PERCo-RF01 0-01 турникета PERCo-RTD-15. Паспорт",
+            "size": 609021
+        }, {
+            "value": "\/download\/documentation\/rus\/nomenklatura-soedinitelnykh-nakladok.pdf",
+            "name": "Номенклатурный лист на соединительные элементы полноростовых исполнительных устройств и ограждений",
+            "size": 374721
+        }]
+    },
+    "kalitka-avtomaticheskaya-wmd-05s-ag-900": {
+        "name": "Калитка автоматическая WMD-05S со створкой AG-900",
+        "download": {
+            "0": {
+                "value": "\/download\/techspec\/rus\/WMD-05S_TechSpec.pdf",
+                "name": "Краткое техническое описание WMD-05S",
+                "size": 810577
+            },
+            "1": {
+                "value": "\/download\/documentation\/rus\/WMD-05S_ApplicGuide.pdf",
+                "name": "Автоматическая калитка PERCo-WMD-05S. Руководство по эксплуатации",
+                "size": 2031165
+            },
+            "2": {
+                "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+                "name": "Сертификат транспортной безопасности",
+                "size": 2530853
+            },
+            "5": {
+                "value": "\/download\/certificates\/rus\/WMD_Certificate.pdf",
+                "name": "Сертификат на автоматическую калитку PERCo-WMD-05S(SW)",
+                "size": 770345
+            }
+        }
+    },
+    "kalitka-avtomaticheskaya-wmd-05s-ag-1100": {
+        "name": "Калитка автоматическая WMD-05S со створкой AG-1100",
+        "download": {
+            "0": {
+                "value": "\/download\/techspec\/rus\/WMD-05S_TechSpec.pdf",
+                "name": "Краткое техническое описание WMD-05S",
+                "size": 810577
+            },
+            "1": {
+                "value": "\/download\/documentation\/rus\/WMD-05S_ApplicGuide.pdf",
+                "name": "Автоматическая калитка PERCo-WMD-05S. Руководство по эксплуатации",
+                "size": 2031165
+            },
+            "2": {
+                "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+                "name": "Сертификат транспортной безопасности",
+                "size": 2530853
+            },
+            "5": {
+                "value": "\/download\/certificates\/rus\/WMD_Certificate.pdf",
+                "name": "Сертификат на автоматическую калитку PERCo-WMD-05S(SW)",
+                "size": 770345
+            }
+        }
+    },
+    "kalitka-poluavtomaticheskaya-whd-05-asg-900": {
+        "name": "Калитка полуавтоматическая WHD-05 со створкой ASG-900",
+        "download": {
+            "0": {
+                "value": "\/download\/techspec\/rus\/WHD-05_TechSpec.pdf",
+                "name": "Краткое техническое описание WHD-05",
+                "size": 1220736
+            },
+            "1": {
+                "value": "\/download\/documentation\/rus\/WHD-05_ApplicGuide.pdf",
+                "name": "Полуавтоматическая калитка PERCo-WHD-05. Руководство по эксплуатации",
+                "size": 2238100
+            },
+            "2": {
+                "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+                "name": "Сертификат транспортной безопасности",
+                "size": 2530853
+            },
+            "6": {
+                "value": "\/download\/certificates\/rus\/WHD-05_Certificate.pdf",
+                "name": "Сертификат на калитку PERCo-WHD-05",
+                "size": 753814
+            }
+        }
+    },
+    "avtomaticheskaya-kalitka-wmd-06-agg-900": {
+        "name": "Автоматическая калитка WMD-06 со створкой AGG-900",
+        "download": {
+            "0": {
+                "value": "\/download\/techspec\/rus\/WMD-06_TechSpec.pdf",
+                "name": "Краткое техническое описание WMD-06",
+                "size": 824809
+            },
+            "1": {
+                "value": "\/download\/documentation\/rus\/WMD-06_ApplicGuide.pdf",
+                "name": "Автоматическая калитка PERCo-WMD-06. Руководство по эксплуатации",
+                "size": 1752777
+            },
+            "2": {
+                "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+                "name": "Сертификат транспортной безопасности",
+                "size": 2530853
+            },
+            "6": {
+                "value": "\/download\/certificates\/rus\/WMD_Certificate.pdf",
+                "name": "Сертификат на автоматическую калитку PERCo-WMD-06",
+                "size": 770345
+            }
+        }
+    },
+    "vreznoy-elektromekhanicheskiy-zamok-lc72.3": {
+        "name": "Врезной электромеханический замок LC72.3",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/LC_TechSpec.pdf",
+            "name": "Краткое техническое описание серии LC",
+            "size": 1161963
+        }, {
+            "value": "\/download\/documentation\/rus\/LC72.3_ApplicGuide.pdf",
+            "name": "Замок дверной врезной электромеханический PERCo-LC72.3.  Руководство по эксплуатации",
+            "size": 5533027
+        }, {
+            "value": "\/download\/certificates\/rus\/LC72-85.3_Certification.pdf",
+            "name": "Сертификат на врезной электромеханический замок LC72-85.3",
+            "size": false
+        }]
+    },
+    "vreznoy-elektromekhanicheskiy-zamok-lc72.4": {
+        "name": "Врезной электромеханический замок LC72.4",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/LC_TechSpec.pdf",
+            "name": "Краткое техническое описание серии LC",
+            "size": 1161963
+        }, {
+            "value": "\/download\/documentation\/rus\/LC72.4_ApplicGuide.pdf",
+            "name": "Замок дверной врезной электромеханический PERCo-LC72.4. Руководство по эксплуатации",
+            "size": 5661655
+        }]
+    },
+    "vreznoy-elektromekhanicheskiy-zamok-lc85.3": {
+        "name": "Врезной электромеханический замок LC85.3",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/LC_TechSpec.pdf",
+            "name": "Краткое техническое описание серии LC",
+            "size": 1161963
+        }, {
+            "value": "\/download\/certificates\/rus\/LC72-85.3_Certification.pdf",
+            "name": "Сертификат на врезной электромеханический замок LC72-85.3",
+            "size": false
+        }, {
+            "value": "\/download\/documentation\/rus\/LC85.3_ApplicGuide.pdf",
+            "name": "Замок дверной врезной электромеханический PERCo-LC85.3. Руководство по эксплуатации",
+            "size": 5356813
+        }]
+    },
+    "vreznoy-elektromekhanicheskiy-zamok-lc85.4": {
+        "name": "Врезной электромеханический замок LC85.4",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/LC_TechSpec.pdf",
+            "name": "Краткое техническое описание серии LC",
+            "size": 1161963
+        }, {
+            "value": "\/download\/documentation\/rus\/LC85.4_ApplicGuide.pdf",
+            "name": "Замок дверной врезной электромеханический PERCo-LC85.4. Руководство по эксплуатации",
+            "size": 5336620
+        }]
+    },
+    "vreznoy-elektromekhanicheskiy-zamok-lb72.1": {
+        "name": "Врезной электромеханический замок LB72.1",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/LB_TechSpec.pdf",
+            "name": "Краткое техническое описание серии LB",
+            "size": 978437
+        }, {
+            "value": "\/download\/documentation\/rus\/LB72.1_ApplicGuide.pdf",
+            "name": "Замок дверной врезной электромеханический PERCo-LB72.1.  Руководство по эксплуатации",
+            "size": 3204854
+        }]
+    },
+    "vreznoy-elektromekhanicheskiy-zamok-lb72.2": {
+        "name": "Врезной электромеханический замок LB72.2",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/LB_TechSpec.pdf",
+            "name": "Краткое техническое описание серии LB",
+            "size": 978437
+        }, {
+            "value": "\/download\/documentation\/rus\/LB72.2_ApplicGuide.pdf",
+            "name": "Замок дверной врезной электромеханический PERCo-LB72.2.  Руководство по эксплуатации",
+            "size": 3237557
+        }]
+    },
+    "vreznoy-elektromekhanicheskiy-zamok-lb85.1": {
+        "name": "Врезной электромеханический замок LB85.1",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/LB_TechSpec.pdf",
+            "name": "Краткое техническое описание серии LB",
+            "size": 978437
+        }, {
+            "value": "\/download\/documentation\/rus\/LB85.1_ApplicGuide.pdf",
+            "name": "Замок дверной врезной электромеханический PERCo-LB85.1.  Руководство по эксплуатации",
+            "size": 3117501
+        }]
+    },
+    "vreznoy-elektromekhanicheskiy-zamok-lb85.2": {
+        "name": "Врезной электромеханический замок LB85.2",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/LB_TechSpec.pdf",
+            "name": "Краткое техническое описание серии LB",
+            "size": 978437
+        }, {
+            "value": "\/download\/documentation\/rus\/LB85.2_ApplicGuide.pdf",
+            "name": "Замок дверной врезной электромеханический PERCo-LB85.2.  Руководство по эксплуатации",
+            "size": 2131950
+        }]
+    },
+    "elektronnaya-prokhodnaya-kt02.3": {
+        "name": "Электронная проходная KT02.3",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/KT02_TechSpec.pdf",
+            "name": "Краткое техническое описание KT02",
+            "size": 1528544
+        }, {
+            "value": "\/download\/documentation\/rus\/KT023_ApplicGuide.pdf",
+            "name": "Электронная проходная PERCo-KT02.3 Руководство по эксплуатации",
+            "size": 3406893
+        }, {
+            "value": "\/download\/documentation\/rus\/KT023_UsersGuide.pdf",
+            "name": "Электронная проходная PERCo-KT02.3 Руководство пользователя",
+            "size": 824396
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/certificates\/rus\/KT_KTC_Certificate.pdf",
+            "name": "Сертификат на электронные проходные серии KT, KTC",
+            "size": 779431
+        }]
+    },
+    "elektronnaya-prokhodnaya-kt02.7": {
+        "name": "Электронная проходная KT02.7M",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/KT02_TechSpec.pdf",
+            "name": "Краткое техническое описание KT02",
+            "size": 1528544
+        }, {
+            "value": "\/download\/documentation\/rus\/KT02.7M_UsersGuide.pdf",
+            "name": "Электронная проходная PERCo-KT02.7M Руководство по эксплуатации",
+            "size": 3856464
+        }, {
+            "value": "\/download\/documentation\/rus\/KT02.7M_ApplicGuide.pdf",
+            "name": "Электронная проходная PERCo-KT02.7M. Руководство пользователя",
+            "size": 1118832
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/certificates\/rus\/KT_KTC_Certificate.pdf",
+            "name": "Сертификат на электронные проходные серии KT, KTC",
+            "size": 779431
+        }]
+    },
+    "elektronnaya-prokhodnaya-kt08.3a": {
+        "name": "Электронная проходная KT08.3A",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/KT-08.3A_TechSpec.pdf",
+            "name": "Краткое техническое описание KT08.3A",
+            "size": 1132410
+        }, {
+            "value": "\/download\/documentation\/rus\/KT08.3A_ApplicGuide.pdf",
+            "name": "Электронная проходная PERCo-KT08.3A Руководство по эксплуатации",
+            "size": 4582765
+        }, {
+            "value": "\/download\/documentation\/rus\/KT08.3A_UsersGuide.pdf",
+            "name": "Электронная проходная PERCo-KT08.3A Руководство пользователя",
+            "size": 1316041
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/certificates\/rus\/KT_KTC_Certificate.pdf",
+            "name": "Сертификат на электронные проходные серии KT, KTC",
+            "size": 779431
+        }]
+    },
+    "kontroller-zamka-cl05.2": {
+        "name": "Контроллер замка CL05.2",
+        "download": {
+            "0": {
+                "value": "\/download\/documentation\/rus\/CL05_ApplicGuide.pdf",
+                "name": "Контроллер замка PERCo-CL05.2. Руководство по эксплуатации",
+                "size": 1747451
+            },
+            "1": {
+                "value": "\/download\/certificates\/rus\/CL05_Certification.pdf",
+                "name": "Сертификат на контроллер замка PERCo-CL05.2",
+                "size": 769710
+            },
+            "2": {
+                "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+                "name": "Сертификат транспортной безопасности",
+                "size": 2530853
+            },
+            "4": {
+                "value": "\/download\/certificates\/rus\/Controllers_Certificate.pdf",
+                "name": "Сертификат по ГОСТ 51241-2008 на контроллеры",
+                "size": 3737665
+            }
+        }
+    },
+    "kontroller-zamka-cl201.1": {
+        "name": "Контроллер замка CL201.1",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/CL201.1_ApplicGuide.pdf",
+            "name": "Контроллер замка PERCo-CL201.1. Руководство по эксплуатации",
+            "size": 1179102
+        }, {
+            "value": "\/download\/certificates\/rus\/CL201_Certification.pdf",
+            "name": "Сертификат на контроллер замка PERCo-CL201",
+            "size": 759239
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/certificates\/rus\/Controllers_Certificate.pdf",
+            "name": "Сертификат по ГОСТ 51241-2008 на контроллеры",
+            "size": 3737665
+        }]
+    },
+    "kontroller-registratsii-cr01.2": {
+        "name": "Контроллер регистрации CR01.2",
+        "download": {
+            "0": {
+                "value": "\/download\/documentation\/rus\/CR01.2_ApplicGuide.pdf",
+                "name": "Контроллер регистрации PERCo-CR01.2. Руководство по эксплуатации",
+                "size": 2004418
+            },
+            "1": {
+                "value": "\/download\/certificates\/rus\/CR01_Certification.pdf",
+                "name": "Сертификат на контроллер регистрации CR01",
+                "size": 768926
+            },
+            "2": {
+                "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+                "name": "Сертификат транспортной безопасности",
+                "size": 2530853
+            },
+            "4": {
+                "value": "\/download\/certificates\/rus\/Controllers_Certificate.pdf",
+                "name": "Сертификат по ГОСТ 51241-2008 на контроллеры",
+                "size": 3737665
+            }
+        }
+    },
+    "universalnyy-kontroller-ct-l04-2": {
+        "name": "Универсальный контроллер CT\/L04.2",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/documentation\/rus\/CTL04.2_ApplicGuide.pdf",
+            "name": "Контроллер турникета\/замка PERCo-CT\/L04.2. Руководство по эксплуатации.",
+            "size": 3850589
+        }, {
+            "value": "\/download\/techspec\/rus\/CT-L04.2_TechSpec.pdf",
+            "name": "Краткое техническое описание CT\/L04.2",
+            "size": 1758730
+        }, {
+            "value": "\/download\/certificates\/rus\/CTL04.2_Certification.pdf",
+            "name": "Сертификат на универсальный контроллер CT\/L04.2",
+            "size": 776307
+        }]
+    },
+    "tablo-sistemnogo-vremeni-au05": {
+        "name": "Табло системного времени AU05",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/AU05_ApplicGuide.pdf",
+            "name": "Табло системного времени PERCo-AU05. Руководство по эксплуатации",
+            "size": 665122
+        }, {
+            "value": "\/download\/certificates\/rus\/AU05_Certificate.pdf",
+            "name": "Сертификат на табло системного времени PERCo-AU05",
+            "size": 769623
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "ik-pult-distantsionnogo-upravleniya-au01": {
+        "name": "ИК-пульт дистанционного управления AU01",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/documentation\/rus\/AU01_Passport.pdf",
+            "name": "ИК-пульт дистанционного управления PERCo-AU01. Паспорт",
+            "size": 764996
+        }]
+    },
+    "blok-indikatsii-s-ik-priemnikom-ai01": {
+        "name": "Блок индикации с ИК-приемником AI01",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/documentation\/rus\/AI01_Passport.pdf",
+            "name": "Блок индикации с ИК-приемником PERCo-AI01. Паспорт и руководство по эксплуатации",
+            "size": 895345
+        }]
+    },
+    "schityvatel-rp-15-2": {
+        "name": "Считыватель RP-15.2",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/RP-15.2_TechSpec.pdf",
+            "name": "Краткое техническое описание RP-15.2",
+            "size": 336126
+        }, {
+            "value": "\/download\/documentation\/rus\/RP-15MW_ApplicGuide.pdf",
+            "name": "Считыватель бесконтактный PERCo-RP-15.2. Паспорт и руководство по эксплуатации",
+            "size": 682885
+        }, {
+            "value": "\/download\/certificates\/rus\/Card-readers_Certificate.pdf",
+            "name": "Сертификат на считыватели",
+            "size": 1558481
+        }]
+    },
+    "kontrolnyy-schityvatel-ir08": {
+        "name": "Контрольный считыватель IR08",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/IR08_TechSpec.pdf",
+            "name": "Краткое техническое описание IR08",
+            "size": 612015
+        }, {
+            "value": "\/download\/documentation\/rus\/IR08_Passport.pdf",
+            "name": "Контрольный считыватель PERCO-IR08. Паспорт",
+            "size": 617907
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/certificates\/rus\/Card-readers_Certificate.pdf",
+            "name": "Сертификат на считыватели",
+            "size": 1558481
+        }]
+    },
+    "kontrolnyy-schityvatel-ir05.2": {
+        "name": "Контрольный считыватель IR05.2",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/IR05_Passport.pdf",
+            "name": "Контрольный считыватель PERCo-IR05.2. Паспорт",
+            "size": 1402623
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/certificates\/rus\/Card-readers_Certificate.pdf",
+            "name": "Сертификат на считыватели",
+            "size": 1558481
+        }]
+    },
+    "beskontaktnyy-schityvatel-ir07": {
+        "name": "Бесконтактный считыватель IR07",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/IR07_ApplicGuide.pdf",
+            "name": "Считыватель бесконтактный PERCo-IR07. Руководство по эксплуатации",
+            "size": 1241792
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/certificates\/rus\/Card-readers_Certificate.pdf",
+            "name": "Сертификат на считыватели",
+            "size": 1558481
+        }]
+    },
+    "beskontaktnyy-schityvatel-ir04": {
+        "name": "Бесконтактный считыватель IR04",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/IR04_ApplicGuide.pdf",
+            "name": "Бесконтактный считыватель карт доступа PERCo-IR04. Руководство по эксплуатации",
+            "size": 917908
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/certificates\/rus\/Card-readers_Certificate.pdf",
+            "name": "Сертификат на считыватели",
+            "size": 1558481
+        }]
+    },
+    "beskontaktnyy-schityvatel-ir03": {
+        "name": "Бесконтактный считыватель IR03",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/IR03_ApplicGuide.pdf",
+            "name": "Бесконтактный считыватель PERCo-IR03. Руководство по эксплуатации",
+            "size": 1818269
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/certificates\/rus\/Card-readers_Certificate.pdf",
+            "name": "Сертификат на считыватели",
+            "size": 1558481
+        }]
+    },
+    "stoyka-schityvatel-irp01": {
+        "name": "Стойка-считыватель IRP01",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/IRP01_TechSpec.pdf",
+            "name": "Краткое техническое описание IRP01",
+            "size": 523513
+        }, {
+            "value": "\/download\/documentation\/rus\/IRP01_ApplicGuide.pdf",
+            "name": "Стойка-считыватель PERCo-IRP01. Руководство по эксплуатации",
+            "size": 1775428
+        }, {
+            "value": "\/download\/certificates\/rus\/IRP01_Certification.pdf",
+            "name": "Сертификат на стойку-считыватель PERCo-IRP01",
+            "size": 770624
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "schityvatel-dalnego-deystviya-ir10": {
+        "name": "Считыватель дальнего действия IR10",
+        "download": {
+            "0": {
+                "value": "\/download\/techspec\/rus\/IR-10_TechSpec.pdf",
+                "name": "Краткое техническое описание IR10",
+                "size": 487139
+            },
+            "1": {
+                "value": "\/download\/documentation\/rus\/IR10_ApplicGuide.pdf",
+                "name": "Бесконтактный считыватель PERCo-IR10. Руководство по эксплуатации",
+                "size": 1726271
+            },
+            "2": {
+                "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+                "name": "Сертификат транспортной безопасности",
+                "size": 2530853
+            },
+            "4": {
+                "value": "\/download\/documentation\/rus\/BH-03_ApplicGuide.pdf",
+                "name": "Стойка PERCo-BH-03 для установки считывателя PERCo-IR10. Руководство по монтажу",
+                "size": 1357454
+            },
+            "8": {
+                "value": "\/download\/certificates\/rus\/Card-readers_Certificate.pdf",
+                "name": "Сертификат на считыватели",
+                "size": 1558481
+            }
+        }
+    },
+    "vreznoy-elektromekhanicheskiy-zamok-lbp85.1": {
+        "name": "Врезной электромеханический замок LBP85.1",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/LBP_TechSpec.pdf",
+            "name": "Краткое техническое описание серии LBP",
+            "size": 1275750
+        }, {
+            "value": "\/download\/documentation\/rus\/LBP85.1_ApplicGuide.pdf",
+            "name": "Замок дверной врезной электромеханический PERCo-LBP85.1.  Руководство по эксплуатации",
+            "size": 5229094
+        }, {
+            "value": "\/download\/documentation\/rus\/LBP85-BP1_template-left.pdf",
+            "name": "Шаблон установки для левого замка LBP-85 с запорной планкой BP-1",
+            "size": 529452
+        }, {
+            "value": "\/download\/documentation\/rus\/LBP85-BP1_template-right.pdf",
+            "name": "Шаблон установки для правого замка LBP-85 с запорной планкой BP-1",
+            "size": 541888
+        }, {
+            "value": "\/download\/documentation\/rus\/LBP85-BP2_template-left.pdf",
+            "name": "Шаблон установки для левого замка LBP-85 с запорной планкой BP-2",
+            "size": 521926
+        }, {
+            "value": "\/download\/documentation\/rus\/LBP85-BP2_template-right.pdf",
+            "name": "Шаблон установки для правого замка LBP-85 с запорной планкой BP-2",
+            "size": 520378
+        }]
+    },
+    "vreznoy-elektromekhanicheskiy-zamok-lbp85.2": {
+        "name": "Врезной электромеханический замок LBP85.2",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/LBP_TechSpec.pdf",
+            "name": "Краткое техническое описание серии LBP",
+            "size": 1275750
+        }, {
+            "value": "\/download\/documentation\/rus\/LBP85.2_ApplicGuide.pdf",
+            "name": "Замок дверной врезной электромеханический PERCo-LBP85.2.  Руководство по эксплуатации",
+            "size": 4353696
+        }, {
+            "value": "\/download\/documentation\/rus\/LBP85-BP1_template-left.pdf",
+            "name": "Шаблон установки для левого замка LBP-85 с запорной планкой BP-1",
+            "size": 529452
+        }, {
+            "value": "\/download\/documentation\/rus\/LBP85-BP1_template-right.pdf",
+            "name": "Шаблон установки для правого замка LBP-85 с запорной планкой BP-1",
+            "size": 541888
+        }, {
+            "value": "\/download\/documentation\/rus\/LBP85-BP2_template-left.pdf",
+            "name": "Шаблон установки для левого замка LBP-85 с запорной планкой BP-2",
+            "size": 521926
+        }, {
+            "value": "\/download\/documentation\/rus\/LBP85-BP2_template-right.pdf",
+            "name": "Шаблон установки для правого замка LBP-85 с запорной планкой BP-2",
+            "size": 520378
+        }]
+    },
+    "elektronnaya-prokhodnaya-kt05.4": {
+        "name": "Электронная проходная KT05.4",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/KT05.4_TechSpec.pdf",
+            "name": "Краткое техническое описание KT05.4",
+            "size": 1201090
+        }, {
+            "value": "\/download\/documentation\/rus\/KT05.4_ApplicGuide.pdf",
+            "name": "Электронная проходная PERCo-КT05.4. Руководство по эксплуатации",
+            "size": 3576594
+        }, {
+            "value": "\/download\/documentation\/rus\/KT05.4_UsersGuide.pdf",
+            "name": "Электронная проходная PERCo-КT05.4. Руководство пользователя",
+            "size": 1144562
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/certificates\/rus\/KT_KTC_Certificate.pdf",
+            "name": "Сертификат на электронные проходные серии KT, KTC",
+            "size": 779431
+        }]
+    },
+    "elektronnaya-prokhodnaya-kt05.7": {
+        "name": "Электронная проходная KT05.7M",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/KT05.7_ApplicGuide.pdf",
+            "name": "Электронная проходная PERCo-КT05.7M. Руководство по эксплуатации",
+            "size": 3287830
+        }, {
+            "value": "\/download\/documentation\/rus\/KT05.7_UsersGuide.pdf",
+            "name": "Электронная проходная PERCo-КT05.7M. Руководство пользователя",
+            "size": 1080979
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/certificates\/rus\/KT_KTC_Certificate.pdf",
+            "name": "Сертификат на электронные проходные серии KT, KTC",
+            "size": 779431
+        }]
+    },
+    "elektronnaya-prokhodnaya-kt05.4a": {
+        "name": "Электронная проходная KT05.4A",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/KT05.4A_TechSpec.pdf",
+            "name": "Краткое техническое описание KT05.4A",
+            "size": 928191
+        }, {
+            "value": "\/download\/documentation\/rus\/KT05.4A_ApplicGuide.pdf",
+            "name": "Электронная проходная PERCo-КT05.4A. Руководство по эксплуатации",
+            "size": 3904053
+        }, {
+            "value": "\/download\/documentation\/rus\/KT05.4A_UsersGuide.pdf",
+            "name": "Электронная проходная PERCo-КT05.4A. Руководство пользователя",
+            "size": 1539082
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/certificates\/rus\/KT_KTC_Certificate.pdf",
+            "name": "Сертификат на электронные проходные серии KT, KTC",
+            "size": 779431
+        }]
+    },
+    "elektronnaya-prokhodnaya-kt05.7a": {
+        "name": "Электронная проходная KT05.7MA",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/KT05.7A_ApplicGuide.pdf",
+            "name": "Электронная проходная PERCo-КT05.7MA. Руководство по эксплуатации",
+            "size": 3282057
+        }, {
+            "value": "\/download\/documentation\/rus\/KT05.7A_UsersGuide.pdf",
+            "name": "Электронная проходная PERCo-КT05.7MA. Руководство пользователя",
+            "size": 1092283
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/certificates\/rus\/KT_KTC_Certificate.pdf",
+            "name": "Сертификат на электронные проходные серии KT, KTC",
+            "size": 779431
+        }]
+    },
+    "elektronnaya-prokhodnaya-ktc01.4": {
+        "name": "Электронная проходная KTC01.4",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/KTC01.4_TechSpec.pdf",
+            "name": "Краткое техническое описание KTC01.4",
+            "size": 1035953
+        }, {
+            "value": "\/download\/documentation\/rus\/KTC01.4_ApplicGuide.pdf",
+            "name": "Электронная проходная PERCo-KTC01.4. Руководство по эксплуатации",
+            "size": 4294580
+        }, {
+            "value": "\/download\/documentation\/rus\/KTC01.4_UsersGuide.pdf",
+            "name": "Электронная проходная PERCo-KTC01.4. Руководство пользователя",
+            "size": 1230598
+        }, {
+            "value": "\/download\/certificates\/rus\/KT_KTC_Certificate.pdf",
+            "name": "Сертификат на электронные проходные серии KT, KTC",
+            "size": 779431
+        }]
+    },
+    "elektronnaya-prokhodnaya-ktc01.7": {
+        "name": "Электронная проходная KTC01.7M",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/KTC01.7_ApplicGuide.pdf",
+            "name": "Электронная проходная PERCo-KTC01.7M. Руководство по эксплуатации",
+            "size": 4515575
+        }, {
+            "value": "\/download\/documentation\/rus\/KTC01.7_UsersGuide.pdf",
+            "name": "Электронная проходная PERCo-KTC01.7M. Руководство пользователя",
+            "size": 1157808
+        }, {
+            "value": "\/download\/certificates\/rus\/KT_KTC_Certificate.pdf",
+            "name": "Сертификат на электронные проходные серии KT, KTC",
+            "size": 779431
+        }]
+    },
+    "elektronnaya-prokhodnaya-ktc01.4a": {
+        "name": "Электронная проходная KTC01.4A",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/KTC01.4A_TechSpec.pdf",
+            "name": "Краткое техническое описание KTC01.4A",
+            "size": 1235058
+        }, {
+            "value": "\/download\/documentation\/rus\/KTC01.4A_ApplicGuide.pdf",
+            "name": "Электронная проходная PERCo-KTC01.4A. Руководство по эксплуатации",
+            "size": 3920887
+        }, {
+            "value": "\/download\/documentation\/rus\/KTC01.4A_UsersGuide.pdf",
+            "name": "Электронная проходная PERCo-KTC01.4A. Руководство пользователя",
+            "size": 1199153
+        }, {
+            "value": "\/download\/certificates\/rus\/KT_KTC_Certificate.pdf",
+            "name": "Сертификат на электронные проходные серии KT, KTC",
+            "size": 779431
+        }]
+    },
+    "elektronnaya-prokhodnaya-ktc01.7a": {
+        "name": "Электронная проходная KTC01.7MA",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/KTC01.7A_ApplicGuide.pdf",
+            "name": "Электронная проходная PERCo-KTC01.7MA. Руководство по эксплуатации",
+            "size": 4112428
+        }, {
+            "value": "\/download\/documentation\/rus\/KTC01.7A_UsersGuide.pdf",
+            "name": "Электронная проходная PERCo-KTC01.7MA. Руководство пользователя",
+            "size": 1182299
+        }, {
+            "value": "\/download\/certificates\/rus\/KT_KTC_Certificate.pdf",
+            "name": "Сертификат на электронные проходные серии KT, KTC",
+            "size": 779431
+        }]
+    },
+    "kalitka-avtomaticheskaya-wmd-05sw-ag-650": {
+        "name": "Калитка автоматическая WMD-05SW со створкой AG-650",
+        "download": {
+            "0": {
+                "value": "\/download\/techspec\/rus\/WMD-05SW_TechSpec.pdf",
+                "name": "Краткое техническое описание WMD-05SW",
+                "size": 887567
+            },
+            "1": {
+                "value": "\/download\/documentation\/rus\/WMD-05SW_ApplicGuide.pdf",
+                "name": "Автоматическая калитка PERCo-WMD-05SW. Руководство по эксплуатации",
+                "size": 1167502
+            },
+            "2": {
+                "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+                "name": "Сертификат транспортной безопасности",
+                "size": 2530853
+            },
+            "5": {
+                "value": "\/download\/certificates\/rus\/WMD_Certificate.pdf",
+                "name": "Сертификат на автоматическую калитку PERCo-WMD-05S(SW)",
+                "size": 770345
+            }
+        }
+    },
+    "kalitka-avtomaticheskaya-wmd-05sw-ag-900": {
+        "name": "Калитка автоматическая WMD-05SW со створкой AG-900",
+        "download": {
+            "0": {
+                "value": "\/download\/techspec\/rus\/WMD-05SW_TechSpec.pdf",
+                "name": "Краткое техническое описание WMD-05SW",
+                "size": 887567
+            },
+            "1": {
+                "value": "\/download\/documentation\/rus\/WMD-05SW_ApplicGuide.pdf",
+                "name": "Автоматическая калитка PERCo-WMD-05SW. Руководство по эксплуатации",
+                "size": 1167502
+            },
+            "2": {
+                "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+                "name": "Сертификат транспортной безопасности",
+                "size": 2530853
+            },
+            "5": {
+                "value": "\/download\/certificates\/rus\/WMD_Certificate.pdf",
+                "name": "Сертификат на автоматическую калитку PERCo-WMD-05S(SW)",
+                "size": 770345
+            }
+        }
+    },
+    "kalitka-avtomaticheskaya-wmd-05sw-ag-1100": {
+        "name": "Калитка автоматическая WMD-05SW со створкой AG-1100",
+        "download": {
+            "0": {
+                "value": "\/download\/techspec\/rus\/WMD-05SW_TechSpec.pdf",
+                "name": "Краткое техническое описание WMD-05SW",
+                "size": 887567
+            },
+            "1": {
+                "value": "\/download\/documentation\/rus\/WMD-05SW_ApplicGuide.pdf",
+                "name": "Автоматическая калитка PERCo-WMD-05SW. Руководство по эксплуатации",
+                "size": 1167502
+            },
+            "2": {
+                "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+                "name": "Сертификат транспортной безопасности",
+                "size": 2530853
+            },
+            "5": {
+                "value": "\/download\/certificates\/rus\/WMD_Certificate.pdf",
+                "name": "Сертификат на автоматическую калитку PERCo-WMD-05S(SW)",
+                "size": 770345
+            }
+        }
+    },
+    "lokalnoe-programmnoe-obespechenie-perco-sl01": {
+        "name": "Локальное программное обеспечение PERCo-SL01"
+    },
+    "lokalnoe-programmnoe-obespechenie-perco-sl02": {
+        "name": "Локальное программное обеспечение PERCo-SL02"
+    },
+    "modul-po-perco-sm12-videonablyudenie": {
+        "name": "Модуль ПО PERCo-SM12  Видеонаблюдение"
+    },
+    "modul-po-perco-sm13-tsentralnyy-post": {
+        "name": "Модуль ПО PERCo-SM13  Центральный пост"
+    },
+    "modul-po-perco-sm15-prozrachnoe-zdanie": {
+        "name": "Модуль ПО PERCo-SM15  Прозрачное здание"
+    },
+    "modul-po-perco-sm10-priem-posetiteley": {
+        "name": "Модуль ПО PERCo-SM10  Прием посетителей"
+    },
+    "modul-po-perco-sm14-dizayner-propuskov": {
+        "name": "Модуль ПО PERCo-SM14  Дизайнер пропусков"
+    },
+    "modul-po-perco-sm09-verifikatsiya": {
+        "name": "Модуль ПО PERCo-SM09  Верификация"
+    },
+    "modul-po-perco-sm03-byuro-propuskov": {
+        "name": "Модуль ПО PERCo-SM03 Бюро пропусков"
+    },
+    "modul-po-perco-sm04-upravlenie-dostupom": {
+        "name": "Модуль ПО PERCo-SM04 Управление доступом"
+    },
+    "modul-po-perco-sm07-uchet-rabochego-vremeni": {
+        "name": "Модуль ПО PERCo-SM07 Учет рабочего времени"
+    },
+    "modul-po-perco-sm05-distsiplinarnye-otchety": {
+        "name": "Модуль ПО PERCo-SM05 Дисциплинарные отчеты"
+    },
+    "modul-po-perco-sm02-personal": {
+        "name": "Модуль ПО PERCo-SM02 Персонал"
+    },
+    "modul-po-perco-sm08-monitoring": {
+        "name": "Модуль ПО PERCo-SM08 Мониторинг"
+    },
+    "modul-po-perco-sm01-administrator": {
+        "name": "Модуль ПО PERCo-SM01 Администратор"
+    },
+    "perco-sn01-bazovyy-komplekt-po": {
+        "name": "PERCo-SN01 Базовый комплект ПО"
+    },
+    "modul-po-perco-sm16-kafe": {
+        "name": "Модуль ПО PERCo-SM16 Кафе"
+    },
+    "modul-po-perco-sm17-atp": {
+        "name": "Модуль ПО PERCo-SM17 АТП"
+    },
+    "modul-po-perco-sm18-integratsiya-s-iso-orion": {
+        "name": "Модуль ПО PERCo-SM18 Интеграция с ИСО «Орион»"
+    },
+    "modul-po-raspoznavanie-dokumentov": {
+        "name": "Модуль ПО «Распознавание документов»"
+    },
+    "schityvatel-magnitnykh-kart-rm-3vr": {
+        "name": "Считыватель магнитных карт RM-3VR",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/RM-3VR_Passport.pdf",
+            "name": "Считыватель магнитный PERCo-RM-3VR. Паспорт и руководство по эксплуатации.",
+            "size": 712791
+        }, {
+            "value": "\/download\/certificates\/rus\/RM-3VR_Certificate.pdf",
+            "name": "Сертификат на считыватель магнитный PERCo-RM-3VR",
+            "size": 583667
+        }]
+    },
+    "schityvatel-bankovskikh-kart-rmc01": {
+        "name": "Считыватель банковских карт RMC01",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/RMC01_ApplicGuide.pdf",
+            "name": "Считыватель банковских карт PERCo-RMC01. Паспорт и руководство по эксплуатации",
+            "size": 1312679
+        }, {
+            "value": "\/download\/certificates\/rus\/RMC01_Certificate.pdf",
+            "name": "Сертификат на считыватель банковских карт PERCo-RMC01",
+            "size": 781528
+        }]
+    },
+    "kontroller-upravleniya-dostupom-sc-820": {
+        "name": "Контроллер управления доступом SC-820",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/SC-820_ApplicGuide.pdf",
+            "name": "Контроллер доступа к банкомату PERCo-SC-820. Руководство по эксплуатации",
+            "size": 986465
+        }, {
+            "value": "\/download\/certificates\/rus\/SC-820_Certificate.pdf",
+            "name": "Сертификат на контроллер PERCo-SC-820",
+            "size": 783278
+        }]
+    },
+    "bazovoe-po-shkola-perco-ss01": {
+        "name": "Базовое ПО «Школа» PERCo-SS01"
+    },
+    "rasshirennoe-po-shkola-perco-ss02": {
+        "name": "Расширенное ПО «Школа» PERCo-SS02"
+    },
+    "polnorostovoe-ograzhdenie-mb-16": {
+        "name": "Полноростовое ограждение МB-16",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/MB-16_ApplicGuide.pdf",
+            "name": "Ограждение полноростовое PERCo-МВ-16. Руководство по эксплуатации",
+            "size": 993144
+        }]
+    },
+    "kalitka-polnorostovaya-whd-16": {
+        "name": "Калитка полноростовая WHD-16",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/WHD-16_ApplicGuide.pdf",
+            "name": "Калитка полноростовая PERCo-WHD-16. Руководство по эксплуатации",
+            "size": 908407
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "polnorostovyy-rotornyy-turniket-rtd-16.1": {
+        "name": "Полноростовый моторизованный роторный турникет RTD-16.1",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/RTD-16_TechSpec.pdf",
+            "name": "Краткое техническое описание RTD-16",
+            "size": 2026946
+        }, {
+            "value": "\/download\/documentation\/rus\/RTD-16_ApplicGuide.pdf",
+            "name": "Турникет роторный полноростовый PERCo-RTD-16. Руководство по эксплуатации",
+            "size": 2435180
+        }, {
+            "value": "\/download\/documentation\/rus\/MB-16_ApplicGuide.pdf",
+            "name": "Ограждение полноростовое PERCo-МВ-16. Руководство по эксплуатации",
+            "size": 993144
+        }, {
+            "value": "\/download\/documentation\/rus\/RTC-16_ApplicGuide.pdf",
+            "name": "Крыша PERCo-RTC-16. Руководство по эксплуатации",
+            "size": 1196799
+        }, {
+            "value": "\/download\/certificates\/rus\/RTD_Certification.pdf",
+            "name": "Сертификат на полноростовые турникеты серии RTD",
+            "size": 751126
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/documentation\/rus\/RF-16_ApplicGuide.pdf",
+            "name": "Рама монтажная PERCo-RF-16. Руководство по монтажу.",
+            "size": 542194
+        }]
+    },
+    "polnorostovyy-rotornyy-turniket-rtd-16.2": {
+        "name": "Полноростовый роторный турникет RTD-16.2",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/RTD-16_TechSpec.pdf",
+            "name": "Краткое техническое описание RTD-16",
+            "size": 2026946
+        }, {
+            "value": "\/download\/documentation\/rus\/RTD-16_ApplicGuide.pdf",
+            "name": "Турникет роторный полноростовый PERCo-RTD-16. Руководство по эксплуатации",
+            "size": 2435180
+        }, {
+            "value": "\/download\/documentation\/rus\/MB-16_ApplicGuide.pdf",
+            "name": "Ограждение полноростовое PERCo-МВ-16. Руководство по эксплуатации",
+            "size": 993144
+        }, {
+            "value": "\/download\/documentation\/rus\/RTC-16_ApplicGuide.pdf",
+            "name": "Крыша PERCo-RTC-16. Руководство по эксплуатации",
+            "size": 1196799
+        }, {
+            "value": "\/download\/certificates\/rus\/RTD_Certification.pdf",
+            "name": "Сертификат на полноростовые турникеты серии RTD",
+            "size": 751126
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/documentation\/rus\/RF-16_ApplicGuide.pdf",
+            "name": "Рама монтажная PERCo-RF-16. Руководство по монтажу.",
+            "size": 542194
+        }]
+    },
+    "polnorostovyy-rotornyy-turniket-rtd-16.1s": {
+        "name": "Полноростовый моторизованный роторный турникет RTD-16.1S",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/RTD-16_TechSpec.pdf",
+            "name": "Краткое техническое описание RTD-16",
+            "size": 2026946
+        }, {
+            "value": "\/download\/documentation\/rus\/RTD-16_ApplicGuide.pdf",
+            "name": "Турникет роторный полноростовый PERCo-RTD-16. Руководство по эксплуатации",
+            "size": 2435180
+        }, {
+            "value": "\/download\/documentation\/rus\/MB-16_ApplicGuide.pdf",
+            "name": "Ограждение полноростовое PERCo-МВ-16. Руководство по эксплуатации",
+            "size": 993144
+        }, {
+            "value": "\/download\/documentation\/rus\/RTC-16_ApplicGuide.pdf",
+            "name": "Крыша PERCo-RTC-16. Руководство по эксплуатации",
+            "size": 1196799
+        }, {
+            "value": "\/download\/certificates\/rus\/RTD_Certification.pdf",
+            "name": "Сертификат на полноростовые турникеты серии RTD",
+            "size": 751126
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/documentation\/rus\/RF-16_ApplicGuide.pdf",
+            "name": "Рама монтажная PERCo-RF-16. Руководство по монтажу.",
+            "size": 542194
+        }]
+    },
+    "polnorostovyy-rotornyy-turniket-rtd-16.2s": {
+        "name": "Полноростовый роторный турникет RTD-16.2S",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/RTD-16_TechSpec.pdf",
+            "name": "Краткое техническое описание RTD-16",
+            "size": 2026946
+        }, {
+            "value": "\/download\/documentation\/rus\/RTD-16_ApplicGuide.pdf",
+            "name": "Турникет роторный полноростовый PERCo-RTD-16. Руководство по эксплуатации",
+            "size": 2435180
+        }, {
+            "value": "\/download\/documentation\/rus\/MB-16_ApplicGuide.pdf",
+            "name": "Ограждение полноростовое PERCo-МВ-16. Руководство по эксплуатации",
+            "size": 993144
+        }, {
+            "value": "\/download\/documentation\/rus\/RTC-16_ApplicGuide.pdf",
+            "name": "Крыша PERCo-RTC-16. Руководство по эксплуатации",
+            "size": 1196799
+        }, {
+            "value": "\/download\/certificates\/rus\/RTD_Certification.pdf",
+            "name": "Сертификат на полноростовые турникеты серии RTD",
+            "size": 751126
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/documentation\/rus\/RF-16_ApplicGuide.pdf",
+            "name": "Рама монтажная PERCo-RF-16. Руководство по монтажу.",
+            "size": 542194
+        }]
+    },
+    "perco-wm-02-modul-verifikatsiya": {
+        "name": "PERCo-WM-02 Модуль «Верификация»"
+    },
+    "perco-wm-01-modul-uchet-rabochego-vremeni": {
+        "name": "PERCo-WM-01 Модуль «Учет рабочего времени»"
+    },
+    "perco-ws-standartnyy-paket-po": {
+        "name": "PERCo-WS «Стандартный пакет ПО»"
+    },
+    "biometricheskie-kontrollery-suprema": {
+        "name": "Биометрические контроллеры Suprema"
+    },
+    "ograzhdenie-vn06-iz-zakalennogo-stekla": {
+        "name": "Ограждение ВН06 из закаленного стекла",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/BH06_ApplicGuide.pdf",
+            "name": "Ограждение полуростовое PERCo-BH06. Руководство по эксплуатации",
+            "size": 650708
+        }]
+    },
+    "beskontaktnyy-schityvatel-mr07-1": {
+        "name": "Бесконтактный считыватель MR07.1 (MIFARE, защита от копирования)",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/certificates\/rus\/Card-readers_Certificate.pdf",
+            "name": "Сертификат на считыватели",
+            "size": 1558481
+        }, {
+            "value": "\/download\/documentation\/rus\/MR07.1_ApplicGuide.pdf",
+            "name": "Считыватель бесконтактный PERCo-MR07.1. Паспорт и руководство по эксплуатации",
+            "size": 1013540
+        }, {
+            "value": "\/download\/techspec\/rus\/MR07_TechSpec.pdf",
+            "name": " Краткое техническое описание MR07.1",
+            "size": 239458
+        }]
+    },
+    "kontrolnyy-schityvatel-mr08": {
+        "name": "Контрольный считыватель MR08 (MIFARE, защита от копирования) ",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/certificates\/rus\/Card-readers_Certificate.pdf",
+            "name": "Сертификат на считыватели",
+            "size": 1558481
+        }, {
+            "value": "\/download\/documentation\/rus\/MR08_ApplicGuide.pdf",
+            "name": "Контрольный считыватель PERCo-MR08. Паспорт",
+            "size": 874110
+        }, {
+            "value": "\/download\/techspec\/rus\/MR08_TechSpec.pdf",
+            "name": " Краткое техническое описание MR08",
+            "size": 171426
+        }]
+    },
+    "kontroller-dostupa-c01-dlya-online-sistem": {
+        "name": "Контроллер доступа C01 для online систем",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/C01_UsersGuide.pdf",
+            "name": "Контроллер доступа PERCo-C01. Руководство по эксплуатации",
+            "size": 1961978
+        }, {
+            "value": "\/download\/techspec\/rus\/C-01_TechSpec.pdf",
+            "name": "Краткое техническое описание C01",
+            "size": 1388576
+        }]
+    },
+    "modul-po-perco-sm19-integratsiya-s-1s-predpriyatie": {
+        "name": "Модуль ПО PERCo-SM19 Интеграция с 1С:Предприятие"
+    },
+    "polnorostovyy-rotornyy-turniket-rtd-20-1": {
+        "name": "Полноростовый моторизованный роторный турникет RTD-20.1",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/RTD-20_TechSpec.pdf",
+            "name": "Краткое техническое описание RTD-20",
+            "size": 2027526
+        }, {
+            "value": "\/download\/documentation\/rus\/RTD-20_ApplicGuide.pdf",
+            "name": "Турникет роторный полноростовый PERCo-RTD-20. Руководство по эксплуатации",
+            "size": 3232760
+        }, {
+            "value": "\/download\/documentation\/rus\/RTC-20_ApplicGuide.pdf",
+            "name": "Крыша PERCo-RTC-20. Руководство по эксплуатации",
+            "size": 1288918
+        }, {
+            "value": "\/download\/certificates\/rus\/RTD_Certification.pdf",
+            "name": "Сертификат на полноростовые турникеты серии RTD",
+            "size": 751126
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/documentation\/rus\/RF-20_ApplicGuide.pdf",
+            "name": "Рама монтажная PERCo-RF-20. Руководство по монтажу.",
+            "size": 1238286
+        }]
+    },
+    "polnorostovyy-rotornyy-turniket-rtd-20-2": {
+        "name": "Полноростовый роторный турникет RTD-20.2",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/RTD-20_TechSpec.pdf",
+            "name": "Краткое техническое описание RTD-20",
+            "size": 2027526
+        }, {
+            "value": "\/download\/documentation\/rus\/RTD-20_ApplicGuide.pdf",
+            "name": "Турникет роторный полноростовый PERCo-RTD-20. Руководство по эксплуатации",
+            "size": 3232760
+        }, {
+            "value": "\/download\/documentation\/rus\/RTC-20_ApplicGuide.pdf",
+            "name": "Крыша PERCo-RTC-20. Руководство по эксплуатации",
+            "size": 1288918
+        }, {
+            "value": "\/download\/certificates\/rus\/RTD_Certification.pdf",
+            "name": "Сертификат на полноростовые турникеты серии RTD",
+            "size": 751126
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/documentation\/rus\/RF-20_ApplicGuide.pdf",
+            "name": "Рама монтажная PERCo-RF-20. Руководство по монтажу.",
+            "size": 1238286
+        }]
+    },
+    "polnorostovyy-rotornyy-turniket-rtd-20-1S": {
+        "name": "Полноростовый моторизованный роторный турникет RTD-20.1S",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/RTD-20_TechSpec.pdf",
+            "name": "Краткое техническое описание RTD-20",
+            "size": 2027526
+        }, {
+            "value": "\/download\/documentation\/rus\/RTD-20_ApplicGuide.pdf",
+            "name": "Турникет роторный полноростовый PERCo-RTD-20. Руководство по эксплуатации",
+            "size": 3232760
+        }, {
+            "value": "\/download\/documentation\/rus\/RTC-20_ApplicGuide.pdf",
+            "name": "Крыша PERCo-RTC-20. Руководство по эксплуатации",
+            "size": 1288918
+        }, {
+            "value": "\/download\/certificates\/rus\/RTD_Certification.pdf",
+            "name": "Сертификат на полноростовые турникеты серии RTD",
+            "size": 751126
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/documentation\/rus\/RF-20_ApplicGuide.pdf",
+            "name": "Рама монтажная PERCo-RF-20. Руководство по монтажу.",
+            "size": 1238286
+        }]
+    },
+    "polnorostovyy-rotornyy-turniket-rtd-20-2s": {
+        "name": "Полноростовый роторный турникет RTD-20.2S",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/RTD-20_TechSpec.pdf",
+            "name": "Краткое техническое описание RTD-20",
+            "size": 2027526
+        }, {
+            "value": "\/download\/documentation\/rus\/RTD-20_ApplicGuide.pdf",
+            "name": "Турникет роторный полноростовый PERCo-RTD-20. Руководство по эксплуатации",
+            "size": 3232760
+        }, {
+            "value": "\/download\/documentation\/rus\/RTC-20_ApplicGuide.pdf",
+            "name": "Крыша PERCo-RTC-20. Руководство по эксплуатации",
+            "size": 1288918
+        }, {
+            "value": "\/download\/certificates\/rus\/RTD_Certification.pdf",
+            "name": "Сертификат на полноростовые турникеты серии RTD",
+            "size": 751126
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/documentation\/rus\/RF-20_ApplicGuide.pdf",
+            "name": "Рама монтажная PERCo-RF-20. Руководство по монтажу.",
+            "size": 1238286
+        }]
+    },
+    "tumbovyy-turniket-tripod-ttd-10a": {
+        "name": "Тумбовый турникет-трипод TTD-10A",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/TTD-10A_TechSpec.pdf",
+            "name": "Краткое техническое описание TTD-10A",
+            "size": 1747810
+        }, {
+            "value": "\/download\/documentation\/rus\/TTD-10А_ApplicGuide.pdf",
+            "name": "Тумбовый турникет-трипод PERCo-TTD-10A. Руководство по эксплуатации",
+            "size": 4478977
+        }, {
+            "value": "\/download\/certificates\/rus\/TTD_TB_TBC_Certificate.pdf",
+            "name": "Сертификат на тумбовые турникеты",
+            "size": 756710
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "perco-wb-bazovyy-paket-po": {
+        "name": "PERCo-WB «Базовый пакет ПО»"
+    },
+    "krysha-rtc-15-dlya-polnorostovogo-turniketa-rtd-15": {
+        "name": "Крыша RTC-15 для полноростового турникета RTD-15",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/RTC-15_ApplicGuide.pdf",
+            "name": "Крыша PERCo-RTC-15. Руководство по эксплуатации",
+            "size": 1506378
+        }]
+    },
+    "krysha-rtc-16-dlya-polnorostovogo-turniketa-rtd-16": {
+        "name": "Крыша RTC-16 для полноростового турникета RTD-16",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/RTC-16_ApplicGuide.pdf",
+            "name": "Крыша PERCo-RTC-16. Руководство по эксплуатации",
+            "size": 1196799
+        }]
+    },
+    "krysha-rtc-20-dlya-polnorostovogo-turniketa-rtd-20": {
+        "name": "Крыша RTC-20 для полноростового турникета RTD-20",
+        "download": [{
+            "value": "\/download\/documentation\/rus\/RTC-20_ApplicGuide.pdf",
+            "name": "Крыша PERCo-RTC-20. Руководство по эксплуатации",
+            "size": 1288918
+        }]
+    },
+    "skorostnoy-prokhod-st-02-atg-600": {
+        "name": "Скоростной проход ST-02 с раздвижными стандартными створками",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/ST-02_TechSpec.pdf",
+            "name": "Краткое техническое описание ST-02",
+            "size": 1093200
+        }, {
+            "value": "\/download\/certificates\/rus\/ST-02_Declaration.pdf",
+            "name": "Декларация о соответствии на скоростной турникет ST-02",
+            "size": 806423
+        }, {
+            "value": "\/download\/documentation\/rus\/ST-02_ApplicGuide.pdf",
+            "name": "Скоростной проход PERCo-ST-02 и двусторонняя секция PERCo-STD-02. Руководство по эксплуатации",
+            "size": 4196081
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "konverter-perco-ac02": {
+        "name": "Конвертер PERCo-AC02.1",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/AC02_TechSpec.pdf",
+            "name": "Краткое техническое описание AC02",
+            "size": 960032
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }, {
+            "value": "\/download\/documentation\/rus\/AC02_ApplicGuide.pdf",
+            "name": "Конвертер PERCo-AC02. Паспорт и руководство по эксплуатации",
+            "size": 1085547
+        }]
+    },
+    "kartopriemnik-ic05": {
+        "name": "Картоприемник IC05",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/IC05_TechSpec.pdf",
+            "name": "Краткое техническое описание IC05",
+            "size": 987419
+        }, {
+            "value": "\/download\/documentation\/rus\/IC05_ApplicGuide.pdf",
+            "name": "Картоприёмник PERCo-IC05. Руководство по эксплуатации",
+            "size": 3283933
+        }, {
+            "value": "\/download\/certificates\/rus\/IC05_Declaration.pdf",
+            "name": "Картоприёмник PERCo-IC05. Декларация",
+            "size": 331657
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    },
+    "smartfony-s-nfc-modulem": {
+        "name": "Смартфоны с NFC модулем"
+    },
+    "karty-dostupa": {
+        "name": "Бесконтактные карты доступа"
+    },
+    "biometricheskaya-identifikatsiya": {
+        "name": "Биометрическая идентификация"
+    },
+    "skorostnoy-prokhod-st-02-s-razdvizhnymi-uvelichennymi-stvorkami": {
+        "name": "Скоростной проход ST-02 с раздвижными увеличенными створками",
+        "download": [{
+            "value": "\/download\/techspec\/rus\/ST-02_TechSpec.pdf",
+            "name": "Краткое техническое описание ST-02",
+            "size": 1093200
+        }, {
+            "value": "\/download\/certificates\/rus\/ST-02_Declaration.pdf",
+            "name": "Декларация о соответствии на скоростной турникет ST-02",
+            "size": 806423
+        }, {
+            "value": "\/download\/documentation\/rus\/ST-02_ApplicGuide.pdf",
+            "name": "Скоростной проход PERCo-ST-02 и двусторонняя секция PERCo-STD-02. Руководство по эксплуатации",
+            "size": 4196081
+        }, {
+            "value": "\/download\/documentation\/rus\/sertifikat-transportnoy-bezopasnosti.pdf",
+            "name": "Сертификат транспортной безопасности",
+            "size": 2530853
+        }]
+    }
+}

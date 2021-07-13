@@ -1,0 +1,13 @@
+*.txt
+*.md
+*.zip
+*.rar
+*.pdf
+*.mp4
+*.gz
+*.jpg
+*.png
+*.log
+ignore/
+.ignore/
+.vscode/

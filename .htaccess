@@ -1,0 +1,460 @@
+Options -Indexes
+ErrorDocument 404 /404.php
+ErrorDocument 410 /410.php
+
+php_value session.entropy_file /dev/urandom
+php_value session.entropy_length 128
+php_value max_input_vars 10000
+php_value pcre.recursion_limit 1000
+php_value opcache.revalidate_freq 0
+php_value mbstring.func_overload 2
+php_value mbstring.internal_encoding UTF-8
+
+AddType video/webm .webm
+AddType video/mp4 .mp4
+
+RewriteCond %{HTTP_HOST} ^perco.ru$
+RewriteRule ^(.*)$ https://www.perco.ru/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^xn--j1aibe8d.xn--p1ai$
+RewriteRule ^(.*)$ https://www.perco.ru/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www.xn--j1aibe8d.xn--p1ai$
+RewriteRule ^(.*)$ https://www.perco.ru/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^xn--e1akmbg.xn--p1ai$
+RewriteRule ^(.*)$ https://www.perco.ru/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www.xn--e1akmbg.xn--p1ai$
+RewriteRule ^(.*)$ https://www.perco.ru/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^xn--e1afgkolfc2f.xn--p1ai$
+RewriteRule ^(.*)$ https://www.perco.ru/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www.xn--e1afgkolfc2f.xn--p1ai$
+RewriteRule ^(.*)$ https://www.perco.ru/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^perco.info$
+RewriteRule ^(.*)$ https://www.perco.ru/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www.perco.info$
+RewriteRule ^(.*)$ https://www.perco.ru/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^perco.biz$
+RewriteRule ^(.*)$ https://www.perco.ru/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www.perco.biz$
+RewriteRule ^(.*)$ https://www.perco.ru/$1 [R=301,L]
+
+#RewriteCond %{HTTP_HOST} ^seb.perco.ru$
+#RewriteRule ^(.*)$ https://www.perco.ru/$1 [R=301,L]
+
+#RewriteCond %{HTTP_HOST} ^service.perco.ru$
+#RewriteRule ^(.*)$ https://www.perco.ru/$1 [R=301,L]
+
+#RewriteCond %{HTTP_HOST} ^sotops.perco.ru$
+#RewriteRule ^(.*)$ https://www.perco.ru/$1 [R=301,L]
+
+#RewriteCond %{HTTP_HOST} ^spb.perco.ru$
+#RewriteRule ^(.*)$ https://www.perco.ru/$1 [R=301,L]
+
+#RewriteCond %{HTTP_HOST} ^flash.perco.ru$
+#RewriteRule ^(.*)$ https://www.perco.ru/$1 [R=301,L]
+
+#RewriteCond %{HTTP_HOST} ^dostup.perco.ru$
+#RewriteRule ^(.*)$ https://www.perco.ru/ [R=301,L]
+
+#RewriteCond %{HTTP_HOST} ^turniket.perco.ru$
+#RewriteRule ^(.*)$ https://www.perco.ru/ [R=301,L]
+
+#RewriteCond %{HTTP_HOST} ^tourniquet.perco.ru$
+#RewriteRule ^(.*)$ https://www.it.perco.com [R=301,L]
+
+#RewriteCond %{HTTP_HOST} ^turnstile.perco.ru$
+#RewriteRule ^(.*)$ https://www.perco.com [R=301,L]
+
+#RewriteCond %{HTTP_HOST} ^site.perco.ru$
+#RewriteRule ^(.*)$ https://www.perco.ru/$1 [R=301,L]
+
+
+RewriteRule ^robots.txt$ robots.php [L]
+
+RewriteRule ^sxd/ - [L]
+RewriteRule ^(.*/)index.php$ /$1 [R=301,L]
+RewriteRule ^index.php$ /$1 [R=301,L]
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
+<IfModule mod_php5.c>
+  php_flag allow_call_time_pass_reference 1
+  php_flag session.use_trans_sid off
+
+  #php_value display_errors 1
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
+  RewriteEngine On
+
+	RewriteCond %{HTTP:X-HTTPS} !1
+	RewriteCond %{HTTP_HOST} ^www.perco.ru$
+	RewriteRule ^(.*) https://www.perco.ru/$1 [R,L]
+
+	#RewriteCond %{HTTP:X-HTTPS} !1
+	#RewriteRule ^client/?(.*) https://www.perco.ru/client/$1 [R,L]
+
+	#RewriteCond %{HTTP:X-HTTPS} !1
+	#RewriteRule ^bitrix/admin/?(.*) https://www.perco.ru/bitrix/admin/$1 [R,L]
+
+  RewriteCond %{REQUEST_FILENAME} ^(.*)/DD.MM.YYYY$
+  RewriteRule ^(.*)$ rewriteurl.php?route=$1 [L,QSA]
+  RewriteRule ^images/subscribe/pixel/$ /images/subscribe/pixel/pixel.gif [R=301,L]
+
+
+# ���������� ���������
+#---------------------------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------------------------
+# �������� �������
+  Redirect 410 /products/price-list/
+  Redirect 410 /products/turnikety-kalitki-ograzhdeniya/price-list/
+  Redirect 410 /products/sistemy-kontrolya-dostupa/price-list/
+  Redirect 410 /products/kompleksnye-sistemy-bezopasnosti/price-list/
+  Redirect 410 /products/sistemy-kontrolya-dostupa/sistemy-povysheniya-effektivnosti/
+  Redirect 410 /products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/primer-postroeniya-seti-ethernet/
+  Redirect 410 /products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/novoe-v-sistemah/
+  Redirect 410 /products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/elektronnye-kabinety/
+  Redirect 410 /products/kompleksnye-sistemy-bezopasnosti/novoe-v-sistemah/
+  Redirect 410 /products/kompleksnye-sistemy-bezopasnosti/setevye-ip-videokamery/
+  Redirect 410 /articles/
+  Redirect 410 /glossary/
+  
+  Redirect 301 /products/skorostnoy-prokhod-st-01-atg-300h.php https://perco.ru/products/skorostnoy-prokhod-st-01.php
+  Redirect 301 /products/skorostnoy-prokhod-st-01-atg-425.php https://perco.ru/products/skorostnoy-prokhod-st-01.php
+  Redirect 301 /products/skorostnoy-prokhod-st-01-atg-300.php https://perco.ru/products/skorostnoy-prokhod-st-01.php
+  Redirect 301 /products/beskontaktnye-karty-dostupa/ https://perco.ru/products/karty-dostupa/
+  Redirect 301 /percoDemo/products/beskontaktnye-karty-dostupa/ https://perco.ru/percoDemo/products/karty-dostupa/
+  Redirect 301 /organizatsiya-ucheta-rabochego-vremeni.php https://perco.ru/resheniya/gibkiy-grafik/
+  Redirect 301 /resheniya/tipovye-resheniya/ https://perco.ru/resheniya/
+  Redirect 301 /resheniya/gotovye-resheniya-dlya-obektov/ https://perco.ru/resheniya/
+  Redirect 301 /individualnye-resheniya/ https://perco.ru/resheniya/
+  Redirect 301 /podderzhka/proektirovshchikam-i-installyatoram.php https://perco.ru/podderzhka/proektirovshchikam-i-installyatoram/
+  Redirect 301 /resheniya/dlya-predpriyatiy/ https://perco.ru/resheniya/predpriyatiya/
+  Redirect 301 /resheniya/dlya-biznes-tsentrov/ https://perco.ru/resheniya/biznes-tsentry/
+  Redirect 301 /resheniya/dlya-gosudarstvennykh-uchrezhdeniy/ https://perco.ru/resheniya/gosudarstvennye-uchrezhdeniya/
+  Redirect 301 /resheniya/dlya-ofisov/ https://perco.ru/resheniya/ofisy/
+  Redirect 301 /resheniya/dlya-uchebnykh-zavedeniy/ https://perco.ru/resheniya/uchebnye-zavedeniya/
+  Redirect 301 /resheniya/dlya-sportivno-razvlekatelnykh-obektov/ https://perco.ru/resheniya/sportivno-razvlekatelnye-obekty/
+  Redirect 301 /podderzhka/proektirovshchikam-i-installyatoram/novoe-test.php https://www.perco.ru/podderzhka/proektirovshchikam-i-installyatoram/novoe.php
+  Redirect 301 /products/shlagbaum-gs04.php https://www.perco.ru/products/shlagbaum/
+  Redirect 301 /elektronnaya-prokhodnaya-kt02-9q.php https://www.perco.ru/products/elektronnaya-prokhodnaya-kt02-9q.php
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^support/service-list/$ /support/service-list/RUS/ [R=301,L]
+  RewriteRule ^products/elektronnye-prohodnye/?$ /products/elektronnye-prokhodnye/ [R=301,L]
+  RewriteRule ^products/elektronnye-prohodnye/elektronnaya-prohodnaya-kt08.3a/?$ /products/elektronnaya-prokhodnaya-kt08.3a.php [R=301,L]
+  RewriteRule ^products/elektronnye-prohodnye/elektronnaya-prohodnaya-kt02/?$ /products/elektronnaya-prokhodnaya-kt02.3.php [R=301,L]
+  RewriteRule ^products/elektronnye-prohodnye/elektronnaya-prohodnaya-kt02-7/?$ /products/elektronnaya-prokhodnaya-kt02.7.php [R=301,L]
+  RewriteRule ^products/elektronnye-prohodnye/elektronnaya-prohodnaya-ktc01/?$ /products/elektronnaya-prokhodnaya-ktc01.4.php [R=301,L]
+  RewriteRule ^products/elektronnye-prohodnye/elektronnaya-prohodnaya-kt05/?$ /products/elektronnaya-prokhodnaya-kt05.4.php [R=301,L]
+  RewriteRule ^products/elektronnye-prohodnye/elektronnaya-prohodnaya-kr05/?$ /products/elektronnaya-prokhodnaya-kr05.4.php [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^products/zamki/?$ /products/elektromekhanicheskie-zamki/ [R=301,L]
+  RewriteRule ^products/zamki/lbp85.1/?$ /products/vreznoy-elektromekhanicheskiy-zamok-lbp85.1.php [R=301,L]
+  RewriteRule ^products/zamki/lbp85.2/?$ /products/vreznoy-elektromekhanicheskiy-zamok-lbp85.2.ph [R=301,L]
+  RewriteRule ^products/zamki/lb85.1/?$ /products/vreznoy-elektromekhanicheskiy-zamok-lb85.1.php [R=301,L]
+  RewriteRule ^products/zamki/lb85.2/?$ /products/vreznoy-elektromekhanicheskiy-zamok-lb85.2.php [R=301,L]
+  RewriteRule ^products/zamki/lb72.1/?$ /products/vreznoy-elektromekhanicheskiy-zamok-lb72.1.php [R=301,L]
+  RewriteRule ^products/zamki/lb72.2/?$ /products/vreznoy-elektromekhanicheskiy-zamok-lb72.2.php [R=301,L]
+  RewriteRule ^products/zamki/vreznoj-elektromehanicheskij-zamok-lc85-mod-1/?$ /products/vreznoy-elektromekhanicheskiy-zamok-lc85.3.php [R=301,L]
+  RewriteRule ^products/zamki/elektromehanicheskij-dvernoj-zamok-lc85/?$ /products/vreznoy-elektromekhanicheskiy-zamok-lc85.4.php [R=301,L]
+  RewriteRule ^products/zamki/dvernoj-zamok-lc72/?$ /products/vreznoy-elektromekhanicheskiy-zamok-lc72.3.php [R=301,L]
+  RewriteRule ^products/zamki/zamok-lc72/?$ /products/vreznoy-elektromekhanicheskiy-zamok-lc72.4.php [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^products/gallery/sportivnye-uchrezhdeniya.php?$ /fotogalereya/sportivnye-i-razvlekatelnye-uchrezhdeniya.php [R=301,L]
+  RewriteRule ^products/gallery/ofisy-kompanii.php?$ /fotogalereya/ofisy-kompaniy.php [R=301,L]
+  RewriteRule ^products/gallery/(.*)?$ /fotogalereya/$1 [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/?$ /products/turnikety/ [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/turnikety-tripody/?$ /products/turnikety-tripody/ [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/turnikety-tripody/turniket-tripod-ttr-08/?$ /products/turniket-tripod-ttr-08a.php [R=301,L]
+  RewriteRule ^/products/turniket-tripod-ttr-08.php?$ /products/turniket-tripod-ttr-08a.php [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/turnikety-tripody/turniket-tripod-ttr-07/?$ /products/turniket-tripod-ttr-07.1.php [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/turnikety-tripody/turniket-tripod-ttr-04/?$ /products/turniket-tripod-ttr-04.php [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/turnikety-tripody/turniket-tripod-ttr-04w/?$ /products/turniket-tripod-ttr-04cw.php [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/turnikety-tripody/turniket-tripod-t-5/?$ /products/turniket-tripod-t-5.php [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/tumbovye-turnikety/?$ /products/tumbovye-turnikety/ [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/tumbovye-turnikety/ttd-08a/?$ /products/tumbovyy-turniket-tripod-ttd-08a.php [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/tumbovye-turnikety/tumbovyj-turniket-tripod-ttd-031/?$ /products/tumbovyy-turniket-tripod-ttd-03.1s.php [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/tumbovye-turnikety/tumbovyj-turniket-tripod-ttd-032/?$ /products/tumbovyy-turniket-tripod-ttd-03.2s.php [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/tumbovye-turnikety/tumbovyj-turniket-tripod-tbc01/?$ /products/tumbovyy-turniket-tripod-tbc01.1.php [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/tumbovye-turnikety/tumbovyj-turniket-tripod-tb01/?$ /products/tumbovye-turnikety-tripody-tb01.1.php [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/skorostnye-prohody/?$ /products/skorostnye-prokhody/ [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/skorostnye-prohody/st-01/?$ /products/skorostnoy-prokhod-st-01-atg-300.php [R=301,L]
+  RewriteRule ^products/skorostnoy-prokhod-st-01-atg-450.php?$ /products/skorostnoy-prokhod-st-01-atg-425.php [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/polurostovye-rotornye-turnikety/?$ /products/polurostovye-rotornye-turnikety/ [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/polurostovye-rotornye-turnikety/wmd-06/?$ /products/avtomaticheskaya-kalitka-wmd-06-agg-650.php [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/polurostovye-rotornye-turnikety/wmd-05sw/?$ /products/kalitka-avtomaticheskaya-wmd-05sw-ag-650.php [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/polurostovye-rotornye-turnikety/motorizovannaya-kalitka-wmd-05s/?$ /products/kalitka-avtomaticheskaya-wmd-05s-ag-650.php [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/polurostovye-rotornye-turnikety/nemotorizovannaya-kalitka-whd-04/?$ /products/kalitka-poluavtomaticheskaya-whd-05-asg-650.php [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/polurostovye-rotornye-turnikety/rotornyj-polurostovyj-turniket-rtd-03s/?$ /products/polurostovyy-rotornyy-turniket-rtd-03s-rb-03s.php [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/polurostovye-rotornye-turnikety/rotornyj-polurostovyj-turniket-rtd-03s-03tp/?$ /products/polurostovyy-rotornyy-turniket-rtd-03s-rb-03tp.php [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/polnorostovye-turnikety-i-polnorostovye-kalitki/?$ /products/polnorostovye-turnikety-i-kalitki/ [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/polnorostovye-turnikety-i-polnorostovye-kalitki/rtd-16/?$ /products/polnorostovyy-rotornyy-turniket-rtd-16.1.php [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/polnorostovye-turnikety-i-polnorostovye-kalitki/rotornyj-polnorostovyj-turniket-rtd-15/?$ /products/polnorostovyy-rotornyy-turniket-rtd-15.1.php [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/polnorostovye-turnikety-i-polnorostovye-kalitki/whd-16/?$ /products/kalitka-polnorostovaya-whd-16.php [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/polnorostovye-turnikety-i-polnorostovye-kalitki/polnorostovaya-kalitka-whd-15/?$ /products/kalitka-polnorostovaya-whd-15.php [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/ograzhdeniya/?$ /products/ograzhdeniya/ [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/ograzhdeniya/polurostovoe-ograzhdenie-bh02/?$ /products/ograzhdenie-polurostovoe-bh02.php [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/ograzhdeniya/mb-16/?$ /products/polnorostovoe-ograzhdenie-mb-16.php [R=301,L]
+  RewriteRule ^products/turnikety-kalitki-ograzhdeniya/ograzhdeniya/polnorostovoe-ograzhdenie-mb-15r/?$ /products/polnorostovoe-ograzhdenie-mb-15.php [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^products/sistemy-kontrolya-dostupa/?$ /products/sistema-kontrolya-dostupa-perco-web/ [R=301,L]
+  RewriteRule ^/products/sistemy-kontrolya-dostupa/kontrol-dostupa-v-pomescheniya/?$ /products/ [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/?$ /products/kompleksnaya-sistema-bezopasnosti-perco-s-20/ [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-bezopasnosti-shkola/?$ /products/sistema-bezopasnosti-perco-s-20-shkola/ [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-ogranicheniya-dostupa-k-bankomatu-s-800/?$ /products/sistema-dlya-bankomatov-perco-s-800/ [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-ogranicheniya-dostupa-k-bankomatu-s-800/sc-820/?$ /products/kontroller-upravleniya-dostupom-sc-820.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-ogranicheniya-dostupa-k-bankomatu-s-800/rm-3vr/?$ /products/schityvatel-magnitnykh-kart-rm-3vr.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-ogranicheniya-dostupa-k-bankomatu-s-800/rmc01/?$ /products/schityvatel-bankovskikh-kart-rmc01.php [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/?$ /products/sistema-kontrolya-dostupa-perco-web/ [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/kontrollery/?$ /products/kontrollery/ [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/kontrollery/kontroller-zamka-cl05/?$ /products/kontroller-zamka-cl05.1.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/kontrollery/kontroller-zamka-turniketa-ctl04/?$ /products/universalnyy-kontroller-ctl04.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/kontrollery/kontroller-zamka-cl201/?$ /products/kontroller-zamka-cl201.1.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/kontrollery/kontroller-ucheta-rabochego-vremeni-cr01/?$ /products/kontroller-registratsii-cr01.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/kontrollery/ik-pult-distancionnogo-upravleniya-au01/?$ /products/ik-pult-distantsionnogo-upravleniya-au01.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/kontrollery/tablo-sistemnogo-vremeni-au05/?$ /products/tablo-sistemnogo-vremeni-au05.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/kontrollery/vynosnoj-blok-indikacii-ai01/?$ /products/blok-indikatsii-s-ik-priemnikom-ai01.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/schityvateli/?$ /products/schityvateli/ [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/schityvateli/ir10/?$ /products/schityvatel-dalnego-deystviya-ir10.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/schityvateli/beskontaktnyj-schityvatel-ir03/?$ /products/beskontaktnyy-schityvatel-ir03.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/schityvateli/beskontaktnyj-schityvatel-ir04/?$ /products/beskontaktnyy-schityvatel-ir04.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/schityvateli/beskontaktnyj-schityvatel-ir07/?$ /products/beskontaktnyy-schityvatel-ir07.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/schityvateli/kontrolnyj-schityvatel-ir05/?$ /products/kontrolnyy-schityvatel-ir05.2.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/schityvateli/kontrolnyj-schityvatel-ir08/?$ /products/kontrolnyy-schityvatel-ir08.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/schityvateli/irp01/?$ /products/stoyka-schityvatel-irp01.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/schityvateli/schityvateli-beskontaktnyh-kart-rp-15/?$ /products/schityvatel-rp-15-2.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/schityvateli/karty-dostupa/?$ /products/karty-dostupa.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/kartopriemniki/?$ /products/kartopriemniki/ [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/kartopriemniki/kartopriemnik-ic02/?$ /products/kartopriemnik-ic02.1.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/kartopriemniki/kartopriemnik-ic03/?$ /products/kartopriemnik-ic03.1.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/elektronnye-prohodnye/?$ /products/elektronnye-prokhodnye/ [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/elektronnye-prohodnye/elektronnaya-prohodnaya-kt08.3a/?$ /products/elektronnaya-prokhodnaya-kt08.3a.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/elektronnye-prohodnye/elektronnaya-prohodnaya-kt02/?$ /products/elektronnaya-prokhodnaya-kt02.3.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/elektronnye-prohodnye/elektronnaya-prohodnaya-kt02-7/?$ /products/elektronnaya-prokhodnaya-kt02.7.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/elektronnye-prohodnye/elektronnaya-prohodnaya-ktc01/?$ /products/elektronnaya-prokhodnaya-ktc01.4.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/elektronnye-prohodnye/elektronnaya-prohodnaya-kt05/?$ /products/elektronnaya-prokhodnaya-kt05.4.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/elektronnye-prohodnye/elektronnaya-prohodnaya-kr05/?$ /products/elektronnaya-prokhodnaya-kr05.4.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/programmnoe-obespechenie/?$ /products/po-sistemy-kontrolya-dostupa-perco-web/ [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-perco-web/priobretenie-licenzii/?$ /podderzhka/priobretenie-licenzii-perco-web.php [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/kontrollery/?$ /products/kontrollery/ [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/kontrollery/kontroller-zamka-cl05/?$ /products/kontroller-zamka-cl05.1.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/kontrollery/kontroller-zamka-turniketa-ctl04/?$ /products/universalnyy-kontroller-ctl04.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/kontrollery/kontroller-zamka-cl201/?$ /products/kontroller-zamka-cl201.1.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/kontrollery/kontroller-ucheta-rabochego-vremeni-cr01/?$ /products/kontroller-registratsii-cr01.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/kontrollery/ik-pult-distancionnogo-upravleniya-au01/?$ /products/ik-pult-distantsionnogo-upravleniya-au01.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/kontrollery/tablo-sistemnogo-vremeni-au05/?$ /products/tablo-sistemnogo-vremeni-au05.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/kontrollery/vynosnoj-blok-indikacii-ai01/?$ /products/blok-indikatsii-s-ik-priemnikom-ai01.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/schityvateli/?$ /products/schityvateli/ [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/schityvateli/ir10/?$ /products/schityvatel-dalnego-deystviya-ir10.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/schityvateli/beskontaktnyj-schityvatel-ir03/?$ /products/beskontaktnyy-schityvatel-ir03.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/schityvateli/beskontaktnyj-schityvatel-ir04/?$ /products/beskontaktnyy-schityvatel-ir04.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/schityvateli/beskontaktnyj-schityvatel-ir07/?$ /products/beskontaktnyy-schityvatel-ir07.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/schityvateli/kontrolnyj-schityvatel-ir05/?$ /products/kontrolnyy-schityvatel-ir05.2.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/schityvateli/kontrolnyj-schityvatel-ir08/?$ /products/kontrolnyy-schityvatel-ir08.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/schityvateli/irp01/?$ /products/stoyka-schityvatel-irp01.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/schityvateli/schityvateli-beskontaktnyh-kart-rp-15/?$ /products/schityvatel-rp-15-2.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/schityvateli/karty-dostupa/?$ /products/karty-dostupa.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/elektronnye-prohodnye/?$ /products/elektronnye-prokhodnye/ [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/elektronnye-prohodnye/elektronnaya-prohodnaya-kt08.3a/?$ /products/elektronnaya-prokhodnaya-kt08.3a.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/elektronnye-prohodnye/elektronnaya-prohodnaya-kt02/?$ /products/elektronnaya-prokhodnaya-kt02.3.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/elektronnye-prohodnye/elektronnaya-prohodnaya-kt02-7/?$ /products/elektronnaya-prokhodnaya-kt02.7.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/elektronnye-prohodnye/elektronnaya-prohodnaya-ktc01/?$ /products/elektronnaya-prokhodnaya-ktc01.4.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/elektronnye-prohodnye/elektronnaya-prohodnaya-kt05/?$ /products/elektronnaya-prokhodnaya-kt05.4.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/elektronnye-prohodnye/elektronnaya-prohodnaya-kr05/?$ /products/elektronnaya-prokhodnaya-kr05.4.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/kartopriemniki/?$ /products/kartopriemniki/ [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/kartopriemniki/kartopriemnik-ic02/?$ /products/kartopriemnik-ic02.1.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/kartopriemniki/kartopriemnik-ic03/?$ /products/kartopriemnik-ic03.1.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/lokalnoe/?$ /products/lokalnoe-po/ [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/lokalnoe/lokalnoe-programmnoe-obespechenie-perco-sl01/?$ /products/lokalnoe-programmnoe-obespechenie-perco-sl01.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/lokalnoe/lokalnoe-programmnoe-obespechenie-perco-sl02/?$ /products/lokalnoe-programmnoe-obespechenie-perco-sl02.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/setevoe/?$ /products/setevoe-po/ [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/setevoe/perco-sn01-bazovoe-programmnoe-obespechenie/?$ /products/perco-sn01-bazovyy-komplekt-po.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/setevoe/perco-sm01-modul-programmnogo-obespecheniya-administrator/?$ /products/modul-po-perco-sm01-administrator.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/setevoe/perco-sm02-modul-programmnogo-obespecheniya-personal/?$ /products/modul-po-perco-sm02-personal.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/setevoe/perco-sm03-modul-programmnogo-obespecheniya-byuro-propuskov/?$ /products/modul-po-perco-sm03-byuro-propuskov.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/setevoe/perco-sm04-modul-programmnogo-obespecheniya-upravlenie-dostupom/?$ /products/modul-po-perco-sm04-upravlenie-dostupom.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/setevoe/perco-sm05-modul-programmnogo-obespecheniya-disciplinarnye-otchety/?$ /products/modul-po-perco-sm05-distsiplinarnye-otchety.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/setevoe/perco-sm07-modul-programmnogo-obespecheniya-uchet-rabochego-vremeni/?$ /products/modul-po-perco-sm07-uchet-rabochego-vremeni.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/setevoe/perco-sm08-modul-programmnogo-obespecheniya-monitoring/?$ /products/modul-po-perco-sm08-monitoring.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/setevoe/perco-sm09-modul-programmnogo-obespecheniya-videoidentifikaciya/?$ /products/modul-po-perco-sm09-verifikatsiya.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/setevoe/perco-sm10-modul-programmnogo-obespecheniya-priem-posetitelej/?$ /products/modul-po-perco-sm10-priem-posetiteley.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/setevoe/perco-sm12-modul-programmnogo-obespecheniya-videonablyudenie/?$ /products/modul-po-perco-sm12-videonablyudenie.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/setevoe/perco-sm13-modul-programmnogo-obespecheniya-centralnyj-post/?$ /products/modul-po-perco-sm13-tsentralnyy-post.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/setevoe/perco-sm14-modul-programmnogo-obespecheniya-dizajner-propuskov/?$ /products/modul-po-perco-sm14-dizayner-propuskov.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/setevoe/perco-sm15-modul-programmnogo-obespecheniya-prozrachnoe-zdanie/?$ /products/modul-po-perco-sm15-prozrachnoe-zdanie.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/setevoe/perco-sm16-modul-programmnogo-obespecheniya-kafe/?$ /products/modul-po-perco-sm16-kafe.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/setevoe/perco-sm17-modul-programmnogo-obespecheniya-atp/?$ /products/modul-po-perco-sm17-atp.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/setevoe/perco-sm18/?$ /products/modul-po-perco-sm18-integratsiya-s-iso-orion.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/setevoe/modul-po-raspoznavanie-dokumentov/?$ /products/modul-po-raspoznavanie-dokumentov.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/programmnoe-obespechenie/setevoe/1s-modul-uchet-rabochego-vremeni/?$ /products/formula-modul-uchet-rabochego-vremeni-integratsiya-s-1s-predpriyatie-8.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/komplekty-programmnogo-obespecheniya/?$ /products/komplekty-po/ [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-kontrolya-dostupa-s-20/priobretenie-licenzii/?$ /podderzhka/priobretenie-licenzii-perco-s-20.php [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/?$ /products/kompleksnaya-sistema-bezopasnosti-perco-s-20/ [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/dopolnitelnoe-oborudovanie-skud/?$ /products/dopolnitelnoe-oborudovanie/ [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/dopolnitelnoe-oborudovanie-skud/vynosnoj-blok-indikacii-ai01/?$ /products/blok-indikatsii-s-ik-priemnikom-ai01.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/dopolnitelnoe-oborudovanie-skud/ik-pult-distancionnogo-upravleniya-au01/?$ /products/ik-pult-distantsionnogo-upravleniya-au01.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/dopolnitelnoe-oborudovanie-skud/tablo-sistemnogo-vremeni-au05/?$ /products/tablo-sistemnogo-vremeni-au05.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/dopolnitelnoe-oborudovanie-skud/karty-dostupa/?$ /products/karty-dostupa.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/oborudovanie-skud/?$ /products/kontrollery-schityvateli/ [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/oborudovanie-skud/kontroller-zamka-cl05/?$ /products/kontroller-zamka-cl05.1.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/oborudovanie-skud/kontroller-zamka-turniketa-ctl04/?$ /products/universalnyy-kontroller-ctl04.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/oborudovanie-skud/kontroller-zamka-cl201/?$ /products/kontroller-zamka-cl201.1.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/oborudovanie-skud/beskontaktnyj-schityvatel-ir03/?$ /products/beskontaktnyy-schityvatel-ir03.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/oborudovanie-skud/beskontaktnyj-schityvatel-ir04/?$ /products/beskontaktnyy-schityvatel-ir04.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/oborudovanie-skud/beskontaktnyj-schityvatel-ir07/?$ /products/beskontaktnyy-schityvatel-ir07.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/oborudovanie-skud/kontrolnyj-schityvatel-ir05/?$ /products/kontrolnyy-schityvatel-ir05.2.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/oborudovanie-skud/kontrolnyj-schityvatel-ir08/?$ /products/kontrolnyy-schityvatel-ir08.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/oborudovanie-skud/elektronnaya-prohodnaya-ktc01/?$ /products/elektronnaya-prokhodnaya-ktc01.4.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/oborudovanie-skud/elektronnaya-prohodnaya-kt05/?$ /products/elektronnaya-prokhodnaya-kt05.4.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/oborudovanie-skud/elektronnaya-prohodnaya-kt02/?$ /products/elektronnaya-prokhodnaya-kt02.3.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/oborudovanie-skud/elektronnaya-prohodnaya-kt02-7/?$ /products/elektronnaya-prokhodnaya-kt02.7.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/oborudovanie-skud/elektronnaya-prohodnaya-kr05/?$ /products/elektronnaya-prokhodnaya-kr05.4.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/oborudovanie-skud/kartopriemnik-ic02/?$ /products/kartopriemnik-ic02.1.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/oborudovanie-skud/kontroller-ucheta-rabochego-vremeni-cr01/?$ /products/kontroller-registratsii-cr01.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/?$  [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/lokalnoe/?$ /products/lokalnoe-po/ [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/lokalnoe/lokalnoe-programmnoe-obespechenie-perco-sl01/?$ /products/lokalnoe-programmnoe-obespechenie-perco-sl01.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/lokalnoe/lokalnoe-programmnoe-obespechenie-perco-sl02/?$ /products/lokalnoe-programmnoe-obespechenie-perco-sl02.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/setevoe/?$ /products/setevoe-po/ [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/setevoe/perco-sn01-bazovoe-programmnoe-obespechenie/?$ /products/perco-sn01-bazovyy-komplekt-po.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/setevoe/perco-sm01-modul-programmnogo-obespecheniya-administrator/?$ /products/modul-po-perco-sm01-administrator.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/setevoe/perco-sm02-modul-programmnogo-obespecheniya-personal/?$ /products/modul-po-perco-sm02-personal.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/setevoe/perco-sm03-modul-programmnogo-obespecheniya-byuro-propuskov/?$ /products/modul-po-perco-sm03-byuro-propuskov.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/setevoe/perco-sm04-modul-programmnogo-obespecheniya-upravlenie-dostupom/?$ /products/modul-po-perco-sm04-upravlenie-dostupom.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/setevoe/perco-sm05-modul-programmnogo-obespecheniya-disciplinarnye-otchety/?$ /products/modul-po-perco-sm05-distsiplinarnye-otchety.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/setevoe/perco-sm07-modul-programmnogo-obespecheniya-uchet-rabochego-vremeni/?$ /products/modul-po-perco-sm07-uchet-rabochego-vremeni.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/setevoe/perco-sm08-modul-programmnogo-obespecheniya-monitoring/?$ /products/modul-po-perco-sm08-monitoring.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/setevoe/perco-sm09-modul-programmnogo-obespecheniya-videoidentifikaciya/?$ /products/modul-po-perco-sm09-verifikatsiya.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/setevoe/perco-sm10-modul-programmnogo-obespecheniya-priem-posetitelej/?$ /products/modul-po-perco-sm10-priem-posetiteley.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/setevoe/perco-sm12-modul-programmnogo-obespecheniya-videonablyudenie/?$ /products/modul-po-perco-sm12-videonablyudenie.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/setevoe/perco-sm13-modul-programmnogo-obespecheniya-centralnyj-post/?$ /products/modul-po-perco-sm13-tsentralnyy-post.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/setevoe/perco-sm14-modul-programmnogo-obespecheniya-dizajner-propuskov/?$ /products/modul-po-perco-sm14-dizayner-propuskov.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/setevoe/perco-sm15-modul-programmnogo-obespecheniya-prozrachnoe-zdanie/?$ /products/modul-po-perco-sm15-prozrachnoe-zdanie.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/setevoe/perco-sm16-modul-programmnogo-obespecheniya-kafe/?$ /products/modul-po-perco-sm16-kafe.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/setevoe/perco-sm17-modul-programmnogo-obespecheniya-atp/?$ /products/modul-po-perco-sm17-atp.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/setevoe/perco-sm18/?$ /products/modul-po-perco-sm18-integratsiya-s-iso-orion.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/setevoe/modul-po-raspoznavanie-dokumentov/?$ /products/modul-po-raspoznavanie-dokumentov.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/setevoe/1s-modul-uchet-rabochego-vremeni/?$ /products/formula-modul-uchet-rabochego-vremeni-integratsiya-s-1s-predpriyatie-8.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/programmnoe-obespechenie/komplekty/?$ /products/komplekty-po/ [R=301,L]
+  RewriteRule ^products/karty-dostupa.php?$ /products/karty-dostupa/ [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^products/sistemy-kontrolya-dostupa/sistema-avtotransportnaya-prohodnaya/?$ /products/modul-po-perco-sm17-atp.php [R=301,L]
+  RewriteRule ^products/sistemy-kontrolya-dostupa/terminaly-ucheta-rabochego-vremeni/?$ /products/kontroller-registratsii-cr01.php [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/ohranno-pozharnaya-signalizaciya/?$ /products/pozharnye-paneli/ [R=301,L]
+  RewriteRule ^products/kompleksnye-sistemy-bezopasnosti/ohranno-pozharnaya-signalizaciya/ohranno-pozharnaya-signalizaciya/?$ /products/okhranno-pozharnaya-signalizatsiya-pu01.php [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^where-to-buy/RUS/?$ /gde-kupit/rossiya/ [R=301,L]
+  RewriteRule ^where-to-buy/(.*)?$ /gde-kupit/$1 [R=301,L]
+  RewriteRule ^about/?$ /o-kompanii/ [R=301,L]
+  RewriteRule ^about/istoriya-perco/?$ /o-kompanii/istoriya-kompanii.php [R=301,L]
+  RewriteRule ^about/sotrudnichestvo/?$ /o-kompanii/sotrudnichestvo.php [R=301,L]
+  RewriteRule ^about/kachestvo/?$ /o-kompanii/ [R=301,L]
+  RewriteRule ^about/nashi-klienty/?$ /o-kompanii/nashi-klienty.php [R=301,L]
+  RewriteRule ^about/video/?$ /o-kompanii/video/ [R=301,L]
+  RewriteRule ^o-kompanii/video/([a-zA-Z0-9\-\_/]*)\.(php)$ /o-kompanii/video/ [R=301,L]
+  RewriteRule ^podderzhka/video/([a-zA-Z0-9\-\_/]*)\.(php)$ /podderzhka/video/ [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^support/?$ /podderzhka/ [R=301,L]
+  RewriteRule ^support/servisnoe-obsluzhivanie/?$ /podderzhka/servisnoe-obsluzhivanie.php [R=301,L]
+  RewriteRule ^support/service-list/(.*)?$ /podderzhka/spisok-servisnykh-tsentrov.php [R=301,L]
+  RewriteRule ^support/programmnoe-obespechenie/?$ /podderzhka/programmnoe-obespechenie.php [R=301,L]
+  RewriteRule ^support/dokumentaciya/?$ /podderzhka/dokumentatsiya.php [R=301,L]
+  RewriteRule ^support/dokumentaciya/arhiv-dokumentacii/?$ /podderzhka/archive.php [R=301,L]
+  RewriteRule ^support/video/(.*)?$ /podderzhka/video/ [R=301,L]
+  RewriteRule ^support/reklamnye-materialy/?$ /podderzhka/katalogi-i-buklety.php [R=301,L]
+  RewriteRule ^podderzhka/reklamnye-materialy.php?$ /podderzhka/katalogi-i-buklety.php [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^rss/?$ /novosti/rss.php [R=301,L]
+  RewriteRule ^search/?$ /search.php? [R=301,L]
+  RewriteRule ^sitemap/?$ /sitemap.php [R=301,L]
+  RewriteRule ^contacts/?$ /kontakty/ [R=301,L]
+  RewriteRule ^news/$ /novosti/ [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^obuchenie/instal/?$ /obuchenie/installyatorov/ [R=301,L]
+  RewriteRule ^obuchenie/instal/schedule/?$ /obuchenie/installyatorov/raspisanie-seminarov.php [R=301,L]
+  RewriteRule ^obuchenie/instal/seminary-v-uchebnom-centre/?$ /obuchenie/installyatorov/ochnye-seminary.php [R=301,L]
+  RewriteRule ^obuchenie/instal/vebinary/?$ /obuchenie/installyatorov/vebinary.php [R=301,L]
+  RewriteRule ^obuchenie/instal/vyezdnye-seminary/?$ /obuchenie/installyatorov/vyezdnye-seminary.php [R=301,L]
+  RewriteRule ^obuchenie/instal/samoobuchenie/?$ /obuchenie/installyatorov/samoobuchenie.php [R=301,L]
+  RewriteRule ^obuchenie/instal/sertificat/?$ /obuchenie/installyatorov/sertifikatsiya.php [R=301,L]
+  RewriteRule ^obuchenie/instal/kit/?$ /obuchenie/installyatorov/kit.php [R=301,L]
+  RewriteRule ^obuchenie/user/?$ /obuchenie/polzovateley/ [R=301,L]
+  RewriteRule ^obuchenie/user/schedule/?$ /obuchenie/polzovateley/raspisanie-seminarov.php [R=301,L]
+  RewriteRule ^obuchenie/user/seminary-v-uchebnom-centre/?$ /obuchenie/polzovateley/ochnye-seminary.php [R=301,L]
+  RewriteRule ^obuchenie/user/vebinary/?$ /obuchenie/polzovateley/vebinary.php [R=301,L]
+  RewriteRule ^obuchenie/user/samoobuchenie/?$ /obuchenie/polzovateley/samoobuchenie.php [R=301,L]
+  RewriteRule ^obuchenie/user/vebinary-po-zaprosu/?$ /obuchenie/polzovateley/individualnye-vebinary.php [R=301,L]
+  RewriteRule ^obuchenie/user/proverka-znaniy/?$ /obuchenie/polzovateley/proverka-znaniy.php [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^resheniya/organizatsiya-ucheta-rabochego-vremeni.php?$ /resheniya/gibkiy-grafik/ [R=301,L]
+  RewriteRule ^resheniya/dlya-predpriyatiy.php?$ /resheniya/dlya-predpriyatiy/ [R=301,L]
+  RewriteRule ^resheniya/dlya-biznes-tsentrov.php?$ /resheniya/dlya-biznes-tsentrov/ [R=301,L]
+  RewriteRule ^resheniya/dlya-gosudarstvennykh-uchrezhdeniy.php?$ /resheniya/dlya-gosudarstvennykh-uchrezhdeniy/ [R=301,L]
+  RewriteRule ^resheniya/dlya-ofisov.php?$ /resheniya/dlya-ofisov/ [R=301,L]
+  RewriteRule ^resheniya/dlya-uchebnykh-zavedeniy.php?$ /resheniya/dlya-uchebnykh-zavedeniy/ [R=301,L]
+  RewriteRule ^resheniya/dlya-sportivno-razvlekatelnykh-obektov.php?$ /resheniya/dlya-sportivno-razvlekatelnykh-obektov/ [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^fotogalereya/biznes-centry.php?$ /fotogalereya/ [R=301,L]
+  RewriteRule ^fotogalereya/promyshlennye-predpriyatiya.php?$ /fotogalereya/ [R=301,L]
+  RewriteRule ^fotogalereya/sportivnye-i-razvlekatelnye-uchrezhdeniya.php?$ /fotogalereya/ [R=301,L]
+  RewriteRule ^fotogalereya/gosudarstvennye-uchrezhdeniya.php?$ /fotogalereya/ [R=301,L]
+  RewriteRule ^fotogalereya/shkoly.php?$ /fotogalereya/ [R=301,L]
+  RewriteRule ^fotogalereya/vuzy.php?$ /fotogalereya/ [R=301,L]
+  RewriteRule ^fotogalereya/ofisy-kompaniy.php?$ /fotogalereya/ [R=301,L]
+  RewriteRule ^fotogalereya/transportnye-uchrezhdeniya.php?$ /fotogalereya/ [R=301,L]
+  RewriteRule ^fotogalereya/prochie.php?$ /fotogalereya/ [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteRule ^novosti/articles/identifikatsiya-po-kartam-mifare-s-zashchitoy-ot-kopirovaniya.php?$ /novosti/articles/identifikatsiya-po-kartam-mifare-s-zashchitoy-ot-kopirovaniya/ [R=301,L]
+  RewriteRule ^novosti/articles/obzor-rossiyskogo-rynka-turniketov.php?$ /novosti/articles/obzor-rossiyskogo-rynka-turniketov/ [R=301,L]
+  RewriteRule ^novosti/articles/analiz-modeley-turniketov-rossiyskikh-proizvoditeley.php?$ /novosti/articles/analiz-modeley-turniketov-rossiyskikh-proizvoditeley/ [R=301,L]
+  RewriteRule ^novosti/articles/turnikety-istoriya-sozdaniya.php?$ /novosti/articles/turnikety-istoriya-sozdaniya/ [R=301,L]
+  RewriteRule ^novosti/articles/mobilnyy-dostup-v-skud.php?$ /novosti/articles/mobilnyy-dostup-v-skud/ [R=301,L]
+#---------------------------------------------------------------------------------------------------------------------------------------
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+  RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+#----------------
+  RewriteRule ^products/beskontaktnye-karty-dostupa/.*$ /products/karty-dostupa/ [R=301,L]
+#----------------
+
+
+</IfModule>
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresByType image/jpeg "access plus 3 day"
+  ExpiresByType image/gif "access plus 3 day"
+</IfModule>
+
+
+php_value mail.log /home/d/dc178435/perco.ru/public_html/mail.log
+php_value default_charset utf-8
+AddType 'text/html; charset=utf-8' .html .htm .shtml
