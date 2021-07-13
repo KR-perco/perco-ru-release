@@ -1,0 +1,6 @@
+<?
+$MESS['LEARNING_TEST_SELF_NAME']="ЧФОТІвКФ";
+$MESS['LEARNING_TEST_SELF_DESC']="ЧФОТІвКФ";
+$MESS['LEARNING_SERVICE']="НшЙПЕаСµ";
+$MESS['LEARNING_TEST_SERVICE']="ІвКФ";
+?>

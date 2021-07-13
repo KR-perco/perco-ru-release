@@ -1,0 +1,8 @@
+<?
+$MESS['LEARNING_COURSE_ID']="їОіМID";
+$MESS['LEARNING_DESC_YES']="КЗ";
+$MESS['LEARNING_DESC_NO']="·с";
+$MESS['LEARNING_CHECK_PERMISSIONS']="јмІв ФКРн ИЁПЮ";
+$MESS['LEARNING_TESTS_PER_PAGE']="ГїТіІвКФКэБї";
+$MESS['LEARNING_TEST_TEMPLATE_NAME']="URL:ЦБФЪПЯІвКФТіГж";
+?>

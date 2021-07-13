@@ -1,0 +1,6 @@
+<?
+$MESS['LEARNING_STUDENT_PROFILE_NAME']="С§Ф±µДКфРФ";
+$MESS['LEARNING_STUDENT_PROFILE_DESC']="С§Ф± ІОКэ ±ај­ ТіГж";
+$MESS['LEARNING_SERVICE']="НшЙПЕаСµ";
+$MESS['LEARNING_STUDENT_SERVICE']="С§Ф±";
+?>

@@ -1,0 +1,6 @@
+<?
+$MESS ['LEARNING_STUDENT_GRADEBOOK_NAME'] = "Црrenci dergisi";
+$MESS ['LEARNING_STUDENT_GRADEBOOK_DESC'] = "Test sonuзlarэ";
+$MESS ['LEARNING_SERVICE'] = "Eрitim";
+$MESS ['LEARNING_STUDENT_SERVICE'] = "Црrenci";
+?>
