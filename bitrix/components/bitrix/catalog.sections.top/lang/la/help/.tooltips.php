@@ -1,0 +1,29 @@
+<?
+$MESS["SECTION_SORT_FIELD_TIP"] = "El campo en el cual las secciones serбn ordenadas dentro del block de informaciуn.";
+$MESS["SECTION_SORT_ORDER_TIP"] = "Define el orden de clasificaciуn de la secciуn.";
+$MESS["ELEMENT_SORT_FIELD_TIP"] = "El campo por el cual los elementos serбn ordenados dentro de la secciуn.";
+$MESS["ELEMENT_SORT_ORDER_TIP"] = "La direcciуn en la cual los elementos podrбn ser ordenados.";
+$MESS["FILTER_NAME_TIP"] = "El nombre de la variable en el la cual las configuraciones del filtro podrбn ser pasadas. Usted puede dejar el campo vacнo para usar el nombre predeterminado.";
+$MESS["SECTION_URL_TIP"] = "Especificar aquн la ruta a la seccнуn de descripciуn del block de informaciуn.";
+$MESS["DETAIL_URL_TIP"] = "Especificar aquн la ruta a la pбgina detallada del elemento del block de informaciуn.";
+$MESS["BASKET_URL_TIP"] = "Especificar aquн la ruta a la pбgina del carrito de compras.";
+$MESS["PRODUCT_ID_VARIABLE_TIP"] = "El nombre de la variable en la cual el ID del producto podrб ser pasado.";
+$MESS["SECTION_ID_VARIABLE_TIP"] = "El nombre de la variable en la cual el ID de la secciуn del block de informaciуn serб pasado.";
+$MESS["DISPLAY_PANEL_TIP"] = "Si se selecciona, la barra de botones podrб ser mostrada en la barra de herramientas del administrador y el componente, editado en la zona de barra de herramientas en el modo de ediciуn del sitio.";
+$MESS["DISPLAY_COMPARE_TIP"] = "Al elegir esta opciуn podrб visualizar el botуn <b>Compare</b> para agregar un elemento en la tabla de comparaciуn.";
+$MESS["SET_TITLE_TIP"] = "Si se selecciona, el tнtulo de la pбgina podrб ser fijado en nombre de la secciуn actual.";
+$MESS["SECTION_COUNT_TIP"] = "Nъmero mбximo de secciones para ser visualizadas.";
+$MESS["ELEMENT_COUNT_TIP"] = "Nъmero mбximo de elementos para ser visualizados en cada secciуn.";
+$MESS["LINE_ELEMENT_COUNT_TIP"] = "Nъmero de elementos por fila en la tabla.";
+$MESS["USE_PRICE_COUNT_TIP"] = "Visualizar los precios de todos los tipos.";
+$MESS["CACHE_TIME_TIP"] = "Especificar aquн el perнodo de tiempo durante el cual la cachй es vбlida.";
+$MESS["CACHE_FILTER_TIP"] = "Activando esta opciуn podrб causar que todos los filtros resulten para ser usados con cachй.";
+$MESS["PRICE_VAT_INCLUDE_TIP"] = "Eligiendo esta opciуn, se especificarб la tasa incluнda en los precios visualizados.";
+$MESS["IBLOCK_TYPE_TIP"] = "Seleccione un bloque de informaciуn de los tipos en la lista y haga clic en <b>OK</b>. Esto carga de bloques de informaciуn del tipo seleccionado.";
+$MESS["IBLOCK_ID_TIP"] = "Seleccione uno de los bloques de informaciуn de tipo elegido. Si selecciona. Si usted seleccione <b>(other)-&gt;</b>, especificar el ID del block de informaciуn en el campo al lado.";
+$MESS["ACTION_VARIABLE_TIP"] = "El nombre de una variable en la que la acciуn necesaria se aprobу: ADD_TO_COMPARE_LIST, ADD2BASKET etc. El valor por defecto es <i>action</i>.";
+$MESS["PROPERTY_CODE_TIP"] = "Aquн puede elegir las propiedades de bloque de informaciуn se mostrarб en la pбgina top rated elementos. Si selecciona <b>(not selected)-></b> y no se especifica la propiedad ID, las propiedades no se mostrarбn.";
+$MESS["PRICE_CODE_TIP"] = "Especificar el tipo de precio que se utilizarб en el catбlogo. Si omite el tipo de precio, los precios y los botones <b>Buy</b> and<b>Agregar a la canasta</b> no serб mostrada.";
+$MESS["SHOW_PRICE_COUNT_TIP"] = "La cantidad de producto para el que los artнculos se especifica el precio (e.j. 1 or 10); depende de la naturaleza del producto.";
+$MESS["CACHE_TYPE_TIP"] = "<i>Auto</i>: la cachй es vбlida durante el tiempo predefinido en la configuraciуn de la cachй;<br /><i>Cache</i>: siempre cachй durante el perнodo especificado en el siguiente campo;<br /><i>Do not cahce</i>: no se realiza el almacenamiento en cachй. ";
+?>

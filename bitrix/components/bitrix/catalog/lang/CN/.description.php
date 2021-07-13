@@ -1,0 +1,5 @@
+<?
+$MESS['IBLOCK_CATALOG_NAME']="·ЦАа";
+$MESS['IBLOCK_CATALOG_DESCRIPTION']="НкИ«·ЦАа";
+$MESS['T_IBLOCK_DESC_CATALOG']="·ЦАа";
+?>

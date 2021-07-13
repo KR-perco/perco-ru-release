@@ -1,0 +1,37 @@
+<?
+$MESS ['IBLOCK_PRICES'] = "јЫёс";
+$MESS ['T_IBLOCK_DESC_NEWS_PANEL'] = "ПФКѕГж°е°ґЕҐОЄХвёц№№іЙµД";
+$MESS ['IBLOCK_TYPE'] = "РЕПўїйАаРН";
+$MESS ['IBLOCK_IBLOCK'] = "РЕПўїй";
+$MESS ['IBLOCK_PROPERTY'] = "КфРФ";
+$MESS ['IBLOCK_SORT_SHOWS'] = "ЖЅѕщµДПФКѕ";
+$MESS ['IBLOCK_SORT_SORT'] = "РтєЕ";
+$MESS ['IBLOCK_SORT_TIMESTAMP'] = "ЧоЅьёьРВ";
+$MESS ['IBLOCK_SORT_NAME'] = "ГыіЖ";
+$MESS ['IBLOCK_SORT_ID'] = "ID";
+$MESS ['IBLOCK_SORT_ACTIVE_FROM'] = "ј¤»оґУ";
+$MESS ['IBLOCK_SORT_ACTIVE_TO'] = "ј¤»оЦ±µЅ";
+$MESS ['IBLOCK_SORT_ASC'] = "ЙэРт";
+$MESS ['IBLOCK_SORT_DESC'] = "ЅµРт";
+$MESS ['IBLOCK_SECTION_URL'] = "НшЦ·µДТіГжУлЅЪДїВј";
+$MESS ['IBLOCK_LINE_ELEMENT_COUNT'] = "КэЧЦ»щґЎПФКѕФЪ±нёсРР";
+$MESS ['IBLOCK_ELEMENT_SORT_FIELD'] = "ЕЕРтФЄЛШЧЦ¶О";
+$MESS ['IBLOCK_ELEMENT_SORT_ORDER'] = "ОЄФЄЛШХыАн¶©µҐ";
+$MESS ['IBLOCK_PRICE_CODE'] = "јЫёсАаРН";
+$MESS ['IBLOCK_BASKET_URL'] = "НшЦ·µДТіГжУлПы·СХЯ№єОпіµ";
+$MESS ['IBLOCK_FILTER_NAME_IN'] = "БРХуµДГыЧЦУлјЫЦµµДК№УГБЛ¶ФВЛІЁФЄјю";
+$MESS ['IBLOCK_CACHE_FILTER'] = "»єґжИф№эВЛЖчТСј¤»о";
+$MESS ['IBLOCK_SECTION_ID'] = "ЅЪID";
+$MESS ['IBLOCK_PAGE_ELEMENT_COUNT'] = "ГїТіФЄЛШКэБї";
+$MESS ['IBLOCK_ACTION_VARIABLE'] = "\"Actions\" parameter name";
+$MESS ['IBLOCK_PRODUCT_ID_VARIABLE'] = "\"Product code\" parameter name";
+$MESS ['IBLOCK_SECTION_ID_VARIABLE'] = "\"Section code\" parameter name";
+$MESS ['IBLOCK_USE_PRICE_COUNT'] = "ПФКѕ КэБї јЫёс·¶О§";
+$MESS ['IBLOCK_SHOW_PRICE_COUNT'] = "ПФКѕ КэБїµДјЫёс";
+$MESS ['IBLOCK_DETAIL_URL'] = "URL of the page with the detail contents";
+$MESS ['T_IBLOCK_DESC_PAGER_CATALOG'] = "ІъЖ·";
+$MESS ['T_IBLOCK_DESC_DISPLAY_COMPARE'] = "Show Compare button";
+$MESS ['T_IBLOCK_DESC_KEYWORDS'] = "ЙиЦГАґЧФКфРФµДТіГж№ШјьЧЦ";
+$MESS ['T_IBLOCK_DESC_DESCRIPTION'] = "ґУКфРФЙиЦГТіГжЛµГч";
+$MESS ['CP_BCS_INCLUDE_SUBSECTIONS'] = "ПФКѕАґЧФЧУЅЪµДФЄЛШ";
+?>
