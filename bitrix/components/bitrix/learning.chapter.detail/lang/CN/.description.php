@@ -1,6 +1,0 @@
-<?
-$MESS['LEARNING_SERVICE']="НшЙПЕаСµ";
-$MESS['LEARNING_CONTENT_SERVICE']="їОіМєНХВЅЪ";
-$MESS['LEARNING_CHAPTER_DETAIL_NAME']="ХВЅЪПкПё";
-$MESS['LEARNING_CHAPTER_DETAIL_DESC']="ХВЅЪПкПё";
-?>

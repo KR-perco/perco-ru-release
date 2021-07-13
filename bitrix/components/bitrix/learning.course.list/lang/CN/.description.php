@@ -1,6 +1,0 @@
-<?
-$MESS['LEARNING_COURSE_LIST_NAME']="їОіМБР±н";
-$MESS['LEARNING_COURSE_LIST_DESC']="їОіМБР±н";
-$MESS['LEARNING_SERVICE']="НшЙПЕаСµ";
-$MESS['LEARNING_COURSE_SERVICE']="їОіМ";
-?>

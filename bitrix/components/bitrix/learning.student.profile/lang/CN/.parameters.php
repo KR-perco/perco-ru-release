@@ -1,3 +1,0 @@
-<?
-$MESS['LEARNING_TRANSCRIPT_TEMPLATE_NAME']="URL¶ФТіУлЦ¤ГчЅб№ы";
-?>

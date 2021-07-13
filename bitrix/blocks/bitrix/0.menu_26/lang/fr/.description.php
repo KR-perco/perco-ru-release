@@ -1,7 +1,0 @@
-<?
-$MESS["LANDING_BLOCK_MENU_26-HAMBURGER"] = "Menu hamburger";
-$MESS["LANDING_BLOCK_MENU_26-LINK"] = "Lien";
-$MESS["LANDING_BLOCK_MENU_26-NAME"] = "Menu vertical réduit";
-$MESS["LANDING_BLOCK_MENU_26-NAVBAR"] = "Menu";
-$MESS["LANDING_BLOCK_MENU_26-TEXT"] = "Texte";
-?>

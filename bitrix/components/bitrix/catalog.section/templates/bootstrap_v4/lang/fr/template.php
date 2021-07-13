@@ -1,3 +1,0 @@
-<?
-$MESS["CT_BCS_CATALOG_BTN_MESSAGE_CLOSE"] = "Fermer";
-?>

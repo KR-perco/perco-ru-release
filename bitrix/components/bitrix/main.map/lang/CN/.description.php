@@ -1,5 +1,0 @@
-<?
-$MESS['MAIN_SITE_MAP_COMPONENT_NAME']="ХѕµгµШНј";
-$MESS['MAIN_SITE_MAP_COMPONENT_DESCR']="ХѕµгµШНј";
-$MESS['MAIN_SITE_MAP_GROUP_NAME']="ХѕµгµШНј";
-?>

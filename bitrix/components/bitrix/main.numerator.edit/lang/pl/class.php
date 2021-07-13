@@ -1,4 +1,0 @@
-<?
-$MESS["NUMERATOR_EDIT_BTN_CANCEL"] = "Anuluj";
-$MESS["NUMERATOR_EDIT_BTN_SAVE"] = "Zapisz";
-?>

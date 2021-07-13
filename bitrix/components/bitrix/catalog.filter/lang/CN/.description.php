@@ -1,5 +1,0 @@
-<?
-$MESS['T_IBLOCK_DESC_CATALOG']="·ЦАа";
-$MESS['IBLOCK_FILTER_TEMPLATE_NAME']="ФЄЛШ№эВЛ±нµҐ";
-$MESS['IBLOCK_FILTER_TEMPLATE_DESCRIPTION']="ПФКѕФЄЛШ№эВЛЖч±нµҐ";
-?>

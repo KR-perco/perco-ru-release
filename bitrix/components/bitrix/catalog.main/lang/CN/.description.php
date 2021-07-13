@@ -1,5 +1,0 @@
-<?
-$MESS['T_IBLOCK_DESC_CATALOG']="·ЦАа";
-$MESS['IBLOCK_MAIN_TEMPLATE_NAME']="РЕПўїй";
-$MESS['IBLOCK_MAIN_TEMPLATE_DESCRIPTION']="ПФКѕёГАаРНµДРЕПўїй";
-?>

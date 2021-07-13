@@ -1,5 +1,0 @@
-<?
-$MESS["LANDING_CMP_DESCRIPTION"] = "Rollen.";
-$MESS["LANDING_CMP_NAME"] = "Rollen";
-$MESS["LANDING_CMP_NAMESPACE_NAME"] = "Sites24";
-?>
