@@ -1,0 +1,29 @@
+<?
+$MESS ['COMP_FORM_PARAMS_ACTION_ALIAS'] = "¶ЇЧч»сИЎ±дБїµД±рГы";
+$MESS ['COMP_FORM_SEF_RESULT_VIEW_PAGE'] = "Ѕб№ыІйїґТіГж";
+$MESS ['COMP_FORM_SEF_RESULT_NEW_PAGE'] = "Ѕб№ыРВТіГж";
+$MESS ['COMP_FORM_SEF_RESULT_EDIT_PAGE'] = "Ѕб№ы±ај­ТіГж";
+$MESS ['COMP_FORM_SEF_RESULT_LIST_PAGE'] = "Ѕб№ыБР±нТіГж";
+$MESS ['COMP_FORM_PARAMS_SUCCESS_URL'] = "іЙ№¦ ТіГж URL";
+$MESS ['COMP_FORM_PARAMS_START_PAGE'] = "їЄКј ТіГж";
+$MESS ['COMP_FORM_VALUES_LIST'] = "Ѕб№ыБР±н";
+$MESS ['COMP_FORM_VALUES_NEW'] = "Ѕб№ыРВТіГж";
+$MESS ['COMP_FORM_PARAMS_SHOW_LIST_PAGE'] = "ПФКѕ Ѕб№ы БР±н ТіГж";
+$MESS ['COMP_FORM_PARAMS_SHOW_EDIT_PAGE'] = "ПФКѕЅб№ы±ај­ ТіГж";
+$MESS ['COMP_FORM_PARAMS_SHOW_VIEW_PAGE'] = "ПФКѕЅб№ыІйїґ ТіГж";
+$MESS ['COMP_FORM_PARAMS_RESULT_ID'] = "Ѕб№ыID";
+$MESS ['COMP_FORM_PARAMS_EDIT_ADDITIONAL'] = "ФКРн ±ај­ ёЁЦъ ЧЦ¶О";
+$MESS ['COMP_FORM_PARAMS_EDIT_STATUS'] = "ПФКѕ ЧґМ¬ ёьёД±нµҐ";
+$MESS ['COMP_FORM_PARAMS_WEB_FORM_ID'] = "±нµҐID";
+$MESS ['COMP_FORM_PARAMS_SHOW_ANSWER_VALUE'] = "ПФКѕјЫЦµANSWER_VALUE±нФЪЅб№ыГїёцЅб№ыµД";
+$MESS ['COMP_FORM_PARAMS_SHOW_ADDITIONAL'] = "ІйїґёЁЦъНшТі±нµҐµИБмУтµДТ»ёц±нµДЅб№ы";
+$MESS ['COMP_FORM_PARAMS_SHOW_STATUS'] = "ПФКѕГїёцЅб№ыµДЧґМ¬ФЪЅб№ыАп±н";
+$MESS ['COMP_FORM_PARAMS_NOT_SHOW_FILTER'] = "№эВЛЖчБмУтґъВл(COMMA-SEPARATED)Г»УРФКРнПФКѕ";
+$MESS ['COMP_FORM_PARAMS_NOT_SHOW_FILTER_LIST'] = "ґъВлµДЧЦ¶ОДЗёцКЗІ»ФКРнПФКѕФЪ№эВЛ";
+$MESS ['COMP_FORM_PARAMS_NOT_SHOW_TABLE'] = "КШФтБмУтЈ¬КЗІ»ИЭРнПФКѕФЪЧАГжЙПЈЁ¶єєЕ·ЦёфЈ©";
+$MESS ['COMP_FORM_PARAMS_NOT_SHOW_TABLE_LIST'] = "ФЪ±нёсГ»УРФКРнПФКѕБмУтµДґъВл";
+$MESS ['COMP_FORM_PARAMS_CHAIN_ITEM_TEXT'] = "ГыіЖµДёЅјУµјєЅБґЅУ";
+$MESS ['COMP_FORM_PARAMS_CHAIN_ITEM_LINK'] = "Б¬ЅУёЅјУµДµјєЅБґПоДї";
+$MESS ['COMP_FORM_PARAMS_IGNORE_CUSTOM_TEMPLATE'] = "єцВФ¶ЁЦЖДЈ°е";
+$MESS ['COMP_FORM_PARAMS_USE_EXTENDED_ERRORS'] = "К№УГА©Х№µДґнОуРЕПўКдіц";
+?>

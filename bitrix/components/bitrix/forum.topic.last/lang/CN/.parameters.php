@@ -1,0 +1,30 @@
+<?
+$MESS['F_URL_TEMPLATES']="БґЅУґ¦АнЦР";
+$MESS['F_DEFAULT_VALUES']="Predefined values";
+$MESS['F_SECURITY']="°ІИ«ЙиЦГ";
+$MESS['F_SORTING_SETTINGS']="ЕЕРт №ЬАн";
+$MESS['F_SET_NAVIGATION']="ПФКѕµ±З°О»ЦГµјєЅ";
+$MESS['F_TOPICS_PER_PAGE']="ГїТі»°МвКэБї";
+$MESS['F_SHOW_TOPICS_PAGES']="ПФКѕ ·ЦТіµјєЅ";
+$MESS['F_SHOW_FORUM_ANOTHER_SITE']="ПФКѕВЫМіУЙЖдЛыДЪІїНшХѕ";
+$MESS['F_INDEX_TEMPLATE']="ВЫМіБР±нТіГж";
+$MESS['F_READ_TEMPLATE']="»°МвФД¶БДЈ°е";
+$MESS['F_LIST_TEMPLATE']="»°МвБР±нТіГж";
+$MESS['F_PROFILE_VIEW_TEMPLATE']="КфРФТіГж";
+$MESS['F_TOPIC_NEW_TEMPLATE']="РВ»°Мв ґґЅЁ ТіГж";
+$MESS['F_SUBSCRIBE_TEMPLATE']="¶©ФДТіГж";
+$MESS['F_MOVE_TEMPLATE']="»°МвТЖ¶ЇТіГж";
+$MESS['F_SET_PAGE_TITLE']="ЙиЦГТі±кМв";
+$MESS['F_DEFAULT_FID']="ВЫМіID";
+$MESS['F_SHOW_SORTING']="ПФКѕ ЕЕРт їШЦЖ";
+$MESS['F_PREVIEW_SORTING']="ЕЕРт";
+$MESS['F_SHOW_TITLE']="±кМв";
+$MESS['F_SHOW_USER_START_NAME']="ЧчХЯ";
+$MESS['F_SHOW_POSTS']="»Шёґ";
+$MESS['F_SHOW_VIEWS']="¶Б";
+$MESS['F_SHOW_LAST_POST_DATE']="ЧоЅь ПыПў";
+$MESS['F_SORTING_ORD']="°ґЧЦ¶ОЕЕРт";
+$MESS['F_SORTING_BY']="ЕЕРт ¶©µҐ";
+$MESS['F_DESC_ASC']="ЙэРт";
+$MESS['F_DESC_DESC']="ЅµРт";
+?>

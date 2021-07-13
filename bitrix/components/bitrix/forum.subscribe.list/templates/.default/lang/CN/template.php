@@ -1,0 +1,14 @@
+<?
+$MESS['FSL_BACK']="&lt;&lt;&nbsp;Back";
+$MESS['FSL_SUBSCR_MANAGE']="¶©ФД";
+$MESS['FSL_FORUM_NAME']="ВЫМі±кМв";
+$MESS['FSL_TOPIC_NAME']="»°Мв±кМв";
+$MESS['FSL_SUBSCR_DATE']="Ф¤¶©ИХЖЪ";
+$MESS['FSL_LAST_SENDED_MESSAGE']="ЧоЅь·ўЛНПыПў";
+$MESS['FSL_ACTIONS']="¶ЇЧч";
+$MESS['FSL_NEW_TOPICS']="РВ»°Мв";
+$MESS['FSL_ALL_MESSAGES']="И«Ії»°Мв";
+$MESS['FSL_HERE']="ХвАп";
+$MESS['FSL_DELETE']="Йѕіэ";
+$MESS['FSL_NOT_SUBCRIBED']="ДъГ»УР¶©ФДИОєОВЫМіЎЈїЄКјЅУКХВЫМіУКјюЈ¬ЗлК№УГІЛµҐ°ґЕҐЈ¬ФЪВЫМі»тПЯЛчАыТжЎЈ";
+?>

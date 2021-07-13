@@ -1,0 +1,16 @@
+<?
+$MESS['IBLOCK_FORM_SUBMIT']="±Јґж";
+$MESS['IBLOCK_FORM_APPLY']="У¦УГ";
+$MESS['IBLOCK_FORM_RESET']="ЦШЙи";
+$MESS['IBLOCK_FORM_BACK']="БР±н";
+
+$MESS['IBLOCK_FORM_DATE_FORMAT']="Format: ";
+
+$MESS['IBLOCK_FORM_FILE_NAME']="ОДјю";
+$MESS['IBLOCK_FORM_FILE_SIZE']="ОДјюґуРЎЈЁBЈ©";
+$MESS['IBLOCK_FORM_FILE_DOWNLOAD']="ПВФШ";
+$MESS['IBLOCK_FORM_FILE_DELETE']="ЙѕіэОДјю";
+
+$MESS['IBLOCK_FORM_CAPTCHA_TITLE']="·АА¬»шУКјюЈЁCAPTCHAЈ©";
+$MESS['IBLOCK_FORM_CAPTCHA_PROMPT']="ЗлКдИл·ыєЕЈ¬ДгЛщїґµЅµДНјЖ¬";
+?>

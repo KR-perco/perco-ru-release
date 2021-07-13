@@ -1,0 +1,29 @@
+<?
+$MESS ['COMP_FORM_PARAMS_ACTION_ALIAS'] = "Etkinliрin deрiюken adэ";
+$MESS ['COMP_FORM_SEF_RESULT_VIEW_PAGE'] = "Sonuз gцrьnьm sayfasэ";
+$MESS ['COMP_FORM_SEF_RESULT_NEW_PAGE'] = "Sonuз ekleme sayfasэ";
+$MESS ['COMP_FORM_SEF_RESULT_EDIT_PAGE'] = "Sonuз dьzenleme sayfasэ";
+$MESS ['COMP_FORM_SEF_RESULT_LIST_PAGE'] = "Sonuз liste sayfasэ";
+$MESS ['COMP_FORM_PARAMS_SUCCESS_URL'] = "Baюarэlэ gцnderinin hakkэnda ileti sayfasэ";
+$MESS ['COMP_FORM_PARAMS_START_PAGE'] = "Baюlangэз sayfasэ";
+$MESS ['COMP_FORM_VALUES_LIST'] = "Sonuз listesi";
+$MESS ['COMP_FORM_VALUES_NEW'] = "Sonuз ekleme sayfasэ";
+$MESS ['COMP_FORM_PARAMS_SHOW_LIST_PAGE'] = "Sonuз listesi ile sayfayэ gцrьntьle ";
+$MESS ['COMP_FORM_PARAMS_SHOW_EDIT_PAGE'] = "Sonuз dьzenleme sayfasэnэ gцrьntьle";
+$MESS ['COMP_FORM_PARAMS_SHOW_VIEW_PAGE'] = "Sonuз inceleme sayfasэnэ gцrьntьle";
+$MESS ['COMP_FORM_PARAMS_RESULT_ID'] = "ID sonucu";
+$MESS ['COMP_FORM_PARAMS_EDIT_ADDITIONAL'] = "Ek alanlarэ dьzenlemek iзin gцrьntьle";
+$MESS ['COMP_FORM_PARAMS_EDIT_STATUS'] = "Durum deрiюiklik formunu gцrьntьle";
+$MESS ['COMP_FORM_PARAMS_WEB_FORM_ID'] = "Web-form ID";
+$MESS ['COMP_FORM_PARAMS_SHOW_ANSWER_VALUE'] = "Parametre anlamэnэ gцrьntьle ANSWER_VALUE";
+$MESS ['COMP_FORM_PARAMS_SHOW_ADDITIONAL'] = "Web-formun ek alanlarэnэ gцrьntьle";
+$MESS ['COMP_FORM_PARAMS_SHOW_STATUS'] = "Sonucun geзerli durumunu gцrьntьle";
+$MESS ['COMP_FORM_PARAMS_NOT_SHOW_FILTER'] = "Filtre iзerisinde gцrьntьlenmesi yasak olan alan kodlar (virgьl aюэrэ)";
+$MESS ['COMP_FORM_PARAMS_NOT_SHOW_FILTER_LIST'] = "Filtre iзerisinde gцrьntьlenmesi yasak olan alan kodlarэ";
+$MESS ['COMP_FORM_PARAMS_NOT_SHOW_TABLE'] = "Tablo iзerisinde gцrьntьlenmesi yasak olan alan kodlarэ (virgьl aюэrэ)";
+$MESS ['COMP_FORM_PARAMS_NOT_SHOW_TABLE_LIST'] = "Tablo iзerisinde gцrьntьlenmesi yasak olan alan kodlarэ";
+$MESS ['COMP_FORM_PARAMS_CHAIN_ITEM_TEXT'] = "Navigasyon zincirinde ek црelerin adэ";
+$MESS ['COMP_FORM_PARAMS_CHAIN_ITEM_LINK'] = "Navigasyon zincirinde ek црe baрlantэlarэ";
+$MESS ['COMP_FORM_PARAMS_IGNORE_CUSTOM_TEMPLATE'] = "Kendi юablonunu yoksay";
+$MESS ['COMP_FORM_PARAMS_USE_EXTENDED_ERRORS'] = "Hatalar hakkэnda iletilerin geliюmiю gцrьntьlerini kullan ";
+?>

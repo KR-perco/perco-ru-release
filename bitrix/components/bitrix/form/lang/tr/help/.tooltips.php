@@ -1,0 +1,38 @@
+<?
+$MESS ['SEF_MODE_TIP'] = "Onay kutusunun kurulmasэnda, sayэsal kontrol desteрi devreye girer";
+$MESS ['WEB_FORM_ID_TIP'] = "Aзэlan listede, sayfa iзerisinden tьm web-formlar gцrьntьlenmektedirler  <i>Form listesi</i>.  Eрer REQUEST ьzerinden, dэюarэdan bileюen iзerisine formun ID' si teslim edilecek ise Црe<i>diрer</i> kullanэlabilecek. ";
+$MESS ['RESULT_ID_TIP'] = "Varsayэlan olarak alan <i>={\$_REQUEST[\"RESULT_ID\"]}</i> iзermektedir. Aynэ zamanda, bu alana  RESULT_ID?  dцndьren php-kodu kaydedebilir.  ";
+$MESS ['START_PAGE_TIP'] = "<i>Sonuз listesi</i>, seзeneрin seзilmesi durumunda, bu formun sonuз listesi gцrьntьlenecektir. <br /> <i>Sonuз ekleme sayfasэnэ</i> baюlangэз sayfasэ olarak seзilmesi durumunda, umumi kэsmэnda, doldurulmasэ iзin seзilmiю web-form sunulacaktэr.  ";
+$MESS ['SHOW_LIST_PAGE_TIP'] = "<i>Sonuз ekleme sayfasэnэn</i> - baюlangэз olmasэ durumunda, seзeneрin belirtilmesinde kullanэcэ formu doldurduktan sonra sonuз listeli sayfaya geзecektir. ";
+$MESS ['SHOW_EDIT_PAGE_TIP'] = "Sonuз listesi ile sayfa ьzerinde seзeneрin seзilmesi durumunda, sonuз dьzenleme <i>Deрiюtirilsin</i> baюvurusu olacaktэr";
+$MESS ['SHOW_VIEW_PAGE_TIP'] = "Sonuз listesi ile sayfa ьzerinde seзeneрin seзilmesi durumunda, sonuз inceleme baюvurusu olacaktэr.  ";
+$MESS ['SUCCESS_URL_TIP'] = "Burada, form sonucun baюarэlэ gцnerildiрi hakkэnda ileti sayfasэna giden yol belirtilmektedir. Sonuз dьzenleme hakkэ olmaksэzэn, kullanэcэ tarafэndan sonuзlarэn gцnderilmesinde kullanэlmaktadэr. Bu alan boю bэrakэlabilir, fakat bu durumda kullanэcэ, ileti sonuзlu formu ile sayfaya yeniden gцnderilecektir.  ";
+$MESS ['SHOW_ANSWER_VALUE_TIP'] = "Эюaretlenmiю seзenek, web-form sorusunun ANSWER_VALUE parametrelerin anlamэnэ gцrьntьlemek iзin gцrьntьleme anlamэna gelir.  ";
+$MESS ['SHOW_ADDITIONAL_TIP'] = "Seзeneрin belirtilmesinde, geзerli olmalarэ durumunda, formun ek alanlarэ belirtilecektir.  ";
+$MESS ['SHOW_STATUS_TIP'] = "Sonuз listesi ile sayfa iзerisinde seзeneрin seзilmesi durumunda, geзerli sonuз durumu gцrьntьlenecektir.";
+$MESS ['EDIT_ADDITIONAL_TIP'] = "Onay kutusunun seзilmesinde, dьzenlemek iзin ek alanlar gцrьntьlenecektir.   ";
+$MESS ['EDIT_STATUS_TIP'] = "Seзeneyin  <i>Sonucun geзerli durumunu gцrьntьle</i>, belirtilmesi durumunda, durumu (seзeneрin belirtilmesinde) deрiюtirme formunu gцrьntьleme veya sonucun geзerli durumu (bayraрэn зэkarэlmasэnda) hakkэnda bilgi bэrakma imkanэ vardэr.        ";
+$MESS ['NOT_SHOW_FILTER_TIP'] = "Ayarlama alanэ, sonuз listesi ile sayfa ьzerinde filtre iзerisinde gцrьntьlenmemesi gereken web form alanlarэnэ silmeyi imkan tanэmaktadэr.  ";
+$MESS ['NOT_SHOW_TABLE_TIP'] = "Ayarlama alanэ, web form sonuз listesi ile sayfa ьzerinde tablo iзerisinde gцrьntьlenmemesi gereken web form alanlarэnэ silmeyi imkan tanэmaktadэr.  ";
+$MESS ['CHAIN_ITEM_TEXT_TIP'] = "Bu alan iзerisinde, navigasyon zincirin oрe adэnэ belirtebilirsiniz.   Цrnek: \"yeni form\".";
+$MESS ['CHAIN_ITEM_LINK_TIP'] = "Alan, navigasyon zincirin ek oрesinde baрlantэyэ ekleme imkanэ tanэmaktadэr.   Цrnek: /myfolder/   ";
+$MESS ['CACHE_TYPE_TIP'] = "<br /><i>Cache</i>: always cache for the period specified in the next field";
+$MESS ['CACHE_TIME_TIP'] = "Bu alan, цnbellekleme zamanэnэ saniye olarak gцrьntьlemek iзin kullanэlmaktadэr.";
+$MESS ['VARIABLE_ALIASES_action_TIP'] = "list opens a page with a list of results.";
+$MESS ['SEF_FOLDER_TIP'] = "Црenin зalэюtэрэ klasцre giden yol. Yol fiziksel olarak olabilir de olmayabilir de.  ";
+$MESS ['SEF_URL_TEMPLATES_list_TIP'] = "<i>Sonuз listesi</i> sayfasэnэn sayfa baюlэрэ olarak seзilmesi durumunda, bu alan boю olarak bэrakэlabilir.   Aksi takdirde, sonuз listeli sayfaya geзiюinde sayэsal kontrol kataloрuna eklenecek kataloрu belirtmek zorundasэnэz. Цrnek: list/.";
+$MESS ['SEF_URL_TEMPLATES_new_TIP'] = "Sonuз ekleme sayfasэnэn sayfa baюlэрэ olarak seзilmesi durumunda, bu alan boю bэrakэlabilir. Aksi takdirde katalog adэnэ belirtmek zorundasэnэz, цrnek:  new/.";
+$MESS ['SEF_URL_TEMPLATES_edit_TIP'] = "Sonuз dьzenleme sayfasэnda, web form doldurma sonucun ID belirtilir, цrnek: edit/#RESULT_ID#/.";
+$MESS ['SEF_URL_TEMPLATES_view_TIP'] = "Sonuз gцrьntьleme sayfasэnda web formun doldurma sonucun ID belirtilmek zorundadэr, цrnek, view/#RESULT_ID#/.";
+$MESS ['IGNORE_CUSTOM_TEMPLATE_TIP'] = "Kendi юablonunu yoksay";
+$MESS ['AJAX_MODE_TIP'] = "AJAX modunu aз";
+$MESS ['AJAX_OPTIONS_TIP'] = "Ek ayarlar";
+$MESS ['AJAX_OPTION_NOSHADOW_TIP'] = "gцlgelemeyi kapat";
+$MESS ['AJAX_OPTION_NOJUMP_TIP'] = "baюa dцnьюь kapat";
+$MESS ['AJAX_OPTION_NOSTYLE_TIP'] = "stillerin alt yьkьnь kapat";
+$MESS ['USE_EXTENDED_ERRORS_TIP'] = "Hatalar hakkэnda iletilerin geliюmiю gцrьntьlerini kullan ";
+$MESS ['AJAX_OPTION_SHADOW_TIP'] = "gцlgelendirmeyi aз";
+$MESS ['AJAX_OPTION_JUMP_TIP'] = "bileюen baюlangэcэna dцnmeyi aз";
+$MESS ['AJAX_OPTION_STYLE_TIP'] = "stillerin alt yьkьnь aз";
+$MESS ['AJAX_OPTION_HISTORY_TIP'] = "tarayэcэ navigasyon emьlasyonunu aз (deneysel цzellik)";
+?>
