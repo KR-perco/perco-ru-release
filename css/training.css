@@ -1,208 +1,347 @@
-body #container { max-width: none; }
+body #container {
+    max-width: none;
+}
+
 .banner_image {
-	background-image: url(/images/banners/banner_obuchenie.jpg);
-	height: 510px;
-	background-size: cover;
+    background-image: url(/images/banners/banner_obuchenie.jpg);
+    height: 510px;
+    background-size: cover;
 }
+
 @media screen and (max-width: 1120px) {
-	.banner_image {
-		background-image: url(/images/banners/banner_obuchenie_mini.jpg);
-		height: 310px;
-	}
+    .banner_image {
+        background-image: url(/images/banners/banner_obuchenie_mini.jpg);
+        height: 310px;
+    }
 }
+
 @media screen and (max-width: 720px) {
-	.banner_image {
-		background-size: cover;
-		height: 145px;
-	}
+    .banner_image {
+        background-size: cover;
+        height: 145px;
+    }
 }
 
 .training-content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin: 0!important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0!important;
 }
+
 .training-head {
-	display: grid;
-	grid: auto / auto;
-	place-content: center;
-	inline-size: 100%;
-	background: #f0f0f1;
+    display: grid;
+    grid: auto / auto;
+    place-content: center;
+    inline-size: 100%;
+    background: #f0f0f1;
 }
+
 .training-head__body {
-	display: grid;
-	grid: auto / auto;
-	place-content: center;
-	position: relative;
+    display: grid;
+    grid: auto / auto;
+    place-content: center;
+    position: relative;
 }
+
 .training-head__img {
-	max-inline-size: 100%;
+    max-inline-size: 100%;
 }
+
 .training-main {
-	margin: 0;
-	padding-block-start: 32px;
-	padding-block-end: 128px;
-	inline-size: 100%;
-	max-inline-size: 1200px;
+    margin: 0;
+    padding-block-start: 32px;
+    padding-block-end: 128px;
+    inline-size: 100%;
+    max-inline-size: 1200px;
 }
+
 .training-feedback {
-	display: flex;
-	justify-content: flex-start;
-	margin-block: 16px;
-	inline-size: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-block: 16px;
+    inline-size: 100%;
 }
+
 .training-feedback_register {
-	display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .training-feedback input {
-	padding: 2px 12px;
-	inline-size: 300px;
-	font-size: 18px;
+    padding: 2px 12px;
+    inline-size: 300px;
+    font-size: 18px;
 }
+
 .training-feedback input[type="submit"] {
-	margin: 0;
-	padding: 4px 32px;
-	block-size: auto;
-	inline-size: auto;
-	font-size: 14px;
+    margin: 0;
+    padding: 4px 32px;
+    block-size: auto;
+    inline-size: auto;
+    font-size: 14px;
 }
+
 .training-feedback-form__label {
-	display: block;
-	margin-block-end: 8px;
+    display: block;
+    margin-block-end: 8px;
 }
+
 .training-feedback-form__input {
-	inline-size: 256px;
+    inline-size: 256px;
 }
+
 .training-feedback-form__label_captcha {
-	display: flex;
-	align-items: center;
-	margin-block-start: 32px;
+    display: flex;
+    align-items: center;
+    margin-block-start: 32px;
 }
+
 .training-feedback-form__input_captcha {
-	margin-inline-start: 24px;
+    margin-inline-start: 24px;
 }
+
 .training-feedback-form__input_captcha input {
-	inline-size: 96px;
+    inline-size: 96px;
 }
+
 .training-feedback__mandatory {
-	margin-block-start: 16px;
+    margin-block-start: 16px;
 }
+
 .training-registration-title {
-	margin-block-start: 0;
-	font-size: 35px;
+    margin-block-start: 0;
+    font-size: 35px;
 }
+
 .training-items {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
 .training-item {
-	display: grid;
-	grid: repeat(2, auto) / auto;
-	row-gap: 16px;
-	margin-inline: 40px;
-	margin-block-start: 32px;
-	inline-size: 100%;
-	max-inline-size: 308px;
+    display: grid;
+    grid: repeat(2, auto) / auto;
+    row-gap: 16px;
+    margin-inline: 40px;
+    margin-block-start: 32px;
+    inline-size: 100%;
+    max-inline-size: 308px;
 }
+
+.training-item>img {
+    width: 100%;
+}
+
 .training-item__text {
-	font-size: 18px;
+    font-size: 18px;
 }
+
 .training-item__title {
-	font-weight: bold;
+    font-weight: bold;
 }
+
 .training-item__time {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
+
 .training-item__time-element {
-	display: flex;
-	align-items: center;
-	margin-block-start: 8px;
+    display: flex;
+    align-items: center;
+    margin-block-start: 8px;
 }
+
 .training-item__time-element-img {
-	block-size: 22px;
+    block-size: 22px;
 }
+
 .training-item__time-element-img_calendar {
-	margin-inline-end: 8px;
+    margin-inline-end: 8px;
 }
+
 .training-item__time-element-img_clock {
-	margin-inline-end: 4px;
+    margin-inline-end: 4px;
 }
+
 .training-item__reg {
-	margin-block-start: 16px;
-	font-size: 18px;
+    margin-block-start: 16px;
+    font-size: 18px;
 }
+
 .training-item__reg-link {
-	background-color: #214288;
+    background-color: #214288;
     border: none;
     border-bottom: 2px solid #00295b;
     color: white;
     cursor: pointer;
     height: 25px;
-	padding: 2px 24px;
+    padding: 2px 24px;
+    display: inline;
 }
+
 .training-popup-register {
-	display: none;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	left: 0;
-	top: 0;
-	margin: 0!important;
-	block-size: 100%;
-	inline-size: 100%;
-	background: #00000080;
-	z-index: 1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: 0!important;
+    block-size: 100%;
+    inline-size: 100%;
+    background: #00000080;
+    z-index: 1;
 }
+
 .training-popup-register__window {
-	padding: 24px 64px;
-	max-inline-size: 400px;
-	background: white;
-	opacity: 0;
-	transform: translate(0, -32px);
-	transition-duration: .4s;
+    max-inline-size: 400px;
+    background: white;
 }
+
 .training-popup-feedback-notification {
-	display: none;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	left: 0;
-	top: 0;
-	margin: 0!important;
-	block-size: 100%;
-	inline-size: 100%;
-	background: #00000080;
-	z-index: 1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: 0!important;
+    block-size: 100%;
+    inline-size: 100%;
+    background: #00000080;
+    z-index: 1;
 }
+
 .training-popup-feedback-notification__window {
-	padding: 24px 64px;
-	background: white;
-	box-shadow: 0 0 64px 0 black;
-	opacity: 0;
-	transform: translate(0, -32px);
-	transition-duration: .4s;
-	color: green;
+    padding: 24px 64px;
+    background: white;
+    box-shadow: 0 0 64px 0 black;
+    opacity: 0;
+    transform: translate(0, -32px);
+    transition-duration: .4s;
+    color: green;
 }
+
 .stupid-bitrix {
-	display: none;
+    display: none;
 }
+
 form img {
-	cursor: pointer;
+    cursor: pointer;
 }
+
 form[name="TRAINING_REGISTER"] .notetext {
-	display: none;
+    display: none;
 }
+
 .clock {
-	display: flex;
-	justify-content: center;
-	margin-top: 40px;
-	margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
 }
+
 .clock img {
-	width: 1000px;
+    width: 1000px;
+}
+
+.modal-backdrop {
+    opacity: 0.5;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translate3d(0, -100%, 0);
+        visibility: visible;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.slideInDown .modal-dialog {
+    animation-duration: .75s;
+    animation-fill-mode: both;
+    animation-name: slideInDown;
+}
+
+@keyframes slideOutUp {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        visibility: hidden;
+        transform: translate3d(0, -100%, 0);
+    }
+}
+
+.fancybox__content>.carousel__button.is-close {
+    top: -55px;
+}
+
+
+/* // For timer */
+
+.timer-body {
+    text-align: center;
+    background: transparent;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.timer-visible {
+    display: block;
+}
+
+.timer-hidden {
+    display: none;
+}
+
+.countdown-title {
+    color: #003C8E;
+    font-weight: 100;
+    font-size: 40px;
+    margin: 40px 0px 20px;
+}
+
+.countdown {
+    font-family: sans-serif;
+    color: #003C8E;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+}
+
+.countdown-number {
+    padding: 10px;
+    border-radius: 3px;
+    background: transparent;
+    display: inline-block;
+}
+
+.countdown-time {
+    padding: 15px;
+    border-radius: 3px;
+    background: transparent;
+    display: inline-block;
+}
+
+.countdown-text {
+    display: block;
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+.deadline-message {
+    display: none;
+    font-size: 24px;
+    font-style: italic;
+}
+
+.hide {
+    display: none;
 }
