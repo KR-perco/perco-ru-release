@@ -77,6 +77,7 @@ cgi-bin/
 sxd/
 sxv/
 upload/
+images/
 
 results-session.json
 podderzhka/ostatki/files/ostatki.xls
