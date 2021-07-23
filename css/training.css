@@ -237,6 +237,10 @@ form[name="TRAINING_REGISTER"] .notetext {
     display: none;
 }
 
+form[name="TRAINING_REGISTER"] .form_row>div:nth-child(2) {
+    margin-bottom: 5px;
+}
+
 .clock {
     display: flex;
     justify-content: center;
@@ -344,4 +348,11 @@ form[name="TRAINING_REGISTER"] .notetext {
 
 .hide {
     display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .training-main {
+        inline-size: auto;
+        padding: 0 10px;
+    }
 }

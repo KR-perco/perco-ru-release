@@ -24,7 +24,6 @@ function addkey($key, $sort)			// функция для сортировки т�
 }
 
 console_log("element cataloga");
-console_log($arResult);
 ?>
 <div id="main_block">
 <!-- <script src="/scripts/lightgallery/js/lg-thumbnail.min.js"></script>
@@ -109,6 +108,7 @@ if ($arResult["PROPERTIES"]["SPECIFICATIONS"]["VALUE"])
 	$arFields = $ob->GetFields();
 	$arProps = $ob->GetProperties();
 	$APPLICATION->AddHeadString('<script type="text/javascript">var model="'.$arFields["NAME"].'";</script>', true);
+	
 
 // Чертеж ->
 	if ($arProps["SHEMA"]["VALUE"])

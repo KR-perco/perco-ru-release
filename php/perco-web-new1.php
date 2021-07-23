@@ -343,7 +343,7 @@ switch ($checkedId) {
                     <span>Для службы безопасности</span>
                     <img alt="Для службы безопасности" src="/images/products/perco-web/for-security-service_530x230.jpg">
                 </a>
-                <div class="color">(2.03&nbsp;MB)&nbsp; — 10.11.2020</div>
+                <div class="color">(2.39&nbsp;MB)&nbsp; — 20.07.2021</div>
             </div>
 
             <div class="download_item_img">

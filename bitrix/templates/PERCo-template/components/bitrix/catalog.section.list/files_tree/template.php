@@ -45,6 +45,11 @@ if (!function_exists("getElements"))
 {
 	function getElements($iblock_id, $section_id, $archive, $with_image)
 	{
+		
+// console_log($iblock_id);
+// console_log($section_id);
+// console_log($archive);
+// console_log($with_image);
 		if ($archive)
 			$archive = "!PROPERTY_ARCHIVE";
 		else
@@ -154,7 +159,7 @@ if ($arResult["SECTIONS_COUNT"] > 0)
 		echo "</dt></dl>";
 		$CURRENT_DEPTH--;
 	}
-}
+} 
 elseif ($arResult["SECTION"]["ID"] != 0)
 {
 	if (LANGUAGE_ID == "ru")
@@ -169,6 +174,6 @@ elseif ($arResult["SECTION"]["ID"] != 0)
 			echo $name;
 	}
 	getElements($arResult["SECTION"]["IBLOCK_ID"], $arResult["SECTION"]["ID"], $archive, $arParams["WITH_IMAGE"]);
-}
+} 
 ?>
 </div>

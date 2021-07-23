@@ -31,7 +31,7 @@ switch ($checkedId){
 	$checkedFive = $checked;
 	break;
 	case "six":
-	$checkedSix = $checked;
+	$checkedSix = $checked; 
 	break;
 	case "seven":
 	$checkedSeven = $checked;
@@ -791,8 +791,7 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Arra
 
 		<input type="radio" id="<?=translitIt(strtolower("Внутреннее ПО контроллеров"));?>" <? echo $checkedFour ?>
 		name="vkladki">
-		<label for="<?=translitIt(strtolower("Внутреннее ПО контроллеров"));?>"><span class="dashed">Внутреннее ПО
-				контроллеров</span></label>
+		<label for="<?=translitIt(strtolower("Внутреннее ПО контроллеров"));?>"><span class="dashed">Внутреннее ПО контроллеров</span></label>
 		<div>
 			<p>Обновить встроенное ПО PERCo-Web контроллеров CL15, CR11, СT13 и CT/L14 можно только с помощью WEB-интерфейса.</p>
 			<?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Array(
@@ -817,10 +816,10 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Arra
 				<tr>
 					<td style="border: none;">Версия прошивки:</td>
 					<td style="border: none;">
-						<p>CR11, CL15, CT13, CT/L14 - <span class="color">2.2.0.36</span></p>
+						<p>CR11, CL15, CT13, CT/L14 - <span class="color">2.2.1.2</span></p>
 					</td>
 				</tr>
-			</table>
+			</table> 
 			<p>Обновить внутреннее ПО всех остальных контроллеров PERCo можно при помощи программы "Прошиватель", а также при помощи Web-интерфейса (у контроллеров с поддержкой Web-интерфейса).</p>
 			<?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Array(
 			"IBLOCK_TYPE" => "download",	// Тип инфоблока
