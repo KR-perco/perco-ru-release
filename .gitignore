@@ -1,3 +1,47 @@
+/.gitignore
+/.htaccess
+/*.htaccess
+/.htaccess*
+/urlrewrite.php
+/web.config
+/*web.config
+/*.log
+/*.sql
+# исключаем из репозитория текстовые файлы, но оставляем robots.txt
+/*.txt
+!/robots.txt
+/sitemap*.xml
+/*.dt
+/*.tar.gz
+/*.gz
+/*.tar
+/*.bak
+/*.old
+/*~
+*/_*
+/_*
+/composer.*
+
+# исключаем ВСЮ папку bitrix, но ниже настроим включение нужных папок
+# или используйте папку /local, чтобы полностью исключить папку bitrix
+/bitrix/*
+# включаем папку components, но исключаем components/bitrix - зачем?
+#!/bitrix/components
+#/bitrix/components/bitrix/
+# включаем папку php_interface и исключаем файл dbconn.php
+!/bitrix/php_interface/
+/bitrix/php_interface/dbconn.php
+/bitrix/php_interface/*.bak
+# включаем папку шаблонов
+!/bitrix/templates/
+# исключаем служебные и ненужные папки проекта
+/dev
+/pma
+/upload
+/verstka
+
+ 
+# Мои исключения
 *.txt
 *.md
 *.zip
@@ -14,70 +58,19 @@
 ignore/
 .ignore/
 .vscode/
-
-bitrix/html_pages/
-bitrix/stack_cache/
-bitrix/activities/
-bitrix/admin/
-bitrix/backup/
-bitrix/blocks/
-bitrix/cache/
-bitrix/catalog_export/
-bitrix/components/
-bitrix/css/
-bitrix/fonts/
-bitrix/gadgets/
-bitrix/image_uploader/
-bitrix/images/
-bitrix/js/
-bitrix/managed_cache/
-bitrix/modules/
-bitrix/otp/
-bitrix/panel/
-bitrix/php_interface/include/
-bitrix/php_interface/subscribe/
-bitrix/php_interface/user_lang/
-bitrix/php_interface/dbconn.php
-bitrix/public/
-bitrix/services/
-bitrix/sounds/
-bitrix/template/
-bitrix/themes/
-bitrix/tmp/
-bitrix/tools/
-bitrix/updates/
-bitrix/wizards/
-bitrix/.access.php
-bitrix/.settings.php
-bitrix/.activity_limit.php
-bitrix/bitrix.php
-bitrix/click.php
-bitrix/composer-bx.json
-bitrix/composer.json.example
-bitrix/coupon_activation.php
-bitrix/footer.php
-bitrix/header.php
-bitrix/index.php
-bitrix/license_key.php
-bitrix/p3p.xml
-bitrix/redirect.php
-bitrix/rk.php
-bitrix/routing_index.php
-bitrix/rss.php
-bitrix/spread.php
-bitrix/urlrewrite.php
-bitrix/virtual_file_system.php
-bitrix/bitrix.php
-bitrix/bitrix.php
-bitrix/bitrix.php
-bitrix/bitrix.php
-bitrix/bitrix.php
-
+managed_cache/
 cgi-bin/
 sxd/
 sxv/
 upload/
+
+bitrix/*
+!bitrix/templates/
+
+# файлы игнорируемые на localhost
 images/
+# файлы игнорируемые на localhost en-версии файлов
+info_dso/
 
 results-session.json
 podderzhka/ostatki/files/ostatki.xls
