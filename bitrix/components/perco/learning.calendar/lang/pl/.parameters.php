@@ -1,0 +1,29 @@
+<?
+$MESS ['T_IBLOCK_DESC_LIST_ID'] = "Kod bloku informacyjnego";
+$MESS ['T_IBLOCK_DESC_LIST_TYPE'] = "Typy blokуw informacyjnych (uїywany dla sprawdzania tylko)";
+$MESS ['T_IBLOCK_DESC_CAL_MVN'] = "Nazwa zmiennej dla miesi±ca";
+$MESS ['T_IBLOCK_DESC_CAL_YVN'] = "Nazwa zmiennej dla roku";
+$MESS ['T_IBLOCK_DESC_CAL_WS'] = "Startuj z tygodniem";
+$MESS ['T_IBLOCK_DESC_CAL_WS_0'] = "Niedziela";
+$MESS ['T_IBLOCK_DESC_CAL_WS_1'] = "Poniedziaіek";
+$MESS ['T_IBLOCK_DESC_CAL_WS_2'] = "Wtorek";
+$MESS ['T_IBLOCK_DESC_CAL_WS_3'] = "¦roda";
+$MESS ['T_IBLOCK_DESC_CAL_WS_4'] = "Czwartek";
+$MESS ['T_IBLOCK_DESC_CAL_WS_5'] = "Pi±tek";
+$MESS ['T_IBLOCK_DESC_CAL_WS_6'] = "Sobota";
+$MESS ['T_IBLOCK_DESC_CAL_DATE_FIELD'] = "Pole daty";
+$MESS ['T_IBLOCK_DESC_CAL_TYPE'] = "Typ kalendarza";
+$MESS ['T_IBLOCK_DESC_CAL_TYPE_EVENTS'] = "Wydarzenia";
+$MESS ['T_IBLOCK_DESC_CAL_TYPE_NEWS'] = "Wiadomo¶ci";
+$MESS ['T_IBLOCK_DESC_CAL_SHOW_YEAR'] = "Pokaї switcher roku";
+$MESS ['T_IBLOCK_DESC_CAL_SHOW_TIME'] = "Pokazuje czas wiadomo¶ci";
+$MESS ['T_IBLOCK_DESC_CAL_DATE_ACTIVE_FROM'] = "Data aktywacji (od)";
+$MESS ['T_IBLOCK_DESC_CAL_DATE_ACTIVE_TO'] = "Data aktywacji (do)";
+$MESS ['T_IBLOCK_DESC_CAL_TIMESTAMP_X'] = "Data ostatniej zmiany";
+$MESS ['T_IBLOCK_DESC_CAL_DATE_CREATE'] = "Data utworzenia";
+$MESS ['T_IBLOCK_DESC_CAL_TITLE_LEN'] = "Dіugo¶ж tytuіu (0 - bez limitu)";
+$MESS ['T_IBLOCK_DESC_CAL_SHOW_CURRENT_DATE'] = "Pokazuje aktualny miesi±c i rok";
+$MESS ['T_IBLOCK_DESC_CAL_SHOW_MONTH_LIST'] = "Pokazuje listк rozwijan± miesiкcy";
+$MESS ['T_IBLOCK_DESC_CAL_NEWS_COUNT'] = "Ilo¶ж wiadomo¶ci dla daty (0 - bez limitu)";
+$MESS ['IBLOCK_DETAIL_URL'] = "URL do strony szczegуіуw zawarto¶ci";
+?>

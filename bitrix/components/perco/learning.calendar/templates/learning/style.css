@@ -1,0 +1,320 @@
+.spb-info li:first-child {
+    display: none;
+}
+
+td.event {
+    padding: 0px;
+}
+
+td div.seminarvucentreNoA {
+    background-color: #49639b;
+    height: 20px;
+    line-height: 18px;
+    margin: 0;
+    width: 100% !important;
+    color: #fff;
+}
+
+td div.seminarvucentreNoA p {
+    margin: 0;
+    padding-left: 5px;
+}
+
+.seminarvucentrespb {
+    background-color: #218873;
+}
+
+.seminarvucentre {
+    background-color: #49639b;
+}
+
+.vebinar {
+    background-color: #d5d9dd;
+}
+
+.seminarvucentre p,
+.seminarvucentrespb p {
+    padding-left: 5px;
+    color: #fff;
+}
+
+.news-calendar {
+    font-size: 14px;
+    position: relative;
+    margin: 20px 0;
+}
+
+.news-calendar .event-calendar {
+    max-width: 600px;
+    min-width: 320px;
+    margin: auto;
+}
+
+.clear_div {
+    clear: both;
+}
+
+.NewsCalTable {
+    position: relative;
+    border-collapse: collapse;
+    margin: auto;
+    width: 100%;
+    table-layout: fixed;
+    border: none;
+}
+
+.NewsCalTable>thead {
+    text-align: center;
+}
+
+.NewsCalTable>thead a {
+    text-decoration: none;
+}
+
+.NewsCalTable td {
+    vertical-align: top;
+    border: none;
+}
+
+.NewsCalTable thead td span {
+    color: #b0b1b1;
+    ;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+#current_month,
+.head_b {
+    color: #1f1f1f;
+}
+
+.NewsCalTable thead td {
+    border: 1px solid #b1b7b7;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f1f1f;
+}
+
+.NewsCalTable thead tr:nth-child(2) {
+    text-align: left;
+}
+
+.NewsCalTable thead td a img {
+    position: relative;
+    top: 1px;
+}
+
+.NewsCalTable tbody td {
+    background-image: url(/images/calendar/bg-calendar-td-fon.png);
+    background-repeat: no-repeat;
+    border: 1px solid #b1b7b7;
+    height: 70px;
+    padding: 0;
+    min-width: 68px;
+    font-size: 16px;
+}
+
+.NewsCalTable tbody td .day {
+    color: #1f1f1f;
+}
+
+.week-row {
+    min-height: 90px;
+    position: relative;
+}
+
+table.days {
+    position: absolute;
+    min-height: 90px;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    left: 0px;
+    margin: 0px;
+}
+
+table.days tr {
+    border-bottom: 1px solid #b1b7b7;
+}
+
+table.days td {
+    border: none;
+    border-left: 1px solid #b1b7b7;
+    border-right: 1px solid #b1b7b7;
+    vertical-align: top;
+}
+
+table.days .day {
+    padding: 4px 0 0 4px;
+}
+
+.seminars {
+    position: relative;
+    width: 100%;
+    margin: 0px;
+    min-height: 90px;
+    height: 90px;
+    table-layout: fixed;
+}
+
+td.event {
+    border: none;
+    padding: 0px;
+}
+
+td.event table {
+    border: none;
+    width: 100%;
+    margin: 0;
+    margin-top: 27px;
+}
+
+.vebinarNoA .left_text {
+    background-color: #d5d9dd;
+    width: 100%;
+    min-height: 20px;
+    padding: 0px;
+}
+
+.right_image {
+    float: right;
+    padding-top: 1px;
+}
+
+.center_text {
+    clear: both;
+    padding-top: 3px;
+}
+
+td>div:first-child {
+    width: 70px;
+}
+
+td>div>div {
+    padding: 0 5px;
+}
+
+.info_block {
+    padding-top: 5px;
+}
+
+.info_block div p {
+    margin-bottom: 0;
+    margin-top: 2px;
+    padding-left: 0 !important;
+}
+
+.info_block div p span {
+    margin-left: 9px;
+}
+
+.description_block {
+    display: flex;
+    font-size: 12px;
+    margin: 20px auto;
+    width: 500px;
+}
+
+.description_item .text_block {
+    padding-left: 5px;
+}
+
+.description_item {
+    display: flex;
+    margin-right: 10px;
+}
+
+.description_item>img {
+    width: 46px;
+    margin-right: 10px;
+    height: 38px;
+}
+
+div.viewEvents {
+    display: none;
+    background: none repeat scroll 0 0 #EBF0FA;
+    border: 1px solid #999999;
+    left: 0px;
+    padding: 5px;
+    position: absolute;
+    width: calc(100% - 12px);
+    z-index: 10;
+}
+
+.viewEvents>* {
+    margin-left: 10px;
+}
+
+.viewAll {
+    display: none;
+    font-size: 12px;
+    text-align: center;
+    margin: auto;
+}
+
+.viewEventsAll {
+    left: 294px !important;
+}
+
+.viewEventsUser {
+    left: 502px !important;
+    width: 472px !important;
+}
+
+.viewEventsInstal {
+    left: 0 !important;
+    width: 482px !important;
+}
+
+.viewEventsAll,
+.viewEventsUser,
+.viewEventsInstal {
+    bottom: 421px !important;
+    top: inherit !important;
+}
+
+.noDecor {
+    text-decoration: none;
+}
+
+.spanBlock {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.spanBloc ul li {
+    list-style-image: url(/images/e-learning/schedule-list-01.png);
+}
+
+@media screen and (max-width: 770px) {
+
+    td>div:first-child,
+    .description_block {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    td.event {
+        vertical-align: middle;
+    }
+}
+td.event p img.inf {
+	padding:5px;
+	padding-top:10px;
+	display:none;
+	width:22px;
+	height:22px;
+}
+@media screen and (max-width: 440px) {
+    td.event p {
+        /*display: none;*/
+        font-size: 0;
+    }
+	td.event p img.inf {
+		display:block;
+	}
+}

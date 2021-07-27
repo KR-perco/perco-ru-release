@@ -1,0 +1,29 @@
+<?
+$MESS['T_IBLOCK_DESC_LIST_ID'] = 'Informacinio bloko kodas';
+$MESS['T_IBLOCK_DESC_LIST_TYPE'] = 'Informacinio bloko tipas(naudojamas tik patikrinimui)';
+$MESS['T_IBLOCK_DESC_CAL_MVN'] = 'Mлnesio kintamojo pavadinimas';
+$MESS['T_IBLOCK_DESC_CAL_YVN'] = 'Metш kintamojo pavadinimas';
+$MESS['T_IBLOCK_DESC_CAL_WS'] = 'Savaitлs pradюia';
+$MESS['T_IBLOCK_DESC_CAL_WS_0'] = 'Sekmadienis';
+$MESS['T_IBLOCK_DESC_CAL_WS_1'] = 'Pirmadienis';
+$MESS['T_IBLOCK_DESC_CAL_WS_2'] = 'Antradienis';
+$MESS['T_IBLOCK_DESC_CAL_WS_3'] = 'Treиiadienis';
+$MESS['T_IBLOCK_DESC_CAL_WS_4'] = 'Ketvirtadienis';
+$MESS['T_IBLOCK_DESC_CAL_WS_5'] = 'Penktadienis';
+$MESS['T_IBLOCK_DESC_CAL_WS_6'] = 'Рeрtadienis';
+$MESS['T_IBLOCK_DESC_CAL_DATE_FIELD'] = 'Datos laukas';
+$MESS['T_IBLOCK_DESC_CAL_TYPE'] = 'Kalendoriaus tipas';
+$MESS['T_IBLOCK_DESC_CAL_TYPE_EVENTS'] = 'Бvykiai';
+$MESS['T_IBLOCK_DESC_CAL_TYPE_NEWS'] = 'Naujienos';
+$MESS['T_IBLOCK_DESC_CAL_SHOW_YEAR'] = 'Atvaizduoti metш jungiklб';
+$MESS['T_IBLOCK_DESC_CAL_SHOW_TIME'] = 'Atvaizduoti naujienш laikа';
+$MESS['T_IBLOCK_DESC_CAL_DATE_ACTIVE_FROM'] = 'Aktyvumo pradюios data';
+$MESS['T_IBLOCK_DESC_CAL_DATE_ACTIVE_TO'] = 'Aktyvumo pabaigos data';
+$MESS['T_IBLOCK_DESC_CAL_TIMESTAMP_X'] = 'Paskutiniojo pakeitimo data';
+$MESS['T_IBLOCK_DESC_CAL_DATE_CREATE'] = 'Sukurta';
+$MESS['T_IBLOCK_DESC_CAL_TITLE_LEN'] = 'Antraрtлs pavadinimas (0-neriboti)';
+$MESS['T_IBLOCK_DESC_CAL_SHOW_CURRENT_DATE'] = 'Atvaizduoti einamuosius metus ir mлnesб';
+$MESS['T_IBLOCK_DESC_CAL_SHOW_MONTH_LIST'] = 'Atvaizduoti iрpleиiamаjб mлnesiш sаraра';
+$MESS['T_IBLOCK_DESC_CAL_NEWS_COUNT'] = 'Naujienш skaiиius per dienа (0-neriboti)';
+$MESS['IBLOCK_DETAIL_URL'] = 'URL, vedantis б puslapб su skyriaus elemento turiniu';
+?>

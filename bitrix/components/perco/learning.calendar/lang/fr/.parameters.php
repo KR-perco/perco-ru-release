@@ -1,0 +1,29 @@
+<?
+$MESS ['T_IBLOCK_DESC_CAL_WS_2'] = "Mardi";
+$MESS ['T_IBLOCK_DESC_CAL_WS_4'] = "Jeudi";
+$MESS ['T_IBLOCK_DESC_CAL_WS_5'] = "Vendredi";
+$MESS ['T_IBLOCK_DESC_CAL_WS_3'] = "Mercredi";
+$MESS ['T_IBLOCK_DESC_CAL_WS_1'] = "Lundi";
+$MESS ['T_IBLOCK_DESC_CAL_WS_6'] = "Samedi";
+$MESS ['T_IBLOCK_DESC_CAL_WS_0'] = "Dimanche";
+$MESS ['T_IBLOCK_DESC_CAL_DATE_ACTIVE_FROM'] = "Date d'activitй (dйbut)";
+$MESS ['T_IBLOCK_DESC_CAL_DATE_ACTIVE_TO'] = "Date d'activitй (fin)";
+$MESS ['T_IBLOCK_DESC_CAL_TYPE'] = "Type de calendrier";
+$MESS ['T_IBLOCK_DESC_CAL_DATE_CREATE'] = "Date de crйation";
+$MESS ['T_IBLOCK_DESC_CAL_DATE_FIELD'] = "Champ de date";
+$MESS ['T_IBLOCK_DESC_CAL_SHOW_MONTH_LIST'] = "Afficher une liste dйroulante des mois";
+$MESS ['T_IBLOCK_DESC_CAL_SHOW_CURRENT_DATE'] = "Afficher le mois et l'annйe en cours";
+$MESS ['T_IBLOCK_DESC_CAL_SHOW_TIME'] = "Afficher l'instant des nouvelles";
+$MESS ['T_IBLOCK_DESC_CAL_TYPE_EVENTS'] = "Йvйnements";
+$MESS ['T_IBLOCK_DESC_LIST_ID'] = "Code de bloc d'information";
+$MESS ['T_IBLOCK_DESC_CAL_TIMESTAMP_X'] = "Date de la derniиre modification";
+$MESS ['T_IBLOCK_DESC_CAL_TYPE_NEWS'] = "Nouvelles";
+$MESS ['T_IBLOCK_DESC_CAL_NEWS_COUNT'] = "Nombre de nouvelles par date (0- illimitй)";
+$MESS ['T_IBLOCK_DESC_CAL_SHOW_YEAR'] = "Montrer la commutation d'annйe";
+$MESS ['T_IBLOCK_DESC_CAL_WS'] = "Dйbut de la semaine";
+$MESS ['T_IBLOCK_DESC_CAL_TITLE_LEN'] = "Longueur du titre (0 - illimitй)";
+$MESS ['T_IBLOCK_DESC_LIST_TYPE'] = "Type du bloc d'informations (utile а la vйrification uniquement)";
+$MESS ['IBLOCK_DETAIL_URL'] = "URL de la page avec contenu dйtaillй";
+$MESS ['T_IBLOCK_DESC_CAL_MVN'] = "Nom de variable pour le mois";
+$MESS ['T_IBLOCK_DESC_CAL_YVN'] = "Nom de variable pour l'annйe";
+?>
