@@ -21,9 +21,7 @@ function addkey($key, $sort)			// функция для сортировки т�
 	}
 	else
 		return $key;
-}
-
-console_log("element cataloga");
+} 
 ?>
 <div id="main_block">
 <!-- <script src="/scripts/lightgallery/js/lg-thumbnail.min.js"></script>

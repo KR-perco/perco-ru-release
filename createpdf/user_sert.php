@@ -7,13 +7,15 @@ function createSert($ID, $txt, $datecomp, $sert_pole, $sert_data, $logoFile, $te
 	$logoYPos = 0;
 	$logoWidth = 210;
 	$logoHeight = 297;
-
 	$pdf = new FPDF( 'P', 'mm', 'A4' );	// Создаем титульную страницу
 	$pdf->AddFont('Palatino','','palai.php');	// Добавляем шрифт
 	$pdf->SetFont( 'Palatino', '', 24 );	// Устанавливаем шрифт
 	$pdf->SetTextColor( $textColour[0], $textColour[1], $textColour[2] );	// Устанавливаем цвет текста
 	$pdf->AddPage();	// Создаем страницу
+	
+	// формат подложек 1241px x 1755px
 	$pdf->Image($logoFile, $logoXPos, $logoYPos, $logoWidth, $logoHeight);	// фоновое изображение
+
 	$pdf->SetXY(25, 138);	// Устанавливаем координаты
 	$pdf->MultiCell(160, 12, iconv("UTF-8", "windows-1251", $txt), 0, 'C');
 	$pdf->AddFont('Futuris','','FTR.php');	// Добавляем шрифт

@@ -63,14 +63,14 @@ if (!function_exists("getElements"))
 			$version = "";
 			$list_files = "";
 			while($ar = $rs->GetNextElement())
-			{
+			{ 
 				$arFields = $ar->GetFields();
 				$arProps = $ar->GetProperties(); 
 				if (is_array($arProps["FILE"]["DESCRIPTION"]))
 				{
-					$keyName = array_search(LANGUAGE_ID, $arProps["NAME"]["DESCRIPTION"]);
-					$keyFile = array_search(LANGUAGE_ID, $arProps["FILE"]["DESCRIPTION"]);
-					$keyImage = array_search(LANGUAGE_ID, $arProps["IMAGE"]["DESCRIPTION"]);
+					$keyName = array_search($GLOBALS['LANG'], $arProps["NAME"]["DESCRIPTION"]);
+					$keyFile = array_search($GLOBALS['LANG'], $arProps["FILE"]["DESCRIPTION"]);
+					$keyImage = array_search($GLOBALS['LANG'], $arProps["IMAGE"]["DESCRIPTION"]);
 					$name = $arProps["NAME"]["VALUE"][$keyName];
 					$file = $arProps["FILE"]["VALUE"][$keyFile];
 					$image = $arProps["IMAGE"]["VALUE"][$keyImage];
@@ -90,13 +90,22 @@ if (!function_exists("getElements"))
 				if ($arProps["INSTAL_VERSION"]["VALUE"] && LANGUAGE_ID == "ru")
 					$version = ", версия ".$arProps["INSTAL_VERSION"]["VALUE"];
 				$google = "onclick=\"ga('send', 'event', {'eventCategory': 'Поддержка покупателя', 'eventAction': 'download', 'eventLabel': '".$file."'});\"";
-				if ($with_image == "Y")
-					$list_files .= '<div class="element_item"><div><img alt="'.$name.'" src="'.$image.'"></div><a href="'.$file.'" target="_blank" '.$google.' download>'.$name.'</a><div class="color">'.$fSize.' — '.$date.'</div></div>';
+				if ($with_image == "Y") { // не самое надёжное выделение инфоблока для раздела "Каталоки и буклеты" IBLOCK_ID = 21
+					// 2299 - раздел, который не продаём на заказ, только электронный вариант скачивается
+					$haveBtnBuy = ($section_id == 2299) ? '' : '<div data-fancybox data-src="#dialog-content" data-merch="'.$arFields["NAME"].'" class="form-popup-link">Заказать</div>';
+					console_log($section_id);
+					$haveFancyLink = ($section_id == 2266) ? '<a data-fancybox href="'.$file.'" target="_blank" '.$google.' download>Смотреть</a>' : '<a href="'.$file.'" target="_blank" '.$google.' download>Скачать</a>';
+					console_log($arFields);
+					// console_log($arProps);
+					// $name = $arFields["NAME"];
+					$podpis = ($arProps["IMAGE_PODPIS"]["VALUE"] == "") ? '' : $arProps["IMAGE_PODPIS"]["VALUE"].'<br/>';
+					$list_files .= '<div class="element_item buklets_item"><div class="buklets_item__hover"><div class="buklets__img"><img alt="'.$name.'" src="'.$image.'"></div><div class="buklets__info-wrap"><div class="buklets__name-wrap">'.$name.'</div><div class="buklets__btn-wrap">'.$haveFancyLink.$haveBtnBuy.'</div><div class="color">'.$podpis.''.$fSize.' — '.$date.'</div></div></div></div>';
+				}
 				else
-					$list_files .= '<li class="icon-style__'.$arProps["ICON"]["VALUE"].'"><a href="'.$file.'" target="_blank" '.$google.' download>'.$name.$version.'</a> <span class="color">'.$fSize.' — '.$date.'</span></li>';
+					$list_files .= '<li><a href="'.$file.'" target="_blank" '.$google.' download>'.$name.$version.'</a> <span class="color">'.$fSize.' — '.$date.'</span></li>';
 			}
 			if(!empty($list_files)){
-				if ($with_image == "Y")
+				if ($with_image == "Y") // не самое надёжное выделение инфоблока для раздела "Каталоки и буклеты" IBLOCK_ID = 21
 					echo '<div class="elements_list">'.$list_files.'</div>';
 				else
 					echo "<ul>".$list_files."</ul>";
@@ -144,7 +153,8 @@ if ($arResult["SECTIONS_COUNT"] > 0)
 					echo "</dt>";
 				}
 				echo "<dt>".$name;
-			}
+			} 
+			// console_log($arSection);
 			getElements($arSection["IBLOCK_ID"], $arSection["ID"], $archive, $arParams["WITH_IMAGE"]);
 			$CURRENT_DEPTH = $arSection["DEPTH_LEVEL"];
 		}

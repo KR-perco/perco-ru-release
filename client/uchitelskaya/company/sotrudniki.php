@@ -43,7 +43,8 @@ while($arUser = $rsUsers->Fetch())
 {
 	echo "<tr><td>".$arUser["LAST_NAME"]." ".$arUser["NAME"]." ".$arUser["SECOND_NAME"]."</td>";
 	echo "<td>".$arUser["EMAIL"]."</td>";
-	echo "<td>".$arUser["PERSONAL_NOTES"]."</td><td>".$arUser["UF_DATA_OBUCH"]."</td><td>";
+	echo "<td>".$arUser["PERSONAL_NOTES"]."</td>";
+	echo "<td>".$arUser["UF_DATA_OBUCH"]."</td><td>";
 	if ($arUser["UF_DATA_OBUCH"])
 	{
 		if($_GET["obuch"] == 1 && $_GET["USER_ID"] == $arUser["ID"])

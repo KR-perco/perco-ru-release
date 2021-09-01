@@ -1,0 +1,38 @@
+.form_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form_row>div:first-child {
+    flex-basis: 210px;
+    flex-shrink: 0;
+}
+
+.form_row>div {
+    padding: 1px 3px 1px 0;
+}
+
+.form_row input,
+.form_row textarea {
+    width: 250px;
+}
+
+.form_row input[name="captcha_word"] {
+    width: 190px;
+}
+
+div input[type="submit"] {
+    margin-top: 0;
+}
+
+@media screen and (max-width: 720px) {
+    .form_row {
+        flex-direction: column;
+    }
+    .form_row>div.input-copy {
+        flex-basis: auto!important;
+    }
+    .form_row>div:first-child {
+        flex-basis: auto;
+    }
+}

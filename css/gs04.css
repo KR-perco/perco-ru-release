@@ -1,88 +1,118 @@
 img[src="/images/icons/video.svg"]:nth-child(even) {
-	display: none;
+    display: none;
 }
 
 .text_items {
-	inline-size: 100%;
+    inline-size: 100%;
 }
 
-.iconsTitle {margin-block-end: 32px;}
+.iconsTitle {
+    margin-block-end: 32px;
+}
 
-.iconsTitle_big {margin-block-end: 40px;}
+.iconsTitle_big {
+    margin-block-end: 40px;
+}
 
 .tabIcons {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	inline-size: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    inline-size: 100%;
 }
 
 .tabIcon {
-	display: flex;
-	flex-direction: column;
-	margin-right: 30px;
-	margin-bottom: 32px;
-	inline-size: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    margin-bottom: 32px;
+    inline-size: 300px;
+    position: relative;
 }
 
 .tabIcon_upravlenie {
-	inline-size: 216px;
+    inline-size: 216px;
 }
 
 .tabIcon_complect {
-	inline-size: 252px;
+    inline-size: 252px;
 }
 
 .tabIcon_complect .tabIcon__img {
-	border: 1px solid #9da1a364;
+    border: 1px solid #9da1a364;
 }
 
 .tabIcon__title {
-	padding-block-end: 8px;
-	font-size: 20px;
-	line-height: 20px;
-	font-weight: 600;
+    padding-block-end: 8px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 600;
 }
 
 .tabIcon__title {
-	inline-size: 100%;
-	border-block-end: 1px solid #d4d4d4;
+    inline-size: 100%;
+    border-block-end: 1px solid #d4d4d4;
 }
 
-.tabIcon__imgLink, .tabIcon__img {
-	inline-size: 100%;
-	max-inline-size: 252px;
+.tabIcon__imgLink,
+.tabIcon__img {
+    inline-size: 100%;
+    max-inline-size: 252px;
 }
 
 .tabIcon__text {
-	margin-block-start: 16px;
-	inline-size: 100%;
-	max-inline-size: 300px;
-	color: #222;
-	font-size: 18px;
+    margin-block-start: 16px;
+    inline-size: 100%;
+    max-inline-size: 300px;
+    color: #222;
+    font-size: 18px;
 }
 
 .tabIcon__text_complect {
-	max-inline-size: 252px;
+    max-inline-size: 252px;
+}
+
+.tabIcon__signature {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    font-weight: 500;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.word-100 {
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+.word-5 {
+    flex: 1 1 50%;
+}
+
+.word-3 {
+    flex: 1 1 33%;
 }
 
 @media (min-width: 512px) {
-	.tabIcon_upravlenie .tabIcon__title {
-		block-size: 40px;
-	}
+    .tabIcon_upravlenie .tabIcon__title {
+        block-size: 40px;
+    }
 }
 
 @media (min-width: 1200px) {
-	.tabIcon {
-		margin-right: 80px;
-		margin-bottom: 64px;
-	}
-	
-	.tabIcon_upravlenie {
-		margin-right: 16px;
-	}
-	
-	.tabIcon_complect {
-		margin-right: 32px;
-	}
+    .tabIcon {
+        margin-right: 80px;
+        margin-bottom: 64px;
+    }
+    .tabIcon_upravlenie {
+        margin-right: 16px;
+    }
+    .tabIcon_complect {
+        margin-right: 32px;
+    }
 }

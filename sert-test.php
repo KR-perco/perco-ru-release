@@ -15,6 +15,7 @@ echo '</tr>';
 $today =  mktime(0, 0, 0, date("m"), date("d"), date("Y")); //unix time для начала сегодняшнего дня
 
 $filter = [
+	"ID" => "5276", // только тестовая компания
 	"ACTIVE" => "Y",
 	"GROUPS_ID" => 32 //пользователи из группы "Компании"
 ];
@@ -22,6 +23,7 @@ $select = [
 	"SELECT" => ['ID', 'NAME', "UF_SERT_D", "UF_SERT_DATE", "UF_SERT_TP", "UF_SERT_DATE_TP", "UF_SERT_SC", "UF_SERT_DATE_SC", "UF_PAI", "UF_PTP", "UF_SC", "UF_PAS", "UF_TIP_SERT"]
 ];
 $rsCompany = CUser::GetList(($by="id"), ($order="desc"), $filter, $select); // выбираем компании
+ 
 $i = 0;
 while($arCompany = $rsCompany->Fetch()) {
 	$i++;
@@ -33,6 +35,8 @@ while($arCompany = $rsCompany->Fetch()) {
 	echo '<tr>';
 	echo '<td>' . $arCompany['ID'] . '</td>';
 	echo '<td>' . $arCompany['NAME'] . '</td>';
+
+	// console_log($arCompany);
 	
 	$filter = [
 		"ACTIVE" => "Y",
@@ -44,6 +48,7 @@ while($arCompany = $rsCompany->Fetch()) {
 	];
 	$rsUsers = CUser::GetList(($by="id"), ($order="desc"), $filter, $select); // выбираем пользователей, которые принадлежат данной компании
 	while ($arUser = $rsUsers->Fetch()) {
+		console_log($arUser);  
 		// считаем пользователей компании с пройденными тестами АИ
 		$getSertDate = strtotime($arUser["UF_SERT_DATE"]);
 		$endSertDate = mktime(0, 0, 0, date("m", $getSertDate), date("d", $getSertDate), date("Y", $getSertDate)+1);
@@ -70,8 +75,11 @@ while($arCompany = $rsCompany->Fetch()) {
 	$endSertDate = mktime(0, 0, 0, date("m", $getSertDate), date("d", $getSertDate), date("Y", $getSertDate)+1); //unix time время окончания действия сертификата АИ у пользователя
 	if (in_array(18, $arCompany["UF_TIP_SERT"])) //если пользователь является "Авторизованный инсталлятор, торговый партнер"
 	{
-		if ($countAI >= 2 && $arCompany["UF_PAI"] == "Подтверждено" && $arCompany["PERSONAL_WWW"] == "Подтверждено") //если больше двух человек сдали тест аи в компании и "Условия для сертификации Авторизованного инсталлятора" "Подтверждено" и "WWW-страница" "Подтверждено"
+		// Тестируем условия для выпуска сертификата
+		// Было "($countAI >= 2 && $arCompany["UF_PAI"] == "Подтверждено" && $arCompany["PERSONAL_WWW"] == "Подтверждено")" 
+		if ($countAI >= 1 && $arCompany["UF_PAI"] == "Подтверждено" && $arCompany["PERSONAL_WWW"] == "Подтверждено") //если больше двух человек сдали тест аи в компании и "Условия для сертификации Авторизованного инсталлятора" "Подтверждено" и "WWW-страница" "Подтверждено"
 			$trebovaniyaAI = true;
+
 		if ($arCompany["UF_SERT_D"] && ($endSertDate <= $today || !$trebovaniyaAI))
 		{
 			echo '<td>Удаляем сертификат</td>';

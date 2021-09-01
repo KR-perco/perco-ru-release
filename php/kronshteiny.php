@@ -10,6 +10,24 @@
 	.kronshteiny-option {display: flex; flex-wrap: wrap; margin-block-start: 64px; margin-inline-end: 24px; max-inline-size: 820px;}
 	.kronshteiny-option-name {margin-block-end: 16px; inline-size: 100%; font-size: 22px;}
 	.kronshteiny-option-combination-img {margin-block-end: 16px; max-inline-size: 246px;}
+	#container .kronshteiny_docs .catalog-section-list ul li.icon-style__pdf:before { 
+		background-image: url("/images/icons/pdf.svg");
+		/* case "pdf":
+			$ico = "/images/icons/pdf.svg";
+			break;
+		case "dwf":
+			if (LANGUAGE_ID == "ru")
+				$AutoCadtitle = 'для просмотра должна быть установлена программа Autodesk DWF Viewer<br />';
+			$ico = "/images/icons/dwf.svg";
+			break;
+		case "dwg":
+			$ico = "/images/icons/dwg.svg";
+			break;
+		default:
+			$ico = "/images/icons/download.svg";
+			break; */
+
+	}
 </style>
 
 <?
@@ -55,4 +73,29 @@
 		</select>
 	</div>
 	<div class="kronshteiny"></div>
+	<div class="kronshteiny_docs">
+	<?
+		$iblocks = GetIBlockList("download", "files");
+		if($arIBlock = $iblocks->Fetch())
+			$block_id = $arIBlock["ID"];
+
+		$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Array(
+				"IBLOCK_TYPE" => "download",	// Тип инфоблока
+				"IBLOCK_ID" => $block_id,	// Инфоблок
+				"SECTION_ID" => "",	// ID раздела
+				"SECTION_CODE" => "kronshteyny",	// Код раздела
+				"SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
+				"COUNT_ELEMENTS" => "N",	// Показывать количество элементов в разделе
+				"TOP_DEPTH" => "2",	// Максимальная отображаемая глубина разделов
+				"SECTION_FIELDS" => "",	// Поля разделов
+				"SECTION_USER_FIELDS" => array("UF_ARCHIVE"),	// Свойства разделов
+				"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
+				"CACHE_TYPE" => "A",	// Тип кеширования
+				"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+				"CACHE_GROUPS" => "Y",	// Учитывать права доступа
+			),
+			false
+		);
+		?>
+	</div>
 </div>

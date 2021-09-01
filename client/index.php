@@ -33,6 +33,9 @@ input[type=button]:focus { outline:none }
 <?$APPLICATION->ShowTitle(false, false)?>
 </h1>
 <?
+// Перенаправление в разделы в зависимости от принадлежности к группе работает странно:
+// Если пользователь принадлежит к нескольким группам - он попадёт в самую первую
+// то есть если ко всем группам - то попадает в "/client/student/"
 if ($USER->IsAuthorized())
 {
 	$arGroups = CUser::GetUserGroup($USER->GetID());

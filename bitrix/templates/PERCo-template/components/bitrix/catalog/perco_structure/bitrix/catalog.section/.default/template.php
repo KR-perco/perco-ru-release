@@ -84,6 +84,7 @@ if (intval($res->SelectedRowsCount()) > 0)
 	<?=$content;?>
 </div>
 <? if ($arProps["SCROLL"]["VALUE"]) {
+	console_log($arProps);
 	if ($device!="desktop")
 		echo '<style type="text/css">body #main_block { flex-direction: column; }#horizontal_scroll { margin: 20px 0 0 0 !important; }</style>';
 ?>

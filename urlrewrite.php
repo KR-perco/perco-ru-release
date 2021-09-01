@@ -81,8 +81,8 @@ $arUrlRewrite=array (
     'SORT' => 100,
   ),
   5 => 
-  array (
-    'CONDITION' => '#^/resheniya/(.*)/#',
+  array (  
+    'CONDITION' => '#^/resheniya/(.*)/.*#',
     'RULE' => '/resheniya/details.php?ELEMENT_CODE=$1',
     'ID' => '',
     'PATH' => '',

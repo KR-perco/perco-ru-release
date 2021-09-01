@@ -49,6 +49,7 @@ dev/
 pma/
 upload/
 verstka/
+landing-barrier-tests/
 
 # исключаем ВСЮ папку bitrix, но ниже настроим включение нужных папок
 # или используйте папку /local, чтобы полностью исключить папку bitrix

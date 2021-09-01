@@ -128,7 +128,7 @@ unset($file); // Очистить переменную $file
 				<a href="/resheniya/">Решения</a>
 				<a href="/novosti/">Новости</a>
 				<a href="/gde-kupit/">Купить</a>
-				<a href="/obuchenie/">Обучение</a>
+				<a href="/obuchenie/">Подготовка специалистов</a>
 				<a href="/podderzhka/">Поддержка</a>
 				<a href="/o-kompanii/">О компании</a>
 			</div>

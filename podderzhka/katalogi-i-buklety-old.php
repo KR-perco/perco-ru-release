@@ -8,11 +8,7 @@ $APPLICATION->SetPageProperty("keywords", "системы контроля до�
 $APPLICATION->SetTitle("Каталоги и буклеты");
 
 $APPLICATION->SetAdditionalCSS("/css/reklamnye-materialy.css"); // подключение стилей
-
-// Стили для fancybox (всплывающего окна с формой)
-$APPLICATION->SetAdditionalCSS("/css/libs/fancybox.css"); 
-
-
+$APPLICATION->AddHeadScript("/scripts/pages/reklamnye-materialy.js"); // подключение скриптов
 ?>
 <div id="content">
 	<div id="himg">
@@ -24,7 +20,7 @@ $APPLICATION->SetAdditionalCSS("/css/libs/fancybox.css");
 $iblocks = GetIBlockList("download", "files");
 if($arIBlock = $iblocks->Fetch())
 	$block_id = $arIBlock["ID"];
-$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree_catalogs-and-booklets", Array(
+$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Array(
 		"IBLOCK_TYPE" => "download",	// Тип инфоблока
 		"IBLOCK_ID" => $block_id,	// Инфоблок
 		"SECTION_ID" => "",	// ID раздела
@@ -42,52 +38,12 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree_catalo
 	),
 	false
 );?>
-<div id="dialog-content" style="display:none;" class="" role="dialog">
-	<div id="free_catalog"> 
-		<div class="icon">
-			<span class="booklets-header">Заказать</span>
-		</div> 
-	</div> 
-	<div class="booklets-popup__window">
-		<div class="booklets-feedback">
-			<? $APPLICATION->IncludeComponent(
-					"bitrix:form.result.new",
-					"zakaz-bokletov-i-katalogov",
-				array(
-					"WEB_FORM_ID" => "72", 
-					"USE_EXTENDED_ERRORS" => "N",
-					"SEF_MODE" => "N",
-					"SEF_FOLDER" => "",
-					//"CACHE_TYPE" => "A",
-					//"CACHE_TIME" => "3600",
-					"CACHE_TYPE" => "N",
-					"CACHE_TIME" => "0",
-					"LIST_URL" => "",
-					"EDIT_URL" => "",
-					"SUCCESS_URL" => "", 
-					"CHAIN_ITEM_TEXT" => "",
-					"CHAIN_ITEM_LINK" => "",
-					"AJAX_MODE" => "Y",
-					"VARIABLE_ALIASES" => array(
-						"WEB_FORM_ID" => "WEB_FORM_ID",
-						"RESULT_ID" => "RESULT_ID",
-					)
-				),
-				false
-			); ?> 
-		</div>
-	</div> 
-
+	<div id="free_catalog">
+		<a href="/podderzhka/zakaz-kataloga.php">
+			<div class="icon">
+				<img src="/images/icons/catalog.svg" alt="Технический каталог"><span class="icon_text">Заказать технический каталог</span>
+			</div>
+		</a>
+	</div>
 </div>
-
-
-</div>
-
-
-<!-- // скрипты для подключения всплывающего окна с формой -->
-<script src="/scripts/libs/fancybox/fancybox.umd.js"></script>
-<script src="/scripts/catalogs-and-booklets.js"></script> 
-
-
-
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

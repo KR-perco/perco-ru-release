@@ -66,9 +66,7 @@ function getPriceProduct($iblockID, $elementID, $imgSrc = "")
 		}
 	}
 	return $priceText;
-}
-
-console_log($arResult);
+} 
 if (count($arResult["SECTIONS"]) > 0)
 {
 	echo '<div id="secel_list">';
@@ -87,7 +85,7 @@ if (count($arResult["SECTIONS"]) > 0)
 		);
 		$arSection = $rsSection->Fetch();
 ?>
-	<div class="secel_item test1">
+	<div class="secel_item type1">
 		<a href="<?=str_ireplace("_com", "", $section["SECTION_PAGE_URL"]);?>">
 			<div class="image_icon">
 				<img alt="<?=$section["NAME"];?>" src="<?=$arSection["PROPERTY_IMAGE_VALUE"];?>" />
@@ -153,7 +151,7 @@ if (count($arResult["SECTIONS"]) > 0)
 <?
 	}
 	if ($arParams['SECTION_CODE'] == 'turnikety') {?>
-		<div class="secel_item test1">
+		<div class="secel_item type1">
 			<a href="/products/kronshteyny/">
 				<div class="image_icon">
 					<img alt="Кронштейны" src="/images/products/kronshteiny/all.jpg" />
@@ -193,7 +191,7 @@ if (count($arResult["SECTIONS"]) > 0)
 			if ($arDopname["VALUE"])
 				$dopname = '<p class="dop_name">'.$arDopname["VALUE"].'</p>';
 	?>
-		<div class="secel_item test2">
+		<div class="secel_item type2">
 			<a href="<?=str_ireplace("_com", "", $element["DETAIL_PAGE_URL"]);?>">
 				<div class="image_icon">
 					<img alt="<?=$element["NAME"];?>" src="<?=$arImage["VALUE"];?>" />
@@ -235,7 +233,7 @@ else
 			$free = '<p class="free">БЕСПЛАТНО</p>';
 		}
 ?>
-	<div class="secel_item test3">
+	<div class="secel_item type3">
 		<a href="<?=str_ireplace("_com", "", $element["DETAIL_PAGE_URL"]);?>">
 			<div class="image_icon">
 				<img alt="<?=$element["NAME"];?>" src="<?=$arImage["VALUE"];?>" />
@@ -245,10 +243,9 @@ else
 		</a>
 	</div>
 <?
-	}
-	console_log($arParams['SECTION_CODE']);
+	} 
 	if ($arParams['SECTION_CODE'] == 'biometricheskie-kontrollery-i-schityvateli') {?> 
-		<div class="secel_item test3">
+		<div class="secel_item type3">
 			<a href="/products/terminaly-raspoznavaniya-lits/">
 				<div class="image_icon">
 					<img alt="Терминалы распознавания лиц" src="/images/products/terminaly-raspoznavaniya-lits/v-page.jpg">

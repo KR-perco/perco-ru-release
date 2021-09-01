@@ -24,12 +24,12 @@ if ($arResult["isFormNote"] != "Y")
 			echo $arQuestion["HTML_CODE"];
 		else
 		{
-			// console_log($arQuestion); 
+			// 	<label class="training-feedback-form__label"> 	E-mail <span style="color: red;">*</span>&nbsp; 
+			//      <br>
+			//      <input type="text" class="inputtext" name="form_email_926" value="" size="0"> 
+			//  </label>
 ?>
-<div class="form_row">
-	
-	<div><?=$arQuestion["HTML_CODE"];?></div>
-	<div>
+<label class="training-feedback-form__label"> 
 <?
 			if (is_array($arResult["FORM_ERRORS"]) && array_key_exists($FIELD_SID, $arResult['FORM_ERRORS']))
 			{
@@ -41,8 +41,9 @@ if ($arResult["isFormNote"] != "Y")
 				echo $arResult["REQUIRED_SIGN"];
 			echo $arQuestion["IS_INPUT_CAPTION_IMAGE"] == "Y" ? "<br />".$arQuestion["IMAGE"]["HTML_CODE"] : "";
 ?>
-	</div>
-</div>
+	<br> 
+	<?=$arQuestion["HTML_CODE"];?> 
+</label>
 <?
 		}
 	} //endwhile
@@ -50,9 +51,9 @@ if ($arResult["isFormNote"] != "Y")
 	{
 ?>
 <div><?=GetMessage("FORM_CAPTCHA_FIELD_TITLE")?><?=$arResult["REQUIRED_SIGN"];?></div>
-<div class="form_row">
-	<div><input type="text" name="captcha_word" size="20" maxlength="50" value="" class="inputtext" /></div>
+<div class="training-feedback-form__label">
 	<div><input type="hidden" name="captcha_sid" value="<?=htmlspecialcharsbx($arResult["CAPTCHACode"]);?>" /><img src="/bitrix/tools/captcha.php?captcha_sid=<?=htmlspecialcharsbx($arResult["CAPTCHACode"]);?>" height="40" /></div>
+	<div><input type="text" name="captcha_word" size="20" maxlength="50" value="" class="inputtext" /></div>
 </div>
 <?
 } // isUseCaptcha

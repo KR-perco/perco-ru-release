@@ -171,8 +171,8 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "section_icons", A
 		</div>
 		<div class="banner_item">
 			<a href="/obuchenie/">
-				<img title="Обучение партнеров и сертификация" alt="Обучение партнеров и сертификация" src="/images/banners/banner-obuchenie.jpg">
-				<div>Обучение в Учебном центре PERCo</div>
+				<img title="Подготовка специалистов и сертификация" alt="Подготовка специалистов и сертификация" src="/images/banners/banner-obuchenie.jpg">
+				<div>Подготовка специалистов в Учебном центре PERCo</div>
 			</a>
 		</div>
 		<div class="banner_item">

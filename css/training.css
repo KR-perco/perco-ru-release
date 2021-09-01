@@ -256,6 +256,28 @@ form[name="TRAINING_REGISTER"] .form_row>div:nth-child(2) {
     opacity: 0.5;
 }
 
+.training-main.ver2 .training-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.training-main.ver2 .training-item {
+    margin: 0;
+    margin-inline: 0;
+    margin-block-start: 32px;
+    max-inline-size: 493px;
+}
+
+.training-main.ver2 .timer-body {
+    max-width: 500px;
+    text-align: left;
+}
+
+.training-main.ver2 .training-item__desc {
+    margin: 5px 0;
+}
+
 @keyframes slideInDown {
     from {
         transform: translate3d(0, -100%, 0);

@@ -9,6 +9,10 @@
     margin-top: 50px;
 }
 
+#main_block>#content {
+    margin-top: 0px;
+}
+
 h1 {
     font-size: 18px !important;
 }
