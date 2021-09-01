@@ -154,8 +154,6 @@ $php_result = '<div class="tabIcons">
 			<p>Цена <span class="price_rub">' . number_format($kodovyaPanelPrice * $euro, 0, ",", " ") . ' &#8381;</span> со склада в Москве и Санкт-Петербурге</p>
 			<p>' . number_format($kodovyaPanelPrice, 0, ",", " ") . ' € (по курсу ЦБ РФ на ' . date("d.m.y") . ')</p>
 		</div>
-	</div>
-	<div class="tabIcon tabIcon_complect"></div>
-	<div class="tabIcon tabIcon_complect"></div>
+	</div> 
 </div>';
 ?>

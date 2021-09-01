@@ -4,21 +4,25 @@ img[src="/images/icons/video.svg"]:nth-child(even) {
 
 .text_items {
     inline-size: 100%;
+    padding: 7px 0 0 10px;
 }
 
 .iconsTitle {
     margin-block-end: 32px;
+    margin-top: 0;
 }
 
 .iconsTitle_big {
     margin-block-end: 40px;
+    margin-top: 0;
 }
 
 .tabIcons {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    inline-size: 100%;
+    justify-content: flex-start;
+    inline-size: 103%;
+    margin: 0 -1.5%;
 }
 
 .tabIcon {
@@ -28,14 +32,30 @@ img[src="/images/icons/video.svg"]:nth-child(even) {
     margin-bottom: 32px;
     inline-size: 300px;
     position: relative;
+    flex: 0 1 30%;
+    margin: 0 1.5%;
+    padding: 0 0 50px;
 }
 
 .tabIcon_upravlenie {
     inline-size: 216px;
+    flex: 0 1 22%;
 }
 
 .tabIcon_complect {
     inline-size: 252px;
+}
+
+[for="Дopolnitelnoe-oborudovanie"]+div>.text_items,
+[for="Кomplekt"]+div>.text_items {
+    margin-top: 7px;
+}
+
+[for="Оsobennosti"]+div,
+[for="Уpravlenie"]+div,
+[for="Кomplekt"]+div,
+[for="Дopolnitelnoe-oborudovanie"]+div {
+    margin-bottom: -30px;
 }
 
 .tabIcon_complect .tabIcon__img {
@@ -98,21 +118,37 @@ img[src="/images/icons/video.svg"]:nth-child(even) {
     flex: 1 1 33%;
 }
 
+.tabIcon__imgLink_srink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 14px;
+}
+
+.tabIcon__imgLink_srink .tabIcon__img {
+    inline-size: 75%;
+}
+
+
+/* .turnikets-video .video-block {
+    margin-top: 0px!important;
+} */
+
 @media (min-width: 512px) {
     .tabIcon_upravlenie .tabIcon__title {
         block-size: 40px;
     }
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
     .tabIcon {
-        margin-right: 80px;
-        margin-bottom: 64px;
+        flex: 0 1 47%;
+        align-items: center;
     }
-    .tabIcon_upravlenie {
-        margin-right: 16px;
-    }
-    .tabIcon_complect {
-        margin-right: 32px;
+}
+
+@media (max-width: 460px) {
+    .tabIcon {
+        flex: 0 1 100%;
     }
 }

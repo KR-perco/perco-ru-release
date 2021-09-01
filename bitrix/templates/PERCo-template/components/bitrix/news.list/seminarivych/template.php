@@ -1,5 +1,5 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?>
-<?
+<? 
 if (!empty($arResult["ITEMS"]))
 {
 	$kto = "";
@@ -30,6 +30,7 @@ if (!empty($arResult["ITEMS"]))
 			$arRes = $res->GetNextElement();
 			$arFields = $arRes->GetFields();
 			$arProp = $arRes->GetProperties();
+			console_log($arItem);
 			if (!$arProp["FOR_US_".$kto_let]["VALUE"])
 				continue;
 			if ($kto)
@@ -57,6 +58,7 @@ if (!empty($arResult["ITEMS"]))
 				if (($arProp["CITY"]["VALUE"] == "Санкт-Петербург") and ($arProp["TOPIC"]["VALUE"] != NULL)) {
 					$line .= "<tr><td>".$inum."</td><td>".str_ireplace("#kto#", $tema, $arProp["TOPIC"]["VALUE"])."</td><td>";
 					$arPreview = explode("###", $arFields["PREVIEW_TEXT"]);
+					console_log($arFields["ID"]);
 					if ($kto && count($arPreview) > 1)
 					{
 						switch($kto)
