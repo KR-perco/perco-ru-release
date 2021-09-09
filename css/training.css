@@ -115,6 +115,13 @@ body #container {
     font-size: 35px;
 }
 
+.ver2 .training-item__title,
+.individual-registration-title {
+    margin-block-start: 0;
+    font-size: 26px;
+    color: #003C8E;
+}
+
 .training-items {
     display: flex;
     flex-wrap: wrap;
@@ -260,6 +267,8 @@ form[name="TRAINING_REGISTER"] .form_row>div:nth-child(2) {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    border-top: 1px solid #d0d0d1;
+    margin-top: 39px;
 }
 
 .training-main.ver2 .training-item {
@@ -318,6 +327,12 @@ form[name="TRAINING_REGISTER"] .form_row>div:nth-child(2) {
     font-weight: 100;
 }
 
+.training-main.ver2 .timer-body.ver2 {
+    max-width: none;
+    text-align: left;
+    display: inline;
+}
+
 .timer-visible {
     display: block;
 }
@@ -340,6 +355,39 @@ form[name="TRAINING_REGISTER"] .form_row>div:nth-child(2) {
     font-weight: 100;
     text-align: center;
     font-size: 30px;
+}
+
+.timer-body.ver2 .countdown {
+    display: flex;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.timer-body.ver2 .deadline-message,
+.timer-body.ver2 .countdown-text,
+.timer-body.ver2 .countdown-time {
+    font-size: inherit;
+    font-weight: inherit;
+    padding: 0;
+}
+
+.timer-body.ver2 .countdown {
+    padding: 20px 0;
+}
+
+.timer-body.ver2 .countdown>span {
+    padding-right: 10px;
+}
+
+.training-main.ver2 .training-registration-title {
+    font-size: 20px;
+}
+
+.training-main.ver2 .training-feedback_register {
+    align-items: flex-start;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #d0d0d1;
+    margin-bottom: 37px;
 }
 
 .countdown-number {

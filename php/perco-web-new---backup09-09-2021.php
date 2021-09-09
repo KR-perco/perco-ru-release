@@ -972,7 +972,7 @@ switch ($checkedId){
                             <p>+</p>
                         </td>
                         <td>
-                            <p>+</p>
+                            <p><strong>-</strong></p>
                         </td>
                     </tr>
 					<tr>
@@ -1147,30 +1147,6 @@ switch ($checkedId){
                         </td>
                     </tr>
 					<tr>
-                        <td>
-                            <p>Выданные идентификаторы</p>
-                        </td>
-                        <td colspan="2">
-                            <p>+</p>
-                        </td>
-                    </tr>
-					<tr>
-                        <td>
-                            <p>Время присутствия</p>
-                        </td>
-                        <td colspan="2">
-                            <p>+</p>
-                        </td>
-                    </tr>
-					<tr>
-                        <td>
-                            <p>Выданные документы </p>
-                        </td>
-                        <td colspan="2">
-                            <p>+</p>
-                        </td>
-                    </tr>
-					<tr>
                         <td style="background: none; text-align: center;" colspan="3">
                             <h4>Учет рабочего времени</h4>
                         </td>
@@ -1242,7 +1218,7 @@ switch ($checkedId){
                             <p>+</p>
                         </td>
 						<td>
-                            <p>+</p>
+                            <p><strong>-</strong></p>
                         </td>
                     </tr>
 					<tr>
@@ -1253,7 +1229,7 @@ switch ($checkedId){
                             <p>+</p>
                         </td>
 						<td>
-                            <p>+</p>
+                            <p><strong>-</strong></p>
                         </td>
                     </tr>
 					<tr>

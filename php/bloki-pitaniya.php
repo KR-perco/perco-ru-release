@@ -57,10 +57,10 @@ $products = array(
 		"description" => "",
 		"price" => "8"
 	),"BP-24 Blok pitaniya" => array(
-		"name" => "БП-24 Блок питания",
+		"name" => "БП-24-5 Блок питания",
 		"image" => "/images/products/bloki-pitaniya/BP-24-5.jpg",
 		"description" => "",
-		"price" => "21"
+		"price" => "28"
 	),
 	"akkumulyatornaya batareya 12v 7ac" => array(
 		"name" => "Аккумуляторная батарея 12 В 7А*ч",

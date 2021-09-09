@@ -129,26 +129,29 @@ switch ($checkedId){
 					"NAME"      => "Редактировать версию прошивки внутреннего по контроллеров"
 				));
 				?>.</p>
-			<a target="_blank" href="/download/soft/rus/perco-web-current-version.pdf" download>Изменения в последних версиях ПО</a> 
-				<? $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Array(
-						"IBLOCK_TYPE" => "download",		// Тип инфоблока
-						"IBLOCK_ID" => $block_id,			// Инфоблок
-						"SECTION_ID" => "",					// ID раздела
-						"SECTION_CODE" => "migrator",		// Код раздела
-						"SECTION_URL" => "",				// URL, ведущий на страницу с содержимым раздела
-						"COUNT_ELEMENTS" => "N",			// Показывать количество элементов в разделе
-						"TOP_DEPTH" => "2",					// Максимальная отображаемая глубина разделов
-						"SECTION_FIELDS" => "",				// Поля разделов
-						//"SECTION_USER_FIELDS" => array("UF_ARCHIVE"),	// Свойства разделов
-						"ADD_SECTIONS_CHAIN" => "N",		// Включать раздел в цепочку навигации
-						"CACHE_TYPE" => "A",				// Тип кеширования
-						"CACHE_TIME" => "36000000",			// Время кеширования (сек.)
-						"CACHE_GROUPS" => "Y",				// Учитывать права доступа
-					),
-					false
-				);
-				?>
-				<p>
+			<a target="_blank" href="/download/soft/rus/perco-web-current-version.pdf" download>Изменения в последних версиях ПО</a>
+
+			<p> 
+				
+			<? $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Array(
+					"IBLOCK_TYPE" => "download",	// Тип инфоблока
+					"IBLOCK_ID" => $block_id,	// Инфоблок
+					"SECTION_ID" => "",	// ID раздела
+					"SECTION_CODE" => "migrator",	// Код раздела
+					"SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
+					"COUNT_ELEMENTS" => "N",	// Показывать количество элементов в разделе
+					"TOP_DEPTH" => "2",	// Максимальная отображаемая глубина разделов
+					"SECTION_FIELDS" => "",	// Поля разделов
+					//"SECTION_USER_FIELDS" => array("UF_ARCHIVE"),	// Свойства разделов
+					"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
+					"CACHE_TYPE" => "A",	// Тип кеширования
+					"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+					"CACHE_GROUPS" => "Y",	// Учитывать права доступа
+				),
+				false
+			);
+			?>
+				
 				Утилита миграции позволяет перенести данные из БД системы безопасности PERCo-S-20 в пустую БД PERCo-Web. 
 				Данные импортируются одним массивом, при этом в PERCo-Web автоматически активируется ознакомительный 
 				режим лицензий «Стандартный пакет ПО» и «Учет рабочего времени». Список импортируемых данных представлен 
@@ -283,24 +286,25 @@ switch ($checkedId){
 			);
 			?>
 
-				<? $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Array(
-						"IBLOCK_TYPE" => "download",		// Тип инфоблока
-						"IBLOCK_ID" => $block_id,			// Инфоблок
-						"SECTION_ID" => "",					// ID раздела
-						"SECTION_CODE" => "migrator",		// Код раздела
-						"SECTION_URL" => "",				// URL, ведущий на страницу с содержимым раздела
-						"COUNT_ELEMENTS" => "N",			// Показывать количество элементов в разделе
-						"TOP_DEPTH" => "2",					// Максимальная отображаемая глубина разделов
-						"SECTION_FIELDS" => "",				// Поля разделов
-						//"SECTION_USER_FIELDS" => array("UF_ARCHIVE"),	// Свойства разделов
-						"ADD_SECTIONS_CHAIN" => "N",		// Включать раздел в цепочку навигации
-						"CACHE_TYPE" => "A",				// Тип кеширования
-						"CACHE_TIME" => "36000000",			// Время кеширования (сек.)
-						"CACHE_GROUPS" => "Y",				// Учитывать права доступа
-					),
-					false
-				);
-				?>
+				
+			<? $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Array(
+					"IBLOCK_TYPE" => "download",	// Тип инфоблока
+					"IBLOCK_ID" => $block_id,	// Инфоблок
+					"SECTION_ID" => "",	// ID раздела
+					"SECTION_CODE" => "migrator",	// Код раздела
+					"SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
+					"COUNT_ELEMENTS" => "N",	// Показывать количество элементов в разделе
+					"TOP_DEPTH" => "2",	// Максимальная отображаемая глубина разделов
+					"SECTION_FIELDS" => "",	// Поля разделов
+					//"SECTION_USER_FIELDS" => array("UF_ARCHIVE"),	// Свойства разделов
+					"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
+					"CACHE_TYPE" => "A",	// Тип кеширования
+					"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+					"CACHE_GROUPS" => "Y",	// Учитывать права доступа
+				),
+				false
+			);
+			?>
 			
 			<p>	Утилита миграции позволяет перенести данные из БД системы безопасности PERCo-S-20 в пустую БД PERCo-Web. 
 				Данные импортируются одним массивом, при этом в PERCo-Web автоматически активируется ознакомительный 
@@ -814,7 +818,7 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Arra
 				<tr>
 					<td style="border: none;">Версия прошивки:</td>
 					<td style="border: none;">
-						<p>CR11, CL15, CT13, CT/L14 - <span class="color">2.2.1.17</span></p>
+						<p>CR11, CL15, CT13, CT/L14 - <span class="color">2.2.1.2</span></p>
 					</td>
 				</tr>
 			</table>
@@ -1522,22 +1526,22 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Arra
 		<label for="<?=translitIt(strtolower("Локальное ПО"));?>"><span class="dashed">Локальное ПО</span></label>
 		<div>
 		<?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Array(
-			"IBLOCK_TYPE" => "download",	// Тип инфоблока
-			"IBLOCK_ID" => $block_id,	// Инфоблок
-			"SECTION_ID" => "",	// ID раздела
-			"SECTION_CODE" => "lokalnoe-programmnoe-obespechenie-s-20",	// Код раздела
-			"SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
-			"COUNT_ELEMENTS" => "N",	// Показывать количество элементов в разделе
-			"TOP_DEPTH" => "2",	// Максимальная отображаемая глубина разделов
-			"SECTION_FIELDS" => "",	// Поля разделов
-			"SECTION_USER_FIELDS" => array("UF_ARCHIVE"),	// Свойства разделов
-			"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
-			"CACHE_TYPE" => "A",	// Тип кеширования
-			"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
-			"CACHE_GROUPS" => "Y",	// Учитывать права доступа
-				),
-				false
-			);
+		"IBLOCK_TYPE" => "download",	// Тип инфоблока
+		"IBLOCK_ID" => $block_id,	// Инфоблок
+		"SECTION_ID" => "",	// ID раздела
+		"SECTION_CODE" => "lokalnoe-programmnoe-obespechenie-s-20",	// Код раздела
+		"SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
+		"COUNT_ELEMENTS" => "N",	// Показывать количество элементов в разделе
+		"TOP_DEPTH" => "2",	// Максимальная отображаемая глубина разделов
+		"SECTION_FIELDS" => "",	// Поля разделов
+		"SECTION_USER_FIELDS" => array("UF_ARCHIVE"),	// Свойства разделов
+		"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
+		"CACHE_TYPE" => "A",	// Тип кеширования
+		"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+		"CACHE_GROUPS" => "Y",	// Учитывать права доступа
+			),
+			false
+		);
 		?>
 			<p>Локальное ПО PERCo-SL01; PERCo-SL02, версий 5.3.1.1. поддерживает работу с контроллерами: CTL04.2;
 				CL05.2; CL201.1; CR01.2.</p>
@@ -1566,25 +1570,28 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Arra
 		</div>
 		<input type="radio" id="<?=translitIt(strtolower("Архив ПО"));?>" <? echo $checkedEight ?> name="vkladki">
 		<label for="<?=translitIt(strtolower("Архив ПО"));?>"><span class="dashed">Архив ПО</span></label>
-		<div> 
+		<div>
+
+
+
 			<?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Array(
-				"IBLOCK_TYPE" => "download",	// Тип инфоблока
-				"IBLOCK_ID" => $block_id,	// Инфоблок
-				"SECTION_ID" => "",	// ID раздела
-				"SECTION_CODE" => "sistemy-kontrolya-dostupa",	// Код раздела
-				"SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
-				"COUNT_ELEMENTS" => "N",	// Показывать количество элементов в разделе
-				"TOP_DEPTH" => "2",	// Максимальная отображаемая глубина разделов
-				"SECTION_FIELDS" => "",	// Поля разделов
-				"SECTION_USER_FIELDS" => array("UF_ARCHIVE"),	// Свойства разделов
-				"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
-				"CACHE_TYPE" => "A",	// Тип кеширования
-				"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
-				"CACHE_GROUPS" => "Y",	// Учитывать права доступа
-				),
-				false
-			);
-			?>
+		"IBLOCK_TYPE" => "download",	// Тип инфоблока
+		"IBLOCK_ID" => $block_id,	// Инфоблок
+		"SECTION_ID" => "",	// ID раздела
+		"SECTION_CODE" => "sistemy-kontrolya-dostupa",	// Код раздела
+		"SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
+		"COUNT_ELEMENTS" => "N",	// Показывать количество элементов в разделе
+		"TOP_DEPTH" => "2",	// Максимальная отображаемая глубина разделов
+		"SECTION_FIELDS" => "",	// Поля разделов
+		"SECTION_USER_FIELDS" => array("UF_ARCHIVE"),	// Свойства разделов
+		"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
+		"CACHE_TYPE" => "A",	// Тип кеширования
+		"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+		"CACHE_GROUPS" => "Y",	// Учитывать права доступа
+			),
+			false
+		);
+		?>
 		</div>
 	</div>
 </div>
