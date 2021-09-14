@@ -32,7 +32,7 @@
 	<div class="cookie-warning" id="cookie-warning">
 		<div class="block">
 			<div class="text">
-				<p>OOO «ПЭРКО» <!--a href="/politika-konfidentsialnosti/cookies.php">использует файлы «cookie»</a-->использует файлы «cookie» с целью персонализации сервисов и повышения удобства пользования веб-сайтом. «Cookie» представляют собой небольшие файлы, содержащие информацию о предыдущих посещениях веб-сайта.</p>
+				<p>OOO «ПЭРКо»  <!--a href="/politika-konfidentsialnosti/cookies.php">использует файлы «cookie»</a-->использует файлы «cookie» с целью персонализации сервисов и повышения удобства пользования веб-сайтом. «Cookie» представляют собой небольшие файлы, содержащие информацию о предыдущих посещениях веб-сайта.</p>
 				<p>Если вы не хотите использовать файлы «cookie», измените настройки браузера.</p>
 			</div>
 			<div class="close" onclick="closeWarning()">
@@ -43,8 +43,8 @@
 	<div class="cookie-warning" id="cookie-warning-en">
 		<div class="block">
 			<div class="text">
-				<p>"PERCO" <!--a href="/privacy-policy/cookies.php">uses "cookie" files</a-->uses "cookie" files to personalize the services and to increase website usability. "Cookies" are little text files containing information about previous website visits.</p>
-				<p>If you don't want to use "cookie" files, please change browser settings. </p>
+				<p>«PERCo» <a href="/privacy-policy/cookies.php">uses «cookie» files</a> to personalize the services and to increase website usability. «Cookies» are little text files containing information about previous website visits.</p>
+				<p>If you don't want to use «cookie» files, please change browser settings. </p>
 			</div>
 			<div class="close" onclick="closeWarning()">
 				<span class="icon"></span>

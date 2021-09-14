@@ -59,7 +59,7 @@ if (CModule::IncludeModule("learning"))
 		$company = $arCompany["WORK_COMPANY"] . ", " . $arCompany["WORK_CITY"];
 	$txt = $company . "\n" . $arUser["LAST_NAME"] . " " . $arUser["NAME"] . " " . $arUser["SECOND_NAME"];
 	//Делаем замену казахских символов на русские и английские
-	$txt = str_replace(['Ә', 'ә', 'Ғ', 'ғ', 'Қ', 'қ', 'Ң', 'ң', 'Ө', 'ө', 'Ұ', 'ұ', 'Ү', 'ү', 'Һ', 'һ', 'І', 'і'], ['А', 'а', 'F', 'f', 'К', 'к', 'Н', 'н', 'О', 'о', 'У', 'у', 'У', 'у', 'H', 'h', 'I', 'i'], $txt);
+	// $txt = str_replace(['Ә', 'ә', 'Ғ', 'ғ', 'Қ', 'қ', 'Ң', 'ң', 'Ө', 'ө', 'Ұ', 'ұ', 'Ү', 'ү', 'Һ', 'һ', 'І', 'і'], ['А', 'а', 'F', 'f', 'К', 'к', 'Н', 'н', 'О', 'о', 'У', 'у', 'У', 'у', 'H', 'h', 'I', 'i'], $txt);
 	switch(date("n"))
 	{
 		case 1:
@@ -117,14 +117,14 @@ if (CModule::IncludeModule("learning"))
 		{
 			if (in_array(18, $arCompany["UF_TIP_SERT"]))		// Авторизованный инсталлятор
 			{
-				$logoFile = $_SERVER["DOCUMENT_ROOT"]."/createpdf/sertificat-install-shablon.jpg";
+				$logoFile = $_SERVER["DOCUMENT_ROOT"]."/createpdf/sertificat-ai-user-shablon.jpg";
 				$textColour = array( 0, 102, 110 );
 				$sert_pole = "UF_SERT_D";
 				$sert_data = "UF_SERT_DATE";
 			}
 			elseif (in_array(21, $arCompany["UF_TIP_SERT"]))	// Администратор систем
 			{
-				$logoFile = $_SERVER["DOCUMENT_ROOT"]."/createpdf/sertificat-administrator-shablon.jpg";
+				$logoFile = $_SERVER["DOCUMENT_ROOT"]."/createpdf/sertificat-adsc-user-shablon.jpg";
 				$textColour = array( 95, 79, 124 );
 				$sert_pole = "UF_SERT_D";
 				$sert_data = "UF_SERT_DATE";
@@ -149,7 +149,7 @@ if (CModule::IncludeModule("learning"))
 		// Менеджер по продажам
 		elseif ($testComplete[7] && ($arUser["UF_SERT_DATE_TP"] == "" || $endSertDate <= $today) && in_array(19, $arCompany["UF_TIP_SERT"]))
 		{
-			$logoFile = $_SERVER["DOCUMENT_ROOT"]."/createpdf/sertificat-menedzher-shablon.jpg";
+			$logoFile = $_SERVER["DOCUMENT_ROOT"]."/createpdf/sertificat-stp-user-shablon.jpg";
 			$textColour = array( 123, 121, 119 );
 			$sert_pole = "UF_SERT_TP";
 			$sert_data = "UF_SERT_DATE_TP";
@@ -171,7 +171,7 @@ if (CModule::IncludeModule("learning"))
 		}
 		elseif ($testComplete[8] && ($arUser["UF_SERT_DATE_SC"] == "" || $endSertDate <= $today) && $arCompany["UF_SC"])
 		{
-			$logoFile = $_SERVER["DOCUMENT_ROOT"]."/createpdf/sertificat-specialist-shablon.jpg";
+			$logoFile = $_SERVER["DOCUMENT_ROOT"]."/createpdf/sertificat-sc-user-shablon.jpg";
 			$textColour = array( 39, 87, 164 );
 			$sert_pole = "UF_SERT_SC";
 			$sert_data = "UF_SERT_DATE_SC";

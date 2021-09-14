@@ -137,14 +137,14 @@ if (CModule::IncludeModule("learning"))
 		{
 			if (in_array(18, $arCompany["UF_TIP_SERT"]))		// Авторизованный инсталлятор (Авторизованный инсталлятор, торговый партнер)
 			{
-				$logoFile = $_SERVER["DOCUMENT_ROOT"]."/createpdf/sertificat-install-shablon.jpg";
+				$logoFile = $_SERVER["DOCUMENT_ROOT"]."/createpdf/sertificat-ai-user-shablon.jpg";
 				$textColour = array( 0, 102, 110 );
 				$sert_pole = "UF_SERT_D";
-				$sert_data = "UF_SERT_DATE";
+				$sert_data = "UF_SERT_DATE"; 
 			}
 			elseif (in_array(21, $arCompany["UF_TIP_SERT"]))	// Администратор систем (Пользователи систем)
 			{
-				$logoFile = $_SERVER["DOCUMENT_ROOT"]."/createpdf/sertificat-administrator-shablon.jpg";
+				$logoFile = $_SERVER["DOCUMENT_ROOT"]."/createpdf/sertificat-adsc-user-shablon.jpg";
 				$textColour = array( 95, 79, 124 );
 				$sert_pole = "UF_SERT_D";
 				$sert_data = "UF_SERT_DATE";
@@ -193,7 +193,7 @@ if (CModule::IncludeModule("learning"))
 		// Менеджер по продажам
 		elseif ($testComplete[7] && ($arUser["UF_SERT_DATE_TP"] == "" || $endSertDate <= $today) && in_array(19, $arCompany["UF_TIP_SERT"]))
 		{
-			$logoFile = $_SERVER["DOCUMENT_ROOT"]."/createpdf/sertificat-menedzher-shablon.jpg";
+			$logoFile = $_SERVER["DOCUMENT_ROOT"]."/createpdf/sertificat-stp-user-shablon.jpg";
 			$textColour = array( 123, 121, 119 );
 			$sert_pole = "UF_SERT_TP";
 			$sert_data = "UF_SERT_DATE_TP";
@@ -239,7 +239,7 @@ if (CModule::IncludeModule("learning"))
 		}
 		elseif ($testComplete[8] && ($arUser["UF_SERT_DATE_SC"] == "" || $endSertDate <= $today) && $arCompany["UF_SC"])
 		{
-			$logoFile = $_SERVER["DOCUMENT_ROOT"]."/createpdf/sertificat-specialist-shablon.jpg";
+			$logoFile = $_SERVER["DOCUMENT_ROOT"]."/createpdf/sertificat-sc-user-shablon.jpg";
 			$textColour = array( 39, 87, 164 );
 			$sert_pole = "UF_SERT_SC";
 			$sert_data = "UF_SERT_DATE_SC";
