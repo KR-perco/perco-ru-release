@@ -11,60 +11,60 @@ $APPLICATION->SetAdditionalCSS("/css/glavnaya.css"); // подключение �
 
 <div id="main_banner">
 	<ul id="slider">
-		<li>
+	<li>
 			<a href="/products/shlagbaum/">
 				<div class="text_banner">
 					<span></span>
 				</div>
-				<div class="banner_image" style="background-image: url(/images/banners/boom-barrier.jpg);"></div>
+				<div class="banner_image" style="background-image: url(/images/banners/boom-barrier-3.jpg);"></div>
 			</a>
 		</li>
 		<li>
-			<a href="/resheniya/dlya-biznes-tsentrov/">
+			<a href="/resheniya/biznes-tsentry/">
 				<div class="text_banner">
 					<span>Для бизнес-центров</span>
 				</div>
-				<div class="banner_image" style="background-image: url(/images/banners/solution-bc.jpg);"></div>
+				<div class="banner_image" style="background-image: url(/images/banners/solution-bc-3.jpg);"></div>
 			</a>
 		</li>
 		<li>
-			<a href="/resheniya/dlya-predpriyatiy/">
+			<a href="/resheniya/predpriyatiya/">
 				<div class="text_banner">
 					<span>Для предприятий</span>
 				</div>
-				<div class="banner_image" style="background-image: url(/images/banners/solution-company.jpg);"></div>
+				<div class="banner_image" style="background-image: url(/images/banners/solution-company-3.jpg);"></div>
 			</a>
 		</li>
 		<li>
-			<a href="/resheniya/dlya-ofisov/">
+			<a href="/resheniya/ofisy/">
 				<div class="text_banner">
 					<span>Для офисов</span>
 				</div>
-				<div class="banner_image" style="background-image: url(/images/banners/solution-office.jpg);"></div>
+				<div class="banner_image" style="background-image: url(/images/banners/solution-office-3.jpg);"></div>
 			</a>
 		</li>
-		<li>
-			<a href="/resheniya/dlya-uchebnykh-zavedeniy/">
+		<li> 
+			<a href="/resheniya/uchebnye-zavedeniya/">
 				<div class="text_banner">
 					<span>Для учебных заведений</span>
 				</div>
-				<div class="banner_image" style="background-image: url(/images/banners/solution-e-institute.jpg);"></div>
+				<div class="banner_image" style="background-image: url(/images/banners/solution-e-institute-3.jpg);"></div>
 			</a>
 		</li>
 		<li>
-			<a href="/resheniya/dlya-gosudarstvennykh-uchrezhdeniy/">
+			<a href="/resheniya/gosudarstvennye-uchrezhdeniya/">
 				<div class="text_banner">
 					<span>Для государственных учреждений</span>
 				</div>
-				<div class="banner_image" style="background-image: url(/images/banners/solution-institute.jpg);"></div>
+				<div class="banner_image" style="background-image: url(/images/banners/state-institutions-3.jpg);"></div>
 			</a>
 		</li>
 		<li>
-			<a href="/resheniya/dlya-sportivno-razvlekatelnykh-obektov/">
+			<a href="/resheniya/sportivno-razvlekatelnye-obekty/">
 				<div class="text_banner">
 					<span>Для спортивно-развлекательных объектов</span>
 				</div>
-				<div class="banner_image" style="background-image: url(/images/banners/solution-sport.jpg);"></div>
+				<div class="banner_image" style="background-image: url(/images/banners/solution-sport-3.jpg);"></div>
 			</a>
 		</li>
 	</ul>
@@ -271,8 +271,6 @@ $APPLICATION->IncludeComponent(
 					<li>Турникеты, калитки и ограждения</li>
 					<li>Электромеханические замки</li>
 				</ul>
-				<p>Комплексные системы безопасности представлены системой PERCo-S-20  предназначенной для обеспечения безопасности и повышения эффективности работы предприятия. S-20 построена на Ethernet-технологиях.</p>
-				<p>Архитектура S-20 включает в себя системы охранно-пожарной сигнализации, видеонаблюдения, контроля доступа и учета рабочего времени.</p>
 				<p>Системы контроля доступа PERCo представляют собой широкий спектр решений для предприятий, учреждений, образовательных организаций, спорткомплексов и т.п.</p>
 				<p>СКУД PERCo построены на Ethernet-технологиях, что позволяет использовать стандартное сетевое оборудование.</p>
 				<p>Помимо задач контроля доступа системы PERCo позволяют на базе того же оборудования организовать учет рабочего времени и контроль трудовой дисциплины.</p>

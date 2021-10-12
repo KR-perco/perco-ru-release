@@ -6,7 +6,7 @@ $this->setFrameMode(true);
 global $device;
 foreach($arResult["SECTIONS"] as $arValue)
 {
-	if (stripos($arValue["NAME"], "ПО ") !== false || $arValue["CODE"] == "prays-list")
+	if (stripos($arValue["NAME"], "ПО ") !== false || $arValue["CODE"] == "prays-list" || $arValue["CODE"] == "komplekty-po")
 		continue;
 	if (LANGUAGE_ID == "en")
 		$arValue["SECTION_PAGE_URL"] = str_replace("_com", "", $arValue["SECTION_PAGE_URL"]);

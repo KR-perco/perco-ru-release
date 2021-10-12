@@ -64,7 +64,7 @@ $arUrlRewrite=array (
     'PATH' => '/desktop_app/router.php',
     'SORT' => 100,
   ),
-  7 => 
+  7 =>  
   array (
     'CONDITION' => '#^/gde-kupit/(.*)/.*#',
     'RULE' => '/gde-kupit/details.php?country=$1',

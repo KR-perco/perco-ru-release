@@ -65,6 +65,10 @@ $arFilter = Array("IBLOCK_ID"=>$block_id, "GLOBAL_ACTIVE"=>"Y", "<=DEPTH_LEVEL"=
 $rsSections = CIBlockSection::GetList($arSort, $arFilter, false, array("UF_GROUP_PRODUCTS"));
 while($arSection = $rsSections->GetNext())
 {
+	if ($arSection["CODE"] == "komplekty-po") { 
+		$count++;
+		continue;
+	}
 	if ($arSection["CODE"] == "prays-list")
 		continue;
 	if (LANGUAGE_ID == "en")

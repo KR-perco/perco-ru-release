@@ -76,7 +76,7 @@ $APPLICATION->AddHeadScript("/scripts/pages/instal.js"); // подключени
 	<p>Торговым компаниям, удовлетворяющим требованиям статуса Сертифицированный торговый партнер также будет предоставлен соответствующий статус.</p>
 	<p>Для специалистов, уже обладающих необходимыми знаниями по системам безопасности PERCo, есть возможность пройти тестирование экстерном.</p>
 	<p>Координаты авторизованных инсталляторов и сертифицированных торговых партнеров  будут размещены в разделе сайта «Где купить», как компаний, рекомендованных PERCo.</p>
-	<p><img class="icon" src="/images/icons/pdf.svg"><a target="_blank" href="/download/e-learning/learning_system_authorized_installers.pdf" onclick="ga('send', 'event', {'eventCategory': 'Информация', 'eventAction': 'download', 'eventLabel': '/download/e-learning/learning_system_authorized_installers.pdf'});" download>Программа обучения и сертификации «Авторизованный инсталлятор PERCo»</a> <span class="color">(<?=printFileInfo("/download/e-learning/learning_system_authorized_installers.pdf", "size");?>) &mdash; <?=printFileInfo("/download/e-learning/learning_system_authorized_installers.pdf", "date");?></span></p>
+
 	<h2>Система обучения  для инсталляторов</h2>
 	<div id="sistema-instal">
 		<div>
