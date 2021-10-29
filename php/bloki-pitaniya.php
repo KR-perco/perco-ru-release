@@ -7,7 +7,7 @@ $products = array(
 		"name" => "Полисервис БРП-24-9-ТИ",
 		"image" => "/images/products/bloki-pitaniya/Poliservis-BRP-24-9-TI.jpg",
 		"description" => "",
-		"price" => "106"
+		"price" => "115"
     ),
 	"K-Inzhenering BIRP-24-6-0" => array(
 		"name" => "К-Инженеринг БИРП 24/6",
@@ -19,19 +19,19 @@ $products = array(
 		"name" => "К-Инженеринг БИРП 24/2,5",
 		"image" => "/images/products/bloki-pitaniya/K-Inzhenering-BIRP-24-2-5.jpg",
 		"description" => "",
-		"price" => "58"
+		"price" => "64"
     ),
 	"K-Inzhenering BIRP-12-2-5" => array(
 		"name" => "К-Инженеринг БИРП 12-2,5/7",
 		"image" => "/images/products/bloki-pitaniya/K-Inzhenering-BIRP-12-2-5.jpg",
 		"description" => "",
-		"price" => "30"
+		"price" => "34"
 	),
 	"K-Inzhenering BIRP-12-10-0" => array(
 		"name" => "К-Инженеринг БИРП 12/10",
 		"image" => "/images/products/bloki-pitaniya/K-Inzhenering-BIRP-12-10-0.jpg",
 		"description" => "",
-		"price" => "66"
+		"price" => "72"
 	),
 	"LRS-150-24 Blok pitaniya" => array(
 		"name" => "LRS-150-24 Блок питания",
@@ -49,18 +49,18 @@ $products = array(
 		"name" => "БП-3А Блок питания",
 		"image" => "/images/products/bloki-pitaniya/BP-ZA.jpg",
 		"description" => "",
-		"price" => "12"
+		"price" => "15"
 	),
 	"BP-1A Blok pitaniya" => array(
 		"name" => "БП-1А Блок питания",
 		"image" => "/images/products/bloki-pitaniya/BP-1AM.jpg",
 		"description" => "",
-		"price" => "8"
+		"price" => "12"
 	),"BP-24 Blok pitaniya" => array(
 		"name" => "БП-24-5 Блок питания",
 		"image" => "/images/products/bloki-pitaniya/BP-24-5.jpg",
 		"description" => "",
-		"price" => "28"
+		"price" => "26"
 	),
 	"akkumulyatornaya batareya 12v 7ac" => array(
 		"name" => "Аккумуляторная батарея 12 В 7А*ч",

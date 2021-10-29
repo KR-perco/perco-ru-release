@@ -339,56 +339,29 @@ switch ($checkedId){
 				CT/L04 и встроенных контроллеров электронных проходных требуется только для версий прошивок х.х.х.16 и
 				более ранних. Для версий прошивок х.х.0.17 - х.х.1.19 обновление не требуется.</p-->
 			<p>При обновлении версий ПО PERCo-S-20, предшествующих версиям 3.6.2.2, для корректной работы необходимо обновление прошивок контроллеров CT/L04 и встроенных контроллеров электронных проходных х.х.х.16 и более ранних.</p>
-			<p>Отличия в прошивках:</p>
-			<!--ul>
-				<li>Версия х.х.1.19 отличается от версий х.х.0.17 - х.х.0.18 наличием нового варианта индикации режимов
-					контроля доступа и упрощенным алгоритмом постановки/снятия с охраны</li>
-				<li>Версия х.х.0.20 отличается от х.х.1.19 наличием возможности подключения к контроллеру внешних
-					верифицирующих устройств (например, алкотестера)</li>
-			</ul-->
-			<ul>
-				<li>Версия х.х.8.19 отличается от версий х.х.0.17 - х.х.0.18 наличием нового варианта индикации режимов контроля доступа и упрощенным алгоритмом постановки/снятия с охраны.</li>
-				<li>Версия х.х.8.20 отличается от х.х.8.19 наличием возможности подключения к контроллеру внешних верифицирующих устройств (например, алкотестера). Для получения прошивки х.х.8.20 необходимо отправить запрос в техподдержку – на электронный адрес <a href="mailto:system@perco.ru">system@perco.ru</a> или <a href="mailto:soft@perco.ru">soft@perco.ru</a>.</li>				
-			</ul>
-			<p><strong>ВАЖНО:</strong> контроллеры с версией прошивки х.х.8.20 не поддерживаются в PERCo-Web.</p>
-			<?
-$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Array(
-		"IBLOCK_TYPE" => "download",	// Тип инфоблока
-		"IBLOCK_ID" => $block_id,	// Инфоблок
-		"SECTION_ID" => "",	// ID раздела
-		"SECTION_CODE" => "programmnoe-obespechenie-dlya-smeny-proshivok-v-kontrollerakh-sistemy-s-20",	// Код раздела
-		"SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
-		"COUNT_ELEMENTS" => "N",	// Показывать количество элементов в разделе
-		"TOP_DEPTH" => "2",	// Максимальная отображаемая глубина разделов
-		"SECTION_FIELDS" => "",	// Поля разделов
-		"SECTION_USER_FIELDS" => array("UF_ARCHIVE"),	// Свойства разделов
-		"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
-		"CACHE_TYPE" => "A",	// Тип кеширования
-		"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
-		"CACHE_GROUPS" => "Y",	// Учитывать права доступа
-	),
-	false
-);
-?>
-			<table style="width: auto; border: none; margin-left: 20px; margin-top: -10px;">
-				<tr>
-					<td style="border: none; vertical-align: top;">Версии прошивок:</td>
-					<td style="border: none;">
-						<p>CT/L04.2, CT03.2, CL05.2, CR01.2 - <span class="color">
-							<?php
-							$APPLICATION->IncludeFile("/include/vnutrennee-po-kontrollerov-versiya-proshivki.php", Array(), Array(
-								"MODE"      => "html",
-								"NAME"      => "Редактировать версию прошивки внутреннего по контроллеров"
-							));
-							?>
-						</span></p>
-						<p>CT/L04, CT03, CL05, CL05.1, CR01 - <span class="color">x.x.8.19</span></p>
-						<p>CS01, PU01 - <span class="color">x.x.x.8</span></p>
-						<p>CT01, CT02, CL01, CL02, CL03 - <span class="color">x.x.x.30</span></p>
-						<p>SC-820 - <span class="color">1.0.0.5</span></p>
-					</td>
-				</tr>
-			</table>
+			<?php
+            $APPLICATION->IncludeFile("/include/differences-in-firmware.php", Array(), Array());
+			$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Array(
+					"IBLOCK_TYPE" => "download",	// Тип инфоблока
+					"IBLOCK_ID" => $block_id,	// Инфоблок
+					"SECTION_ID" => "",	// ID раздела
+					"SECTION_CODE" => "programmnoe-obespechenie-dlya-smeny-proshivok-v-kontrollerakh-sistemy-s-20",	// Код раздела
+					"SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
+					"COUNT_ELEMENTS" => "N",	// Показывать количество элементов в разделе
+					"TOP_DEPTH" => "2",	// Максимальная отображаемая глубина разделов
+					"SECTION_FIELDS" => "",	// Поля разделов
+					"SECTION_USER_FIELDS" => array("UF_ARCHIVE"),	// Свойства разделов
+					"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
+					"CACHE_TYPE" => "A",	// Тип кеширования
+					"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+					"CACHE_GROUPS" => "Y",	// Учитывать права доступа
+				),
+				false
+			);
+            $APPLICATION->IncludeFile("/include/version-table.php", Array(), Array());
+
+            ?>
+			 
 			<?
 $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Array(
 		"IBLOCK_TYPE" => "download",	// Тип инфоблока
@@ -613,54 +586,27 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Arra
 				контроллеров CT/L04 и встроенных контроллеров электронных проходных требуется только для версий прошивок
 				х.х.х.16 и более ранних. Для версий прошивок х.х.0.17 - х.х.1.19 обновление не требуется.</p-->
 			<p>При обновлении версий ПО PERCo-S-20, предшествующих версиям 3.6.2.2, для корректной работы необходимо обновление прошивок контроллеров CT/L04 и встроенных контроллеров электронных проходных х.х.х.16 и более ранних.</p>
-			<p>Отличия в прошивках:</p>
-			<!--ul>
-				<li>Версия х.х.1.19 отличается от версий х.х.0.17 - х.х.0.18 наличием нового варианта индикации режимов
-					контроля доступа и упрощенным алгоритмом постановки/снятия с охраны</li>
-				<li>Версия х.х.0.20 отличается от х.х.1.19 наличием возможности подключения к контроллеру внешних
-					верифицирующих устройств (например, алкотестера)</li>
-			</ul-->
-			<ul>
-				<li>Версия х.х.8.19 отличается от версий х.х.0.17 - х.х.0.18 наличием нового варианта индикации режимов контроля доступа и упрощенным алгоритмом постановки/снятия с охраны.</li>
-				<li>Версия х.х.8.20 отличается от х.х.8.19 наличием возможности подключения к контроллеру внешних верифицирующих устройств (например, алкотестера). Для получения прошивки х.х.8.20 необходимо отправить запрос в техподдержку – на электронный адрес <a href="mailto:system@perco.ru">system@perco.ru</a> или <a href="mailto:soft@perco.ru">soft@perco.ru</a>.</li>				
-			</ul>
-			<p><strong>ВАЖНО:</strong> контроллеры с версией прошивки х.х.8.20 не поддерживаются в PERCo-Web.</p>
-			<?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Array(
-			"IBLOCK_TYPE" => "download",	// Тип инфоблока
-			"IBLOCK_ID" => $block_id,	// Инфоблок
-			"SECTION_ID" => "",	// ID раздела
-			"SECTION_CODE" => "programmnoe-obespechenie-dlya-smeny-proshivok-v-kontrollerakh-sistemy-s-20",	// Код раздела
-			"SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
-			"COUNT_ELEMENTS" => "N",	// Показывать количество элементов в разделе
-			"TOP_DEPTH" => "2",	// Максимальная отображаемая глубина разделов
-			"SECTION_FIELDS" => "",	// Поля разделов
-			"SECTION_USER_FIELDS" => array("UF_ARCHIVE"),	// Свойства разделов
-			"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
-			"CACHE_TYPE" => "A",	// Тип кеширования
-			"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
-			"CACHE_GROUPS" => "Y",	// Учитывать права доступа
+			<?php
+            $APPLICATION->IncludeFile("/include/differences-in-firmware.php", Array(), Array());$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Array(
+					"IBLOCK_TYPE" => "download",	// Тип инфоблока
+					"IBLOCK_ID" => $block_id,	// Инфоблок
+					"SECTION_ID" => "",	// ID раздела
+					"SECTION_CODE" => "programmnoe-obespechenie-dlya-smeny-proshivok-v-kontrollerakh-sistemy-s-20",	// Код раздела
+					"SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
+					"COUNT_ELEMENTS" => "N",	// Показывать количество элементов в разделе
+					"TOP_DEPTH" => "2",	// Максимальная отображаемая глубина разделов
+					"SECTION_FIELDS" => "",	// Поля разделов
+					"SECTION_USER_FIELDS" => array("UF_ARCHIVE"),	// Свойства разделов
+					"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
+					"CACHE_TYPE" => "A",	// Тип кеширования
+					"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+					"CACHE_GROUPS" => "Y",	// Учитывать права доступа
 				),
 				false
-			);?>
-			<table style="width: auto; border: none; margin-left: 20px; margin-top: -10px;">
-				<tr>
-					<td style="border: none; vertical-align: top;">Версии прошивок:</td>
-					<td style="border: none;">
-						<p>CT/L04.2, CT03.2, CL05.2, CR01.2 - <span class="color">
-							<?php
-							$APPLICATION->IncludeFile("/include/vnutrennee-po-kontrollerov-versiya-proshivki.php", Array(), Array(
-								"MODE"      => "html",
-								"NAME"      => "Редактировать версию прошивки внутреннего по контроллеров"
-							));
-							?>
-						</span></p>
-						<p>CT/L04, CT03, CL05, CL05.1, CR01 - <span class="color">x.x.8.19</span></p>
-						<p>CS01, PU01 - <span class="color">x.x.x.8</span></p>
-						<p>CT01, CT02, CL01, CL02, CL03 - <span class="color">x.x.x.30</span></p>
-						<p>SC-820 - <span class="color">1.0.0.5</span></p>
-					</td>
-				</tr>
-			</table>
+			);
+            $APPLICATION->IncludeFile("/include/version-table.php", Array(), Array());
+            ?>
+			 
 			<p>Программное обеспечение PERCo-S-20 «Школа» поддерживается следующими ОС:</p>
 			<ul>
 				<li>Windows Server 2003 SP1</li>
@@ -820,43 +766,26 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Arra
 				</tr>
 			</table>
 			<p>Обновить внутреннее ПО всех остальных контроллеров PERCo можно при помощи программы "Прошиватель", а также при помощи Web-интерфейса (у контроллеров с поддержкой Web-интерфейса).</p>
-			<?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Array(
-			"IBLOCK_TYPE" => "download",	// Тип инфоблока
-			"IBLOCK_ID" => $block_id,	// Инфоблок
-			"SECTION_ID" => "",	// ID раздела
-			"SECTION_CODE" => "programmnoe-obespechenie-dlya-smeny-proshivok-v-kontrollerakh-sistemy-s-20",	// Код раздела
-			"SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
-			"COUNT_ELEMENTS" => "N",	// Показывать количество элементов в разделе
-			"TOP_DEPTH" => "2",	// Максимальная отображаемая глубина разделов
-			"SECTION_FIELDS" => "",	// Поля разделов
-			"SECTION_USER_FIELDS" => array("UF_ARCHIVE"),	// Свойства разделов
-			"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
-			"CACHE_TYPE" => "A",	// Тип кеширования
-			"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
-			"CACHE_GROUPS" => "Y",	// Учитывать права доступа
+			<?
+			$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Array(
+					"IBLOCK_TYPE" => "download",	// Тип инфоблока
+					"IBLOCK_ID" => $block_id,	// Инфоблок
+					"SECTION_ID" => "",	// ID раздела
+					"SECTION_CODE" => "programmnoe-obespechenie-dlya-smeny-proshivok-v-kontrollerakh-sistemy-s-20",	// Код раздела
+					"SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
+					"COUNT_ELEMENTS" => "N",	// Показывать количество элементов в разделе
+					"TOP_DEPTH" => "2",	// Максимальная отображаемая глубина разделов
+					"SECTION_FIELDS" => "",	// Поля разделов
+					"SECTION_USER_FIELDS" => array("UF_ARCHIVE"),	// Свойства разделов
+					"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
+					"CACHE_TYPE" => "A",	// Тип кеширования
+					"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+					"CACHE_GROUPS" => "Y",	// Учитывать права доступа
 				),
 				false
 			);
-			?>
-			<table style="width: auto; border: none; margin-left: 20px; margin-top: -10px;">
-				<tr>
-					<td style="border: none; vertical-align: top;">Версии прошивок:</td>
-					<td style="border: none;">
-						<p>CT/L04.2, CT03.2, CL05.2, CR01.2 - <span class="color">
-							<?php
-							$APPLICATION->IncludeFile("/include/vnutrennee-po-kontrollerov-versiya-proshivki.php", Array(), Array(
-								"MODE"      => "html",
-								"NAME"      => "Редактировать версию прошивки внутреннего по контроллеров"
-							));
-							?>
-						</span></p>
-						<p>CT/L04, CT03, CL05, CL05.1, CR01 - <span class="color">x.x.8.19</span></p>
-						<p>CS01, PU01 - <span class="color">x.x.x.8</span></p>
-						<p>CT01, CT02, CL01, CL02, CL03 - <span class="color">x.x.x.30</span></p>
-						<p>SC-820 - <span class="color">1.0.0.5</span></p>
-					</td>
-				</tr>
-			</table>
+            $APPLICATION->IncludeFile("/include/version-table.php", Array(), Array());
+			?> 
 			<p>Программа "Прошиватель" входит в комплект скачиваемого ПО.</p>
 			<p>Программа "Прошиватель" не работает с контроллерами CL15, CR11, СT13 и CT/L14.</p>
 			<?
@@ -892,18 +821,9 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Arra
 				CT/L04 и встроенных контроллеров электронных проходных требуется только для версий прошивок х.х.х.16 и
 				более ранних. Для версий прошивок х.х.0.17 - х.х.1.19 обновление не требуется.</p-->
 			<p>При обновлении версий ПО PERCo-S-20, предшествующих версиям 3.6.2.2, для корректной работы необходимо обновление прошивок контроллеров CT/L04 и встроенных контроллеров электронных проходных х.х.х.16 и более ранних.</p>
-			<p>Отличия в прошивках:</p>
-			<!--ul>
-				<li>Версия х.х.1.19 отличается от версий х.х.0.17 - х.х.0.18 наличием нового варианта индикации режимов
-					контроля доступа и упрощенным алгоритмом постановки/снятия с охраны</li>
-				<li>Версия х.х.0.20 отличается от х.х.1.19 наличием возможности подключения к контроллеру внешних
-					верифицирующих устройств (например, алкотестера)</li>
-			</ul-->
-			<ul>
-				<li>Версия х.х.8.19 отличается от версий х.х.0.17 - х.х.0.18 наличием нового варианта индикации режимов контроля доступа и упрощенным алгоритмом постановки/снятия с охраны.</li>
-				<li>Версия х.х.8.20 отличается от х.х.8.19 наличием возможности подключения к контроллеру внешних верифицирующих устройств (например, алкотестера). Для получения прошивки х.х.8.20 необходимо отправить запрос в техподдержку – на электронный адрес <a href="mailto:system@perco.ru">system@perco.ru</a> или <a href="mailto:soft@perco.ru">soft@perco.ru</a>.</li>				
-			</ul>
-			<p><strong>ВАЖНО:</strong> контроллеры с версией прошивки х.х.8.20 не поддерживаются в PERCo-Web.</p>
+			<?php
+            $APPLICATION->IncludeFile("/include/differences-in-firmware.php", Array(), Array());
+            ?>
 		</div>
 
 		<input type="radio" id="<?=translitIt(strtolower("Web-интерфейс"));?>" <? echo $checkedFive ?> name="vkladki">

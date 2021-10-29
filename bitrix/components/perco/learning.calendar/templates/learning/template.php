@@ -26,6 +26,7 @@ $combEventSpb = array();
 $combEventPscov = array();
 $array_comb = array();
 
+
 if (stripos($_SERVER['REQUEST_URI'], '/polzovateley/')!== false)
 {
 	$kto = "пользователи";
@@ -77,7 +78,7 @@ if ($parMonth)
 			</tr>
 		</thead>
 	</table>
-<?
+<? 
 foreach($arResult["WEEK_DAYS"] as $WDay)
 {
 	$arWDay[] = $WDay["SHORT"];
@@ -106,6 +107,9 @@ foreach($arResult["MONTH"] as $arWeek)	// проходимся по месяцу
 	$seminarFirstCell = false;
 	foreach($arWeek as $arDay)	// проходимся по неделе выбирая дни
 	{
+
+		// console_log($arDay);
+
 		//два семинара
 		$eventsNumber = count($arDay["events"]);
 		//два семинара
@@ -320,6 +324,20 @@ arSeminars = [];
 arSeminars = [<?php echo "'" . implode("','", $arSeminars) . "'"; ?>];
 arSeminarsDiv = [];
 arSeminarsDiv = [<?php echo "'" . implode("','", $arSeminarsDiv) . "'"; ?>];
+
+ 
+if (<?php echo $arResult["currentMonth"]?> == 11) {
+
+	
+
+	var div29894 = document.getElementById("div29894"); 
+	if (div29894.parentNode) {
+		for (let index = 0; index < 7; index++) { 
+				div29894.parentNode.removeChild(div29894.parentNode.lastChild); 
+		}
+	}
+//   node.parentNode.removeChild(node); 
+}
 </script>
 <?
 if ($page == "all")

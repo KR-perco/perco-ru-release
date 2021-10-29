@@ -93,9 +93,9 @@ if (!function_exists("getElements"))
 				if ($with_image == "Y") { // не самое надёжное выделение инфоблока для раздела "Каталоки и буклеты" IBLOCK_ID = 21
 					// 2299 - раздел, который не продаём на заказ, только электронный вариант скачивается
 					$haveBtnBuy = ($section_id == 2299) ? '' : '<div data-fancybox data-src="#dialog-content" data-merch="'.$arFields["NAME"].'" class="form-popup-link">Заказать</div>';
-					console_log($section_id);
+					// console_log($section_id);
 					$haveFancyLink = ($section_id == 2266) ? '<a data-fancybox href="'.$file.'" target="_blank" '.$google.' download>Смотреть</a>' : '<a href="'.$file.'" target="_blank" '.$google.' download>Скачать</a>';
-					console_log($arFields);
+					// console_log($arFields);
 					// console_log($arProps);
 					// $name = $arFields["NAME"];
 					$podpis = ($arProps["IMAGE_PODPIS"]["VALUE"] == "") ? '' : $arProps["IMAGE_PODPIS"]["VALUE"].'<br/>';
@@ -154,10 +154,9 @@ if ($arResult["SECTIONS_COUNT"] > 0)
 				}
 				echo "<dt>".$name;
 			} 
-			// console_log($arSection);
 			getElements($arSection["IBLOCK_ID"], $arSection["ID"], $archive, $arParams["WITH_IMAGE"]);
 			$CURRENT_DEPTH = $arSection["DEPTH_LEVEL"];
-		}
+		} 
 	}
 	while($CURRENT_DEPTH > $TOP_DEPTH)
 	{

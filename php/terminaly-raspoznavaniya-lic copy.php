@@ -8,31 +8,37 @@ $products = array(
 		"name" => "ZKTeco FaceDepot-7B",
 		"image" => "/images/products/terminaly-raspoznavaniya-lits/zkteco-facedepot-7b.jpg",
 		"description" => "",
-		"price" => "761"
-    ), 
+		"price" => "550"
+    ),
+	"ZKTeco FaceDepot-7A" => array(
+		"name" => "ZKTeco FaceDepot-7A",
+		"image" => "/images/products/terminaly-raspoznavaniya-lits/zkteco-facedepot-7a.jpg",
+		"description" => "",
+		"price" => "626"
+	),
 	"ZKTeco ProFace X" => array(
 		"name" => "ZKTeco ProFace X",
 		"image" => "/images/products/terminaly-raspoznavaniya-lits/zkteco-profacex.jpg",
 		"description" => "",
-		"price" => "850"
+		"price" => "815"
     ),
 	"ZKTeco SpeedFace V5L [TD]" => array(
 		"name" => "ZKTeco SpeedFace V5L [TD]",
 		"image" => "/images/products/terminaly-raspoznavaniya-lits/zkteco-speedface-v5l-td.jpg",
 		"description" => "",
-		"price" => "1064"
+		"price" => "964"
     ),
 	"Suprema Face Station 2" => array(
 		"name" => "Suprema Face Station 2",
 		"image" => "/images/products/terminaly-raspoznavaniya-lits/suprema-facestation-2.jpg",
 		"description" => "",
-		"price" => "805"
+		"price" => "798"
 	),
 	"Suprema FACELite" => array(
 		"name" => "Suprema FACELite",
 		"image" => "/images/products/terminaly-raspoznavaniya-lits/suprema-facelite.jpg",
 		"description" => "",
-		"price" => "565"
+		"price" => "556"
 	),
 );
 

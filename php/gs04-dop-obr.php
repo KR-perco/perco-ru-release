@@ -11,8 +11,8 @@ $svetoforPrice = 95;
 $datchikPrice = 59;
 $svetLenta30Price = 27;
 $svetLenta43Price = 38;
-$ograjdeniePrice = 54;
-$stoikaSchityvatelyaPrice = 57;
+$ograjdeniePrice = 102;
+$stoikaSchityvatelyaPrice = 106;
 $kodovyaPanelPrice = 35;
 $php_result = '<div class="tabIcons">
 	<div class="tabIcon tabIcon_complect">
