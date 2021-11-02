@@ -42,37 +42,17 @@ $php_result = '<div id="secel_list">
 							<div class="text_item"><span style="text-decoration: none;">Система контроля доступа и учета рабочего времени работающая с картами MIFARE/EMM/HID</span><div class="price">'.$wm017.'</div></div>
 								
 						</a>
-					</div>
-					<!-- <div class="secel_item">
+					</div> 
+					<div class="secel_item">
 						<a>
 								<div class="image_icon">
-									<img alt="Система контроля доступа и учета рабочего времени работающая с картами MIFARE/EMM/HID" src="/images/products/box-tripod-turnstiles/ep-mifare+web.jpg">
-								</div>
-								<div class="text_item"><span style="text-decoration: none;">Система контроля доступа и учета рабочего времени работающая с картами EMM/HID</span><div class="price">'.$wm01.'</div></div>
+									<img alt="Система контроля доступа для школ с сервисом отправки SMS родителям и контролем посещаемости" src="/images/products/box-tripod-turnstiles/ep-school.jpg">
+												</div>
+								<div class="text_item"><span style="text-decoration: none;">Система контроля доступа для школ с сервисом отправки SMS родителям и контролем посещаемости </span><div class="price">'.$ss01.'</div></div>
+						</div>
 						</a>
-					</div> -->
-				</div>
-				<p><a href="/products/lokalnoe-programmnoe-obespechenie-perco-sl01.php">Бесплатное ПО PERCo</a> позволяет создать локальную систему контроля доступа с одной электронной проходной и одним рабочем местом, на котором установлены ПО и база данных.</p>
-				<p>Для расширения функционала системы, например, для создания нескольких автоматизированных мест, нескольких точек прохода, организации выдачи постоянных и временных пропусков, верификации, учета рабочего времени необходимо приобрести один из комплектов либо отдельные модули программного обеспечения комплексной системы безопасности.</p>
-				<p>Экономически выгодным решением станут Электронные проходные в комплекте с активированным программным обеспечением по специальным ценам:</p>
-				<div id="secel_list">
-				<div class="secel_item">
-					<a>
-						<div class="image_icon">
-								<img alt="Система контроля доступа и учета рабочего времени с ПО SP13" src="/images/products/box-tripod-turnstiles/ep-s20.jpg">
-											</div>
-							<div class="text_item"><span style="text-decoration: none;">Система контроля доступа и учета рабочего времени с ПО SP13</span><div class="price">'.$sp13.'</div></div>
 					</div>
-					</a>
-				<div class="secel_item">
-					<a>
-							<div class="image_icon">
-								<img alt="Система контроля доступа для школ с сервисом отправки SMS родителям и контролем посещаемости" src="/images/products/box-tripod-turnstiles/ep-school.jpg">
-											</div>
-							<div class="text_item"><span style="text-decoration: none;">Система контроля доступа для школ с сервисом отправки SMS родителям и контролем посещаемости </span><div class="price">'.$ss01.'</div></div>
-					</div>
-					</a>
-				</div>';
+				</div> ';
 
 
-?> 
+?>  
