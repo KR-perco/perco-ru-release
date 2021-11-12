@@ -201,10 +201,7 @@ switch ($checkedId){
 				</li>
 				<li>
 					<noindex>МТС Коммуникатор (<a href="http://www.mcommunicator.ru" target="_blank"
-							rel="nofollow">www.mcommunicator.ru</a>). Контактное лицо: +7 (913) 611-57-39
-						(Шайкина Марина) <a href="mailto:mashajki@mts.ru">mashajki@mts.ru</a>, техническая
-						поддержка: +7 (913) 155-35-21 (Крупко Пётр) <a
-							href="mailto:pakrupko@omsk.mts.ru">pakrupko@omsk.mts.ru</a></noindex>
+							rel="nofollow">www.mcommunicator.ru</a>). Контактное лицо: +7 (913) 682-80-80 (Александр Пашко) <a href="mailto:aleksandr.a.pashko@mts.ru">aleksandr.a.pashko@mts.ru</a></noindex>
 				</li>
 				<li>
 					<noindex>TELE2 Бизнес SMS (<a href="http://www.bsms.tele2.ru" target="_blank"
@@ -491,10 +488,7 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Arra
 				</li>
 				<li>
 					<noindex>МТС Коммуникатор (<a href="http://www.mcommunicator.ru" target="_blank"
-							rel="nofollow">www.mcommunicator.ru</a>). Контактное лицо: +7 (913) 611-57-39
-						(Шайкина Марина) <a href="mailto:mashajki@mts.ru">mashajki@mts.ru</a>, техническая
-						поддержка: +7 (913) 155-35-21 (Крупко Пётр) <a
-							href="mailto:pakrupko@omsk.mts.ru">pakrupko@omsk.mts.ru</a></noindex>
+							rel="nofollow">www.mcommunicator.ru</a>). Контактное лицо: +7 (913) 682-80-80 (Александр Пашко) <a href="mailto:aleksandr.a.pashko@mts.ru">aleksandr.a.pashko@mts.ru</a></noindex>
 				</li>
 				<li>
 					<noindex>TELE2 Бизнес SMS (<a href="http://www.bsms.tele2.ru" target="_blank"
@@ -673,10 +667,7 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Arra
 				</li>
 				<li>
 					<noindex>МТС Коммуникатор (<a href="http://www.mcommunicator.ru" target="_blank"
-							rel="nofollow">www.mcommunicator.ru</a>). Контактное лицо: +7 (913) 611-57-39
-						(Шайкина Марина) <a href="mailto:mashajki@mts.ru">mashajki@mts.ru</a>, техническая
-						поддержка: +7 (913) 155-35-21 (Крупко Пётр) <a
-							href="mailto:pakrupko@omsk.mts.ru">pakrupko@omsk.mts.ru</a></noindex>
+							rel="nofollow">www.mcommunicator.ru</a>). Контактное лицо: +7 (913) 682-80-80 (Александр Пашко) <a href="mailto:aleksandr.a.pashko@mts.ru">aleksandr.a.pashko@mts.ru</a></noindex>
 				</li>
 				<li>
 					<noindex>TELE2 Бизнес SMS (<a href="http://www.bsms.tele2.ru" target="_blank"

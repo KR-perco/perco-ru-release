@@ -16,7 +16,7 @@ $APPLICATION->SetAdditionalCSS("/css/glavnaya.css"); // подключение �
 				<div class="text_banner">
 					<span></span>
 				</div>
-				<div class="banner_image" style="background-image: url(/images/banners/boom-barrier-3.v2.jpg);"></div>
+				<div class="banner_image" style="background-image: url(/images/banners/boom-barrier-3.v3.jpg);"></div>
 			</a>
 		</li>
 		<li>

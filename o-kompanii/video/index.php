@@ -8,7 +8,7 @@ $APPLICATION->SetTitle(GetMessage("SETTITLE"));
 
 $APPLICATION->AddHeadScript("/scripts/lightgallery/js/lg-video.min.js");
 $APPLICATION->AddHeadScript("/scripts/lightgallery/js/lg-thumbnail.min.js");
-// $APPLICATION->AddHeadScript("/scripts/lightslider/js/lightslider.js");
+$APPLICATION->AddHeadScript("/scripts/lightslider/js/lightslider.js");
 ?>
 
 

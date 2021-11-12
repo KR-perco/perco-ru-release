@@ -50,6 +50,7 @@ pma/
 upload/
 verstka/
 landing-barrier-tests/
+speedgate-build-for-prod/ 
 
 # исключаем ВСЮ папку bitrix, но ниже настроим включение нужных папок
 # или используйте папку /local, чтобы полностью исключить папку bitrix
