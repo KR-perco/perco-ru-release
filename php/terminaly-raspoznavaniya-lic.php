@@ -26,13 +26,13 @@ $products = array(
 		"name" => "Suprema Face Station 2",
 		"image" => "/images/products/terminaly-raspoznavaniya-lits/suprema-facestation-2.jpg",
 		"description" => "",
-		"price" => "805"
+		"price" => "1220"
 	),
 	"Suprema FACELite" => array(
 		"name" => "Suprema FACELite",
 		"image" => "/images/products/terminaly-raspoznavaniya-lits/suprema-facelite.jpg",
 		"description" => "",
-		"price" => "565"
+		"price" => "850"
 	),
 );
 

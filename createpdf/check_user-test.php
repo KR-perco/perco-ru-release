@@ -5,8 +5,8 @@ require($_SERVER["DOCUMENT_ROOT"].'/createpdf/sert_tests__manager.php');	// со
 		echo'ВЫКЛ создание сертификата <br><br>'; 
 
 		$ID = strip_tags(trim($_GET["ID"]));
-		$txt = "ТОО «Бақ-Альянс»\n Бектібай Жұмахан Болатұлы";
-		$datecomp = "Свидетельство действительно до 09 сентября 2022 года";
+		$txt = "ТОО MMS Group\n Әли Асқарұлы";
+		$datecomp = "Свидетельство действительно до 25 марта 2022 года";
 		$sert_pole = "UF_SERT_D";
 		$sert_pole_date = "UF_SERT_DATE";
 

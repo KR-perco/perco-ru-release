@@ -49,7 +49,7 @@
 			<option>Тумбовый турникет TTD-03.2</option>
 			<option>Ограждение BH02</option>
 			<option>Тумбовый турникет TTD-10A</option>
-			<!-- <option>Турникет-трипод TTR-11A</option> -->
+			<option>Турникет-трипод TTR-11A</option>
 			<option>Тумбовые турникеты TB01A, TBC01A</option>
 			<option>Тумбовый турникет TTD-08A</option>
 			<option>Электронная проходная, KT02.9, KT02.9B, KT02.9Q</option>

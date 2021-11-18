@@ -82,7 +82,7 @@ $arUrlRewrite=array (
   ),
   8 => 
   array (
-    'CONDITION' => '#^/novosti/(.*).php#',
+    'CONDITION' => '#^/novosti/(.*).php(.*)#',
     'RULE' => '/novosti/details.php?ELEMENT_CODE=$1',
     'ID' => '',
     'PATH' => '',

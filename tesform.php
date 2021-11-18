@@ -6,7 +6,8 @@ $params = array(
 	'number' => '2',
 	'message' => '3'
 );
-$url = 'https://perco.ru/php/barrier-form.php?' . http_build_query($params);
+$url = 'https://perco.ru/php/speedgate-form.php?' . http_build_query($params);
+console_log($url);
 $context = stream_context_create(array(
     'http' => array(
         'method'  => 'GET',
