@@ -1,15 +1,32 @@
 <? if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <?
-if (!empty($_GET['PAGEN_1'])) {
+console_log(LANGUAGE_ID);
+
+
+if (LANGUAGE_ID == "ru") {
+	$lang["page"] = "страница";
+} elseif (LANGUAGE_ID == "en") {
+	$lang["page"] = "page";
+} elseif (LANGUAGE_ID == "de") {
+	$lang["page"] = "seite";
+} elseif (LANGUAGE_ID == "it") { 
+	$lang["page"] = "pagina ";
+} elseif (LANGUAGE_ID == "fr") {
+	$lang["page"] = "page ";
+} elseif (LANGUAGE_ID == "es") {
+	$lang["page"] = "página";
+}
+	
+	if (!empty($_GET['PAGEN_1'])) {
 	if ($_GET['PAGEN_1'] != '1') {
 		if (strpos($APPLICATION->GetPageProperty('title'), '|')) {
-			$APPLICATION->SetPageProperty("title", str_replace(' |', ', страница '.$_GET['PAGEN_1'].' |', $APPLICATION->GetPageProperty('title')));
+			$APPLICATION->SetPageProperty("title", str_replace(' |', ', '.$lang["page"].' '.$_GET['PAGEN_1'].' |', $APPLICATION->GetPageProperty('title')));
 		} else {
-			$APPLICATION->SetPageProperty("title", $APPLICATION->GetPageProperty('title').', страница '.$_GET['PAGEN_1']);
+			$APPLICATION->SetPageProperty("title", $APPLICATION->GetPageProperty('title').', page '.$_GET['PAGEN_1']);
 		}
 	}
 }
-?>
+?> 
 <div id="news">
 <?
 $arResult["TIMESTAMP_X"] = $arResult["ITEMS"][0]["TIMESTAMP_X"];
