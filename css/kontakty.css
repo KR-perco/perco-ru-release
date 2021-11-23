@@ -204,6 +204,10 @@ div.box-before h2::before {
     background-repeat: no-repeat;
 }
 
+h2#adress::before {
+    background-image: url(/images/kontakty/adress.svg);
+}
+
 h2#products::before {
     background-image: url(/images/kontakty/turniket.svg);
 }
@@ -222,7 +226,6 @@ h2#feedback::before {
 
 h2#lerning::before {
     background-image: url(/images/kontakty/obuchenie-01.svg);
-    background-position: 0px 14px;
 }
 
 h2#requisites::before {

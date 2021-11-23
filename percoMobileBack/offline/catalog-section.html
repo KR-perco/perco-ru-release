@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=320">
+	<!--Include mobile platform-->
+	<script type="text/javascript" src="__deviceload__/cordova.js"></script>
+	<script type="text/javascript" src="bitrix_mobile_core.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="fastclick.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+
+	<link href="template_styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<script>
+        var worker;
+        var search = '';
+
+        app.getPageParams({
+		    callback: function(data)
+            {
+                worker = data.worker;
+                search = data.section;
+            }
+        });
+
+        setTimeout(function(){ getData()}, 500);
+
+        BX.ready(function ()
+            {
+                new MenuPO(BX("section-list")).init();
+            }
+        );
+
+        BX.ready(function ()
+            {
+                new MenuElement(BX("section-list")).init();
+            }
+        );
+    
+
+        var currentDate = new Date();
+        var day = ('0' + currentDate.getDate()).slice(-2);
+        var month = ("0" + (currentDate.getMonth() + 1)).slice(-2);
+        var year = currentDate.getFullYear();
+        var date = day + "." + month + "." + year;
+
+	</script>
+
+	<div id="content">
+		<div class="scrollmenu" id="scrollmenu"></div>
+        <div class="section-list" id="section-list"></div>
+	</div>
+
+	<script>
+
+    function getData() {
+        once = 0;
+        var none = '';
+        $.getJSON('data_catalog.json', function(json){
+            for (var prop in json[search])
+            {
+                if (json[search][prop].ELEMENTS)
+                {
+                    sectionName = json[search][prop].NAME;
+                    sectionCode = json[search][prop].CODE;
+
+                    if ((search == "sistema-kontrolya-dostupa-perco-web") || (search == "sistema-bezopasnosti-perco-s-20-shkola") || (search == "sistema-dlya-bankomatov-perco-s-800")){
+                        sectionName = json[search][prop].NAME_PARENT;
+                        app.setPageTitle({
+                            title: sectionName
+                        });
+                        getPage(search);
+                        none = 'style="display: none;"';
+                    } else {
+                        getPage(sectionCode);
+                    }
+
+                    if (once == 0){
+                        if (search == "turnikety"){
+                            getPage(search);
+                        }
+                        once++;
+                    }
+
+
+                    link = '<a class="link" '+ none +' onclick="changeSection(this)" data-filter="'+ sectionCode +'">' + sectionName + '</a>';
+                    scrollmenu = document.getElementById('scrollmenu');
+                    scrollmenu.insertAdjacentHTML('beforeend', link);
+
+                    section = '<div class="section" data-cat="'+ sectionCode +'" id="'+ sectionCode +'"></div>';
+                    sectionList = document.getElementById('section-list');
+                    sectionList.insertAdjacentHTML('beforeend', section);
+
+                    for(var element in json[search][prop].ELEMENTS)
+                    {
+                        image = 'bxlocal://' + json[search][prop].ELEMENTS[element].IMAGE_PREVIEW;
+                        name = json[search][prop].ELEMENTS[element].NAME;
+                        code = json[search][prop].ELEMENTS[element].CODE;
+                        eurPrice = json[search][prop].ELEMENTS[element].SPECIFICATIONS.PRICE;
+                        rubPrice = Math.round(localStorage.getItem("CURRENCY") * eurPrice);
+                        
+                        if (rubPrice) {
+                            rubPrice = rubPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                            rubPriceString = '<p>Цена <span class="price_rub">' + rubPrice  + ' ₽</span> со склада в Москве и Санкт-Петербурге</p>';
+                        } else { rubPriceString = '' }
+
+                        if ((eurPrice) && (eurPrice != "БЕСПЛАТНО")) {    
+                            eurPrice = eurPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                            eurPriceString = '<p>' + eurPrice + ' € (по курсу ЦБ РФ на '+ date +')' + '</p>';
+                        } else if ( eurPrice == "БЕСПЛАТНО" ) {
+                            eurPriceString = '<p class="free">БЕСПЛАТНО</p>';
+                        } else { eurPriceString = ''; }
+
+                        if (json[search][prop].ELEMENTS[element].PAGE_EXIST == false) {
+                            exist = "false";
+                        } else { exist = "true" }
+
+                        if (sectionName = "turnikety-tripody"){
+                            dopName = '<p>' + json[search][prop].ELEMENTS[element].DOP_NAME + '</p>';
+                        } else { dopName = '' }
+
+                        elementList = '<div class="element button" data-exist="'+ exist +'" data-section="'+ search +'" data-title="'+ name +'" data-worker="'+ worker +'" data-element="'+ code +'" style="background-image: url('+ image +');">'+ name + dopName + rubPriceString + eurPriceString +'</div>';
+
+                        sec = document.getElementById(sectionCode);
+                        sec.insertAdjacentHTML('beforeend', elementList);
+                    }
+                 
+                } else if (json[search][prop].CHILD) {
+                    sectionName = json[search][prop].NAME_PARENT;
+                    sectionCode = json[search][prop].CODE;
+                    app.setPageTitle({
+                        title: sectionName
+                    });
+
+                    //alert(search);
+
+                    /*link = '<a class="link" onclick="changeSection(this)" data-filter="'+ search +'">' + sectionName + '</a>';
+                    scrollmenu = document.getElementById('scrollmenu');
+                    scrollmenu.insertAdjacentHTML('beforeend', link);*/
+
+                    section = '<div class="section" data-cat="'+ search +'" id="'+ search +'"></div>';
+                    sectionList = document.getElementById('section-list');
+                    sectionList.insertAdjacentHTML('beforeend', section);
+
+                    for(var element in json[search][prop].CHILD)
+                    {
+                        name = json[search][prop].CHILD[element].NAME;
+                        code = json[search][prop].CHILD[element].CODE;
+                        image = 'bxlocal://' + code + '.png';
+                        
+                        elementList = '<div class="element button-po" data-section="'+ code +'" data-title="'+ name +'" data-worker="'+ worker +'" style="background-image: url('+ image +');">'+ name + '</div>';
+
+                        sec = document.getElementById(search);
+                        sec.insertAdjacentHTML('beforeend', elementList);
+                    }
+
+                    getPage(search);
+                } else {
+                    if (!document.getElementById(search))
+                    {
+                        section = '<div class="section" id="'+ search +'"></div>';
+                        sec = document.getElementById('section-list');
+                        sec.insertAdjacentHTML('beforeend', section);
+                        if (!document.getElementById(''+ search +'-information')){
+                            getPage(search);
+                        }
+                    }
+                    if(json[search][prop].IMAGE_PREVIEW)
+                    {
+                        image = 'bxlocal://' + json[search][prop].IMAGE_PREVIEW;
+                    }else{
+                        image = 'bxlocal://' + json[search][prop].CODE + '.png';
+                    }
+
+                    name = json[search][prop].NAME;
+                    code = json[search][prop].CODE;
+                    eurPrice = json[search][prop].SPECIFICATIONS.PRICE;
+                    rubPrice = Math.round(localStorage.getItem("CURRENCY") * eurPrice);
+                    
+                    if (rubPrice) {
+                        rubPrice = rubPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                        rubPriceString = '<p>Цена <span class="price_rub">' + rubPrice  + ' ₽</span> со склада в Москве и Санкт-Петербурге</p>';
+                    } else { rubPriceString = '' }
+
+                    if (eurPrice) {
+                        eurPrice = eurPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                        eurPriceString = '<p>' + eurPrice + ' € (по курсу ЦБ РФ на '+ date +')' + '</p>';
+                    } else {
+                        eurPriceString = '';
+                    }
+
+                    elementList = '<div class="element button" data-section="'+ search +'" data-title="'+ name +'" data-worker="'+ worker +'" data-element="'+ code +'" style="background-image: url('+ image +');">'+ name + rubPriceString + eurPriceString + '</div>';
+
+                    sec = document.getElementById(search);
+                    sec.insertAdjacentHTML('beforeend', elementList);  
+                }
+            }
+            if (search == "sistema-dlya-bankomatov-perco-s-800"){
+                app.setPageTitle({
+                    title: "Система для банкоматов PERCo-S-800"
+                });
+            }
+            if (search == 'identifikatory') {
+                for(var element in json["kontrollery-schityvateli"]["identifikatory"].CHILD[search].ELEMENTS)
+                {
+
+                }
+            }
+            if ((search == 'lokalnoe-po') || (search == 'setevoe-po') || (search == 'komplekty-po')) 
+            {
+                for(var element in json["kompleksnaya-sistema-bezopasnosti-perco-s-20"]["po-kompleksnoy-sistemy-bezopasnosti-perco-s-20"].CHILD[search].ELEMENTS)
+                {
+                    name = json["kompleksnaya-sistema-bezopasnosti-perco-s-20"]["po-kompleksnoy-sistemy-bezopasnosti-perco-s-20"].CHILD[search].ELEMENTS[element].NAME;
+                    code = json["kompleksnaya-sistema-bezopasnosti-perco-s-20"]["po-kompleksnoy-sistemy-bezopasnosti-perco-s-20"].CHILD[search].ELEMENTS[element].CODE;
+                    image = 'bxlocal://' + json["kompleksnaya-sistema-bezopasnosti-perco-s-20"]["po-kompleksnoy-sistemy-bezopasnosti-perco-s-20"].CHILD[search].ELEMENTS[element].IMAGE_PREVIEW;
+                    eurPrice = json["kompleksnaya-sistema-bezopasnosti-perco-s-20"]["po-kompleksnoy-sistemy-bezopasnosti-perco-s-20"].CHILD[search].ELEMENTS[element].SPECIFICATIONS.PRICE;
+                    rubPrice = Math.round(localStorage.getItem("CURRENCY") * eurPrice);
+                    
+                    if (rubPrice) {
+                        rubPrice = rubPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                        rubPriceString = '<p>Цена <span class="price_rub">' + rubPrice  + ' ₽</span> со склада в Москве и Санкт-Петербурге</p>';
+                    } else { rubPriceString = '' }
+
+                    if (eurPrice) {
+                        eurPrice = eurPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                        eurPriceString = '<p>' + eurPrice + ' € (по курсу ЦБ РФ на '+ date +')' + '</p>';
+                    } else { eurPriceString = ''; }
+
+                    section = '<div class="section" data-cat="'+ search +'" id="'+ search +'"></div>';
+                    sectionList = document.getElementById('section-list');
+                    sectionList.insertAdjacentHTML('beforeend', section);
+
+                    elementList = '<div class="element button" data-section="'+ search +'" data-title="'+ name +'" data-worker="'+ worker +'" data-element="'+ code +'" style="background-image: url('+ image +');"><a href="bxlocal://catalog-element.html?section='+ search +'&product='+ code +'&worker='+ worker +'">'+ name + rubPriceString + eurPriceString +'</a></div>';
+
+                    sec = document.getElementById(search);
+                    sec.insertAdjacentHTML('beforeend', elementList);
+                }
+                getPage(search);
+            }
+
+            showActive();
+            
+        });
+    }
+
+    function getPage(section){
+        $.getJSON('data_page.json', function(json){
+            sec = document.getElementById(section);
+            switch(section){
+                case "kompleksnaya-sistema-bezopasnosti-perco-s-20":
+                    sec = document.getElementById("content");
+                    break;
+                case "sistema-kontrolya-dostupa-perco-web":
+                    sec = document.getElementById("content");
+                    break;
+                case "sistema-bezopasnosti-perco-s-20-shkola":
+                    sec = document.getElementById("content");
+                    break;
+                case "sistema-dlya-bankomatov-perco-s-800":
+                    sec = document.getElementById("content");
+                    break;
+                case "elektromekhanicheskie-zamki":
+                    sec = document.getElementById("content");
+                    break;
+                case "turnikety":
+                    sec = document.getElementById("content");
+                    break;
+                case "komplekty-po":
+                    sec = document.getElementById("content");
+                    break;
+                case "shlagbaum":
+                    sec = document.getElementById("content");
+                    break;
+            }
+
+            pageInfo = '<div class="section-information" id="'+ section +'-information"></div>';
+            sec.insertAdjacentHTML('beforeend', pageInfo);
+
+            if (json[section].PREVIEW_TEXT){
+                preview = json[section].PREVIEW_TEXT;
+                sec = document.getElementById( ''+ section +'-information' );
+                sec.insertAdjacentHTML('beforeend', preview);
+            }
+            if (json[section].DETAIL_TEXT){
+                detail = json[section].DETAIL_TEXT;
+                sec = document.getElementById( ''+ section +'-information' );
+                sec.insertAdjacentHTML('beforeend', detail);
+            }
+            var tabsContent = '';
+            if(json[section].TEXT.VALUE){
+
+                for (tab in json[section].TEXT.VALUE){
+                    text = json[section].TEXT.VALUE[tab];
+                    textTiltle = json[section].TEXT.DESCRIPTION[tab];
+                    
+                    tabsContent += '<input name="vkladki" type="checkbox" id="tab'+ textTiltle +'"><label for="tab'+ textTiltle +'"><span class="dashed">'+ textTiltle +'</span></label><div>'+ text +'</div>';                   
+                }
+                tabs = '<div class="tabs product-tabs">'+ tabsContent +'</div>';
+                sec = document.getElementById( ''+ section +'-information' );
+                sec.insertAdjacentHTML('beforeend', tabs);
+            }
+
+            if (section == 'komplekty-po'){
+                getPrice();
+            }
+        });
+    }
+
+    function showActive(){
+        posts = $('.section-list .section');
+        posts.hide();
+
+        $('a.link:first-child').addClass('active');
+        $('.section:first-child').show();
+    }
+
+    function changeSection(obj){
+        $('.scrollmenu a').removeClass('active');
+        $(obj).addClass('active');
+    
+        var customType = $(obj).data('filter'); // category
+        posts
+            .hide()
+            .filter(function () {
+                return $(this).data('cat') === customType;
+            })
+            .fadeIn();
+    }
+
+
+    function getPrice() {
+        var priceSet;
+        var priceRes = localStorage.getItem("CURRENCY");
+
+        priceSet = function(data){
+            /*
+            * В переменной price приводим получаемую переменную в нужный вид:
+            * 1. принудительно приводим тип в число с плавающей точкой,
+            *    учли результат 'NAN' то по умолчанию 0
+            * 2. фиксируем, что после точки только в сотых долях
+            */
+            var price       = Number.prototype.toFixed.call(parseFloat(data) || 0, 0),
+                //заменяем точку на запятую
+                price_sep   = price.replace(/(\D)/g, ","),
+                //добавляем пробел как разделитель в целых
+                price_sep   = price_sep.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1 ");
+
+            return price_sep + ' руб';
+        };
+
+
+        beforeAll = $('.price-e');
+        for (let i = 0; i < beforeAll.length; i++) {
+            before =  beforeAll[i].innerHTML;
+
+            clearBefore = before.replace(/[^+\d]/g, '');
+            
+            after = Math.round(clearBefore * priceRes);
+                    
+            afterClear = after;
+            
+            after = priceSet(afterClear);
+            
+            beforeAll[i].innerHTML = beforeAll[i].innerHTML.replace(before, after);
+        }
+    }
+    </script>
+
+
+</body>
+
+</html>

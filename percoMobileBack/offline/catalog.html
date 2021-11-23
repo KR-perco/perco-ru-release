@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=320">
+	<!--Include mobile platform-->
+	<script type="text/javascript" src="__deviceload__/cordova.js"></script>
+	<script type="text/javascript" src="bitrix_mobile_core.js"></script>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="fastclick.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+
+	<link href="template_styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<script>
+	let worker;
+
+	app.setPageTitle({
+		title: "Каталог"
+	});
+	
+	app.getPageParams({
+		callback:function(data)
+			{
+				worker = data.worker;
+				document.getElementById(worker).style.display = "flex";
+			}
+	});
+	
+	function adWorker(){
+		$('.item').each(function(index, el){
+			$(el).attr('data-worker', worker);
+		});
+	}
+	
+	BX.ready(function ()
+		{
+			new MenuCatalog(BX("catalog")).init();
+		}
+	);
+
+	setTimeout(function(){ adWorker()}, 500);
+
+	
+
+	</script>
+
+	<div id="workers">
+		<div class="workers-block" id="manager">
+			<a href="solution/" style="display: none">
+				<div>
+					<img src="bxlocal://section-reshenia.png" alt="solution">
+					<p>Решения</p>
+				</div>
+			</a>
+			<a href="bxlocal://gallery.html">
+				<div>
+					<img src="bxlocal://section-galery.png" alt="photogallery">
+					<p>Фотогалерея</p>
+				</div>
+			</a>
+		</div>
+		<div class="workers-block" id="installer">
+			<a href="bxlocal://faq.html">
+				<div>
+					<img src="bxlocal://section-faq.png" alt="faq">
+					<p>FAQ</p>
+				</div>
+			</a>
+			<a href="bxlocal://documentation.html">
+				<div>
+					<img src="bxlocal://section-documentation.png" alt="documentation">
+					<p>Документация</p>
+				</div>
+			</a>			
+		</div>
+		<div class="catalog" id="catalog">
+			<h2>Каталог</h2>
+			<div class="item button" data-type="tosection" data-section="turnikety" data-title="Турникеты" style="background-image: url(bxlocal://catalog-turnstile.png);">
+				Турникеты, калитки, ограждения
+			</div>
+			<div class="item button" data-type="tosection" data-section="elektronnye-prokhodnye" data-title="Электронные проходные" style="background-image: url(bxlocal://catalog-ip-stiles.png);">
+				Электронные проходные
+			</div>
+			<div class="item button" data-section="shlagbaum" data-title="Шлагбаум" data-element="shlagbaum-gs04" style="background-image: url(bxlocal://catalog-shlagbaum.png);">
+				Шлагбаум
+			</div>
+			<div class="item button" data-type="tosection" data-section="elektromekhanicheskie-zamki" data-title="Электро-механические замки" style="background-image: url(bxlocal://catalog-locks.png);">
+				Электромеханические замки
+			</div>
+			<div class="item button" data-type="tosection" data-section="kontrollery-schityvateli" data-title="Контроллеры и считыватели" style="background-image: url(bxlocal://catalog-kontrollery.png);">
+				Контроллеры и считыватели
+			</div>
+			<div class="item button" data-type="tosection" data-section="koren-dopolnitelnoe-oborudovanie" data-title="Дополнительное оборудование" style="background-image: url(bxlocal://catalog-dop-oborudovanie.png);">
+				Дополнительное оборудование
+			</div>
+			<div class="item button" data-type="tosection" data-section="kompleksnaya-sistema-bezopasnosti-perco-s-20" data-title="Комплексная система безопасности PERCo-S-20" style="background-image: url(bxlocal://catalog-ksb-s-20.png);">
+				Комплексная система безопасности PERCo-S-20
+			</div>
+			<div class="item button" data-type="tosection" data-section="sistema-kontrolya-dostupa-perco-web" data-title="Система контроля доступа PERCo-Web" style="background-image: url(bxlocal://catalog-skd-web.png);">
+				Система контроля доступа PERCo-Web
+			</div>
+			<div class="item button" data-type="tosection" data-section="sistema-bezopasnosti-perco-s-20-shkola" data-title="Система безопасности PERCo-S-20 Школа" style="background-image: url(bxlocal://catalog-sb-s-20-school.png);">
+				Система безопасности PERCo-S-20 Школа
+			</div>
+			<div class="item button" data-type="tosection" data-section="sistema-dlya-bankomatov-perco-s-800" data-title="Система для банкоматов PERCo-S-800" style="background-image: url(bxlocal://catalog-sdkb.png);">
+				Система для банкоматов PERCo-S-800
+			</div>
+			<div class="item button" data-section="koren-dopolnitelnoe-oborudovanie" data-title="Дополнительное оборудование" style="background-image: url(bxlocal://catalog-dop-oborudovanie.png);">
+				Дополнительное оборудование
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

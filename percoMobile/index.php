@@ -55,12 +55,12 @@
 <div class="product_block">
 	<h2>Системы безопасности и повышения эффективности PERCo</h2>
 	<div class="product_items">
-		<div class="product_item">
+		<!-- <div class="product_item">
 			<a href="products/kompleksnaya-sistema-bezopasnosti-perco-s-20/">
 				<img src="bxlocal://main-ksb-s-20_2.png" alt="ksb-s-20" />
 				<h4>Комплексная система безопасности <span class="nospace">PERCo-S-20</span></h4>
 			</a>
-		</div>
+		</div> -->
 		<div class="product_item">
 			<a href="products/sistema-kontrolya-dostupa-perco-web/">
 				<img src="bxlocal://main-skd-web.png" alt="skd-web" />

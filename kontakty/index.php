@@ -23,6 +23,44 @@ unset($file); // Очистить переменную $file
 		<div class="line">
 			<div class="col-2">
 				<div class="box-before">
+					<h2 id="adress">Адрес</h2>
+					<div class="tabs">
+						<input type="radio" checked id="adress__spb" name="vyborAdress">
+						<label for="adress__spb"><span class="dashed">Санкт-Петербург</span></label>
+						<div class="item" itemscope itemtype="http://schema.org/Organization"> 
+							<dl>
+								<dd class="addres">194021, Россия, Санкт-Петербург,<br> Политехническая ул., д. 4, корпус 2, строение 1<br> </dd>
+							</dl>
+							<dl>
+								<dd class="map">
+									<a data-src="/kontakty/spb.php?iframe=true&amp;map=yandex&amp;type=offise" _map="yandex" title="Яндекс" data-iframe="true"><img src="/images/kontakty/yandex.svg"></a>
+									<a data-src="/kontakty/spb.php?iframe=true&amp;map=google&amp;type=offise" _map="google" title="Google" data-iframe="true"><img src="/images/kontakty/google-maps-seeklogo.com.svg"></a>
+								</dd>
+							</dl>
+						</div>
+						<input type="radio" id="adress__pskov" name="vyborAdress">
+						<label for="adress__pskov"><span class="dashed">Псков</span></label>
+						<div class="item" itemscope itemtype="http://schema.org/Organization"> 
+							<dl>
+								<dd class="addres"><span><span itemprop="postalCode">180600</span>, <span
+											itemprop="addressLocality">Россия, Псков</span><br>
+										<span itemprop="streetAddress"> ул. Леона Поземского 123В</span></span>
+								</dd>
+							</dl>
+							<dl>
+								<dd class="map">
+									<a data-src="/kontakty/pskov-zavod.php?iframe=true&map=yandex" _map="yandex"
+										title="Яндекс" data-iframe="true"><img
+											src="/images/kontakty/yandex.svg"></a>
+									<a data-src="/kontakty/pskov-zavod.php?iframe=true&map=google" _map="google"
+										title="Google" data-iframe="true"><img
+											src="/images/kontakty/google-maps-seeklogo.com.svg"></a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div class="box-before">
 					<h2 id="products">Выбор и приобретение продукции</h2>
 					<div class="tabs">
 						<input type="radio" checked id="russia" name="vyborProd">
@@ -119,7 +157,7 @@ unset($file); // Очистить переменную $file
 							специалисты по турникетам и контроллерам<br>
 							9:00–17:45 (мск), по рабочим дням,<br>
 							специалист по ПО<br>
-							9:00–17-45 (мск), по рабочим дням
+							9:00–17:45 (мск), по рабочим дням
 						</dd-->
 					</dl>
 
@@ -371,7 +409,7 @@ unset($file); // Очистить переменную $file
 						</dd>
 					</dl>
 					<dl>
-						<dd class="telephone"><span itemprop="telephone">(812) 247-04-50</span></dd>
+						<dd class="telephone"><span itemprop="telephone">(812) 247-04-52, 247-04-50</span></dd>
 					</dl>
 				</div>
 				<div class="box-before">

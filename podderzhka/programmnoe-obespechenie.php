@@ -318,7 +318,7 @@ switch ($checkedId){
 							Обновление ПО ABBYY PassportReader SDK до версии 1.5.2
 						</a>
 						<span class="color">
-							(1.83&nbsp;MB)&nbsp; — 29.01.2021
+							(0.88&nbsp;MB)&nbsp; — 23.11.2021
 						</span>
 					</li>
 				</ul>

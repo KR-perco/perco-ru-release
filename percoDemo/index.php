@@ -13,7 +13,7 @@
 <div class="product_block">
 	<h2>Оборудование безопасности PERCo</h2>
 	<div class="product_items">
-		<div class="product_item">
+		<!-- <div class="product_item">
 			<a href="products/turnikety/">
 				<img src="bxlocal://main-turnstile.png" alt="Турникеты">
 				<h4>Турникеты</h4>
@@ -42,6 +42,45 @@
 				<img src="bxlocal://main-dop.png" alt="Дополнительное оборудование">
 				<h4>Дополнительное оборудование</h4>
 			</a>
+		</div> -->
+
+		<div class="product_items"> 
+			<div class="product_item">
+				<a href="products/turnikety/">
+					<img src="bxlocal://1-turnstile.svg" alt="turnstile" />
+					<h4>Турникеты</h4>
+				</a>
+			</div>
+			<div class="product_item">
+				<a href="products/elektronnye-prokhodnye/">
+					<img src="bxlocal://2-ip-stiles.svg" alt="ip-stiles" />
+					<h4>Электронные проходные</h4>
+				</a>
+			</div>
+			<div class="product_item">
+				<a href="products/shlagbaum/">
+					<img src="bxlocal://3-boom-barrier.svg" alt="barrier" />
+					<h4>Шлагбаум</h4>
+				</a>
+			</div>
+			<div class="product_item">
+				<a href="products/elektromekhanicheskie-zamki/">
+					<img src="bxlocal://4-locks.svg" alt="locks" />
+					<h4>Электро-механические замки</h4>
+				</a>
+			</div>
+			<div class="product_item">
+				<a href="products/kontrollery-schityvateli/">
+					<img src="bxlocal://5-kontrollery.svg" alt="an" />
+					<h4>Контроллеры и считыватели</h4>
+				</a>
+			</div>
+			<div class="product_item">
+				<a href="products/koren-dopolnitelnoe-oborudovanie/">
+					<img src="bxlocal://6-dop-oborudovanie.svg" alt="dop-oborudovanie" />
+					<h4>Дополнительное оборудование</h4>
+				</a>
+			</div>
 		</div>
 	</div>
 </div>

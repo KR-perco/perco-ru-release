@@ -1,0 +1,442 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=320">
+	<!--Include mobile platform-->
+	<script type="text/javascript" src="__deviceload__/cordova.js"></script>
+	<script type="text/javascript" src="bitrix_mobile_core.js"></script>
+	<script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="lightgallery.min.js"></script>
+    <script type="text/javascript" src="lightslider.min.js"></script>
+    <script type="text/javascript" src="fastclick.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+
+    <link href="lightgallery.min.css" rel="stylesheet" type="text/css">
+    <link href="lightslider.min.css" rel="stylesheet" type="text/css">
+	<link href="template_styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<script>
+		app.setPageTitle({
+			title: "Каталог"
+        });
+	</script>
+
+    <div id="content"></div>
+    <div class="scroll"><ul id="gallery" style="min-height: 250px;"></ul></div>
+
+    <script>
+        let section, product, worker;
+        let name, dopName, code, images, preview, detail, price, shema, style;
+        let text, textTiltle;
+        let priceBlock = '';
+        let sliderCount = 0;
+     
+        app.getPageParams({
+		    callback: function(data)
+            {
+                worker = data.worker;
+                section = data.section;
+                product = data.product;
+            }
+        });
+
+        product = 'prilozhenie-perco-registratsiya-dlya-organizatsii-mobilnogo-terminala';
+        section = 'kontrollery-schityvateli';
+
+        setTimeout(function(){ getData()}, 500);
+       
+        var currentDate = new Date();
+        var day = ('0' + currentDate.getDate()).slice(-2);
+        var month = ("0" + (currentDate.getMonth() + 1)).slice(-2);
+        var year = currentDate.getFullYear();
+        var date = day + "." + month + "." + year;
+    
+    function getData() { 
+
+        $.getJSON('data_catalog.json', function(json){
+            
+            for (let type in json[section]) {
+                if (json[section][type].ELEMENTS) {
+                    if(json[section][type].ELEMENTS[product]){
+                        name = json[section][type].ELEMENTS[product].NAME;
+                        dopName = json[section][type].ELEMENTS[product].DOP_NAME;
+                        code = json[section][type].ELEMENTS[product].CODE;
+                        preview = json[section][type].ELEMENTS[product].PREVIEW_TEXT;
+                        detail = json[section][type].ELEMENTS[product].DETAIL_TEXT;
+                        price = json[section][type].ELEMENTS[product].SPECIFICATIONS.PRICE;
+                        shema = json[section][type].ELEMENTS[product].SPECIFICATIONS.SHEMA;
+
+                        galleryName = json[section][type].NAME;
+                        if (worker == 'installer'){document.getElementById('gallery').style.display = 'none';} else { getScroll(galleryName);  }
+
+                        title = '<h2>'+ name +' '+ dopName +'</h2>';
+                    
+                        slide = '';
+                        if (Array.isArray(json[section][type].ELEMENTS[product].PROPERTY_IMAGE_VALUE)){
+                            for (photo in json[section][type].ELEMENTS[product].PROPERTY_IMAGE_VALUE){                        
+                                pagePhoto = json[section][type].ELEMENTS[product].PROPERTY_IMAGE_VALUE[photo].PREVIEW;
+                                fullPhoto = json[section][type].ELEMENTS[product].PROPERTY_IMAGE_VALUE[photo].FULL;
+                                slide += '<li data-thumb="'+ pagePhoto +'" data-src="'+ pagePhoto +'"><img src="bxlocal://'+ pagePhoto +'"></li>';
+                                sliderCount++;
+                            }
+                            if (shema){
+                                slide += '<li data-thumb="bxlocal://'+ shema + '" data-src="bxlocal://'+ shema + '"><img alt="Схема" src="bxlocal://'+ shema +'"></li>';
+                                sliderCount++;
+                            }
+                            productScroll = '<div class="scroll"><ul id="main-slider">'+ slide +'</ul></div>';
+                        }else{    
+                            photo = json[section][type].ELEMENTS[product].PROPERTY_IMAGE_VALUE;
+                            slide = '<div id="main-slider" style="text-align:center; max-width:100%"><a class="lslide" href="' + photo + '"><img alt="'+ name +'" src="bxlocal://'+ photo +'"></a></div>';
+                            productScroll = slide;
+                            sliderCount++;
+                        }
+                        
+                        if ((worker != "installer") && (price)){
+                            rubPrice = Math.round(localStorage.getItem("CURRENCY") * price);
+
+                            if (rubPrice) {
+                                rubPrice = rubPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                                rubPriceString = '<p>Цена <span class="price_rub">' + rubPrice  + ' ₽</span> (по ЦБ РФ на '+ date +')</p>';
+                            } else { rubPriceString = ''; }
+
+                            price = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                            priceBlock = '<div class="price"><p>Цена со склада в Москве и Санкт-Петербурге <span>'+ price +'</span> €</p>'+ rubPriceString +'</div>';
+                        }
+
+                        if (detail == undefined){
+                            detail = '';
+                        }
+
+                        description = '<div class="description">'+ preview + detail +'</div>';
+                        tabsContent = '';
+                        tabs = '';
+                        
+                        if(json[section][type].ELEMENTS[product].PROPERTY_TEXT_VALUE){
+                            for (tab in json[section][type].ELEMENTS[product].PROPERTY_TEXT_VALUE){
+                                text = json[section][type].ELEMENTS[product].PROPERTY_TEXT_VALUE[tab];
+                                textTiltle = json[section][type].ELEMENTS[product].PROPERTY_TEXT_DESCRIPTION[tab];
+                                
+                                tabsContent += '<input name="vkladki" type="checkbox" id="'+ textTiltle +'"><label for="'+ textTiltle +'"><span class="dashed">'+ textTiltle +'</span></label><div>'+ text +'</div>';                   
+                            }
+                        }
+                        
+                        if(json[section][type].ELEMENTS[product].SPECIFICATIONS.CHARACTERISTICS){
+                            charTable = '';
+                            characteristics = '';
+                            for (char in json[section][type].ELEMENTS[product].SPECIFICATIONS.CHARACTERISTICS){
+                                charDesc = json[section][type].ELEMENTS[product].SPECIFICATIONS.CHARACTERISTICS[char].DESCRIPTION;
+                                charTiltle = json[section][type].ELEMENTS[product].SPECIFICATIONS.CHARACTERISTICS[char].VALUE;
+                                
+                                charTable += '<div class="teh_item"><div class="teh_name">'+ charTiltle +'</div><div class="teh_value">'+ charDesc +'</div></div>';                                           
+                            }
+
+                            colorArray = json[section][type].ELEMENTS[product].SPECIFICATIONS.COLORS;
+                            
+                            colors = '';
+                            if (colorArray) {
+                                for (let color in colorArray) {
+                                    if (colorArray[color].PRODUCT_DESCRIPTION) {
+                                        productDescr = '<p>' + colorArray[color].PRODUCT_DESCRIPTION + '</p>';
+                                    } else { productDescr = ''; }
+                                    
+                                    img = '<div class="color"><img src="bxlocal://' + colorArray[color].IMAGE + '"><br>' + colorArray[color].DESCRIPTION + '</div>';
+                                    colors += '<div>' + productDescr + img + '</div>';
+                                }
+                            }
+                            
+                            if (json[section][type].ELEMENTS[product].SPECIFICATIONS.WARRANTY) {
+                                warranty = '<p>' + json[section][type].ELEMENTS[product].SPECIFICATIONS.WARRANTY + '</p>';
+                            } else { warranty = '';}
+
+                            characteristics = charTable + colors + warranty;  
+
+                            tabsContent += '<input name="vkladki" type="checkbox" id="Характеристики"><label for="Характеристики"><span class="dashed">Характеристики</span></label><div>'+ characteristics +'</div>';            
+                        }
+
+                        /*if(json[section][type].ELEMENTS[product].SPECIFICATIONS.DOWNLOAD){
+                            docTable = '';
+                            for (doc in json[section][type].ELEMENTS[product].SPECIFICATIONS.DOWNLOAD){
+                                docValue = json[section][type].ELEMENTS[product].SPECIFICATIONS.DOWNLOAD[doc].VALUE;
+                                docTiltle = json[section][type].ELEMENTS[product].SPECIFICATIONS.DOWNLOAD[doc].NAME;
+
+                                docTable += '<div class="download_item"><div class="icon"><img alt="Иконка" src="bxlocal://pdf.png"></div><div><a href="bxlocal://'+ docValue +'" target="_blank">'+ docTiltle +'</a></div></div>';                                           
+                            }
+                            tabsContent += '<input name="vkladki" type="checkbox" id="Скачать"><label for="Скачать"><span class="dashed">Скачать</span></label><div>'+ docTable +'</div>';            
+                        }*/
+
+                        if (json[section][type].ELEMENTS[product].CSS) {
+                            style = '<style>' + json[section][type].ELEMENTS[product].CSS + '</style>';
+                        } else { style = '' }
+
+                        if (json[section][type].ELEMENTS[product].PHP) {
+                            for (let phpInsert in json[section][type].ELEMENTS[product].PHP) {
+                                tabsContent = tabsContent.replace(json[section][type].ELEMENTS[product].PHP[phpInsert].DESCRIPTION, json[section][type].ELEMENTS[product].PHP[phpInsert].DATA);
+                            }
+                        }
+                        
+                        tabs = '<div class="tabs product-tabs">'+ tabsContent +'</div>';
+                        elementContent = title + productScroll + priceBlock + description + tabs + style;
+
+                        content = document.getElementById('content');
+                        content.insertAdjacentHTML('beforeend', elementContent);
+                        break;
+                    }
+                } else {
+                    if(json[section][type] == json[section][product]){
+                        
+                        name = json[section][product].NAME;
+                        code = json[section][product].CODE;
+                        preview = json[section][product].PREVIEW_TEXT;
+                        detail = json[section][product].DETAIL_TEXT;
+                        price = json[section][product].SPECIFICATIONS.PRICE;
+                        shema = json[section][product].SPECIFICATIONS.SHEMA;
+
+                        if (section == 'elektronnye-prokhodnye'){
+                            getScroll('Электронные проходные');
+                        }
+
+                        slide = '';
+                        shemaSlide = '';
+                        if (Array.isArray(json[section][product].PROPERTY_IMAGE_VALUE)){
+                            for (photo in json[section][product].PROPERTY_IMAGE_VALUE){                        
+                                pagePhoto = json[section][product].PROPERTY_IMAGE_VALUE[photo].PREVIEW;
+                                fullPhoto = json[section][product].PROPERTY_IMAGE_VALUE[photo].FULL;
+                                slide += '<li  class="lslide" data-thumb="'+ pagePhoto +'" data-src="'+ pagePhoto +'"><img src="bxlocal://'+ pagePhoto +'"></li>';
+                                sliderCount++;
+                            }
+                            if (shema){
+                                shema = 'bxlocal://' + shema;
+                                slide += '<li  class="lslide" data-thumb="'+ shema + '" data-src="'+ shema + '"><img alt="Схема" src="'+ shema +'"></li>';
+                                sliderCount++;
+                            }
+                            productScroll = '<div class="scroll" style="margin: 35px auto; width: 100%;	position: relative;"><ul id="main-slider">'+ slide +'</ul></div>';
+                        }else{
+                            image = 'bxlocal://' + json[section][product].PROPERTY_IMAGE_VALUE;
+                            sliderCount++;
+                            if (!shema){
+                                photo = 'bxlocal://' + json[section][product].PROPERTY_IMAGE_VALUE;
+                                slide = '<div style="text-align:center;" id="main-slider"><a class="lslide" data-src="' + photo + '"><img alt="'+ name +'" src="'+ photo +'"></a></div>';
+                                productScroll = slide;
+
+                            }else{
+
+                                slide = '<li class="lslide" data-thumb="'+ image + '" data-src="'+ image + '"><img alt="Схема" src="'+ image +'"></li>';
+                                shema = 'bxlocal://' + shema;
+                                shemaSlide += '<li class="lslide" data-thumb="'+ shema + '" data-src="'+ shema + '"><img alt="Схема" src="'+ shema +'"></li>';
+                                productScroll = '<div class="scroll" style="margin: 35px auto; width: 100%;	position: relative;"><ul id="main-slider">'+ slide + shemaSlide +'</ul></div>';
+                                sliderCount++;
+                            }
+                        }
+
+                        title = '<h2>'+ name +'</h2>';
+                        
+                        if ((worker != 'installer') && (price)){
+                            rubPrice = Math.round(localStorage.getItem("CURRENCY") * price);
+
+                            if (rubPrice) {
+                                rubPrice = rubPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                                rubPriceString = '<p>Цена <span class="price_rub">' + rubPrice  + ' ₽</span> (по ЦБ РФ на '+ date +')</p>';
+                            } else { rubPriceString = ''; }
+
+                            price = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                            priceBlock = '<div class="price"><p>Цена со склада в Москве и Санкт-Петербурге <span>'+ price +'</span> €</p>'+ rubPriceString +'</div>';
+                        }
+                        if (detail == undefined){
+                            detail = '';
+                        }
+                        description = '<div class="description">'+ preview + detail +'</div>';
+                        tabsContent = ''; 
+                        tabs = '';
+
+                        if(json[section][product].PROPERTY_TEXT_VALUE){
+                            for (tab in json[section][product].PROPERTY_TEXT_VALUE){
+                                text = json[section][product].PROPERTY_TEXT_VALUE[tab];
+                                textTiltle = json[section][product].PROPERTY_TEXT_DESCRIPTION[tab];
+                                
+                                tabsContent += '<input name="vkladki" type="checkbox" id="'+ textTiltle +'"><label for="'+ textTiltle +'"><span class="dashed">'+ textTiltle +'</span></label><div>'+ text +'</div>';                   
+                            }
+                        }
+
+                        if(json[section][product].SPECIFICATIONS.CHARACTERISTICS){
+                            charTable = '';
+                            for (char in json[section][product].SPECIFICATIONS.CHARACTERISTICS){
+                                charDesc = json[section][product].SPECIFICATIONS.CHARACTERISTICS[char].DESCRIPTION;
+                                charTiltle = json[section][product].SPECIFICATIONS.CHARACTERISTICS[char].VALUE;
+
+                                charTable += '<div class="teh_item"><div class="teh_name">'+ charTiltle +'</div><div class="teh_value">'+ charDesc +'</div></div>';                                           
+                            }
+
+                            colorArray = json[section][product].SPECIFICATIONS.COLORS;
+                            
+                            colors = '';
+                            if (colorArray) {
+                                for (let color in colorArray) {
+                                    if (colorArray[color].PRODUCT_DESCRIPTION) {
+                                        productDescr = '<p>' + colorArray[color].PRODUCT_DESCRIPTION + '</p>';
+                                    } else { productDescr = ''; }
+                                    
+                                    img = '<div class="color"><img src="bxlocal://' + colorArray[color].IMAGE + '"><br>' + colorArray[color].DESCRIPTION + '</div>';
+                                    colors += '<div>' + productDescr + img + '</div>';
+                                }
+                            }
+                            
+                            if (json[section][product].SPECIFICATIONS.WARRANTY) {
+                                warranty = '<p>' + json[section][product].SPECIFICATIONS.WARRANTY + '</p>';
+                            } else { warranty = '';}
+
+                            characteristics = charTable + colors + warranty;  
+
+                            tabsContent += '<input name="vkladki" type="checkbox" id="Характеристики"><label for="Характеристики"><span class="dashed">Характеристики</span></label><div>'+ characteristics +'</div>';
+                        }
+
+                        /*if(json[section][product].SPECIFICATIONS.DOWNLOAD){
+                            docTable = '';
+                            for (doc in json[section][product].SPECIFICATIONS.DOWNLOAD){
+                                docValue = json[section][product].SPECIFICATIONS.DOWNLOAD[doc].VALUE;
+                                docTiltle = json[section][product].SPECIFICATIONS.DOWNLOAD[doc].NAME;
+
+                                docTable += '<div class="download_item"><div class="icon"><img alt="Иконка" src="bxlocal://pdf.png"></div><div><a href="bxlocal://'+ docValue +'" target="_blank">'+ docTiltle +'</a></div></div>';                                           
+                            }
+                            tabsContent += '<input name="vkladki" type="checkbox" id="Скачать"><label for="Скачать"><span class="dashed">Скачать</span></label><div>'+ docTable +'</div>';            
+                        }*/
+
+                        if (json[section][product].CSS) {
+                            style = '<style>' + json[section][product].CSS + '</style>';
+                        } else { style = '' }
+
+
+                        if (json[section][product].PHP) {
+                            for (let phpInsert in json[section][product].PHP) {
+                                tabsContent = tabsContent.replace(json[section][product].PHP[phpInsert].DESCRIPTION, json[section][product].PHP[phpInsert].DATA);
+                            }
+                        }
+
+                        tabs = '<div class="tabs product-tabs">'+ tabsContent +'</div>';
+                        elementContent = title + productScroll + priceBlock + description + tabs + style;
+                        
+                        sec = document.getElementById('content');
+                        sec.insertAdjacentHTML('beforeend', elementContent);
+                    }
+                }
+            }
+            if ((section == 'lokalnoe-po') || (section == 'setevoe-po'))
+            {
+                name = json["kompleksnaya-sistema-bezopasnosti-perco-s-20"]["po-kompleksnoy-sistemy-bezopasnosti-perco-s-20"].CHILD[section].ELEMENTS[product].NAME;
+                code = json["kompleksnaya-sistema-bezopasnosti-perco-s-20"]["po-kompleksnoy-sistemy-bezopasnosti-perco-s-20"].CHILD[section].ELEMENTS[product].CODE;
+                image = json["kompleksnaya-sistema-bezopasnosti-perco-s-20"]["po-kompleksnoy-sistemy-bezopasnosti-perco-s-20"].CHILD[section].ELEMENTS[product].PROPERTY_IMAGE_VALUE;
+                price = json["kompleksnaya-sistema-bezopasnosti-perco-s-20"]["po-kompleksnoy-sistemy-bezopasnosti-perco-s-20"].CHILD[section].ELEMENTS[product].SPECIFICATIONS.PRICE;
+                title = '<h2>'+ name +'</h2>';
+                previewText = '<div class="detail_text">' + json["kompleksnaya-sistema-bezopasnosti-perco-s-20"]["po-kompleksnoy-sistemy-bezopasnosti-perco-s-20"].CHILD[section].ELEMENTS[product].PREVIEW_TEXT + '</div>';
+                detailText = '<div class="detail_text">' + json["kompleksnaya-sistema-bezopasnosti-perco-s-20"]["po-kompleksnoy-sistemy-bezopasnosti-perco-s-20"].CHILD[section].ELEMENTS[product].DETAIL_TEXT + '</div>';
+
+                rubPrice = Math.round(localStorage.getItem("CURRENCY") * price);
+
+                if (rubPrice) {
+                    rubPrice = rubPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                    rubPriceString = '<p>Цена <span class="price_rub">' + rubPrice  + ' ₽</span> (по ЦБ РФ на '+ date +')</p>';
+                } else { rubPriceString = ''; }
+
+                if ((price > 0) && (worker != "installer")){
+                    price = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                    priceBlock = '<div class="price"><p>Цена со склада в Москве и Санкт-Петербурге <span>'+ price +'</span> €</p>'+ rubPriceString +'</div>';
+                }
+                
+                contentImage = '<div style="text-align:center;width:100%;"><img style="max-width:100%;" alt="'+ name +'" src="bxlocal://'+ image +'"></div>';
+
+                elementContent = title + contentImage + priceBlock + previewText + detailText;
+                content = document.getElementById('content');
+                content.insertAdjacentHTML('beforeend', elementContent);
+            }
+
+            if (sliderCount > 1) {
+                sliderActive('#main-slider');
+            } else if (sliderCount == 1) {
+                galleryActive('#main-slider');
+            }
+
+            deleteLinks();
+
+        });
+
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split('&');
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split('=');
+                if (decodeURIComponent(pair[0]) == variable) {
+                    return decodeURIComponent(pair[1]);
+                }
+            }
+            console.log('Query variable %s not found', variable);
+        }
+
+        function getScroll(section){
+            let galleryScroll = '';
+            $.getJSON('data_gallery.json', function(json){
+                for (let type in json) {
+                    for (let photo in json[type]){
+                        for (let element in json[type][photo].TYPE_PRODUCT){
+                            
+                            if (json[type][photo].TYPE_PRODUCT[element] == section){
+                            
+                                scrollPhoto = 'bxlocal://' + json[type][photo].FULL.VALUE.replace('jpg', 'png');
+                                galleryScroll += '<li data-thumb="'+ scrollPhoto +'" data-src="'+ scrollPhoto +'"><img src="'+ scrollPhoto +'"><p>' + json[type][photo].FULL.DESCRIPTION + '</p></li>';
+                        
+                            }
+                        }
+                    }
+                }
+                content = document.getElementById('gallery');
+                content.insertAdjacentHTML('beforeend', galleryScroll);
+                sliderActive('#gallery');
+            });
+            
+        }
+
+        function sliderActive(slider) {
+            let selector = slider + ' .lslide';
+            
+            $(slider).lightSlider({
+                adaptiveHeight: false,
+                item: 1,
+                slideMargin: 15,
+                loop: true,
+                pager: false,
+                onSliderLoad: function(el) {
+                    el.lightGallery({
+                        selector: selector,
+                        download: false
+                    });
+                }   
+            });
+        }
+
+        function galleryActive(slider) {
+            $(slider).lightGallery({
+                download: false
+            }); 
+        }
+
+        function deleteLinks() {
+            var tabs = document.getElementsByClassName('tabs');
+            
+            if (tabs.length > 0) {
+                var links = tabs[0].getElementsByTagName('a');
+
+                for(i = 0; i < links.length; i++){
+                    links[i].removeAttribute('href');
+                }
+            }
+        }
+
+    }
+    </script>
+
+</body>
+
+</html>

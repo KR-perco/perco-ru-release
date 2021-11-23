@@ -11,9 +11,6 @@ $APPLICATION->ShowTitle(false, false);
 	display: flex;
 	justify-content: center;
 }
-.bx-core body {
-	justify-content: center;
-}
 </style>
 <?
 if ($_REQUEST["map"] == "yandex")
@@ -41,7 +38,12 @@ elseif ($_REQUEST["map"] == "google")
 		2 => "ENABLE_DRAGGING",
 	);
 }
-$text_placemark = '<b>Склад-офис в Санкт-Петербурге</b><br />Санкт-Петербург, Политехническая ул., д. 6А<br />Телефон: +7 (812) 247-04-54';
+
+if ($_REQUEST["type"] == "offise") { 
+	$text_placemark = '<b>Главный офис в Санкт-Петербурге</b><br />Санкт-Петербург, Политехническая ул., д. 4, корпус 2,<br />Телефон: +7 (812) 247-04-54';
+} else { 
+	$text_placemark = '<b>Склад-офис в Санкт-Петербурге</b><br />Санкт-Петербург, Политехническая ул., д. 4, корпус 2,<br />Телефон: +7 (812) 247-04-54';
+}
 $arMap[] = array('TEXT' => $text_placemark,
 	'LON' => $lon,
 	'LAT' => $lat,

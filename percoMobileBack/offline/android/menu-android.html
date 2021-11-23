@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=290">
+
+	<script type="text/javascript" src="__deviceload__/cordova.js"></script>
+	<script type="text/javascript" src="bitrix_mobile_core.js"></script>
+	<script type="text/javascript" src="fastclick.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	
+	<link href="template_styles.css" rel="stylesheet" type="text/css">
+	<script>
+		BX.ready(function ()
+		{
+			new Menu(BX("menu")).init();
+		});
+	</script>
+</head>
+<body>
+<div>
+	<div id="menu" class="menu-block">
+		<div class="menu-header">
+			<img src="bxlocal://logo.png" alt="logo" />
+		</div>
+		<div data-title="Производитель оборудования безопасности" data-news-id="home" data-url="bxlocal://index-android.html" class="item-menu" style="background-image: url(bxlocal://menu-home.png);">
+			Главная
+		</div>
+		<div data-title="Каталог" data-news-id="catalog"  data-url="bxlocal://catalog.html" class="item-menu" style="background-image: url(bxlocal://menu-catalog.png);">
+			Каталог
+		</div>
+		<div style="display: none;" data-title="Документация" data-news-id="documentation"  data-url="bxlocal://documentation.html" class="item-menu" style="background-image: url(bxlocal://menu-download.png);">
+			Скачать
+		</div>
+		<div data-title="Контакты" data-news-id="contacts"  data-url="bxlocal://contacts.html" class="item-menu" style="background-image: url(bxlocal://menu-contacts.png);">
+			Контакты
+		</div>
+		<div data-title="О компании" data-news-id="about"  data-url="bxlocal://about.html" class="item-menu" style="background-image: url(bxlocal://menu-about.png);">
+			О компании
+		</div>
+		<div data-title="О приложении" data-news-id="app"  data-url="bxlocal://app.html" class="item-menu" style="background-image: url(bxlocal://menu-app.png);">
+			О приложении
+		</div>
+	</div>
+	<div class="menu-line"></div>
+</div>
+</body>
+</html>
