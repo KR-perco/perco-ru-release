@@ -1,17 +1,14 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
-CJSCore::Init(array("jquery"));
-
-$this->addExternalJS("/scripts/mobil/catalog.js");
-$this->addExternalJS("/scripts/lightgallery/js/lightgallery.min.js");
-$this->addExternalJS("/scripts/lightslider/js/lightslider.min.js");
-$this->addExternalJS("/scripts/lightgallery/js/lg-zoom.min.js");
-$this->addExternalCss("/scripts/lightgallery/css/lightgallery.min.css");
-$this->addExternalCss("/scripts/lightslider/css/lightslider.min.css");
-
+$this->setFrameMode(true);
 global $device;
-$page = $APPLICATION->GetCurUri();
-$url = parse_url($page);
 
+// $APPLICATION->AddHeadScript("/scripts/lightgallery/js/lg-video.min.js"); // подключение скриптов
+// $APPLICATION->AddHeadScript("/scripts/lightgallery/js/lg-zoom.min.js"); // подключение скриптов
+// $APPLICATION->AddHeadScript("/scripts/lightgallery/js/lg-fullscreen.min.js"); // подключение скриптов
+$APPLICATION->SetPageProperty("bodyItemtype", "ItemPage");
+
+if ($arResult["PROPERTIES"]["JS"]["VALUE"])
+	$APPLICATION->AddHeadScript($arResult["PROPERTIES"]["JS"]["VALUE"]); // подключение скриптов
 if ($arResult["PROPERTIES"]["CSS"]["VALUE"])
 	$APPLICATION->SetAdditionalCSS($arResult["PROPERTIES"]["CSS"]["VALUE"]); // подключение стилей
 
@@ -24,19 +21,54 @@ function addkey($key, $sort)			// функция для сортировки т�
 	}
 	else
 		return $key;
+} 
+?>
+<div id="main_block">
+<!-- <script src="/scripts/lightgallery/js/lg-thumbnail.min.js"></script>
+<script src="/scripts/lightgallery/js/lg-fullscreen.min.js"></script> -->
+<?
+if ($arResult["PREVIEW_TEXT"])
+	$content = '<div class="preview_text" itemprop="description">'.$arResult["PREVIEW_TEXT"].'</div>';
+if ($arResult["DETAIL_TEXT"])
+	$content .= '<div>'.$arResult["DETAIL_TEXT"].'</div>';
+// баннеры на английском языке ->	
+if (LANGUAGE_ID == "en"){
+	switch ($arResult["SECTION"]["NAME"]){
+		case 'IP-based entrance control systems':
+			$content .= '<div class="banner_perco-web">
+				<a href="/products/perco-web-access-control-system/">
+					<img alt="banner_perco-web" src="/images/banners/PERCo-Web.png">
+				</a>
+			</div>';
+			break;
+		case 'Compact Tripod Turnstiles':
+		case 'Box Tripod Turnstiles':
+		case 'Speed Gates':
+		case 'Waist-high Rotor Turnstiles':
+		case 'Full Height Rotor Turnstiles and Security Gates':
+		case 'Swing Gates':
+		case 'Railing Systems':
+			$content .= '<div class="banner_perco-web">
+				<a href="/products/perco-web-access-control-system/">
+					<img alt="banner_perco-web" src="/images/banners/Turnikets.png">
+				</a>
+			</div>';
+			break;
+	}
 }
-
 // Основные вкладки ->
 for($i=0; $i < count($arResult["PROPERTIES"]["TEXT"]["VALUE"]); $i++)
 {
 	$vkladka_menu = "";
 	$name = $arResult["PROPERTIES"]["TEXT"]["DESCRIPTION"][$i];
-	$vkladka_menu = '<input name="vkladki" type="checkbox"';
+	$vkladka_menu = '<input name="vkladki" type="radio"';
+	if ($i == 0)
+		$vkladka_menu .= ' checked="checked"';
 	$vkladka_menu .= ' id="'.translitIt(strtolower($name)).'"><label for="'.translitIt(strtolower($name)).'"><span class="dashed">'.$name.'</span></label>';
 	$vkladka_content .= $vkladka_menu.'<div><div class="text_items">'.html_entity_decode($arResult["PROPERTIES"]["TEXT"]["VALUE"][$i]["TEXT"]).'</div>';
 	if (in_array($name, $arResult["PROPERTIES"]["IMAGES_TEXT"]["DESCRIPTION"]))
 	{
-		$vkladka_content .= '<div class="scroll horizontal_scroll"><ul style="max-height: 270px;" id="img_items'.$i.'">';
+		$vkladka_content .= '<div class="img_items"'.(($arResult['PROPERTIES']['IMAGES_DIR']['VALUE'] == 'только колонкой') ? ' style="flex-basis: 254px;"' : '').'>';
 		foreach(array_keys($arResult["PROPERTIES"]["IMAGES_TEXT"]["DESCRIPTION"], $name) as $keyValue)
 		{
 			$arFilter = Array("IBLOCK_ID"=>$arResult["PROPERTIES"]["IMAGES"]["LINK_IBLOCK_ID"], "ACTIVE"=>"Y", "ID" => $arResult["PROPERTIES"]["IMAGES_TEXT"]["VALUE"][$keyValue]);
@@ -45,39 +77,48 @@ for($i=0; $i < count($arResult["PROPERTIES"]["TEXT"]["VALUE"]); $i++)
 			if ($ob = $res->GetNextElement())
 			{
 				$arPropsImg = $ob->GetProperties();
-				$vkladka_content .= '<li class="img_item';
+				$vkladka_content .= '<div class="img_item';
 				if (!$arPropsImg["FULL"]["VALUE"])
 					$vkladka_content .= " anons_img";
 				$vkladka_content .= '">';
 				$keyFullImg = array_search(LANGUAGE_ID, $arPropsImg["FULL_OPIS"]["DESCRIPTION"]);
 				$keyPreviewImg = array_search(LANGUAGE_ID, $arPropsImg["PREVIEW_OPIS"]["DESCRIPTION"]);
-				
-				if($arPropsImg["FULL"]["VALUE"]){
-					$vkladka_content .='<img src="'.$arPropsImg["FULL"]["VALUE"].'" alt="'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'"/>
-										<div class="caption">'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'</div>';
-				}else{
-					$vkladka_content .='<img src="'.$arPropsImg["PREVIEW"]["VALUE"].'" alt="'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'"/>
-					<div class="caption">'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'</div>';
-				}
-				$vkladka_content .= '</li>';
+				if ($arPropsImg["FULL"]["VALUE"])
+					$vkladka_content .= '<a class="anons_img" href="'.$arPropsImg["FULL"]["VALUE"].'" data-sub-html="'.$arPropsImg["FULL_OPIS"]["VALUE"][$keyFullImg].'" title="'.$arPropsImg["FULL_OPIS"]["VALUE"][$keyFullImg].'">';
+				$vkladka_content .= '<img src="'.$arPropsImg["PREVIEW"]["VALUE"].'" alt="'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'">
+					<div class="frame"></div>';
+				if ($arPropsImg["FULL"]["VALUE"])
+					$vkladka_content .= "</a>";
+				$vkladka_content .= '<div>'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'</div></div>';
 			}
 		}
-		$vkladka_content .= '</ul></div>';
+		$vkladka_content .= '</div>';
 	}
 	$vkladka_content .= '</div>';
 }
 // <- Основные вкладки
-
 if ($arResult["PROPERTIES"]["SPECIFICATIONS"]["VALUE"])
 {
 	$arFilter = Array("IBLOCK_CODE"=>"product_info", "ACTIVE"=>"Y", "ID" => $arResult["PROPERTIES"]["SPECIFICATIONS"]["VALUE"]);
-	$arSelect = Array("ID", "IBLOCK_ID", "NAME", "DATE_ACTIVE_FROM", "PROPERTY_PRICE", "PROPERTY_PICTOGRAM", "PROPERTY_VIDEO", "PROPERTY_DOWNLOADS");
+	$arSelect = Array("ID", "IBLOCK_ID", "NAME", "DATE_ACTIVE_FROM", "PROPERTY_PRICE", "PROPERTY_PICTOGRAM", "PROPERTY_VIDEO", "PROPERTY_REVIEW", "PROPERTY_DOWNLOADS");
 	$res = CIBlockElement::GetList(array(), $arFilter, false, Array(), $arSelect);
 	$ob = $res->GetNextElement();
 	$arFields = $ob->GetFields();
 	$arProps = $ob->GetProperties();
 	$APPLICATION->AddHeadString('<script type="text/javascript">var model="'.$arFields["NAME"].'";</script>', true);
+	
 
+// Чертеж ->
+	if ($arProps["SHEMA"]["VALUE"])
+	{
+		$shema = '<div id="shema">
+					<a href="'.$arProps["SHEMA"]["VALUE"].'" title="'.GetMessage("SCHEME").'">
+						<img alt="'.GetMessage("SCHEME").'" src="/images/icons/shema.svg" />
+						<div><span class="dashed">'.GetMessage("SCHEME").'</span></div>
+					</a>
+				</div>';
+	}
+// <- Чертеж
 // Видео ->
 	if ($arProps["VIDEO"]["VALUE"])
 	{
@@ -98,6 +139,9 @@ if ($arResult["PROPERTIES"]["SPECIFICATIONS"]["VALUE"])
 					continue;
 				$vfile = pathinfo($arIBlockProps["FILE"]["VALUE"][$keyFile]);
 				$keyName = array_search(LANGUAGE_ID, $arIBlockProps["NAME"]["DESCRIPTION"]);
+				$keyYoutube = array_search(LANGUAGE_ID, $arIBlockProps["YOUTUBE"]["DESCRIPTION"]);
+				?><pre style="display: none;" data-youtube="123"><?=var_dump($arIBlockProps["YOUTUBE"]["DESCRIPTION"]);?></pre><?
+				?><pre style="display: none;" data-youtube-key="123"><?=var_dump($arIBlockProps["YOUTUBE"]["VALUE"][$keyYoutube]);?></pre><?
 				if ($arIBlockProps["POSTER"]["DESCRIPTION"])
 				{
 					$keyPoster = array_search(LANGUAGE_ID, $arIBlockProps["POSTER"]["DESCRIPTION"]);
@@ -111,6 +155,7 @@ if ($arResult["PROPERTIES"]["SPECIFICATIONS"]["VALUE"])
 						$type = '<img alt="'.GetMessage("VIDEO").'" src="/images/icons/video.svg" />';
 						$text = '<div><span class="dashed">'.GetMessage("VIDEO").'</span></div>';
 						break;
+					
 					case "3D-модель":
 						$type = '<img alt="'.GetMessage("3D_PRESENTATION").'" src="/images/icons/3d-video.svg" />';
 						$text = '<div><span class="dashed">'.GetMessage("3D_PRESENTATION").'</span></div>';
@@ -120,7 +165,7 @@ if ($arResult["PROPERTIES"]["SPECIFICATIONS"]["VALUE"])
 						$datezbor = printFileInfo($file, "date");
 						if (LANGUAGE_ID == "ru")
 							$video_dop_name = ". ".$arIBlockProps["TYPE"]["VALUE"];
-						$videoInstr = '<div class="download_item"><div class="icon"><img alt="'.GetMessage("DOWNLOAD").'" src="/images/icons/download.svg" /></div><div><a href="'.$arIBlockProps["FILE"]["VALUE"][$keyFile].'" download>'.$arIBlockProps["NAME"]["VALUE"][$keyName].$video_dop_name.'</a><p class="color">'.$fSize.' — '.$datezbor.'</p></div></div>';
+						$videoInstr = '<div class="download_item"><div class="icon"><img alt="'.GetMessage("DOWNLOAD").'" src="/images/icons/video-instruction.svg" /></div><div><a href="'.$arIBlockProps["FILE"]["VALUE"][$keyFile].'" target="_blank" onclick="ga(\'send\', \'event\', {\'eventCategory\': \'Видео\', \'eventAction\': \'Загрузки\', \'eventLabel\': \''.$arIBlockProps["NAME"]["VALUE"][$keyName].'\'});" download>'.$arIBlockProps["NAME"]["VALUE"][$keyName].$video_dop_name.'</a><span class="color"><br />'.$fSize.' — '.$datezbor.'</span></div></div>';
 						continue 2;
 						break;
 					default:
@@ -129,38 +174,103 @@ if ($arResult["PROPERTIES"]["SPECIFICATIONS"]["VALUE"])
 						break;
 				}
 				$video .= '<div class="video">
-						<div id="'.$arIBlockFields["CODE"].'">
-							<p>'.$arIBlockProps["TYPE"]["VALUE"].':</p>
-							<video class="lg-video-object lg-html5" controls="controls" poster="'.$arIBlockProps["IMAGE"]["VALUE"][0].'">
-								<source src="'.$vfile["dirname"]."/".$vfile["filename"].'.mp4" type="video/mp4" />
-								<source src="'.$vfile["dirname"]."/".$vfile["filename"].'.webm" type=\'video/webm; codecs="vp8, vorbis"\' />
-							</video>
-						</div>
-						</div>';
+								<div class="itemVideo" href="https://www.youtube.com/watch?v='.$arIBlockProps["YOUTUBE"]["VALUE"][$keyYoutube].'" data-download-url="'.$arIBlockProps["FILE"]["VALUE"][$keyFile].'" onclick="ga(\'send\', \'event\', {\'eventCategory\': \'Видео\', \'eventAction\': \'Просмотр\', \'eventLabel\': \''.$arIBlockProps["NAME"]["VALUE"][$keyName].'\'});">'.$type.$text.'</div>
+							</div>';
 			}
 		}
 	}
 // <- Видео
+
 // Схема СКУД ->
 	if ($arProps["SHEMASKUD"]["VALUE"] && LANGUAGE_ID == "ru")
 	{
+		// $shemaskud = '<div id="sheme_skud">
+		// 			<a title="Схема системы" href="/images/shema/shema.svg">
+		// 				<img alt="Схема системы" src="/images/icons/shema-skud.svg" />
+		// 				<div><span class="dashed">схема системы</span></div>
+		// 			</a>
+		// 		</div>';
 		$shemaskud = '<div id="sheme_skud">
-					<a title="Схема системы" data-iframe="true" data-src="/shema/skud.php?iframe=true">
+					<a title="Схема системы" data-iframe="true" data-src="/images/shema/shema.svg">
 						<img alt="Схема системы" src="/images/icons/shema-skud.svg" />
 						<div><span class="dashed">схема системы</span></div>
 					</a>
 				</div>';
 	}
 // <- Схема СКУД
+
+// Видеообзор ->
+if ($arProps["REVIEW"]["VALUE"])
+{	
+	$icon = '<img class="iconReview" alt="videoplayer" src="/images/icons/videoplayer.svg" />';
+	$text = '<p style="font-size:12px;"><span class="dashed">'.GetMessage("REVIEW").'</span></p>';
+	$review = '<div class="review">';
+	foreach($arProps["REVIEW"]["VALUE"] as $val)
+	{
+		$arrFilter = Array("IBLOCK_ID"=>"35", "ID" => $val, "ACTIVE" => "Y");
+		$arrSelect = Array("ID", "IBLOCK_ID", "NAME", "CODE", "PROPERTY_*");
+		$ressIBlock = CIBlockElement::GetList(array(), $arrFilter, false, Array(), $arrSelect);
+		if (intval($ressIBlock->SelectedRowsCount()) > 0)
+		{
+			$obbIBlock = $ressIBlock->GetNextElement();
+			$arrIBlockFields = $obbIBlock->GetFields();
+			$arrIBlockProps = $obbIBlock->GetProperties();
+			
+			$keyyFile = array_search(LANGUAGE_ID, $arrIBlockProps["FILE"]["DESCRIPTION"]);
+			$vfile = pathinfo($arrIBlockProps["FILE"]["VALUE"][$keyyFile]);
+			$keyName = array_search(LANGUAGE_ID, $arrIBlockProps["NAME"]["DESCRIPTION"]);
+			$keyImage = array_search(LANGUAGE_ID, $arrIBlockProps["IMAGE"]["DESCRIPTION"]);
+			$keyPoster = array_search(LANGUAGE_ID, $arrIBlockProps["IMAGE"]["DESCRIPTION"]);
+			$keyYoutube = array_search(LANGUAGE_ID, $arrIBlockProps["YOUTUBE"]["DESCRIPTION"]);
+			if ($arrIBlockProps["FILE"]["VALUE"][$keyyFile] == '/video/PERCo-dostup.mp4') {
+				// $icon = '';
+				$type = '<img alt="'.GetMessage("VIDEO").'" src="/images/icons/android.svg" style="width:18px; float:left; margin-right:5px; margin-top:12px;"/>';
+			}
+			else if  ($arrIBlockProps["FILE"]["VALUE"][$keyyFile] == '/video/dostup-po-smartfonam-apple.mp4') {
+				// $icon = '';
+				$type = '<img alt="'.GetMessage("VIDEO").'" src="/images/icons/apple.svg" style="width:18px; float:left; margin-right:5px; margin-top:12px;"/>';
+			}
+			else $type = '';
+			/*else {
+				$type = '<img alt="'.GetMessage("VIDEO").'" src="'.$arrIBlockProps["IMAGE"]["VALUE"][$keyImage].'" />';
+			}*/
+			// $type = '<img alt="'.GetMessage("VIDEO").'" src="'.$arrIBlockProps["IMAGE"]["VALUE"][$keyImage].'" />';
+			
+			if ($arrIBlockProps["POSTER"]["DESCRIPTION"])
+			{
+				$keyPoster = array_search(LANGUAGE_ID, $arrIBlockProps["POSTER"]["DESCRIPTION"]);
+				$poster = $arrIBlockProps["POSTER"]["VALUE"][$keyPoster];
+			} else { $poster = "/images/video/poster.jpg"; }
+
+			if ($arResult["CODE"] == "smartfony-s-nfc-modulem")
+			{
+				// $text = '<p style="font-size:15px;"><span class="dashed">'.$arrIBlockProps["NAME"]["VALUE"][$keyName].'</span></p>';
+				$text = '<p style="font-size:12px;"><span class="dashed">видео</span></p>';
+			}
+
+			$review .= '<div style="cursor:pointer;" href="https://www.youtube.com/watch?v='.$arrIBlockProps["YOUTUBE"]["VALUE"][$keyYoutube].'" 
+						   data-download-url="'.$arrIBlockProps["FILE"]["VALUE"][$keyyFile].'" 
+						   onclick="ga(\'send\', \'event\', {\'eventCategory\': \'Видео\', \'eventAction\': \'Просмотр\', \'eventLabel\': \''.$arrIBlockProps["NAME"]["VALUE"]
+							[$keyName].'\'});
+							
+							">'.$icon.'<img alt="видео" src="'.$poster.'" style="width:220px; margin-bottom:-10px;"><br>'.$type.$text.'</div>';
+		}
+	}
+	$review .= '</div>';
+}
+// <- Видеообзор
+
 	if ($arProps["SHEMA"]["VALUE"] || $arProps["VIDEO"]["VALUE"] || $arProps["SHEMASKUD"]["VALUE"])
-		$shema_video = '<div class="shema_video">'.$video.$shemaskud.'</div>';
+		$shema_video = '<div class="shema_video">'.$shema.$video.$shemaskud.'</div>';
+
 // Цена ->
 	if ($arProps["PRICE"]["VALUE"] && LANGUAGE_ID == "ru")
 	{
-		GetRate();
-		global $price_res;
+		//GetRate();
+		//global $price_res;
+		$price_res = getCurrency("EUR");
 		$price = $price_res * $arProps["PRICE"]["VALUE"];
-		if ($arProps["PRICE"]["VALUE"] >= 1)
+		if ($arProps["PRICE"]["VALUE"] >= 10)
 			$drob = 0;
 		else
 			$drob = 2;
@@ -172,6 +282,9 @@ if ($arResult["PROPERTIES"]["SPECIFICATIONS"]["VALUE"])
 			$price_result .= "<p>в рублях по курсу ЦБ РФ</p>";
 		else
 			$price_result .= '<p><span class="price_rub">'.number_format($price, 0, ",", " ").'</span> &#8381;</span> (по ЦБ РФ на '.date("d.m.y").')</p>';
+		if ($arProps["PRICE"]["DESCRIPTION"])
+			$price_result .= "<p>".$arProps["PRICE"]["DESCRIPTION"]."</p>";
+		$price_result .= '<meta itemprop="availability" content="https://schema.org/InStock"><meta itemprop="url" content="https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'">';
 		$price_result .= '</div>';
 	}
 // <- Цена
@@ -214,7 +327,7 @@ if ($arResult["PROPERTIES"]["SPECIFICATIONS"]["VALUE"])
 	}
 	if ($arProps["SPECIFICATIONS"]["VALUE"])
 	{
-		$vkladka_menu = '<input name="vkladki" type="checkbox" id="teh_info"><label for="teh_info"><span class="dashed">'.GetMessage("SPECIFICATIONS").'</span></label>';
+		$vkladka_menu = '<input name="vkladki" type="radio" id="teh_info"><label for="teh_info"><span class="dashed" >'.GetMessage("SPECIFICATIONS").'</span></label>';
 		$sort = array();
 		$vkladka_content .= $vkladka_menu.'<div>';
 		foreach($arProps["SPECIFICATIONS"]["VALUE"] as $val)
@@ -236,6 +349,16 @@ if ($arResult["PROPERTIES"]["SPECIFICATIONS"]["VALUE"])
 			// $arIBlock = GetIBlockElement($val);
 			$vkladka_content .= '<div class="teh_item"><div class="teh_name">'.$arIBlock["VALUE"].'</div><div class="teh_value">'.$arIBlock["DESCRIPTION"].'</div></div>';
 		}
+// Отображаем Исполнение ->
+if($_GET["F"])
+{
+	$vkladka_content .= '<div class="ispolnenie">';
+	foreach(array_keys($arProps["ISPOLNENIE"]["DESCRIPTION"], LANGUAGE_ID) as $keyValue)
+	{
+		$vkladka_content .= '<p>'.$arProps["ISPOLNENIE"]["VALUE"][$keyValue].'</p>';
+	}
+	$vkladka_content .= "</div>";
+}
 // Отображаем цвет с подписями ->
 		$vkladka_content .= '<div class="color_block">';
 if($_GET["F"])
@@ -291,9 +414,8 @@ if(!$_GET["F"])
 // <- Отображаем Гарантийный срок
 }
 // Загружаемые файлы ->
-	if (($arProps["DOWNLOADS"]["VALUE"]) && ($url["query"] != "manager"))
+	if ($arProps["DOWNLOADS"]["VALUE"])
 	{
-		echo($url["query"]);
 		$download = "";
 		$arFilter = Array("IBLOCK_ID"=>$arProps["DOWNLOADS"]["LINK_IBLOCK_ID"], "ACTIVE"=>"Y", "SECTION_ID" => $arProps["DOWNLOADS"]["VALUE"]);
 		$res = CIBlockElement::GetList(array("SORT"=>"ASC"), $arFilter);
@@ -302,46 +424,57 @@ if(!$_GET["F"])
 			$ico = "";
 			$AutoCadtitle = "";
 			$arPropDown = $ob->GetProperties();
-			$keyFile = array_search(LANGUAGE_ID, $arPropDown["FILE"]["DESCRIPTION"]);
+			$fileLang = 'ru'; //часть кода для возвращения только английской версии файла на всех зарубежных сайтах, начало
+			if (LANGUAGE_ID !== 'ru') {
+				$fileLang = 'en';
+			} //конец
+			$keyFile = array_search($fileLang, $arPropDown["FILE"]["DESCRIPTION"]);
 			if($keyFile === false)
 				continue;
 			$file = $arPropDown["FILE"]["VALUE"][$keyFile];
-			$keyName = array_search(LANGUAGE_ID, $arPropDown["NAME"]["DESCRIPTION"]);
+			$keyName = array_search($fileLang, $arPropDown["NAME"]["DESCRIPTION"]);
 			$name = $arPropDown["NAME"]["VALUE"][$keyName];
-			if($arPropDown["ICON"]["VALUE"] == "pdf"){
-				$download .= '<div class="download_item">';
-				$fSize = '('.printFileInfo($file, "size").')&nbsp;';
-				$google = "onclick=\"ga('send', 'event', {'eventCategory': 'Поддержка покупателя', 'eventAction': 'download', 'eventLabel': '".$file."'});\"";
-				if ($arPropDown["INSTAL_TIME"]["VALUE"])
-					$datezbor = $arPropDown["INSTAL_TIME"]["VALUE"];
-				else
-					$datezbor = printFileInfo($file, "date");
-				$download .= '<div class="icon"><img alt="Иконка" src="/images/icons/pdf.svg" /></div><div><a href="https://www.perco.ru'.$file.'">'.$name.'</a><p class="color">'.$AutoCadtitle.$fSize.' — '.$datezbor.'</p>';
-				$download .= '</div></div>';
+			$download .= '<div class="download_item">';
+			switch($arPropDown["ICON"]["VALUE"])
+			{
+				case "pdf":
+					$ico = "/images/icons/pdf.svg";
+					break;
+				case "dwf":
+					if (LANGUAGE_ID == "ru")
+						$AutoCadtitle = 'для просмотра должна быть установлена программа Autodesk DWF Viewer<br />';
+					$ico = "/images/icons/dwf.svg";
+					break;
+				case "dwg":
+					$ico = "/images/icons/dwg.svg";
+					break;
+				default:
+					$ico = "/images/icons/download.svg";
+					break;
 			}
+			$fSize = '('.printFileInfo($file, "size").')&nbsp;';
+			$google = "onclick=\"ga('send', 'event', {'eventCategory': 'Поддержка покупателя', 'eventAction': 'download', 'eventLabel': '".$file."'});\"";
+			if ($arPropDown["INSTAL_TIME"]["VALUE"])
+				$datezbor = $arPropDown["INSTAL_TIME"]["VALUE"];
+			else
+				$datezbor = printFileInfo($file, "date");
+			$download .= '<div class="icon"><img alt="Иконка" src="'.$ico.'" /></div><div><a href="'.$file.'" target="_blank" '.$google.' download>'.$name.'</a><span class="color"><br />'.$AutoCadtitle.$fSize.' — '.$datezbor.'</span>';
+			$download .= '</div></div>';
 		}
 		if ($download)
 		{
-			$vkladka_menu = '<input name="vkladki" type="checkbox" id="download_info"><label for="download_info" id="label_download"><span class="dashed">'.GetMessage("DOWNLOAD").'</span></label>';
+			$vkladka_menu = '<input name="vkladki" type="radio" id="download_info"><label for="download_info"><span class="dashed">'.GetMessage("DOWNLOAD").'</span></label>';
 			$vkladka_content .= $vkladka_menu.'<div>'.$download.$videoInstr.'</div>';
 		}
 	}
 // <- Загружаемые файлы
-
-// Добавление видео во вкладку ->
-	if ($video)
-	{
-		$vkladka_menu = '<input name="vkladki" type="checkbox" id="video_info"><label id="label_video" for="video_info"><span class="dashed">Видео</span></label>';
-		$vkladka_content .= $vkladka_menu.'<div>'.$video.'</div>';
-	}
-// <- Добавление видео во вкладку
 }
 if (substr_count($vkladka_content, "vkladki") > 1)
-	$content .= '<div class="tabs product-tabs">'.$vkladka_content.'</div>';
+	$content .= '<div class="tabs">'.$vkladka_content.'</div>';
 else
 	$content .= str_ireplace($vkladka_menu, "", $vkladka_content);
 $content = preg_replace_callback("/\[download:(.+)\]/", "GetDownloadFile", $content);
-$content = preg_replace_callback("/\[downloadImg:(.+)\]/", "GetDownloadFileImg", $content);
+$content = preg_replace_callback("/\[downloadImg:(.+)\]/", "GetDownloadFileImg", $content); 
 if ($arResult["PROPERTIES"]["PHP"]["VALUE"])		// Делаем вставки php
 {
 	for($i=0; $i < count($arResult["PROPERTIES"]["PHP"]["VALUE"]); $i++)
@@ -354,81 +487,122 @@ if ($arResult["PROPERTIES"]["LINKS"]["VALUE"])		// Устанавливаем с
 {
 	for($i=0; $i < count($arResult["PROPERTIES"]["LINKS"]["VALUE"]); $i++)
 	{
-		$url = '/percoMobile'.$arResult["PROPERTIES"]["LINKS"]["VALUE"][$i].'';
+		$url = $arResult["PROPERTIES"]["LINKS"]["VALUE"][$i];
 		$trans = str_replace("/", "\/", $arResult["PROPERTIES"]["LINKS"]["DESCRIPTION"][$i]);
 		$content = preg_replace("/(?<![\"\'\«]{1})$trans/", "<a href='$url'>\\0</a>", $content, 1);
 	}
 }
-?>
-
-<div id="content">
-	<h2><?=$arResult["NAME"]?> <?if ($arResult["PROPERTIES"]["DOP_NAME"]["VALUE"]) echo $arResult["PROPERTIES"]["DOP_NAME"]["VALUE"];?></h2>
-	<?if (count($arResult["PROPERTIES"]["IMAGE"]["VALUE"]) > 1){ ?>
-		<div class="main-picture">
-			<ul id="main-slider">
-				<?
-				$resImg = CIBlockElement::GetList(array("SORT"=>"ASC"), Array("IBLOCK_ID"=>$arResult["PROPERTIES"]["IMAGE"]["LINK_IBLOCK_ID"], "ACTIVE"=>"Y", "ID" => $arResult["PROPERTIES"]["IMAGE"]["VALUE"][0]), false, false, array("ID", "NAME", "PROPERTY_PREVIEW", "PROPERTY_FULL"));
-				$img_val = $resImg->Fetch();
-				foreach($arResult["PROPERTIES"]["IMAGE"]["VALUE"] as $val)
-				{
-					$resImg = CIBlockElement::GetList(array("SORT"=>"ASC"), Array("IBLOCK_ID"=>$arResult["PROPERTIES"]["IMAGE"]["LINK_IBLOCK_ID"], "ACTIVE"=>"Y", "ID" => $val), false, false, array("ID", "NAME", "PROPERTY_PREVIEW", "PROPERTY_FULL"));
-					$img_val = $resImg->Fetch();
-					?>
-					<li data-thumb="<?=$img_val["PROPERTY_PREVIEW_VALUE"]?>" data-src="<?=$img_val["PROPERTY_FULL_VALUE"]?>"><img alt="<?=$arResult["NAME"]?>" src="<?=$img_val["PROPERTY_PREVIEW_VALUE"]?>"></li>
-					<?
-				}
-				if ($arProps["SHEMA"]["VALUE"]){
-					?>
-						<li data-thumb="<?=$arProps["SHEMA"]["VALUE"]?>" data-src="<?=$arProps["SHEMA"]["VALUE"]?>"><img class="sheme" alt="sheme" src="<?=$arProps["SHEMA"]["VALUE"]?>"/></li>
-					<?
-				}
-
-				?>
-			</ul>
-		</div>
-	<?}else{
-		?><div class="main-picture"><img alt="<?=$arResult["NAME"]?>" src="<?=$arResult["PROPERTIES"]["IMAGE"]["VALUE"][0]?>"></div><?
-	}			
-	?>
-	
-	<div class="price" id="price">
-		<?=$price_result?>
-	</div>
-	<div class="description">
-		<div class="preview_text">
-			<?=$arResult["PREVIEW_TEXT"]?>
-		</div>
-		<?if($arResult["DETAIL_TEXT"]){?>
-		<div class="detail_text">
-			<?=$arResult["DETAIL_TEXT"]?>
-		</div>
-		<?}?>
-	</div>
-
-	<?
-	if (substr_count($vkladka_content, "vkladki") > 1)
-		$tabs .= '<div class="tabs product-tabs">'.$vkladka_content.'</div>';
-	else
-		$tabs .= str_ireplace($vkladka_menu, "", $vkladka_content);
-	$tabs = preg_replace_callback("/\[download:(.+)\]/", "GetDownloadFile", $content);
-	$tabs = preg_replace_callback("/\[downloadImg:(.+)\]/", "GetDownloadFileImg", $content);
-	if ($arResult["PROPERTIES"]["PHP"]["VALUE"])		// Делаем вставки php
+if (count($arResult["PROPERTIES"]["IMAGE"]["VALUE"]) > 1)
+{
+	$resImg = CIBlockElement::GetList(array("SORT"=>"ASC"), Array("IBLOCK_ID"=>$arResult["PROPERTIES"]["IMAGE"]["LINK_IBLOCK_ID"], "ACTIVE"=>"Y", "ID" => $arResult["PROPERTIES"]["IMAGE"]["VALUE"][0]), false, false, array("ID", "NAME", "PROPERTY_PREVIEW", "PROPERTY_FULL"));
+	$img_val = $resImg->Fetch();
+	$main_image = '<img alt="'.$arResult["NAME"].'" itemprop="image" src="'.$img_val["PROPERTY_PREVIEW_VALUE"].'" />';
+	$main_image = '<div id="list_img"><ul id="main_image_list">';
+	$first_image = 'itemprop="image"';
+	foreach($arResult["PROPERTIES"]["IMAGE"]["VALUE"] as $val)
 	{
-		for($i=0; $i < count($arResult["PROPERTIES"]["PHP"]["VALUE"]); $i++)
-		{
-			include($_SERVER["DOCUMENT_ROOT"].$arResult["PROPERTIES"]["PHP"]["VALUE"][$i]);
-			$tabs = str_ireplace($arResult["PROPERTIES"]["PHP"]["DESCRIPTION"][$i], $php_result, $content);
+		$resImg = CIBlockElement::GetList(array("SORT"=>"ASC"), Array("IBLOCK_ID"=>$arResult["PROPERTIES"]["IMAGE"]["LINK_IBLOCK_ID"], "ACTIVE"=>"Y", "ID" => $val), false, false, array("ID", "NAME", "PROPERTY_PREVIEW", "PROPERTY_FULL"));
+		$img_val = $resImg->Fetch();
+		$main_image .= '<li data-thumb="'.$img_val["PROPERTY_PREVIEW_VALUE"].'" data-src="'.$img_val["PROPERTY_FULL_VALUE"].'"><img alt="'.$arResult["NAME"].'" '.$first_image.' src="'.$img_val["PROPERTY_PREVIEW_VALUE"].'" /></li>';
+		if ($first_image != "") {
+			$first_image = "";
+			$APPLICATION->AddHeadString('<meta property="og:image" content="'.$img_val["PROPERTY_FULL_VALUE"].'">');
 		}
 	}
-	echo $tabs;
-	?>
+	$main_image .= '</ul></div>'; 
+}
+elseif(is_array($arResult["PROPERTIES"]["IMAGE"]["VALUE"]) && is_numeric($arResult["PROPERTIES"]["IMAGE"]["VALUE"][0]))
+{
+	$resImg = CIBlockElement::GetList(array("SORT"=>"ASC"), Array("IBLOCK_ID"=>$arResult["PROPERTIES"]["IMAGE"]["LINK_IBLOCK_ID"], "ACTIVE"=>"Y", "ID" => $arResult["PROPERTIES"]["IMAGE"]["VALUE"][0]), false, false, array("ID", "NAME", "PROPERTY_PREVIEW", "PROPERTY_FULL"));
+	$img_val = $resImg->Fetch();
+	$main_image = '<img alt="'.$arResult["NAME"].'" itemprop="image" src="'.$img_val["PROPERTY_PREVIEW_VALUE"].'" />';
+}
+elseif (is_array($arResult["PROPERTIES"]["IMAGE"]["VALUE"]))
+if (is_array($arResult["PROPERTIES"]["IMAGE"]["VALUE"]))
+	$main_image = '<img alt="'.$arResult["NAME"].'" itemprop="image" src="'.$arResult["PROPERTIES"]["IMAGE"]["VALUE"][0].'" />';
+else
+	$main_image = '<img alt="'.$arResult["NAME"].'" itemprop="image" src="'.$arResult["PROPERTIES"]["IMAGE"]["VALUE"].'" />';
 
+if (count($arResult["PROPERTIES"]["IMAGE"]["VALUE"]) == 1 && is_numeric($arResult["PROPERTIES"]["IMAGE"]["VALUE"][0])) { //делаем кликабельным изображение когда оно одно
+	$resImg = CIBlockElement::GetList(array("SORT"=>"ASC"), Array("IBLOCK_ID"=>$arResult["PROPERTIES"]["IMAGE"]["LINK_IBLOCK_ID"], "ACTIVE"=>"Y", "ID" => $arResult["PROPERTIES"]["IMAGE"]["VALUE"][0]), false, false, array("ID", "NAME", "PROPERTY_PREVIEW", "PROPERTY_FULL"));
+	$img_val = $resImg->Fetch();
+	$main_image = '<img alt="'.$arResult["NAME"].'" itemprop="image" src="'.$img_val["PROPERTY_PREVIEW_VALUE"].'" />';
+	$main_image = '<div id="list_img"><ul id="main_image_list">';
+	$first_image = 'itemprop="image"';
+	foreach($arResult["PROPERTIES"]["IMAGE"]["VALUE"] as $val)
+	{
+		$resImg = CIBlockElement::GetList(array("SORT"=>"ASC"), Array("IBLOCK_ID"=>$arResult["PROPERTIES"]["IMAGE"]["LINK_IBLOCK_ID"], "ACTIVE"=>"Y", "ID" => $val), false, false, array("ID", "NAME", "PROPERTY_PREVIEW", "PROPERTY_FULL"));
+		$img_val = $resImg->Fetch();
+		$main_image .= '<li data-thumb="'.$img_val["PROPERTY_PREVIEW_VALUE"].'" data-src="'.$img_val["PROPERTY_FULL_VALUE"].'"><img alt="'.$arResult["NAME"].'" '.$first_image.' src="'.$img_val["PROPERTY_PREVIEW_VALUE"].'" /></li>';
+		if ($first_image != "") {
+			$first_image = "";
+			$APPLICATION->AddHeadString('<meta property="og:image" content="'.$img_val["PROPERTY_FULL_VALUE"].'">');
+		}
+	}
+	$main_image .= '</ul></div>'; 
+}
 
+$resImg = CIBlockElement::GetList(array("SORT"=>"ASC"), Array("IBLOCK_ID"=>$arResult["PROPERTIES"]["IMAGE"]["LINK_IBLOCK_ID"], "ACTIVE"=>"Y", "ID" => $arResult["PROPERTIES"]["IMAGE"]["VALUE"][0]), false, false, array("ID", "NAME", "PROPERTY_PREVIEW", "PROPERTY_FULL"));
+	$img_val = $resImg->Fetch();
+$product_name = '<div id="pruduct_name"><h1 itemprop="name">'.$arResult["NAME"];
+if($arResult["NAME"] == 'PERCo-WB «Базовый пакет ПО»' || $arResult["NAME"] == 'PERCo-WM-04 Интеграция с внешними системами' || $arResult["NAME"] == 'PERCo-WBE «Базовый пакет встроенного ПО»')
+	$free = '<p class="free">БЕСПЛАТНО</p>';
+if ($arResult["PROPERTIES"]["DOP_NAME"]["VALUE"])
+	$product_name .= " " . $arResult["PROPERTIES"]["DOP_NAME"]["VALUE"];
+$product_name .= '</h1>'.$price_result.''.$free.'</div>';
+$other = '';
+if ($arResult['IBLOCK_SECTION_ID'] == 2357) {
+	ob_start();
+	?><div class="turnikets-video" id="video"><?
+	$iblocks2 = GetIBlockList("video", "video_files");
+	if($arIBlock = $iblocks2->Fetch())
+		$block_id2 = $arIBlock["ID"];
+		$autoplay = 0;
+	$APPLICATION->IncludeComponent("bitrix:catalog.element", "last_video_youtube", array(
+		"IBLOCK_ID" => $block_id2,
+		"ELEMENT_ID" => "26956",
+		"AUTOSTART" => "N",
+		"ADD_SECTIONS_CHAIN" => "N",
+		),
+		false
+	);
+	?></div><?
+	$other = ob_get_contents();
+	ob_end_clean();
+}
+?>
+	<div id="content" itemscope itemtype="http://schema.org/Product">
+		<div id="first_info">
+			<div id="main_image">
+<?
+if ($device=="mobile")
+	echo $product_name;
+?>
+				<?=$main_image;?>
+			</div>
+			<div id="product_info">
+<?
+if ($device!="mobile")
+	echo $product_name;
+?>
+				<?=$pictogram;?>
+				<?=$shema_video;?>
+				<?=$review;?>
+			</div>
+		</div>
+		<div>
+			<?=$content;?>
+			<?=$other;?>
+		</div>
+		<span itemprop="brand" itemtype="https://schema.org/Organization" itemscope><meta itemprop="name" content="PERCo"/></span>
+	</div>
 <?
 if ($arResult["PROPERTIES"]["SCROLL"]["VALUE"])
 {
+	if ($device!="desktop")
+		echo '<style type="text/css">body #main_block { flex-direction: column; }#horizontal_scroll { margin: 20px 0 0 0 !important; }</style>';
 ?>
-	<div class="scroll" id="horizontal_scroll">
+	<div <?echo ($device=="desktop") ? 'id="scroll"' : 'id="horizontal_scroll" style="order: 1;"';?>>
 <?
 global $arrFilter;
 $arrFilter["PROPERTY_TYPE_PRODUCT"] = $arResult["PROPERTIES"]["SCROLL"]["VALUE"];
@@ -488,14 +662,3 @@ $APPLICATION->IncludeComponent("bitrix:news.list", "perco_scroll", array(
 	</div>
 <? } ?>
 </div>
-<script>
-var href = window.location.href;
-worker = href.substring(href.indexOf('#')+1);
-if (worker == 'manager') {
-	document.getElementById('label_download').style.display = "none";
-} else if (worker == 'installer') {
-	document.getElementById('price').style.display = "none";
-	document.getElementById('horizontal_scroll').style.display = "none";
-	document.getElementById('label_video').style.display = "none";
-}
-</script> 

@@ -149,6 +149,9 @@ RewriteRule ^index.php$ /$1 [R=301,L]
   Redirect 301 /podderzhka/proektirovshchikam-i-installyatoram/novoe-test.php https://www.perco.ru/podderzhka/proektirovshchikam-i-installyatoram/novoe.php
   Redirect 301 /products/shlagbaum-gs04.php https://www.perco.ru/products/shlagbaum/
   Redirect 301 /elektronnaya-prokhodnaya-kt02-9q.php https://www.perco.ru/products/elektronnaya-prokhodnaya-kt02-9q.php
+#---- klimov 
+  Redirect 301 /products/kompleksnaya-sistema-bezopasnosti-perco-s-20/ /podderzhka/programmnoe-obespechenie.php
+
 #---------------------------------------------------------------------------------------------------------------------------------------
   RewriteRule ^support/service-list/$ /support/service-list/RUS/ [R=301,L]
   RewriteRule ^products/elektronnye-prohodnye/?$ /products/elektronnye-prokhodnye/ [R=301,L]

@@ -1,0 +1,11 @@
+#video_element > video {
+	display: block;
+	margin: auto;
+	max-width: 100%;
+}
+.dop_info {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+.dop_info > div:last-child { flex-shrink: 0; }

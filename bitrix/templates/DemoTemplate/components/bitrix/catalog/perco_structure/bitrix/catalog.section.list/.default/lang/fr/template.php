@@ -1,3 +1,3 @@
 <?
-$MESS["NEW"] = "NOUVEAUTÉ!";
+$MESS["NEW"] = "NOUVEAU!";
 ?>

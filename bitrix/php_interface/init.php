@@ -138,8 +138,8 @@ function GetDownloadFile($code, $image="")
 		if ($arFileProps["INSTAL_TIME"]["VALUE"])
 			$datezbor = $arFileProps["INSTAL_TIME"]["VALUE"];
 		else
-			$datezbor = printFileInfo($file, "date");
-		if (preg_match('/(.*percoMobile\/.*|.*percoDemo\/.*)/', $_SERVER['REQUEST_URI'])) {
+			$datezbor = printFileInfo($file, "date"); 
+		if (preg_match('/(.*percoMobile\/.*|.*percoDemo\/.*|.*percoMobileMVP\/.*)/', $_SERVER['REQUEST_URI'])) { 
 			$file = preg_replace('/^\/.*\//', 'bxlocal://', $file);
 		}
 		if ($image == "Y")

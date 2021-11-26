@@ -78,7 +78,7 @@ switch ($url["query"]){
 
 ?>
   <div class="catalog">
-    <h2>Каталог</h2>
+    <h2>Каталог</h2> 
 <?
 $iblock_code = "products";
 $iblocks = GetIBlockList("structure", $iblock_code);
@@ -100,15 +100,19 @@ while($arSection = $rsSections->GetNext())
     $current_group = $arSection["UF_GROUP_PRODUCTS"];
   }
 
-  $img = substr($arSection["DESCRIPTION"], 14, -3);
+  $img = substr($arSection["DESCRIPTION"], 14, -3); 
+  if ($arSection["ID"] != 1836) {
+    # убираем "комплекты ПО" 
 ?>
+
     <div class="item">
       <a href="/percoMobile/products/<?=$arSection["CODE"];?>/?<?=$url["query"]?>">
-        <?if ($img != 'dop-oborudovanie.'):?><img alt="<?=$arSection["NAME"];?>" src="bxlocal://catalog-<?=$img?>png" /><?else:?><img alt="<?=$arSection["NAME"];?>" src="/percoMobile/img/catalog-dop-oborudovanie.png" /><?endif;?>
+         <img alt="<?=$arSection["NAME"];?>" src="bxlocal://catalog-<?=$img?>png" /> 
         <p class="item_name"><?echo ($arSection["NAME"] == "Турникеты") ? $arSection["NAME"].", калитки, ограждения" : $arSection["NAME"];?></p>
       </a>
     </div>
 <?
+  }
   if ($count == intval($rsSections->SelectedRowsCount()))
     echo "</div>";
 }

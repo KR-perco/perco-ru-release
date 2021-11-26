@@ -1,0 +1,61 @@
+.scroll {
+	margin: 35px auto;
+	width: 100%;
+	position: relative;
+}
+
+.scroll ul {
+	padding-left: 0;
+	display: flex;
+}
+
+.scroll li {
+	text-align: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.scroll img{
+	max-width: 200px;
+}
+
+.scroll ul#scrollGallery{
+	min-height:230px;
+}
+
+.horizontal_scroll .img_item img{
+	/*max-width: 240px;*/
+}
+
+#horizontal_scroll  img{
+	max-width: 272px;
+}
+
+.scroll .lSAction {
+	left: 0;
+	margin: -120px auto auto;
+	max-width: 1330px;
+	min-width: 300px;
+	position: absolute;
+	right: 0;
+}
+
+.scroll .lSAction > a {
+	background-repeat: no-repeat;
+	background-position: 10px 0px;
+	height: 45px;
+	width: 30px;
+}
+
+.scroll .lSAction > .lSNext {background-image: url("/images/icons/arrow_grey.svg"); }
+.scroll .lSAction > .lSPrev, .scroll .lSAction > .lSNext { background-position: 13px 0; }
+.scroll .lSAction > .lSPrev { left: 0px; background-image: url("/images/icons/arrow_grey-prew.svg"); }
+.scroll .lSSlideWrapper { position: static; }
+
+.caption {
+	color: black;
+	flex-grow: 1;
+	font-size: 12px;
+	text-align: center;
+}
