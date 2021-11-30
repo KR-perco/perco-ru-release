@@ -40,6 +40,14 @@ $arUrlRewrite=array (
     'PATH' => '/percoDemo/products/details.php',
     'SORT' => 100,
   ),
+  19 => 
+  array (
+    'CONDITION' => '#^/percoMobileMVP/products/(.*)#',
+    'RULE' => '',
+    'ID' => 'bitrix:catalog',
+    'PATH' => '/percoMobileMVP/products/details.php',
+    'SORT' => 100,
+  ),
   3 => 
   array (
     'CONDITION' => '#^/novosti/articles/(.*)/#',

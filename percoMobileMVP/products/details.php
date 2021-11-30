@@ -11,7 +11,7 @@ $APPLICATION->IncludeComponent(
 		"ACTION_VARIABLE" => "action",
 		"PRODUCT_ID_VARIABLE" => "id",
 		"SECTION_ID_VARIABLE" => "SECTION_ID",
-		"SEF_MODE" => "N",
+		"SEF_MODE" => "Y",
 		"SEF_FOLDER" => "/percoMobileMVP/",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_JUMP" => "N",

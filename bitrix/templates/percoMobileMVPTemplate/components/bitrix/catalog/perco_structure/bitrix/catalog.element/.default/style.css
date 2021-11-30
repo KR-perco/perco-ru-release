@@ -1,0 +1,263 @@
+.description{
+	font-size: 13px;
+}
+
+.description .more, .description .less{
+	color: #214288;
+	text-decoration: underline;
+	margin-top: 7px;
+}
+
+.description .less{
+	display: none;
+}
+
+.description .second_text{
+	display: none;
+}
+
+.price{
+	margin: 20px 0; 
+}
+
+.price p{
+	margin: 0; 
+}
+
+.price_rub {
+	color: #214288;
+	font-size: 14px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.tabs{
+	font-size: 13px;
+	margin-bottom: 20px;
+}
+
+.download_item {
+	margin: 11px 0;
+	clear: both;
+}
+
+.download_item a{
+	color: #214288;
+}
+
+.download_item .icon{
+	width: 22px;
+	height: 40px;
+	margin-right: 10px;
+	float: left;
+}
+
+.video{
+	margin: 15px auto;
+    max-width: 300px;
+}
+
+.video p{
+	margin: 7px 0;
+}
+
+.video video{
+	width: 100%;
+}
+.price{
+	margin: 20px 0; 
+}
+
+.price p{
+	margin: 0; 
+}
+
+.price_rub {
+	color: #214288;
+	font-size: 14px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.main-picture {
+	width: 100%;
+	position: relative;
+	text-align: center;
+}
+
+.main-picture ul {
+	padding-left: 0;
+	display: flex;
+}
+
+.main-picture li {
+	text-align: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+
+.main-picture ul#scrollGallery{
+	min-height:230px;
+}
+
+
+.main-picture img {
+    max-width: 240px;
+}
+
+
+.main-picture .lSAction {
+	left: 0;
+	margin: -120px auto auto;
+	max-width: 1330px;
+	min-width: 300px;
+	position: absolute;
+	right: 0;
+}
+
+.main-picture .lSAction > a {
+	background-repeat: no-repeat;
+	background-position: 10px 0px;
+	height: 45px;
+	width: 30px;
+}
+
+.main-picture .lSAction > .lSNext {background-image: url("bxlocal://arrow_grey.png"); background-size: contain; }
+.main-picture .lSAction > .lSPrev, .scroll .lSAction > .lSNext { background-position: 13px 0; }
+.main-picture .lSAction > .lSPrev { left: 0px; background-image: url("bxlocal://arrow_grey-prew.png"); background-size: contain; }
+.main-picture .lSSlideWrapper { position: static; }
+
+
+.main-picture li img{
+	object-fit: cover;
+	max-height: 100%;
+}
+
+#main_image {
+	text-align: center;
+	flex-basis: 60%;
+	flex-shrink: 0;
+}
+#main_image > .shema_video img {
+	width: 50px;
+	height: 50px;
+}
+
+#container  #list_img ul {
+	display: flex;
+	padding: 0;
+}
+#list_img { margin: auto; }
+#list_img .lSPager {
+	flex-wrap: wrap;
+	justify-content: center;
+	transform: none !important;
+	width: auto !important;
+}
+#list_img .lSPager li {
+	align-self: center;
+	border: 1px solid #BDBEC0;
+	margin: 5px 0;
+}
+#list_img .lSPager .active { opacity: 0.4; }
+#container #list_img ul li {
+	list-style: none;
+	padding: 0;
+}
+#main_image_list li { cursor: pointer; }
+.shema_video {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+.shema_video  > div {
+	cursor: pointer;
+	font-size: 12px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.shema_video  > div:not(:last-child){ margin-right: 10px; }
+.shema_video  a {
+	color: black;
+	text-decoration: none;
+}
+.shema_video img {
+	width: 50px;
+	height: 50px;
+}
+#product_info { flex-basis: 100%; }
+
+.img_item p{
+	margin: 0px;
+}
+
+#content { margin-top: 40px; }
+#content .frame { background-image: url("/images/other/frame_152.svg"); }
+#price { 
+	font-size: 12px; 
+}
+
+.teh_item {
+	border-bottom: 1px solid #bdbec0;
+	display: flex;
+	font-size: 12px;
+	padding: 5px 0;
+}
+
+.teh_name {
+	margin-right: 10px;
+	width: 44%;
+}
+
+.color{
+	color: #929497;
+	margin: 0px;
+}
+
+.color_block { 
+	margin-top: 40px; 
+}
+
+.color_block .color{ 
+	margin-bottom: 20px; 
+	color: #929497;
+}
+
+.ispolnenie { margin-top: 40px; }
+.ispolnenie + .color_block { margin-top: 0; }
+.newcolor { display: flex; }
+.text_detail { width: 160px; }
+.clr_new { display: flex; flex-direction: column; }
+.imgbox {
+	width: 250px;
+	height: 36px;
+}
+
+iframe.lg-object { box-shadow: none !important; }
+.lg-object.lg-image { background: white; }
+@media screen and (max-width: 900px) {
+	#main_image { margin-right: 10px; }
+	#main_image img { width: 100%; }
+}
+@media screen and (max-width: 720px) {
+	body #container #main_block {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	#first_info { flex-direction: column; }
+	#product_info h1 { margin: 5px 0; }
+	#main_image img { width: 340px; }
+	.pictogram_item { margin-right: 5px; }
+	.tabs > input:checked + label + div { flex-direction: column; }
+	.tabs > div > .img_items { justify-content: flex-start; }
+	.img_items > .img_item {
+		width: 152px;
+		margin-left: 3px;
+	}
+	.pictogram_item img {
+		width: 60px;
+		height: 47px;
+	}
+}
