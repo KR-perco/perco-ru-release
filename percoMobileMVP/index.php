@@ -7,7 +7,7 @@
 </script>
 
 <div>
-	<img width="100%" src="bxlocal://banner.png" alt="banner" />
+	<img width="100%" src="/percoMobileMVP/img/banner.png" alt="banner" />
 </div>
 
 <div class="product_block">
@@ -15,37 +15,37 @@
 	<div class="product_items">
 		<div class="product_item">
 			<a href="products/turnikety/">
-				<img src="bxlocal://main-turnstile.png" alt="turnstile" />
+				<img src="/percoMobileMVP/img/main-turnstile.png" alt="turnstile" />
 				<h4>Турникеты</h4>
 			</a>
 		</div>
 		<div class="product_item">
 			<a href="products/elektronnye-prokhodnye/">
-				<img src="bxlocal://main-ip-stiles.png" alt="ip-stiles" />
+				<img src="/percoMobileMVP/img/main-ip-stiles.png" alt="ip-stiles" />
 				<h4>Электронные проходные</h4>
 			</a>
 		</div>
 		<div class="product_item">
 			<a href="products/shlagbaum/">
-				<img src="bxlocal://main-barrier.png" alt="barrier" />
+				<img src="/percoMobileMVP/img/main-barrier.png" alt="barrier" />
 				<h4>Шлагбаум</h4>
 			</a>
 		</div>
 		<div class="product_item">
 			<a href="products/elektromekhanicheskie-zamki/">
-				<img src="bxlocal://main-locks.png" alt="locks" />
+				<img src="/percoMobileMVP/img/main-locks.png" alt="locks" />
 				<h4>Электро-механические замки</h4>
 			</a>
 		</div>
 		<div class="product_item">
 			<a href="products/kontrollery-schityvateli/">
-				<img src="bxlocal://main-kontrollery.png" alt="an" />
+				<img src="/percoMobileMVP/img/main-kontrollery.png" alt="an" />
 				<h4>Контроллеры и считыватели</h4>
 			</a>
 		</div>
 		<div class="product_item">
 			<a href="products/koren-dopolnitelnoe-oborudovanie/">
-				<img src="bxlocal://main-dop-oborudovanie.png" alt="dop-oborudovanie" />
+				<img src="/percoMobileMVP/img/main-dop-oborudovanie.png" alt="dop-oborudovanie" />
 				<h4>Дополнительное оборудование</h4>
 			</a>
 		</div>
@@ -57,25 +57,25 @@
 	<div class="product_items">
 		<!-- <div class="product_item">
 			<a href="products/kompleksnaya-sistema-bezopasnosti-perco-s-20/">
-				<img src="bxlocal://main-ksb-s-20_2.png" alt="ksb-s-20" />
+				<img src="/percoMobileMVP/img/main-ksb-s-20_2.png" alt="ksb-s-20" />
 				<h4>Комплексная система безопасности <span class="nospace">PERCo-S-20</span></h4>
 			</a>
 		</div> -->
 		<div class="product_item">
 			<a href="products/sistema-kontrolya-dostupa-perco-web/">
-				<img src="bxlocal://main-skd-web.png" alt="skd-web" />
+				<img src="/percoMobileMVP/img/main-skd-web.png" alt="skd-web" />
 				<h4>Система контроля доступа <span class="nospace">PERCo-Web</span></h4>
 			</a>
 		</div>
 		<div class="product_item">
 			<a href="products/sistema-bezopasnosti-perco-s-20-shkola/">
-				<img src="bxlocal://main-sb-s-20-school.png" alt="sb-s-20-school" />
+				<img src="/percoMobileMVP/img/main-sb-s-20-school.png" alt="sb-s-20-school" />
 				<h4>Система безопасности <span class="nospace">PERCo-S-20</span> Школа</h4>
 			</a>
 		</div>
 		<div class="product_item">
 			<a href="products/sistema-dlya-bankomatov-perco-s-800/">
-				<img src="bxlocal://main-skd-S-800.png" alt="skd-S-800" />
+				<img src="/percoMobileMVP/img/main-skd-S-800.png" alt="skd-S-800" />
 				<h4>Система для банкоматов <span class="nospace">PERCo-S-800</span></h4>
 			</a>
 		</div>
@@ -85,13 +85,13 @@
 <div class="workers">
 	<a href="products/?manager">
 		<div class="worker">
-			<img src="bxlocal://worker-manager.png" alt="manager" />
+			<img src="/percoMobileMVP/img/worker-manager.png" alt="manager" />
 			<p>Менеджеру</p>
 		</div>
 	</a>
 	<a href="products/?installer">
 		<div class="worker">
-			<img src="bxlocal://worker-services.png" alt="services" />
+			<img src="/percoMobileMVP/img/worker-services.png" alt="services" />
 			<p>Инсталлятору</p>
 		</div>
 	</a>	

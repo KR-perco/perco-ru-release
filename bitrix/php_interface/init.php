@@ -724,11 +724,55 @@ class SendEmail
 				$CONFIRM_CODE = $ar["CONFIRM_CODE"];
 			}
 		}
+		// Подставим так же имя и компанию, если рассылка именная
+		
+		$file = file_get_contents('../../sendmail-imennaya.json'); // Открыть файл
+		$maillist = json_decode($file, true); // Декодировать в массив
+		unset($file); // Очистить переменную $file
+		
+		$NAME_RECIPIENT = "NAME_RECIPIENT";
+		$COMPANY_RECIPIENT = "вашу компанию";
+
+		foreach ($maillist['maillist'] as $recipient) { 
+			if ($recipient["mail"] == $arFields["EMAIL"]) { 
+				$NAME_RECIPIENT = $recipient['fio'];
+				$COMPANY_RECIPIENT = $recipient['company'];
+			}
+		  } 
 		$arFields["BODY"] = str_replace("#ID#", $ID, $arFields["BODY"]);
 		$arFields["BODY"] = str_replace("#CONFIRM_CODE#", $CONFIRM_CODE, $arFields["BODY"]);
+		$arFields["BODY"] = str_replace("#NAMERECIPIENT#", $NAME_RECIPIENT, $arFields["BODY"]);
+		$arFields["BODY"] = str_replace("#COMPANYRECIPIENT#", $COMPANY_RECIPIENT, $arFields["BODY"]);
 		return $arFields;
 	}
 }
+
+
+// backup //********************************************************
+// // Перехват отправки письма, для добавления ссылки на отписку
+// AddEventHandler("subscribe", "BeforePostingSendMail", Array("SendEmail", "BeforePostingSendMailHandler"));
+// class SendEmail
+// {
+// 	// создаем обработчик события "BeforePostingSendMail"
+// 	function BeforePostingSendMailHandler($arFields)
+// 	{
+// 		$ID = "ID";
+// 		$CONFIRM_CODE = "CODE";
+// 		//Попробуем найти подписчика.
+// 		$rs = CSubscription::GetByEmail($arFields["EMAIL"]);
+// 		if($ar = $rs->Fetch())
+// 		{
+// 			if(intval($ar["ID"]) > 0)
+// 			{
+// 				$ID = $ar["ID"];
+// 				$CONFIRM_CODE = $ar["CONFIRM_CODE"];
+// 			}
+// 		}
+// 		$arFields["BODY"] = str_replace("#ID#", $ID, $arFields["BODY"]);
+// 		$arFields["BODY"] = str_replace("#CONFIRM_CODE#", $CONFIRM_CODE, $arFields["BODY"]);
+// 		return $arFields;
+// 	}
+// }
 
 // Определение региона по IP
 function occurrence($ip = "", $to = "utf-8")

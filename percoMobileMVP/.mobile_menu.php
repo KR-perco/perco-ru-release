@@ -4,11 +4,6 @@ Loc::loadLanguageFile(__FILE__);
 $appDir = "/percoMobileMVP/";
 $items = array(
 	array(
-		"text" => "ТЕСТ3",
-		"data-url" => SITE_DIR."percoMobileMVP/test",
-		"id" => "test", 
-	),
-	array(
 		"text" => "Каталог",
 		"data-url" => SITE_DIR."percoMobileMVP/products/",
 		"id" => "products",

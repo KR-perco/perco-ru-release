@@ -13,25 +13,25 @@ $page = $APPLICATION->GetCurUri();
 $managerBlock = '<div class="workers-block">
                   <a style="display: none;" href="solution/">
                     <div class="">
-                      <img src="bxlocal://section-reshenia.png" alt="solution">
+                      <img src="/percoMobileMVP/img/section-reshenia.png" alt="solution">
                       <p>Решения</p>
                     </div>
                   </a>
                   <a href="/percoMobileMVP/offline/gallery.html">
                     <div class="">
-                      <img src="bxlocal://section-galery.png" alt="photogallery">
+                      <img src="/percoMobileMVP/img/section-galery.png" alt="photogallery">
                       <p>Фотогалерея</p>
                     </div>
                   </a>
                   <a href="/percoMobileMVP/offline/booklets.html">
                     <div class="">
-                      <img src="bxlocal://section-booklets.png" alt="booklets">
+                      <img src="/percoMobileMVP/img/section-booklets.png" alt="booklets">
                       <p>Каталоги и буклеты</p>
                     </div>
                   </a>
                   <a href="/percoMobileMVP/video/?worker=manager">
                     <div class="">
-                      <img src="bxlocal://section-video.png" alt="video">
+                      <img src="/percoMobileMVP/img/section-video.png" alt="video">
                       <p>Видео</p>
                     </div>
                   </a>		
@@ -40,25 +40,25 @@ $managerBlock = '<div class="workers-block">
 $installerBlock = '<div class="workers-block">
                 <a href="/percoMobileMVP/new/">
                   <div class="">
-                    <img src="bxlocal://section-new.png" alt="new" />
+                    <img src="/percoMobileMVP/img/section-new.png" alt="new" />
                     <p>Новое</p>
                   </div>
                 </a>
                 <a href="/percoMobileMVP/video/?worker=installer">
                   <div class="">
-                    <img src="bxlocal://section-video.png" alt="video" />
+                    <img src="/percoMobileMVP/img/section-video.png" alt="video" />
                     <p>Видео</p>
                   </div>
                 </a>
                 <a href="/percoMobileMVP/offline/faq.html">
                   <div class="">
-                    <img src="bxlocal://section-faq.png" alt="faq" />
+                    <img src="/percoMobileMVP/img/section-faq.png" alt="faq" />
                     <p>FAQ</p>
                   </div>
                 </a>
                 <a href="/percoMobileMVP/documentation/">
                   <div class="">
-                    <img src="bxlocal://section-documentation.png" alt="documentation" />
+                    <img src="/percoMobileMVP/img/section-documentation.png" alt="documentation" />
                     <p>Документация</p>
                   </div>
                 </a>			
@@ -78,7 +78,7 @@ switch ($url["query"]){
 
 ?>
   <div class="catalog">
-    <h2>Каталог</h2>
+    <h2>Каталог</h2> 
 <?
 $iblock_code = "products";
 $iblocks = GetIBlockList("structure", $iblock_code);
@@ -100,15 +100,19 @@ while($arSection = $rsSections->GetNext())
     $current_group = $arSection["UF_GROUP_PRODUCTS"];
   }
 
-  $img = substr($arSection["DESCRIPTION"], 14, -3);
+  $img = substr($arSection["DESCRIPTION"], 14, -3); 
+  if ($arSection["ID"] != 1836) {
+    # убираем "комплекты ПО" 
 ?>
+
     <div class="item">
       <a href="/percoMobileMVP/products/<?=$arSection["CODE"];?>/?<?=$url["query"]?>">
-        <?if ($img != 'dop-oborudovanie.'):?><img alt="<?=$arSection["NAME"];?>" src="bxlocal://catalog-<?=$img?>png" /><?else:?><img alt="<?=$arSection["NAME"];?>" src="/percoMobileMVP/img/catalog-dop-oborudovanie.png" /><?endif;?>
+         <img alt="<?=$arSection["NAME"];?>" src="/percoMobileMVP/img/catalog-<?=$img?>png" /> 
         <p class="item_name"><?echo ($arSection["NAME"] == "Турникеты") ? $arSection["NAME"].", калитки, ограждения" : $arSection["NAME"];?></p>
       </a>
     </div>
 <?
+  }
   if ($count == intval($rsSections->SelectedRowsCount()))
     echo "</div>";
 }

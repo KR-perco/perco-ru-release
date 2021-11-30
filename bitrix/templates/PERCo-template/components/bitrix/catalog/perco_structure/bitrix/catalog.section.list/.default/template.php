@@ -14,6 +14,7 @@ if ($ar_props["PROPERTY_BANNER_VALUE"])
 	<div id="content">
 		<h1><?$APPLICATION->ShowTitle(false, false)?></h1>
 <?
+ 
 function getPriceRubFromEuro($priceEuro) {
 	if ($priceEuro >= 10)
 		$drob = 0;
@@ -21,7 +22,7 @@ function getPriceRubFromEuro($priceEuro) {
 		$drob = 2;
 	$price_res = getCurrency("EUR");
 	$price = $price_res * $priceEuro;
-	$priceRub = number_format($price, $drob, ".", " ");
+	$priceRub = number_format($price, $drob, ",", " ");
 
 	return $priceRub;
 }
@@ -63,95 +64,112 @@ function getPriceProduct($iblockID, $elementID, $imgSrc = "")
 					$priceText .= "<p>".$arPropsPrice["PRICE"]["DESCRIPTION"]."</p>";
 				$priceText .= '</div>';
 			}
+
 		}
 	}
 	return $priceText;
-} 
+}
 if (count($arResult["SECTIONS"]) > 0)
 {
 	echo '<div id="secel_list">';
-	foreach($arResult["SECTIONS"] as $section)
-	{
-		$rsSection = CIBlockElement::GetList(
-			array(),
-			array(
-			"IBLOCK_CODE" => "pages_".LANGUAGE_ID,
-			"ACTIVE" => "Y",
-			"CODE" => $section["CODE"]
-			),
-			false,
-			false,
-			array("IBLOCK_ID", "ID", "PROPERTY_IMAGE")
-		);
-		$arSection = $rsSection->Fetch();
-?>
-	<div class="secel_item type1">
-		<a href="<?=str_ireplace("_com", "", $section["SECTION_PAGE_URL"]);?>">
-			<div class="image_icon">
-				<img alt="<?=$section["NAME"];?>" src="<?=$arSection["PROPERTY_IMAGE_VALUE"];?>" />
-			</div>
-			<div class="text_item"><span><?=$section["NAME"];?></span>
-			<?
-			if (LANGUAGE_ID == "ru") echo getPriceProduct($arSection["IBLOCK_ID"], $arSection["ID"]);
-			// echo '<!--<pre>';
-			// print_r($arSection["IBLOCK_ID"]);
-			// echo '</pre>';
-			// echo '<pre>';
-			// print_r($arSection["ID"]);
-			// echo '</pre>-->';
-			if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 24177) {
-				echo '<div class="price">
-				<p>Цена <span class="price_rub">'.getPriceRubFromEuro(0.18).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
-				<p>0.18 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
-				<p>Бесконтактная карта доступа EM-Marin</p>
-				<!--<p>Рабочая частота: 125 КГц</p>-->
-			</div>';
-			}//22.10.2019
-			if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 24176) {
-				echo '<div class="price">
-				<p>Цена <span class="price_rub">'.getPriceRubFromEuro(30).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
-				<p>30 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
-				<p>К-Инженеринг БИРП 12-2,5/7</p>
-			</div>';
-			}//22.10.2019
-			if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 27022) {
-				echo '<div class="price">
-				<p>Цена <span class="price_rub">'.getPriceRubFromEuro(550).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
-				<p>550 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
-				<p>ZKTeco FaceDepot-7B</p>
-			</div>';
-			}
-			if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 28202) {
-				echo '<div class="price">
-				<p>Цена <span class="price_rub">'.getPriceRubFromEuro(5).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
-				<p>5 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
-				<p>Дверные ручки</p>
-			</div>';
-			}
-			if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 28203) {
-				echo '<div class="price">
-				<p>Цена <span class="price_rub">'.getPriceRubFromEuro(0.7).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
-				<p>0.7 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
-				<p>Анкер FWB 6 Fisher (с винтом M 6 x 40 DIN 965 (цинк, потай)</p>
-			</div>';
-			}
-			if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 28755) {
-				echo '<div class="price">
-				<p>Цена <span class="price_rub">'.getPriceRubFromEuro(119).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
-				<p>119 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
-				<p>Стойка BSP2</p>
-			</div>';
-			}
-
+	if ($arResult["SECTION"]["CODE"] != "po-sistemy-kontrolya-dostupa-perco-web") {
+		foreach($arResult["SECTIONS"] as $section)
+		{
+			$rsSection = CIBlockElement::GetList(
+				array(),
+				array(
+				"IBLOCK_CODE" => "pages_".LANGUAGE_ID,
+				"ACTIVE" => "Y",
+				"CODE" => $section["CODE"]
+				),
+				false,
+				false,
+				array("IBLOCK_ID", "ID", "PROPERTY_IMAGE")
+			);
+			$arSection = $rsSection->Fetch();
 			?>
+			<div class="secel_item secel_item_1">
+				<a href="<?=str_ireplace("_com", "", $section["SECTION_PAGE_URL"]);?>">
+					<div class="image_icon">
+						<img alt="<?=$section["NAME"];?>" src="<?=$arSection["PROPERTY_IMAGE_VALUE"];?>" />
+					</div>
+					<div class="text_item"><span><?=$section["NAME"];?></span>
+					<?
+					if (LANGUAGE_ID == "ru") echo getPriceProduct($arSection["IBLOCK_ID"], $arSection["ID"]);
+					// echo '<!--<pre>';
+					// print_r($arSection["IBLOCK_ID"]);
+					// echo '</pre>';
+					// echo '<pre>';
+					// print_r($arSection["ID"]);
+					// echo '</pre>-->';
+					/*if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 24177) {
+						echo '<div class="price">
+						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(0.39).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
+						<p>0.39 € (по курсу ЦБ РФ на 22.10.2019)</p>
+						<p>Бесконтактная карта доступа EM-Marin</p>
+						<!--<p>Рабочая частота: 125 КГц</p>-->
+					</div>';
+					}
+					if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 24176) {
+						echo '<div class="price">
+						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(37).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
+						<p>37 € (по курсу ЦБ РФ на 22.10.2019)</p>
+						<p>К-Инженеринг БИРП 12-2,5/7</p>
+					</div>';
+					}*/
+					if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 24177) {
+						echo '<div class="price">
+						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(0.18).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
+						<p>0.18 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
+						<p>Бесконтактная карта доступа EM-Marin</p>
+						<!--<p>Рабочая частота: 125 КГц</p>-->
+					</div>';
+					}//22.10.2019
+					if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 24176) {
+						echo '<div class="price">
+						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(30).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
+						<p>30 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
+						<p>К-Инженеринг БИРП 12-2,5/7</p>
+					</div>';
+					}//22.10.2019
+					if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 27022) {
+						echo '<div class="price">
+						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(550).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
+						<p>550 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
+						<p>ZKTeco FaceDepot-7B</p>
+					</div>';
+					}
+					if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 28202) {
+						echo '<div class="price">
+						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(5).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
+						<p>5 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
+						<p>Дверные ручки</p>
+					</div>';
+					}
+					if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 28203) {
+						echo '<div class="price">
+						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(0.7).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
+						<p>0.7 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
+						<p>Анкер FWB 6 Fisher (с винтом M 6 x 40 DIN 965 (цинк, потай)</p>
+					</div>';
+					}
+					if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 28755) {
+						echo '<div class="price">
+						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(119).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
+						<p>119 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
+						<p>Стойка BSP2</p>
+					</div>';
+					}
+					?>
 
+					</div>
+				</a>
 			</div>
-		</a>
-	</div>
-<?
+			<?
+		} 
 	}
 	if ($arParams['SECTION_CODE'] == 'turnikety') {?>
-		<div class="secel_item type1">
+		<div class="secel_item secel_item_t1">
 			<a href="/products/kronshteyny/">
 				<div class="image_icon">
 					<img alt="Кронштейны" src="/images/products/kronshteiny/all.jpg" />
@@ -189,9 +207,14 @@ if (count($arResult["SECTIONS"]) > 0)
 					continue;
 			}
 			if ($arDopname["VALUE"])
-				$dopname = '<p class="dop_name">'.$arDopname["VALUE"].'</p>';
+				$dopname = '<p class="dop_name">'.$arDopname["VALUE"].'</p>'; 
+				
+				$free = ''; 
+				if ($element["NAME"] == "PERCo-WB «Базовый пакет ПО»" || $element["NAME"] == "PERCo-WM-04 Интеграция с внешними системами" || $element["NAME"] == "PERCo-WBE «Базовый пакет встроенного ПО»"){
+					$free = '<p class="free">БЕСПЛАТНО</p>';
+				}
 	?>
-		<div class="secel_item type2">
+		<div class="secel_item secel_item_2">
 			<a href="<?=str_ireplace("_com", "", $element["DETAIL_PAGE_URL"]);?>">
 				<div class="image_icon">
 					<img alt="<?=$element["NAME"];?>" src="<?=$arImage["VALUE"];?>" />
@@ -203,7 +226,65 @@ if (count($arResult["SECTIONS"]) > 0)
 	<?
 		}
 	}
+	
 	echo "</div>";
+	
+	if ($arResult["SECTION"]["CODE"] == "po-sistemy-kontrolya-dostupa-perco-web") { ?>
+		
+		<?
+		foreach($arResult["SECTIONS"] as $section)
+		{?>
+			<h2><?=$arResult["SECTIONS"][0]["NAME"]?></h2> 
+			<div id='secel_list'> 
+			<?
+			$arFilter = Array("SECTION_ID"=>$arResult["SECTIONS"][0]["ID"], "ACTIVE"=>"Y");
+			$arSelect = Array("DETAIL_PAGE_URL","NAME", "IMAGE_PREVIEW", "IBLOCK_ID", "ID");
+			$res = CIBlockElement::GetList(Array("SORT"=>"ASC"), $arFilter, false, Array(), $arSelect); 
+			while($ob = $res->GetNextElement())
+			{
+				$arFields = $ob->GetFields(); 
+			
+				$new_product = "";
+				if ($arFields["DATE_ACTIVE_FROM"])
+				{
+					$dateActive = new DateTime(date("Y-m-d", strtotime($arFields["DATE_ACTIVE_FROM"])));
+					$today = new DateTime(date("Y-m-d"));
+					$interval = $dateActive->diff($today);
+					if ($interval->format("%a") < 92)
+						$new_product = '<div class="new_product">'.GetMessage("NEW").'</div>';
+					if ($dateActive > $today)
+						continue;
+				}
+
+				$rsImage = CIBlockElement::GetProperty($arFields["IBLOCK_ID"], $arFields["ID"], array("sort" => "asc"), Array("CODE"=>"IMAGE_PREVIEW"));
+				$arImage = $rsImage->Fetch(); 
+
+				$free = ''; 
+				if ($arFields["NAME"] == "PERCo-WB «Базовый пакет ПО»" || $arFields["NAME"] == "PERCo-WM-04 Интеграция с внешними системами" || $arFields["NAME"] == "PERCo-WBE «Базовый пакет встроенного ПО»"){
+					$free = '<p class="free">БЕСПЛАТНО</p>';
+				}
+
+				// console_log($arFields["ID"]); 
+				// $res = CIBlockElement::GetByID(24546);
+				// if($ar_res = $res->GetNext())
+				// 	console_log($ar_res);
+				?> 
+				<div class="secel_item secel_item_5">
+					<a href="<?=str_ireplace("_com", "", $arFields["DETAIL_PAGE_URL"]);?>">
+						<div class="image_icon">
+							<img alt="<?=$arFields["NAME"];?>" src="<?=$arImage["VALUE"];?>" />
+							<?=$new_product;?>
+						</div>
+						<div class="text_item"><span><?=$arFields["NAME"];?></span><?=$dopname;?><?=$free;?><?if (LANGUAGE_ID == "ru") echo getPriceProduct($arFields["IBLOCK_ID"], $arFields["ID"], $arImage["VALUE"]);?></div>
+					</a>
+				</div> 
+				<?
+			} 
+			?>
+			</div>
+			<?
+		} 
+	}
 }
 else
 {
@@ -229,11 +310,12 @@ else
 		if ($arDopname["VALUE"])
 			$dopname = '<p class="dop_name">'.$arDopname["VALUE"].'</p>';
 		$free = '';
+		console_log($element);
 		if ($element["NAME"] == "PERCo-WB «Базовый пакет ПО»" || $element["NAME"] == "PERCo-WM-04 Интеграция с внешними системами" || $element["NAME"] == "PERCo-WBE «Базовый пакет встроенного ПО»"){
 			$free = '<p class="free">БЕСПЛАТНО</p>';
 		}
 ?>
-	<div class="secel_item type3">
+	<div class="secel_item secel_item_3">
 		<a href="<?=str_ireplace("_com", "", $element["DETAIL_PAGE_URL"]);?>">
 			<div class="image_icon">
 				<img alt="<?=$element["NAME"];?>" src="<?=$arImage["VALUE"];?>" />
@@ -243,9 +325,15 @@ else
 		</a>
 	</div>
 <?
-	} 
+	}
+	// console_log($arParams['SECTION_CODE']);
+	
+	// if ($arParams['SECTION_CODE'] == 'po-sistemy-kontrolya-dostupa-perco-web') {
+		?>  
+	<?
+	// }  
 	if ($arParams['SECTION_CODE'] == 'biometricheskie-kontrollery-i-schityvateli') {?> 
-		<div class="secel_item type3">
+		<div class="secel_item secel_item_b3">
 			<a href="/products/terminaly-raspoznavaniya-lits/">
 				<div class="image_icon">
 					<img alt="Терминалы распознавания лиц" src="/images/products/terminaly-raspoznavaniya-lits/v-page.jpg">
@@ -255,5 +343,6 @@ else
 		</div> 
 	<?}
 	echo "</div>";
+	
 }
 ?>

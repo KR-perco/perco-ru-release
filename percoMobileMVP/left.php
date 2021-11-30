@@ -8,7 +8,7 @@ CMobile::getInstance()->setLargeScreenSupport(false);
 CMobile::getInstance()->setScreenCategory("NORMAL");
 ?>
 <div class="menu-header">
-	<img src="bxlocal://logo.png" alt="logo" />
+	<img src="/percoMobileMVP/img/logo.png" alt="logo" />
 </div>
 <?
 $APPLICATION->IncludeComponent(
