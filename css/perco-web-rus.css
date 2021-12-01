@@ -24,12 +24,22 @@ div.tabs {
 }
 
 @media screen and (max-width: 900px) {
+    .percoMobile_catalog .preview-block {
+        margin: 6px 0;
+    }
+    .preview-block .text-right {
+        margin-left: 4px;
+        padding-right: 10px;
+    }
     .two_blocks.system_features .plus img {
         position: absolute;
         top: 3px;
-        width: 25px;
-        height: 25px;
+        width: 41px;
+        height: 30px;
         left: -44px;
+    }
+    .two_blocks.system_features .plus img.other_icon {
+        height: 20px;
     }
     .two_blocks.system_features .plus {
         list-style-type: none;
@@ -506,6 +516,7 @@ h3 {
 .two_blocks .plus {
     display: list-item;
     position: relative;
+    list-style-type: none;
 }
 
 .plus>input {
@@ -867,6 +878,10 @@ div.twoblocks>div {
     max-width: 41%;
 }
 
+.percoMobile_catalog .hide-on-percoMobile {
+    display: none;
+}
+
 @media screen and (max-width: 1470px) {
     .bio .into_img {
         position: relative;
@@ -980,6 +995,9 @@ div.twoblocks>div {
 }
 
 @media screen and (max-width: 720px) {
+    .elements_list .download_item_img {
+        min-width: 320px;
+    }
     .banner_image {
         height: 145px;
     }
@@ -989,6 +1007,19 @@ div.twoblocks>div {
     .two_blocks {
         flex-direction: column;
         margin-bottom: 20px;
+    }
+    .percoMobile_catalog .two_blocks {
+        padding: 5px 15px;
+    }
+    .percoMobile_catalog .two_blocks.system_features {
+        padding: 5px 15px 5px 57px;
+    }
+    .percoMobile_catalog .section-information ul {
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 0px;
     }
     .two_blocks .left_text,
     .two_blocks .text {

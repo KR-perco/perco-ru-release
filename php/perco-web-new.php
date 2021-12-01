@@ -19,7 +19,7 @@ switch ($checkedId) {
         $checkedFirst = $checked;
 }
 ?>
-<div class="demo-button">
+<div class="demo-button hide-on-percoMobile">
     <div class="banner-link" id="video-gallery">
         <a href="https://www.youtube.com/watch?v=iSaqzXq6qc4" data-download-url="/video/PERCo-Web.mp4">
             <div class="banner-link-inter">
@@ -167,8 +167,8 @@ switch ($checkedId) {
                     <img alt="Удобство и простота использования" src="/images/products/perco-web/perco-web-usability-2.jpg">
                 </div>
             </div>
-            <div class="two_blocks  revers bio" style="position:relative">
-                <div class="into_img" id="bio_img" style="right: -11px;position:relative">
+            <div class="two_blocks revers bio" style="position:relative">
+                <div class="into_img" id="bio_img" style="position:relative">
                     <img alt="Биометрическая идентификация" src="/images/products/perco-web/perco-web-usability-1.jpg">
                 </div>
                 <div class="text">
@@ -390,9 +390,9 @@ switch ($checkedId) {
             </div>
 
         </div>
-        <h2>Структура системы</h2>
+        <h2 class="hide-on-percoMobile">Структура системы</h2>
 
-        <div id="sheme_skud-percoweb">
+        <div class="hide-on-percoMobile" id="sheme_skud-percoweb">
             <a href="/images/shema/shema-perco-web.svg" data-iframe="true" style="display: flex; justify-content: center;">
                 <img src="/images/shema/shema-perco-web.svg" style="width:100%; max-width:1000px;" />
             </a>
@@ -404,8 +404,8 @@ switch ($checkedId) {
                 <div><span class="dashed">схема системы</span></div>
             </a>
         </div> -->
-        <h2>Возможности программного обеспечения</h2>
-        <div id="horizontal_scroll">
+        <h2 class="hide-on-percoMobile">Возможности программного обеспечения</h2>
+        <div class="hide-on-percoMobile" id="horizontal_scroll">
             <ul id="scrollGallery">
                 <li> 
                     <!-- Нумерация по порядку -->

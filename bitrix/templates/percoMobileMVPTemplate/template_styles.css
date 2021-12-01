@@ -362,7 +362,7 @@ div.scrollmenu img {
 
 .product_items {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 

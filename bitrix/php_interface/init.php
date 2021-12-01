@@ -724,9 +724,10 @@ class SendEmail
 				$CONFIRM_CODE = $ar["CONFIRM_CODE"];
 			}
 		}
+		
 		// Подставим так же имя и компанию, если рассылка именная
 		
-		$file = file_get_contents('../../sendmail-imennaya.json'); // Открыть файл
+		$file = file_get_contents('../../sendmail-imennaya-2.json'); // Открыть файл
 		$maillist = json_decode($file, true); // Декодировать в массив
 		unset($file); // Очистить переменную $file
 		

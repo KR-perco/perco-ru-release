@@ -101,8 +101,8 @@ while($arSection = $rsSections->GetNext())
   }
 
   $img = substr($arSection["DESCRIPTION"], 14, -3); 
-  if ($arSection["ID"] != 1836) {
-    # убираем "комплекты ПО" 
+  if ($arSection["ID"] != 1836 && $arSection["ID"] != 2307) {
+    # убираем "комплекты ПО" и "Доп оборудование"
 ?>
 
     <div class="item">

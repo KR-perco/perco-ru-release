@@ -31,12 +31,23 @@ if (intval($res->SelectedRowsCount()) > 0)
 	if (($arFields["DETAIL_TEXT"]) && ($url['query'] != "installer"))
 	//if ($arFields["DETAIL_TEXT"])
 		$content .= '<div>'.$arFields["DETAIL_TEXT"].'</div>';
+ 
+	// вывод "блоков с текстом" если они есть
 	if (count($arProps["TEXT"]["VALUE"]) > 1)
 	{
 		for($i=0; $i < count($arProps["TEXT"]["VALUE"]); $i++)
 		{
-			$name = $arProps["TEXT"]["DESCRIPTION"][$i];
-			if (    (($name == "Технические характеристики" || $name == "Скачать") && ($url['query'] == "installer")) or (($name != "Скачать") && ($url['query'] == "manager")) or ($url['query'] == "")    ) 
+			$name = $arProps["TEXT"]["DESCRIPTION"][$i]; 
+			if (    
+					(
+						($name == "Технические характеристики" || $name == "Скачать") && 
+						($url['query'] == "installer")
+					) or 
+					(
+						($name != "Скачать") && ($url['query'] == "manager")
+					) or 
+					($url['query'] == "")    
+				) 
 			{
 				$vkladka_content .= '<input name="vkladki" type="checkbox"';
 				$vkladka_content .= ' id="'.translitIt(strtolower($name)).'"><label for="'.translitIt(strtolower($name)).'"><span class="dashed">'.$name.'</span></label>';
@@ -79,7 +90,7 @@ if (intval($res->SelectedRowsCount()) > 0)
 	if ($arProps["PHP"]["VALUE"]){
 		for($i=0; $i < count($arProps["PHP"]["VALUE"]); $i++)
 		{
-			if (!preg_match('/(.*percoDemo\/products\/turnikety.*|.*percoMobile\/products\/turnikety.*|.*percoDemo\/products\/elektromekhanicheskie-zamki.*|.*percoMobile\/products\/elektromekhanicheskie-zamki.*|.*percoDemo\/products\/sistema-kontrolya-dostupa-perco-web.*|.*percoMobile\/products\/sistema-kontrolya-dostupa-perco-web.*|.*percoDemo\/products\/po-sistemy-kontrolya-dostupa-perco-web.*|.*percoMobile\/products\/po-sistemy-kontrolya-dostupa-perco-web.*)/', $_SERVER['REQUEST_URI'])) {
+			if (!preg_match('/(.*percoMobileMVP\/products\/turnikety.*|.*percoMobile\/products\/turnikety.*|.*percoMobileMVP\/products\/elektromekhanicheskie-zamki.*|.*percoMobile\/products\/elektromekhanicheskie-zamki.*|.*percoMobileMVP\/products\/sistema-kontrolya-dostupa-perco-web.*|.*percoMobile\/products\/sistema-kontrolya-dostupa-perco-web.*|.*percoMobileMVP\/products\/po-sistemy-kontrolya-dostupa-perco-web.*|.*percoMobile\/products\/po-sistemy-kontrolya-dostupa-perco-web.*)/', $_SERVER['REQUEST_URI'])) {
 				include($_SERVER["DOCUMENT_ROOT"].$arProps["PHP"]["VALUE"][$i]);
 			}
 			$content .= '<div class="include-part">';
@@ -90,11 +101,13 @@ if (intval($res->SelectedRowsCount()) > 0)
 
 	?>
 		<div class="section-information">
-			<div class="include-part">
-			<? 
+			<div class="include-part"> 	
+			<? if ($arResult['NAME'] == 'Система контроля доступа PERCo-Web') { ?>
+				<h1>Система контроля доступа PERCo-Web</h1>
+			<? }  
 			if ($arProps["PHP"]["VALUE"]){
 				for($i=0; $i < count($arProps["PHP"]["VALUE"]); $i++){
-					include($_SERVER["DOCUMENT_ROOT"].$arProps["PHP"]["VALUE"][$i]);
+					include($_SERVER["DOCUMENT_ROOT"].$arProps["PHP"]["VALUE"][$i]); 
 				}
 			}
 			/*if($arResult["CODE"] == "karty-dostupa"){
@@ -117,9 +130,16 @@ if (intval($res->SelectedRowsCount()) > 0)
 			<?echo $content;?>
 		</div>
 </div>
+
+	<script> 
+			// var test = document.getElementsByTagName("a");
+			// for (let item of test) {  
+			// 	console.log(item.innerHTML = item.href);
+			// } 
+	</script>
 <?
-if ($url['path'] == '/percoMobile/products/sistema-dlya-bankomatov-perco-s-800/' || $url['path'] == '/percoDemo/products/sistema-dlya-bankomatov-perco-s-800/') {
-$linkPrefix = (preg_match('/\/percoDemo\//', $url['path']) == 1) ? '/percoDemo/' : '/percoMobile/';
+if ($url['path'] == '/percoMobile/products/sistema-dlya-bankomatov-perco-s-800/' || $url['path'] == '/percoMobileMVP/products/sistema-dlya-bankomatov-perco-s-800/') {
+$linkPrefix = (preg_match('/\/percoMobileMVP\//', $url['path']) == 1) ? '/percoMobileMVP/' : '/percoMobile/';
 ?>
 <div id="secel_list">
 	<div class="secel_item test3" style="margin: 0 2%; inline-size: 29%;">

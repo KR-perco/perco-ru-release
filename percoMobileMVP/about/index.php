@@ -40,7 +40,7 @@ $APPLICATION->SetAdditionalCSS("/scripts/lightslider/css/lightslider.min.css");
 			<li>Изучение систем безопасности PERCo включено в обязательную программу обучения в 12 ВУЗах России и СНГ</li>
 		</ul>
 	</div>
-</div>
+</div> 
 <div id="content">
 	<div id="preview_content">
 		<div class="left text_item">
@@ -64,7 +64,7 @@ $APPLICATION->SetAdditionalCSS("/scripts/lightslider/css/lightslider.min.css");
 			"AUTOSTART" => "N",
 			),
 			false
-		);
+		); 
 	?>
 	</div>
 	<div class="tabs">

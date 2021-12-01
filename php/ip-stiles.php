@@ -3,9 +3,9 @@ GetRate();
 global $price_res; 
 
 $wm01_price = 1379;
-$wm017_price = 1214;
+$wm017_price = 1222;
 $sp13_price = 1311;
-$ss01_price = 1311;
+$ss01_price = 1319;
  
 if ($price_res != 0)
 {

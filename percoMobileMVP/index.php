@@ -43,12 +43,12 @@
 				<h4>Контроллеры и считыватели</h4>
 			</a>
 		</div>
-		<div class="product_item">
+		<!-- <div class="product_item">
 			<a href="products/koren-dopolnitelnoe-oborudovanie/">
 				<img src="/percoMobileMVP/img/main-dop-oborudovanie.png" alt="dop-oborudovanie" />
 				<h4>Дополнительное оборудование</h4>
 			</a>
-		</div>
+		</div> -->
 	</div>
 </div>
 

@@ -127,15 +127,15 @@ if (count($arResult["SECTIONS"]) > 0)
 					}//22.10.2019
 					if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 24176) {
 						echo '<div class="price">
-						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(30).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
-						<p>30 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
+						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(34).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
+						<p>34 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
 						<p>К-Инженеринг БИРП 12-2,5/7</p>
 					</div>';
 					}//22.10.2019
 					if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 27022) {
 						echo '<div class="price">
-						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(550).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
-						<p>550 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
+						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(761).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
+						<p>761 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
 						<p>ZKTeco FaceDepot-7B</p>
 					</div>';
 					}
@@ -155,8 +155,8 @@ if (count($arResult["SECTIONS"]) > 0)
 					}
 					if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 28755) {
 						echo '<div class="price">
-						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(119).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
-						<p>119 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
+						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(128).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
+						<p>128 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
 						<p>Стойка BSP2</p>
 					</div>';
 					}

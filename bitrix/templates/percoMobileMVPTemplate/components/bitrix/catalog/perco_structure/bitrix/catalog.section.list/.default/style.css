@@ -1,32 +1,32 @@
-h1 { 
-	margin: 10px 0; 
+h1 {
+    margin: 10px 0;
 }
 
-.section{
-	display: flex;
+.section {
+    display: flex;
     flex-wrap: wrap;
 }
 
-.section .element{
-	width: 32%
+.section .element {
+    width: 32%
 }
 
-.section .element:nth-child(3n-1){
-	margin: 0 2%;
+.section .element:nth-child(3n-1) {
+    margin: 0 2%;
 }
 
-.section .element a{
-	text-decoration: none;
+.section .element a {
+    text-decoration: none;
 }
 
-.section .element img{
-	width: 100%;
+.section .element img {
+    width: 100%;
 }
 
-.section .element p{
-	font-size: 12px;
-	margin: 0 0 15px;
-	color: #000;
+.section .element p {
+    font-size: 12px;
+    margin: 0 0 15px;
+    color: #000;
 }
 
 .section .detail_text ul li:before {
@@ -39,32 +39,31 @@ h1 {
 }
 
 h2.perco-web {
-	position: absolute;
-	top: 64px;
+    position: absolute;
+    top: 64px;
     left: 32px;
-	color: #fff!important;
-	font-size: 26px;
+    color: #fff!important;
+    font-size: 26px;
     text-align: left;
     font-weight: normal;
 }
 
 .banner_image {
-	background-position: center;
+    background-position: center;
+}
+
+.hide {
+    display: none !important;
 }
 
 @media screen and (max-width: 425px) {
-	.section .element{
-		width: 48%
-	}
-	
-	.section .element:nth-child(3n-1){
-		margin: 0;
-	}
-
-	.section .element:nth-child(2n){
-		margin-left: 4%;
-	}
+    .section .element {
+        width: 48%
+    }
+    .section .element:nth-child(3n-1) {
+        margin: 0;
+    }
+    .section .element:nth-child(2n) {
+        margin-left: 4%;
+    }
 }
-
-
-
