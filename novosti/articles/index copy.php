@@ -16,7 +16,7 @@ $APPLICATION->SetAdditionalCSS("/css/novosti.css"); // подключение с
 			$iBlockId = 61;
 		} 
 		if (LANGUAGE_ID == "en") {
-			$iBlockId = 98;
+			$iBlockId = 94;
 		}  
 		
 		$APPLICATION->IncludeComponent("bitrix:news.list", "articles_list", array(

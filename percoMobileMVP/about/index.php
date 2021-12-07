@@ -2,205 +2,203 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 CModule::IncludeModule('iblock');
 
-$APPLICATION->AddHeadScript("/scripts/lightgallery/js/lightgallery.min.js");
-$APPLICATION->AddHeadScript("/scripts/lightslider/js/lightslider.min.js");
-$APPLICATION->AddHeadScript("/scripts/lightgallery/js/lg-zoom.min.js");
-$APPLICATION->SetAdditionalCSS("/scripts/lightgallery/css/lightgallery.min.css");
-$APPLICATION->SetAdditionalCSS("/scripts/lightslider/css/lightslider.min.css");
+// $APPLICATION->AddHeadScript("/scripts/lightgallery/js/lightgallery.min.js");
+// $APPLICATION->AddHeadScript("/scripts/lightslider/js/lightslider.min.js");
+// $APPLICATION->AddHeadScript("/scripts/lightgallery/js/lg-zoom.min.js");
+// $APPLICATION->SetAdditionalCSS("/scripts/lightgallery/css/lightgallery.min.css");
+// $APPLICATION->SetAdditionalCSS("/scripts/lightslider/css/lightslider.min.css");
 
 ?> 
 <script>
 	app.setPageTitle({
          title: "О компании"
-	  });
-	  
-	$(function(){
-		$("#kachestvo").lightGallery({
-			selector: "this",
-			download: false,
-			iframeMaxWidth: "80%"
-		});
-	});
+	  }); 
 </script>
-<div>
-	<img src="bxlocal://banner_buildings.png" width="100%" alt="banner" />
-</div>
-<div id="state_banner">
-	<div class="text_item">
-		<span class="blue">PERCo в цифрах:</span>
-		<ul>
-			<li>30 работы на рынке безопасности</li>
-			<li>Продажи продукции PERCo в 88 странах мира</li>
-			<li>Торговая марка PERCo зарегистрирована в 20 странах мира</li>
-			<li>Более 20 000 000 человек каждый день проходят через турникеты и электронные проходные PERCo</li>
-			<li>23 000 м<sup>2</sup> производственных и офисных площадей</li>
-			<li>Более 500 квалифицированных специалистов</li>
-			<li>5-летний гарантийный срок на оборудование PERCo</li>
-			<li>Склады готовой продукции в Москве, Санкт-Петербурге, Пскове и ЕС (Роттердам, Голландия и Таллинн, Эстония)</li>
-			<li>Изучение систем безопасности PERCo включено в обязательную программу обучения в 12 ВУЗах России и СНГ</li>
-		</ul>
+<style> 
+ 
+		.cell-6 {
+			max-width: 50%;
+			-ms-flex-preferred-size: 50%;
+			flex-basis: 50%;
+		}
+		.icon__signature {
+			display: flex;
+			justify-content: center;
+			align-items: center; 
+			padding-right: 35px;
+		}
+		.icon__item {
+			display: flex;
+			padding-bottom: 60px;
+		}
+		.icon__item figure {
+			height: 43px;
+			width: 90px;
+			-webkit-box-flex: 0;
+			-ms-flex: 0 0 90px;
+			flex: 0 0 90px;
+    		margin: 0 15px;
+			padding-top: 26px;
+		}
+		.icon-about-1 { 
+			line-height: 31px;
+    		font-size: 31px;
+			text-align: center;
+			display: block;
+			color: #214584;
+			font-weight: bold;
+			background: url(https://www.perco.ru/images/icons/years.svg) no-repeat center center transparent;  
+		}
+		.icon-about-2 {
+			background: url(https://www.perco.ru/images/icons/map.svg) no-repeat center center transparent;
+		}
+		.icon-about-3 {
+			background: url(https://www.perco.ru/images/icons/zavod.svg) no-repeat center center transparent; 
+		}
+		.icon-about-4 {
+			background: url(https://www.perco.ru/images/icons/services.svg) no-repeat center center transparent; 
+		}
+		.icon-about-5 {
+			background: url(https://www.perco.ru/images/icons/5-guaranty.svg) no-repeat center center transparent; 
+		}
+		.icon-about-6 {
+			background: url(https://www.perco.ru/images/icons/support.svg) no-repeat center center transparent; 
+		}
+        .about-content {
+			background-color: white; 
+        }  
+		.about-content__header {
+			font-weight: bold;
+			margin: 0;
+			text-align: center;
+    		line-height: 120px;
+			font-size: 34px;
+		}
+		#content.about-content {
+			margin: 0;
+		} 
+		.header__text_white {
+			font-size: 48px;
+		}
+		.about__text, .about__text_icons {
+			font-size: 18px;
+			width: 70%;
+			margin: 25px auto;
+			line-height: 1.3em;
+		}
+		.row {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-flex: 1;
+			-ms-flex: 1 1 auto;
+			flex: 1 1 auto;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: row;
+			flex-direction: row;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+		.about__text li {
+    		list-style-image: url(https://www.perco.ru/images/icons/list-disc.svg);
+		}
+		.about-title { 
+			-webkit-font-smoothing: antialiased;
+			text-rendering: optimizeLegibility;
+			text-size-adjust: 100%;
+			-webkit-tap-highlight-color: transparent;
+			-webkit-box-direction: normal;
+			visibility: visible;
+			box-sizing: inherit;
+			margin: 0;
+			padding: 0;
+			vertical-align: baseline;
+			position: absolute;
+			font-weight: 300;
+			line-height: 1.1em;
+			color: #FFFFFF;
+			z-index: 5;
+			text-align: right;
+			width: 106px;
+			font-size: 7px;
+			top: 127px;
+			right: calc(50% + 16px);
+		}
+		.about-title + .about-title { 
+			right: 17px; 
+		}
+		@media (max-width: 768px) {
+			.cell-12-sm {
+				max-width: 100%;
+				-ms-flex-preferred-size: 100%;
+				flex-basis: 100%;
+			}
+			.about__text, .about__text_icons {
+				font-size: 16px; 
+			}
+			.icon__item figure {
+				height: 39px;
+				width: 50px;
+				-webkit-box-flex: 0;
+				-ms-flex: 0 0 50px;
+				flex: 0 0 50px;
+    			padding-top: 22px;
+			}
+			.icon-about-1 {
+				line-height: 30px;
+				font-size: 27px;
+			}
+			.icon__item {
+				padding-bottom: 35px;
+			}
+		} 
+</style> 
+<div class="about-content">
+	<h1 class="about-content__header"> Почему PERCo</h1>  
+	<div class="img-holder"> 
+		<div class="about-title about-title-1">Главный офис PERCo</div>
+		<div class="about-title about-title-2">Завод PERCo</div>
+		<img width="100%" class="about__image" src="https://www.perco.ru/percoMobileMVP/img/about/about_photos.png" />  
 	</div>
-</div> 
-<div id="content">
-	<div id="preview_content">
-		<div class="left text_item">
-			<p>Компания PERCo — ведущий российский производитель систем и оборудования безопасности. Входит в пятерку мировых производителей.</p>
-			<p class="headline">Система менеджмента качества PERCo имеет сертификаты, удостоверяющие соответствие международным стандартам<br />ISO 9001:2015</p>
-			<p>Все товары имеют подтверждение соответствия требованиям безопасности российских и общеевропейских ЕС стандартов, предъявляемым к оборудованию, предназначенному для организации безопасности на предприятиях, в организациях и т.п.</p>
-			<p>Производимое PERCo оборудование и системы безопасности разрабатываются специалистами самой компании. Дивизион НИОКР PERCo включает в себя конструкторское бюро, департаменты аппаратных средств и программного обеспечения. Все новые товары проходят необходимые ресурсные и климатические испытания, испытания на электробезопасность, электромагнитную совместимость, пожарную безопасность.</p>
-			<p class="headline">PERCo уделяет особое внимание эффективной эксплуатации продаваемых изделий:</p>
-			<ul>
-				<li>Компания неукоснительно выполняет гарантийные и постгарантийные обязательства производителя в течение всего жизненного срока товара</li>
-				<li>Департамент сервисного обслуживания оказывает технические консультации, послепродажное обслуживание продукции, осуществляет гарантийный ремонт</li>
-				<li>Сертифицированные сервисные центры PERCo помогают бизнес-партнерам, в том числе монтажным организациям, осуществлять сервис, что обеспечивает эффективное обслуживание конечных покупателей продукции PERCo</li>
-			</ul>
-		</div>
-	</div>
-	<div class="turnikets-video" style="max-width: 600px; margin: 0 auto;">
-	<?
-		$APPLICATION->IncludeComponent("bitrix:catalog.element", "mobile_video", array(
-			"IBLOCK_ID" => "35",
-			"ELEMENT_ID" => "22328",
-			"AUTOSTART" => "N",
-			),
-			false
-		); 
-	?>
-	</div>
-	<div class="tabs">
-		<input type="checkbox" id="proizvodstvo" name="vkladki">
-		<label for="proizvodstvo"><span class="dashed">Производство</span></label>
-		<div class="text_item">
-			<div>
-				<img src="bxlocal://proizvodstvo_banner.png" width="100%" alt="banner" />
-			</div>
-			<p class="headline">PERCo — это высокотехнологичное производство, оснащенное по последнему слову техники оборудованием ведущих мировых производителей:</p>
-			<ul>
-				<li>установка лазерного раскроя металла LaserCut, производитель МСА, Россия</li>
-				<li>прецизионный электроэрозионный станок Арта, производитель НПК Дельта-Тест, Россия</li>
-				<li>координатно-вырубные прессы с ЧПУ (производители AMADA, Япония и TRUMPF, Германия)</li>
-				<li>листогибочные прессы с ЧПУ (AMADA, Япония)</li>
-				<li>вертикально-обрабатывающие центры с ЧПУ (MATSUURA, Япония, и DAHLIH, Тайвань)</li>
-				<li>токарно-обрабатывающие центры с ЧПУ (GOODWAY и ACCUWAY MACHINERY, Тайвань)</li>
-				<li>центр SMT-монтажа электронных плат (YAMAHA MOTOR GROUP, Япония)</li>
-				<li>линия подготовки поверхности (WIGAL, Henkel, Германия)</li>
-				<li>универсальные токарные и фрезерные станки (ARSENAL, Болгария)</li>
-				<li>шлифовальные станки (LOESER, Германия)</li>
-				<li>автоматизированный рольганг (TEHTONI CRISTIAN, Италия)</li>
-				<li>автоматический ленточнопильный станок (EVERISING, Тайвань)</li>
-				<li>отрезной дисковый станок (SCOOTCHMAN, США)</li>
-				<li>ленточно-шлифовальные станки Peltzmeyer и Kuhlmeyer (Германия), Gecam (Италия)</li>
-				<li>трубогибочные станки (ERCOLINA, Италия)</li>
-				<li>покрасочная линия (GEMA, Швейцария)</li>
-				<li>полуавтоматическая трубосверлильная машина hebö Maschinenfabrik GmbH (Германия)</li>
-				<li>форматно-раскроечный станок Bala Makina (Турция)</li>
-			</ul>
-			<p>Многоступенчатая система качества предприятия позволяет тщательно осуществлять контроль на всех этапах производства и предпродажной подготовки товаров.</p>
-		</div>
-		<input type="checkbox" id="osnovnye_tovarnye_gruppy" name="vkladki">
-		<label for="osnovnye_tovarnye_gruppy"><span class="dashed">Основные товарные группы</span></label>
-		<div class="text_item">
-			<div>
-				<img src="bxlocal://gruppi_tovarov_banner.png" width="100%" alt="banner" />
-			</div>
-			<p class="headline">Продукция PERCo</p>
-			<ul>
-				<li>Комплексные системы безопасности (КСБ)</li>
-				<li>Системы контроля доступа (СКУД) и повышения эффективности</li>
-				<li>Электронные проходные (готовая система контроля доступа)</li>
-				<li>Турникеты, калитки и ограждения</li>
-				<li>Электромеханические замки</li>
-				<li>Считыватели бесконтактных карт и картоприемники</li>
-			</ul>
-		</div>
-		<input type="checkbox" id="kontrol_kachestva" name="vkladki">
-		<label for="kontrol_kachestva"><span class="dashed">Контроль качества</span></label>
-		<div class="text_item">
-			<div>
-				<img src="bxlocal://kachestvo_banner.png" width="100%" alt="banner" />
-			</div>
-			<p class="headline">Многоступенчатая система качества компании позволяет тщательно контролировать все этапы производства и предпродажной подготовки товаров</p>
-			<p>Все товары имеют подтверждение соответствия требованиям безопасности российских и общеевропейских ЕС стандартов, предъявляемым к такому оборудованию.</p>
-			<p class="headline">Политика PERCo в области качества</p>
-			<p>Политика PERCo в области качества &ndash; достижение высокого качества, надежности и безопасности выпускаемой продукции, достижение и поддержание лидирующих позиций в области производства систем безопасности, обеспечение на внутреннем и внешнем рынках высокой репутации предприятия.</p>
-			<p class="headline">Цели PERC<span style="text-transform:lowercase;">o</span> в области качества</h2>
-			<ul>
-				<li>производство конкурентоспособных изделий, удовлетворяющих потребности покупателей: турникетов, калиток, электромеханических замков, электронных проходных, систем контроля доступа, комплексных систем безопасности</li>
-				<li>обеспечение стабильности качества продукции</li>
-				<li>ежегодное определение объективных показателей, сопровождающих процесс улучшения качества продукции</li>
-				<li>систематический анализ эффективности Системы Менеджмента Качества на основе информации о несоответствиях, выявленных при контроле, испытаниях и эксплуатации продукции</li>
-				<li>постоянное переоснащение парка технологического, контрольно-измерительного и испытательного оборудования, компьютерной техники и программного обеспечения</li>
-				<li>формирование деловой репутации надёжного партнёра в бизнес-сообществе, снижение рисков для потребителей при выполнении договорных обязательств, оперативное предупреждение возможных и устранение выявленных несоответствий продукции</li>
-				<li>обеспечение компетентности персонала, формирование сознательного понимания того, что важнейшим фактором высокой репутации предприятия и финансового благополучия каждого сотрудника является качество</li>
-			</ul>
-		</div>
-		<input type="checkbox" id="obuchenie" name="vkladki">
-		<label for="obuchenie"><span class="dashed">Обучение</span></label>
-		<div>
-			<div>
-				<img src="bxlocal://obuchenie_banner.png" width="100%" alt="banner" />
-			</div>
-			<p class="headline">Учебный центр PERCo на постоянной основе проводит для пользователей и инсталляторов обучающие семинары, посвященные изучению и внедрению системы безопасности PERCo</p>
-			<p>Учебный Центр оснащен компьютерами и стендами с действующим оборудованием. Изучение производимой PERCo продукции для обеспечения безопасности включено в обязательную программу обучения в 12 высших учебных заведениях России и стран СНГ.</p>
-			<p>Вузы имеют лаборатории с оборудованием системы безопасности PERCo и демонстрационными стендами.</p>
-		</div>
-	</div>
-	<div class="scroll" id="horizontal_scroll">
-<?
-global $arrFilter;
-$arrFilter["PROPERTY_TYPE_PRODUCT"] = 16475;
-$APPLICATION->IncludeComponent("bitrix:news.list", "perco_scroll", array(
-	"IBLOCK_TYPE" => "images",
-	"IBLOCK_ID" => "18",
-	"PARENT_SECTION" => "",
-	"PARENT_SECTION_CODE" => "",
-	"NEWS_COUNT" => "1000",
-	"SORT_BY1" => "SORT",
-	"SORT_ORDER1" => "ASC",
-	"SORT_BY2" => "ACTIVE_FROM",
-	"SORT_ORDER2" => "ASC",
-	"USE_FILTER" => "Y",
-	"FILTER_NAME" => "arrFilter",
-	"FIELD_CODE" => array(
-		0 => "",
-	),
-	"PROPERTY_CODE" => array(
-		0 => "TYPE_PRODUCT"
-	),
-	"CHECK_DATES" => "Y",
-	"DETAIL_URL" => "",
-	"AJAX_MODE" => "N",
-	"AJAX_OPTION_SHADOW" => "Y",
-	"AJAX_OPTION_JUMP" => "N",
-	"AJAX_OPTION_STYLE" => "Y",
-	"AJAX_OPTION_HISTORY" => "N",
-	"CACHE_TYPE" => "A",
-	"CACHE_TIME" => "36000000",
-	"CACHE_FILTER" => "N",
-	"CACHE_GROUPS" => "Y",
-	"PREVIEW_TRUNCATE_LEN" => "",
-	"ACTIVE_DATE_FORMAT" => "d.m.Y",
-	"SET_TITLE" => "N",
-	"SET_STATUS_404" => "N",
-	"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-	"ADD_SECTIONS_CHAIN" => "N",
-	"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-	"DISPLAY_TOP_PAGER" => "N",
-	"DISPLAY_BOTTOM_PAGER" => "Y",
-	"PAGER_TITLE" => "Фотографии",
-	"PAGER_SHOW_ALWAYS" => "Y",
-	"PAGER_TEMPLATE" => "gallery",
-	"PAGER_DESC_NUMBERING" => "N",
-	"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-	"PAGER_SHOW_ALL" => "Y",
-	"DISPLAY_DATE" => "Y",
-	"DISPLAY_NAME" => "Y",
-	"DISPLAY_PICTURE" => "Y",
-	"DISPLAY_PREVIEW_TEXT" => "Y",
-	"AJAX_OPTION_ADDITIONAL" => "",
-	),
-	false
-);?>
+	<div id="content_flat"> 
+		<div class="about__text"> 
+			<div class="row">
+				PERCo - ведущий российский производитель систем и оборудования безопасности.<br>
+				PERCo разрабатывает и выпускает:  
+				<ul>
+					<li>шлагбаумы</li>
+					<li>турникеты</li>
+					<li>замки</li>
+					<li>контроллеры и считыватели</li>
+					<li>системы контроля доступа </li>
+				</ul>
+			</div> 
+		</div> 
+		<div class="about__text_icons">
+			<div class="row">
+				<div class="icon__item cell-6 cell-12-sm">
+					<figure class="icon icon-about-1">33</figure><span class="icon__signature">33 года работы на рынке</span>
+				</div>
+				<div class="icon__item cell-6 cell-12-sm">
+					<figure class="icon icon-about-2"></figure><span class="icon__signature">Разветвленная дилерская сеть, сервисные центры во всех регионах России</span>
+				</div>
+				<div class="icon__item cell-6 cell-12-sm">
+					<figure class="icon icon-about-3"></figure><span class="icon__signature">Современный завод по производству оборудования безопасности</span>
+				</div>
+				<div class="icon__item cell-6 cell-12-sm">
+					<figure class="icon icon-about-4"></figure><span class="icon__signature">Склады готовой продукции в Москве, Санкт‑Петербурге, Пскове и ЕС</span>
+				</div>
+				<div class="icon__item cell-6 cell-12-sm">
+					<figure class="icon icon-about-5"></figure><span class="icon__signature">5-летний гарантийный срок на оборудование</span>
+				</div>
+				<div class="icon__item cell-6 cell-12-sm">
+					<figure class="icon icon-about-6"></figure><span class="icon__signature">Техническая поддержка и бесплатное обучение в Учебном центре</span>
+				</div>
+			</div> 
+		</div> 
 	</div>
 </div>
 <? require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -87,17 +87,6 @@ if (intval($res->SelectedRowsCount()) > 0)
 	$content = preg_replace_callback("/\[download:(.+)\]/", "GetDownloadFile", $content);
 	$content = preg_replace_callback("/\[downloadImg:(.+)\]/", "GetDownloadFileImg", $content);
 	$content = preg_replace_callback("/\[price:(.+)\]/", "GetPrice", $content);
-	if ($arProps["PHP"]["VALUE"]){
-		for($i=0; $i < count($arProps["PHP"]["VALUE"]); $i++)
-		{
-			if (!preg_match('/(.*percoMobileMVP\/products\/turnikety.*|.*percoMobile\/products\/turnikety.*|.*percoMobileMVP\/products\/elektromekhanicheskie-zamki.*|.*percoMobile\/products\/elektromekhanicheskie-zamki.*|.*percoMobileMVP\/products\/sistema-kontrolya-dostupa-perco-web.*|.*percoMobile\/products\/sistema-kontrolya-dostupa-perco-web.*|.*percoMobileMVP\/products\/po-sistemy-kontrolya-dostupa-perco-web.*|.*percoMobile\/products\/po-sistemy-kontrolya-dostupa-perco-web.*)/', $_SERVER['REQUEST_URI'])) {
-				include($_SERVER["DOCUMENT_ROOT"].$arProps["PHP"]["VALUE"][$i]);
-			}
-			$content .= '<div class="include-part">';
-			$content = str_ireplace($arProps["PHP"]["DESCRIPTION"][$i], $php_result, $content);
-			$content .= '</div>';
-		}
-	}	
 
 	?>
 		<div class="section-information">
@@ -127,6 +116,7 @@ if (intval($res->SelectedRowsCount()) > 0)
 			}*/
 			?>
 			</div>
+			<? console_log($content); ?>
 			<?echo $content;?>
 		</div>
 </div>
@@ -150,8 +140,8 @@ $linkPrefix = (preg_match('/\/percoMobileMVP\//', $url['path']) == 1) ? '/percoM
 			<div class="text_item">
 				<span>Контроллер управления доступом SC-820</span>
 				<div class="price">
-					<p style="">SC-820. Цена <span class="price_rub">10 747 ₽</span> со склада в Москве и Санкт-Петербурге</p>
-					<p>137 € (по курсу ЦБ РФ на 25.05.20)</p>
+					<p style="">SC-820. Цена <span class="price_rub">11 387 ₽</span> со склада в Москве и Санкт-Петербурге</p>
+					<p>137 € (по курсу ЦБ РФ на 07.12.21)</p>
 				</div>
 			</div>
 		</a>
@@ -164,8 +154,8 @@ $linkPrefix = (preg_match('/\/percoMobileMVP\//', $url['path']) == 1) ? '/percoM
 			<div class="text_item">
 				<span>Считыватель банковских карт RMC01</span>
 				<div class="price">
-					<p style="">RMC01. Цена <span class="price_rub">13 571 ₽</span> со склада в Москве и Санкт-Петербурге</p>
-					<p>173 € (по курсу ЦБ РФ на 25.05.20)</p>
+					<p style="">RMC01. Цена <span class="price_rub">19 033 ₽</span> со склада в Москве и Санкт-Петербурге</p>
+					<p>229 € (по курсу ЦБ РФ на 07.12.21)</p>
 				</div>
 			</div>
 		</a>
@@ -173,13 +163,14 @@ $linkPrefix = (preg_match('/\/percoMobileMVP\//', $url['path']) == 1) ? '/percoM
 	<div class="secel_item test3" style="margin: 0 2%; inline-size: 29%;">
 		<a href="<?= $linkPrefix ?>products/schityvatel-bankovskikh-kart-promix-rr-mc-02.php">
 			<div class="image_icon">
-				<img alt="Считыватель банковских карт Promix-RR.MC.02" src="/images/products/atm-system/schityvatel-bankovskikh-kart-promix-rr-mc-02_page.jpg">
+				<img alt="Считыватель банковских карт Promix-RR.MC.02" src="/images/products/atm-system/promix-rr-mc-02.jpg">
 			</div>
 			<div class="text_item">
 				<span>Считыватель банковских карт Promix-RR.MC.02</span>
 				<div class="price">
-					<p style="">Promix-RR.MC.02. Цена <span class="price_rub">7 374 ₽</span> со склада в Москве и Санкт-Петербурге</p>
-					<p>94 € (по курсу ЦБ РФ на 25.05.20)</p>
+					<p style="">Promix-RR.MC.02. Цена <span class="price_rub">7 813 ₽</span> со склада в Москве и Санкт-Петербурге</p>
+					
+					<p>94 € (по курсу ЦБ РФ на 07.12.21)</p>
 				</div>
 			</div>
 		</a>

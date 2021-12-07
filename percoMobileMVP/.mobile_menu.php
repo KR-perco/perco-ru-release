@@ -25,8 +25,8 @@ $items = array(
 	),
 	array(
 		"text" => "Контакты",
-		"data-url" => SITE_DIR."percoMobileMVP/offline/contacts.html",
-		"id"=>"offline/contacts.html",
+		"data-url" => SITE_DIR."percoMobileMVP/contacts/",
+		"id"=>"contacts",
 		"image"=>"img/menu-contacts.png",
 	),
 	array(

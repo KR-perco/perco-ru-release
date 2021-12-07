@@ -7,7 +7,7 @@ $products = array(
 		"name" => "Полисервис БРП-24-9-ТИ",
 		"image" => "/images/products/bloki-pitaniya/Poliservis-BRP-24-9-TI.jpg",
 		"description" => "",
-		"price" => "115"
+		"price" => "170"
     ),
 	"K-Inzhenering BIRP-24-6-0" => array(
 		"name" => "К-Инженеринг БИРП 24/6",

@@ -143,17 +143,7 @@ if($_GET["type"] == "new_product"){
 				<a href="/novosti/articles/" id="pub"><li class="sidebar-item">Публикации</li></a>
 			</ul>
 		</div>
-		<?}?> 
-		
-		<? if (LANGUAGE_ID == "en") {?>
-		<div class="news-menu">
-			<ul>
-				<a href="/news/" id="nov"><li class="sidebar-item active">News</li></a>
-				<a href="/news/articles/" id="pub"><li class="sidebar-item">Publications</li></a>
-			</ul>
-		</div>
-		<?}?> 
-
+		<?}?>
 		<div id="subscribe">
 			<?$APPLICATION->IncludeComponent(
 				"bitrix:subscribe.edit", 

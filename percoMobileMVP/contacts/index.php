@@ -1,30 +1,20 @@
-<!DOCTYPE html>
-<html>
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+CModule::IncludeModule('iblock');
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=320">
+$APPLICATION->AddHeadScript("/scripts/lightgallery/js/lightgallery.min.js");
+$APPLICATION->AddHeadScript("/scripts/lightslider/js/lightslider.min.js");
+$APPLICATION->AddHeadScript("/scripts/lightgallery/js/lg-zoom.min.js");
+$APPLICATION->SetAdditionalCSS("/scripts/lightgallery/css/lightgallery.min.css");
+$APPLICATION->SetAdditionalCSS("/scripts/lightslider/css/lightslider.min.css");
 
-    <script type="text/javascript" src="__deviceload__/cordova.js"></script>
-    <script type="text/javascript" src="bitrix_mobile_core.js"></script>
-
-    <link href="template_styles.css" rel="stylesheet" type="text/css">
-</head>
-
-<body>
-    <script>
-        app.setPageTitle({
-            title: "Контакты"
-        });
-    </script>
-
-    <style>
-        .tabs label:before {
-            background-image: url("");
-        }
+?> 
+<script>
+	app.setPageTitle({
+         title: "Контакты"
+	  }); 
+</script>
+<style> 
         
         #contacts,
         #change_products,
@@ -151,31 +141,31 @@
         }
         
         dd.telephone::before {
-            background-image: url(bxlocal://k-telefon.png);
+            background-image: url(../img/k-telefon.png);
         }
         
         dd.telegram::before {
-            background-image: url(bxlocal://k-telegram.png);
+            background-image: url(../img/k-telegram.png);
         }
         
         dd.mail::before {
-            background-image: url(bxlocal://k-konvert.png);
+            background-image: url(../img/k-konvert.png);
         }
         
         dd.addres::before {
-            background-image: url(bxlocal://k-geotag.png);
+            background-image: url(../img/k-geotag.png);
         }
         
         dd.time::before {
-            background-image: url(bxlocal://k-chasy.png);
+            background-image: url(../img/k-chasy.png);
         }
         
         dd.viber::before {
-            background-image: url(bxlocal://k-viber.png);
+            background-image: url(../img/k-viber.png);
         }
         
         dd.car::before {
-            background-image: url(bxlocal://k-avto.png);
+            background-image: url(../img/k-avto.png);
         }
         
         div.mail-group dd {
@@ -188,7 +178,7 @@
         }
         
         div.box-before h2::before {
-            content: " ";
+            content: "";
             font-size: 0;
             display: block;
             margin-right: -20px;
@@ -201,33 +191,36 @@
             background-repeat: no-repeat;
         }
         
+        h2#adress::before {
+            background-image: url(../img/contacts/1-adress.jpg);
+            background-size: contain;
+        } 
+        h2#storage::before {
+            background-image: url(../img/contacts/2-storage.jpg);
+            background-size: contain;
+        }
+        
         h2#products::before {
-            background-image: url(bxlocal://kh-turniket.png);
+            background-image: url(../img/contacts/3-products.jpg);
+            background-size: contain;
+        }
+        
+        h2#requisites::before {
+            background-image: url(../img/contacts/4-requisites.jpg);
             background-size: contain;
         }
         
         h2#techsupport::before {
-            background-image: url(bxlocal://kh-remont.png);
-            background-size: contain;
-        }
-        
-        h2#storage::before {
-            background-image: url(bxlocal://kh-sklad-01.png);
-            background-size: contain;
-        }
-        
-        h2#feedback::before {
-            background-image: url(bxlocal://kh-contact-form.png);
-            background-size: contain;
-        }
-        
-        h2#lerning::before {
-            background-image: url(bxlocal://kh-obuchenie-01.png);
+            background-image: url(../img/contacts/5-techsupport.jpg);
             background-size: contain;
         }
         
         h2#personal::before {
-            background-image: url(bxlocal://kh-personal.png);
+            background-image: url(../img/contacts/6-personal.jpg);
+            background-size: contain;
+        }
+        h2#lerning::before {
+            background-image: url(../img/contacts/7-lerning.jpg);
             background-size: contain;
         }
         
@@ -359,14 +352,48 @@
         <div class="line">
             <div class="col-2">
                 <div class="box-before">
+                    <h2 id="adress">Адрес</h2>
+                    <div class="tabs">
+                        <input type="radio" checked="" id="adress__spb" name="vyborAdress">
+                        <label for="adress__spb"><span class="dashed">Санкт-Петербург</span></label>
+                        <div class="item" itemscope="" itemtype="http://schema.org/Organization">
+                            <dl>
+                                <dd class="addres">194021, Россия, Санкт-Петербург,<br> Политехническая ул., д. 4, корпус 2, строение 1<br> </dd>
+                            </dl>
+                            <dl>
+                                <dd class="map">
+                                    <a data-src="/kontakty/spb.php?iframe=true&amp;map=yandex&amp;type=offise" _map="yandex" title="Яндекс" data-iframe="true"><img src="/images/kontakty/yandex.svg"></a>
+                                    <a data-src="/kontakty/spb.php?iframe=true&amp;map=google&amp;type=offise" _map="google" title="Google" data-iframe="true"><img src="/images/kontakty/google-maps-seeklogo.com.svg"></a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <input type="radio" id="adress__pskov" name="vyborAdress">
+                        <label for="adress__pskov"><span class="dashed">Псков</span></label>
+                        <div class="item" itemscope="" itemtype="http://schema.org/Organization">
+                            <dl>
+                                <dd class="addres"><span><span itemprop="postalCode">180600</span>, <span itemprop="addressLocality">Россия, Псков</span><br>
+                                    <span itemprop="streetAddress"> ул. Леона Поземского 123В</span></span>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dd class="map">
+                                    <a data-src="/kontakty/pskov-zavod.php?iframe=true&amp;map=yandex" _map="yandex" title="Яндекс" data-iframe="true"><img src="/images/kontakty/yandex.svg"></a>
+                                    <a data-src="/kontakty/pskov-zavod.php?iframe=true&amp;map=google" _map="google" title="Google" data-iframe="true"><img src="/images/kontakty/google-maps-seeklogo.com.svg"></a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-before">
                     <h2 id="products">Выбор и приобретение продукции</h2>
                     <div class="tabs">
-                        <input type="checkbox" id="russia" name="vyborProd">
+                        <input type="radio" checked="" id="russia" name="vyborProd">
                         <label for="russia"><span class="dashed">Россия</span></label>
                         <div class="item" itemscope="" itemtype="http://schema.org/Organization">
                             <dl>
                                 <dd class="telephone"><span><span itemprop="telephone">
-										8-800-333-52-53</span><br>
+									
+									
                                     <span itemprop="telephone">+7 (812) 247-04-57</span></span>
                                 </dd>
                             </dl>
@@ -376,7 +403,7 @@
                                 </dd>
                             </dl>
                             <dl>
-                                <dd class="addres">194021, Россия, Санкт-Петербург,<br> Политехническая ул., д. 4, корпус 2<br> 9:00–18:00 (мск), по рабочим дням</dd>
+                                <dd class="addres">194021, Россия, Санкт-Петербург,<br> Политехническая ул., д. 4, корпус 2, строение 1<br> 9:00–18:00 (мск), по рабочим дням</dd>
                             </dl>
                             <p style="padding-left: 40px; margin: 30px 50px 15px 40px;">
                                 <a href="https://www.youtube.com/percoru" rel="nofollow" target="_blank"><img alt="youtube" src="/images/icons/you.svg" width="30px" height="30px"></a>
@@ -384,7 +411,7 @@
                                 <a href="https://www.instagram.com/perco_com/" style="margin-right: 10px;" rel="nofollow" target="_blank"><img alt="twitter" src="/images/icons/inst.svg" width="30px" height="30px"></a>
                             </p>
                         </div>
-                        <input type="checkbox" id="uae" name="vyborProd">
+                        <input type="radio" id="uae" name="vyborProd">
                         <label for="uae"><span class="dashed">ОАЭ</span></label>
                         <div class="item" itemscope="" itemtype="http://schema.org/Organization">
                             <dl>
@@ -392,7 +419,7 @@
                                 </dd>
                             </dl>
                             <dl>
-                                <dd class="viber"><span><span itemprop="telephone">+971 55 377 3539</span></span>
+                                <dd class="wa"><span><span itemprop="telephone">+971 55 377 3539</span></span>
                                 </dd>
                             </dl>
                             <dl>
@@ -434,10 +461,13 @@
                         </div>
                     </dl>
                     <dl>
-                        <!--dd class="time">9:00–18:00 (мск), по рабочим дням</dd-->
-                        <dd class="time">
-                            специалисты по турникетам и контроллерам<br> 9:00–17:45 (мск), по рабочим дням,<br> специалист по ПО<br> 9:00–18:15 (мск), по рабочим дням
-                        </dd>
+                        <dd class="time">9:00–17:45 (мск), по рабочим дням</dd>
+                        <!--dd class="time">
+						специалисты по турникетам и контроллерам<br>
+						9:00–17:45 (мск), по рабочим дням,<br>
+						специалист по ПО<br>
+						9:00–17:45 (мск), по рабочим дням
+					</dd-->
                     </dl>
 
                     <dl>
@@ -445,10 +475,19 @@
                             <span>
 							Курьерская доставка: <span itemprop="postalCode">194021</span>,
                             <span itemprop="addressLocality">Россия, <br>Санкт-Петербург,</span>
-                            <span itemprop="streetAddress">Политехническая ул., <br>д. 4, корпус 2</span><br> ООО «ПЭРКо», ИНН 7806437448<br>
+                            <span itemprop="streetAddress">Политехническая ул., д. 4,<br>корпус 2, строение 1</span><br> ООО «ПЭРКО», ИНН 7806437448<br>
                             <span itemprop="telephone">+7 (812) 247-04-54</span><br> с 9:00 до 17:30 по рабочим дням
                             </span>
                         </dd>
+                    </dl>
+                </div>
+                <div class="box-before">
+                    <h2 id="lerning">Сотрудничество и обучение</h2>
+                    <dl>
+                        <dd class="telephone">+7 (812) 247-04-59</dd>
+                    </dl>
+                    <dl>
+                        <dd class="mail"><a href="mailto:seminar@perco.ru">seminar@perco.ru</a></dd>
                     </dl>
                 </div>
             </div>
@@ -458,7 +497,7 @@
                     <h2 id="storage">Склады</h2>
 
                     <div class="tabs">
-                        <input type="checkbox" id="moscow" name="vkladki">
+                        <input type="radio" id="moscow" name="vkladki">
                         <label for="moscow"><span class="dashed">Москва</span></label>
                         <div class="item" itemscope="" itemtype="http://schema.org/Organization">
                             <span style="display: none;" itemprop="name">PERCo – производство турникетов, систем
@@ -493,8 +532,20 @@
                                     </span>
                                 </dd>
                             </dl>
+                            <dl>
+                                <dd class="map">
+                                    <a data-src="/kontakty/moscow.php?iframe=true&amp;map=yandex" _map="yandex" title="Яндекс" data-iframe="true"><img src="/images/kontakty/yandex.svg"></a>
+                                    <a data-src="/kontakty/moscow.php?iframe=true&amp;map=google" _map="google" title="Google" data-iframe="true"><img src="/images/kontakty/google-maps-seeklogo.com.svg"></a>
+                                </dd>
+                            </dl>
+                            <div class="pdf-box">
+                                <img width="20" height="16" src="/images/icons/pdf.svg">
+                                <a href="/download/other/proezd-k-skladu-v-moskve.pdf" target="_blank" onclick="ga('send', 'event', {'eventCategory': 'Контакты', 'eventAction': 'download', 'eventLabel': 'Проезд до склада в Москве'});" download="">Как добраться общественным транспортом</a>
+                            </div>
+
+
                         </div>
-                        <input type="checkbox" id="spb" name="vkladki">
+                        <input type="radio" id="spb" name="vkladki" checked="checked">
                         <label for="spb"><span class="dashed">Санкт-Петербург</span></label>
                         <div class="item" itemscope="" itemtype="http://schema.org/Organization">
                             <span style="display: none;" itemprop="name">PERCo – производство турникетов, систем
@@ -515,12 +566,18 @@
                                     <dd class="addres"><span><span itemprop="postalCode">194021</span>, <span itemprop="addressLocality">Россия,
 											Санкт-Петербург</span><br><span itemprop="streetAddress">Политехническая
 											ул., д. 4, корпус 2, строение
-											1</span>.</span>
+											1</span></span>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dd class="map">
+                                        <a data-src="/kontakty/spb.php?iframe=true&amp;map=yandex" _map="yandex" title="Яндекс" data-iframe="true"><img src="/images/kontakty/yandex.svg"></a>
+                                        <a data-src="/kontakty/spb.php?iframe=true&amp;map=google" _map="google" title="Google" data-iframe="true"><img src="/images/kontakty/google-maps-seeklogo.com.svg"></a>
                                     </dd>
                                 </dl>
                             </div>
                         </div>
-                        <input type="checkbox" id="pskov" name="vkladki">
+                        <input type="radio" id="pskov" name="vkladki">
                         <label for="pskov"><span class="dashed">Псков</span></label>
                         <div class="item" itemscope="" itemtype="http://schema.org/Organization">
                             <span style="display: none;" itemprop="name">PERCo – производство турникетов, систем
@@ -550,9 +607,15 @@
 											1001</span></span>
                                     </dd>
                                 </dl>
+                                <dl>
+                                    <dd class="map">
+                                        <a data-src="/kontakty/pskov.php?iframe=true&amp;map=yandex" _map="yandex" title="Яндекс" data-iframe="true"><img src="/images/kontakty/yandex.svg"></a>
+                                        <a data-src="/kontakty/pskov.php?iframe=true&amp;map=google" _map="google" title="Google" data-iframe="true"><img src="/images/kontakty/google-maps-seeklogo.com.svg"></a>
+                                    </dd>
+                                </dl>
                             </div>
                         </div>
-                        <input type="checkbox" id="tal" name="vkladki">
+                        <input type="radio" id="tal" name="vkladki">
                         <label for="tal"><span class="dashed">Таллинн</span></label>
                         <div class="item" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
                             <dl>
@@ -563,8 +626,14 @@
                                     <span itemprop="streetAddress">45 Akadeemia str.</span></span>
                                 </dd>
                             </dl>
+                            <dl>
+                                <dd class="map">
+                                    <a data-src="/kontakty/tallin.php?iframe=true&amp;map=yandex" _map="yandex" title="Яндекс" data-iframe="true"><img src="/images/kontakty/yandex.svg"></a>
+                                    <a data-src="/kontakty/tallin.php?iframe=true&amp;map=google" _map="google" title="Google" data-iframe="true"><img src="/images/kontakty/google-maps-seeklogo.com.svg"></a>
+                                </dd>
+                            </dl>
                         </div>
-                        <input type="checkbox" id="rot" name="vkladki">
+                        <input type="radio" id="rot" name="vkladki">
                         <label for="rot"><span class="dashed">Роттердам</span></label>
                         <div class="item" itemscope="" itemtype="http://schema.org/Organization">
                             <dl>
@@ -575,17 +644,41 @@
                                     <span itemprop="streetAddress">Ringdijk 374 - 378, 2983 GS Ridderkerk</span></span>
                                 </dd>
                             </dl>
+                            <dl>
+                                <dd class="map">
+                                    <a data-src="/kontakty/rotterdam.php?iframe=true&amp;map=yandex" _map="yandex" title="Яндекс" data-iframe="true"><img src="/images/kontakty/yandex.svg"></a>
+                                    <a data-src="/kontakty/rotterdam.php?iframe=true&amp;map=google" _map="google" title="Google" data-iframe="true"><img src="/images/kontakty/google-maps-seeklogo.com.svg"></a>
+                                </dd>
+                            </dl>
                         </div>
                     </div>
+                    <p><a href="/kontakty/samovyvoz.php">Правила получения оплаченного оборудования на условиях
+						самовывоза</a></p>
                 </div>
-
                 <div class="box-before">
-                    <h2 id="lerning">Сотрудничество и обучение</h2>
+                    <h2 id="requisites">Реквизиты компании</h2>
                     <dl>
-                        <dd class="telephone">+7 (812) 247-04-59</dd>
+                        <dd>Общество с ограниченной ответственностью «ПЭРКО»</dd>
                     </dl>
                     <dl>
-                        <dd class="mail"><a href="mailto:seminar@perco.ru">seminar@perco.ru</a></dd>
+                        <dd class="mail"><a href="mailto:info@perco.ru">info@perco.ru</a>&nbsp;для официальных обращений</dd>
+                    </dl>
+                    <dl>
+                        <dd class="addres">Юридический адрес: 194021, Санкт-Петербург,<br>ул. Политехническая, дом 4, корпус 2, строение 1</dd>
+                        <dd>Фактический адрес: 194021, Санкт-Петербург,<br>ул. Политехническая, дом 4, корпус 2, строение 1</dd>
+                    </dl>
+                    <dl>
+                        <dd class="bank-details">
+                            ОГРН 1107847252611<br> ИНН 7806437448 КПП 780201001<br> р/сч 40702810880000006399<br> Филиал Удельный Банка ВТБ (ПАО)<br>в Санкт-Петербурге г. Санкт-Петербург<br> БИК 044030704 к/сч 30101810200000000704
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dd>
+                            ОКПО 67455649<br> ОКАТО 40265562000.<br> ОКТМО 40315000<br> ОКВЭД 26.11, 25.61, 46.52.2, 68.2
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dd class="telephone"><span itemprop="telephone">(812) 247-04-52, 247-04-50</span></dd>
                     </dl>
                 </div>
                 <div class="box-before">
@@ -601,144 +694,4 @@
             </div>
         </div>
     </div>
-
-    <div id="content" style="display: none;">
-        <div class="block">
-            <h2>Мобильное приложение</h2>
-            <dl>
-                <dt>Сайт PERCo:</dt>
-                <dd><a href="https://www.perco.ru/">perco.ru</a></dd>
-                <dt>Техническая поддержка приложения PERCo.Каталог:</dt>
-                <dd><a href="mailto:webmaster@perco.ru">webmaster@perco.ru</a></dd>
-            </dl>
-        </div>
-        <div class="block">
-            <h2>Выбор и приобретение продукции</h2>
-            <dl>
-                <dt>Call-центр:</dt>
-                <dd><span itemprop="telephone"><a href="tel:+78003335253">8-800-333-52-53</a></span><br>(Бесплатный звонок по России)</dd>
-                <dt>Телефон:</dt>
-                <dd><span itemprop="telephone"><a href="tel:+78122470457">+7 (812) 247-04-57</a></span></dd>
-                <dt>E-mail:</dt>
-                <dd><a href="mailto:mail@perco.ru"><span itemprop="email">mail@perco.ru</span></a></dd>
-                <dt>Почтовый адрес:</dt>
-                <dd>194021, Россия, </dd>
-                <dd>Санкт-Петербург, Политехническая ул., д. 4, корпус 2</dd>
-                <dt>Время работы:</dt>
-                <dd>9:00–18:00 (мск), по рабочим дням</dd>
-            </dl>
-            <dl>
-                <a href="https://www.youtube.com/percoru" rel="nofollow" target="_blank"><img alt="youtube" src="bxlocal://social-you.png"></a>
-                <a href="https://www.instagram.com/perco_com/" rel="nofollow" target="_blank"><img alt="instagram" src="bxlocal://social-inst.png"></a>
-            </dl>
-        </div>
-        <div class="block">
-            <h2>Сотрудничество и обучение</h2>
-            <dl>
-                <dt>Телефон:</dt>
-                <dd><a href="tel:+78122470459">+7 (812) 247-04-59</a></dd>
-                <dt>Запись на семинары:</dt>
-                <dd><a href="mailto:seminar@perco.ru">seminar@perco.ru</a></dd>
-            </dl>
-        </div>
-        <div class="block">
-            <h2>Служба персонала</h2>
-            <dl>
-                <dt>Телефон:</dt>
-                <dd><a href="tel:+78122470451">+7 (812) 247-04-51</a> (Санкт-Петербург)</dd>
-                <dd><a href="tel:+78112794701">+7 (8112) 79-47-01</a> (Псков)</dd>
-                <dd><a href="tel:+78112794704">+7 (8112) 79-47-04</a> (Псков)</dd>
-                <dt>E-mail:</dt>
-                <dd><a href="mailto:ok@perco.ru">ok@perco.ru</a></dd>
-            </dl>
-        </div>
-        <div class="block">
-            <h2>Техническая поддержка</h2>
-            <dl>
-                <dt>Call-центр:</dt>
-                <dd><a href="tel:+78007753705">8-800-775-37-05</a></dd>
-                <dt>Телефон:</dt>
-                <dd><a href="tel:+78122470455">+7 (812) 247-04-55</a></dd>
-                <dt>E-mail:
-			</dt>
-                <dd><a href="mailto:system@perco.ru">system@perco.ru</a> (по вопросам обслуживания систем безопасности и систем контроля доступа)</dd>
-                <dd><a href="mailto:turnstile@perco.ru">turnstile@perco.ru</a> (по вопросам обслуживания турникетов, калиток, ограждений)</dd>
-                <dd><a href="mailto:soft@perco.ru">soft@perco.ru</a> (по вопросам технической поддержки программного обеспечения комплексных систем безопасности, систем контроля доступа)</dd>
-                <dd><a href="mailto:locks@perco.ru">locks@perco.ru</a> (по вопросам обслуживания электромеханических замков)</dd>
-                <dt>Время работы:</dt>
-                <dd>9:00–18:00 (мск), по рабочим дням</dd>
-                <dt>Адрес курьерской доставки:</dt>
-                <dd><span itemprop="postalCode">194021</span>, <span itemprop="addressLocality">Россия, Санкт-Петербург,</span></dd>
-                <dd><span itemprop="streetAddress">Политехническая ул., д. 4, корпус 2</span><br> ООО «ПЭРКО», ИНН 7806437448</dd>
-                <dd><span itemprop="telephone"><a href="tel:+78122470454">+7 (812) 247-04-54</a></span></dd>
-                <dt>Прием курьера:</dt>
-                <dd>с 9:00 до 17:30 по рабочим дням</dd>
-            </dl>
-        </div>
-
-        <div>
-            <h2>Склады</h2>
-            <div class="tabs">
-                <input type="checkbox" id="moscow" name="vkladki">
-                <label for="moscow"><span class="dashed">Москва</span></label>
-                <div class="item" itemscope="" itemtype="http://schema.org/Organization">
-                    <span style="display: none;" itemprop="name">PERCo – производство турникетов, систем безопасности и контроля доступа (СКУД)</span>
-                    <div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-                        <dl>
-                            <dt>Адрес:</dt>
-                            <dd><span itemprop="postalCode">143400</span>, <span itemprop="addressLocality">Россия, Московская обл, Красногорский р-он</span>,</dd>
-                            <dd><span itemprop="streetAddress">Гольево, ул. Центральная, стр. 6 "Б"</span>.</dd>
-                        </dl>
-                    </div>
-                    <dl>
-                        <dt>Телефон:</dt>
-                        <dd><span itemprop="telephone"><a href="tel:+74957869672">+7 (495) 786-96-72</a></span></dd>
-                        <dd><span itemprop="telephone"><a href="tel:+79629663487">+7 (962) 966-34-87</a></span></dd>
-                        <dt>E-mail:</dt>
-                        <dd><a href="mailto:moscow@perco.ru"><span itemprop="email">moscow@perco.ru</span></a></dd>
-                        <dt>Время работы:</dt>
-                        <dd>9:00–17:30 (мск), по рабочим дням</dd>
-                    </dl>
-                </div>
-                <input type="checkbox" id="spb" name="vkladki">
-                <label for="spb"><span class="dashed">Санкт-Петербург</span></label>
-                <div class="item" itemscope="" itemtype="http://schema.org/Organization">
-                    <span style="display: none;" itemprop="name">PERCo – производство турникетов, систем безопасности и контроля доступа (СКУД)</span>
-                    <div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-                        <dl>
-                            <dt>Адрес:</dt>
-                            <dd><span itemprop="postalCode">194021</span>, <span itemprop="addressLocality">Россия, Санкт-Петербург</span></dd>
-                            <dd><span itemprop="streetAddress">Политехническая ул., д. 4, корпус 2, строение 1</span>.</dd>
-                            <dt>Телефон:</dt>
-                            <dd><span itemprop="telephone"><a href="tel:+78122470454">+7 (812) 247-04-54</a></span></dd>
-                            <dt>E-mail:</dt>
-                            <dd><a href="mailto:dl@perco.ru"><span itemprop="email">dl@perco.ru</span></a></dd>
-                            <dt>Время работы:</dt>
-                            <dd>9:00–17:30 (мск), по рабочим дням</dd>
-                        </dl>
-                    </div>
-                </div>
-                <input type="checkbox" id="pskov" name="vkladki">
-                <label for="pskov"><span class="dashed">Псков</span></label>
-                <div class="item" itemscope="" itemtype="http://schema.org/Organization">
-                    <span style="display: none;" itemprop="name">PERCo – производство турникетов, систем безопасности и контроля доступа (СКУД)</span>
-                    <div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-                        <dl>
-                            <dt>Адрес:</dt>
-                            <dd><span itemprop="postalCode">180006</span>, <span itemprop="addressLocality">Россия, Псков</span></dd>
-                            <dd><span itemprop="streetAddress"> ул. Леона Поземского, д. 110д, лит. В, пом. 1001</span></dd>
-                            <dt>Телефон:</dt>
-                            <dd><span itemprop="telephone"><a href="tel:+78112230740">+7 (8112) 23-07-40</a></span></dd>
-                            <dt>E-mail:</dt>
-                            <dd><a href="mailto:warehouse@perco.ru"><span itemprop="email">warehouse@perco.ru</span></a></dd>
-                            <dt>Время работы:</dt>
-                            <dd>8:00–16:30 (мск), по рабочим дням</dd>
-                        </dl>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-
-</html>
+<? require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

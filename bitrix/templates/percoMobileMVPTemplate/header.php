@@ -20,7 +20,20 @@ CMobile::Init();
 	<meta http-equiv="Content-Type" content="text/html;charset=<?= SITE_CHARSET ?>"/>
 	<meta name="format-detection" content="telephone=no">
 </head>
-<body><? //$APPLICATION->ShowPanel();?>
+<body>
+	
+<?
+
+$APPLICATION->AddHeadScript("/scripts/jquery.min.js");
+$APPLICATION->AddHeadScript("/scripts/lightgallery/js/lightgallery.min.js");
+$APPLICATION->AddHeadScript("/scripts/lightgallery/js/lightgallery.min.js");
+$APPLICATION->AddHeadScript("/scripts/lightslider/js/lightslider.min.js");
+$APPLICATION->AddHeadScript("/scripts/lightgallery/js/lg-zoom.min.js");
+$APPLICATION->SetAdditionalCSS("/scripts/lightgallery/css/lightgallery.min.css");
+$APPLICATION->SetAdditionalCSS("/scripts/lightslider/css/lightslider.min.css");
+
+?>
+
 <script type="text/javascript">
 	app.pullDown({
 		enable: true,

@@ -189,8 +189,7 @@ if ($ar_props["PROPERTY_BANNER_VALUE"])
 									$content .= '<div class="preview_text">'.$arFields["PREVIEW_TEXT"].'</div>';
 
 								if (($arFields["DETAIL_TEXT"]) && ($url['query'] != "installer"))
-									$content .= '<div  class="detail_text">'.$arFields["DETAIL_TEXT"].'</div>';
-							
+									$content .= '<div  class="detail_text">'.$arFields["DETAIL_TEXT"].'</div>'; 
 
 								echo $content;
 							}

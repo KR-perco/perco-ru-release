@@ -38,7 +38,7 @@ select:not(:first-child) { display: none; }
 </style>
 <div id="content">
 <div class="catalog-section-list">
-			<h2>Каталог запчастей к оборудованию</h2>
+			<!-- <h2>Каталог запчастей к оборудованию</h2>
 			<div class="download_item">
 				<div class="icon"><img alt="Иконка" src="bxlocal://pdf.png"></div>
 				<div><a href="bxlocal://katalog-zapchastej-PERCo.pdf">Иллюстрированный каталог запчастей к оборудованию PERCo</a></div>
@@ -46,25 +46,25 @@ select:not(:first-child) { display: none; }
 			<div class="download_item" style="display: none;">
 				<div class="icon"><img alt="Иконка" src="bxlocal://pdf.png"></div>
 				<div><a href="bxlocal://katalog-dlya-kp.pdf">Прайс запчастей к оборудованию PERCo</a></div>
-			</div>
+			</div> -->
 			<h2>Сертификаты системы качества PERCo</h2>
 			<div class="download_item">
-				<div class="icon"><img alt="Иконка" src="bxlocal://pdf.png"></div>
-				<div><a href="bxlocal://Certificates_IQNet.pdf">Сертификат IQNet</a></div>
+				<div class="icon"><img alt="Иконка" src="https://www.perco.ru/percoMobileMVP/doc/pdf.png"></div>
+				<div><a href="https://www.perco.ru/percoMobileMVP/doc/Certificates_IQNet.pdf">Сертификат IQNet</a></div>
 			</div>
 			<div class="download_item">
-				<div class="icon"><img alt="Иконка" src="bxlocal://pdf.png"></div>
-				<div><a href="bxlocal://Certificates_ACCREDIA.pdf">Сертификат ACCREDIA/ТЕСТ-С</a></div>
+				<div class="icon"><img alt="Иконка" src="https://www.perco.ru/percoMobileMVP/doc/pdf.png"></div>
+				<div><a href="https://www.perco.ru/percoMobileMVP/doc/Certificates_ACCREDIA.pdf">Сертификат ACCREDIA/ТЕСТ-С</a></div>
 			</div>
 			<div class="download_item">
-				<div class="icon"><img alt="Иконка" src="bxlocal://pdf.png"></div>
-				<div><a href="bxlocal://gost-iso-9001-2015.pdf">Сертификат ГОСТ ISO9001-2015 (ISO9001:2015)</a></div>
+				<div class="icon"><img alt="Иконка" src="https://www.perco.ru/percoMobileMVP/doc/pdf.png"></div>
+				<div><a href="https://www.perco.ru/percoMobileMVP/doc/gost-iso-9001-2015.pdf">Сертификат ГОСТ ISO9001-2015 (ISO9001:2015)</a></div>
 			</div>
-			<h2 style="display: none;">Технический каталог оборудования</h2>
+			<!-- <h2 style="display: none;">Технический каталог оборудования</h2>
 			<div class="download_item" style="display: none;">
 				<div class="icon"><img alt="Иконка" src="bxlocal://pdf.png"></div>
 				<div><a href="bxlocal://technical-catalog-perco.pdf">Технический каталог А4</a></div>
-			</div>
+			</div> -->
 		</div>
 	<div>
 	<div style="display: none;">
@@ -96,7 +96,7 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "mobile_files_tree
 		<button type="submit" value="Найти">Найти</button>
 	</div>
 	<div id="download_items"></div>
-	<p><a href="/percoMobileMVP/documentation/archive.php">Архив документации</a></p>
+	<!-- <p><a href="/percoMobileMVP/documentation/archive.php">Архив документации</a></p> -->
 </div>
   
 

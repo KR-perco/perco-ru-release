@@ -17,13 +17,13 @@ $managerBlock = '<div class="workers-block">
                       <p>Решения</p>
                     </div>
                   </a>
-                  <a href="/percoMobileMVP/offline/gallery.html">
+                  <a href="/percoMobileMVP/manager/gallery">
                     <div class="">
                       <img src="/percoMobileMVP/img/section-galery.png" alt="photogallery">
                       <p>Фотогалерея</p>
                     </div>
                   </a>
-                  <a href="/percoMobileMVP/offline/booklets.html">
+                  <a href="/percoMobileMVP/manager/booklets">
                     <div class="">
                       <img src="/percoMobileMVP/img/section-booklets.png" alt="booklets">
                       <p>Каталоги и буклеты</p>
