@@ -336,6 +336,15 @@ if(!$_GET["F"])
 		$vkladka_content .= $vkladka_menu.'<div>'.$video.'</div>';
 	}
 // <- Добавление видео во вкладку
+// Добавление схемы во вкладку ->
+
+console_log($arProps);
+	// if ($video)
+	// {
+	// 	$vkladka_menu = '<input name="vkladki" type="checkbox" id="video_info"><label id="label_video" for="video_info"><span class="dashed">Видео</span></label>';
+	// 	$vkladka_content .= $vkladka_menu.'<div>'.$video.'</div>';
+	// }
+// <- Добавление схемы во вкладку
 }
 if (substr_count($vkladka_content, "vkladki") > 1)
 	$content .= '<div class="tabs product-tabs">'.$vkladka_content.'</div>';
@@ -350,16 +359,7 @@ if ($arResult["PROPERTIES"]["PHP"]["VALUE"])		// Делаем вставки php
 		include($_SERVER["DOCUMENT_ROOT"].$arResult["PROPERTIES"]["PHP"]["VALUE"][$i]);
 		$content = str_ireplace($arResult["PROPERTIES"]["PHP"]["DESCRIPTION"][$i], $php_result, $content);
 	}
-}
-/*if ($arResult["PROPERTIES"]["LINKS"]["VALUE"])		// Устанавливаем ссылки на фразы
-{
-	for($i=0; $i < count($arResult["PROPERTIES"]["LINKS"]["VALUE"]); $i++)
-	{
-		$url = '/percoMobile'.$arResult["PROPERTIES"]["LINKS"]["VALUE"][$i].'';
-		$trans = str_replace("/", "\/", $arResult["PROPERTIES"]["LINKS"]["DESCRIPTION"][$i]);
-		$content = preg_replace("/(?<![\"\'\«]{1})$trans/", "<a href='$url'>\\0</a>", $content, 1);
-	}
-}*/
+} 
 
 $detailText = $arResult["DETAIL_TEXT"]; // делаем вставку файлов в детальное описание
 $detailText = preg_replace_callback("/\[download:(.+)\]/", "GetDownloadFile", $detailText);

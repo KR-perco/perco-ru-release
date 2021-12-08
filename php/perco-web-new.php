@@ -717,7 +717,7 @@ switch ($checkedId) {
                             <p>Сервер системы</p>
                         </td>
                         <td>
-                            <p><strong>+</strong></p>
+                            <p>+</p>
                         </td>
                         <td>
                             <p>встроен</p>
@@ -972,7 +972,7 @@ switch ($checkedId) {
                             <p>Биометрическая идентификация</p>
                         </td>
                         <td colspan="2">
-                            <p><strong>+</strong></p>
+                            <p>+</p>
                         </td>
                     </tr>
                     <tr>
@@ -980,7 +980,7 @@ switch ($checkedId) {
                             <p>Идентификация по смартфону</p>
                         </td>
                         <td colspan="2">
-                            <p><strong>+</strong></p>
+                            <p>+</p>
                         </td>
                     </tr>
 					<tr>
@@ -988,7 +988,7 @@ switch ($checkedId) {
                             <p>Идентификация по штрихкоду</p>
                         </td>
                         <td colspan="2">
-                            <p><strong>+</strong></p>
+                            <p>+</p>
                         </td>
                     </tr>
                     <tr>
@@ -996,7 +996,7 @@ switch ($checkedId) {
                             <p>Защита от копирования карт</p>
                         </td>
                         <td colspan="2">
-                            <p><strong>+</strong></p>
+                            <p>+</p>
                         </td>
                     </tr>
                     <tr>
@@ -1031,7 +1031,7 @@ switch ($checkedId) {
                             <p>+</p>
                         </td>
                         <td>
-                            <p><strong>-</strong></p>
+                            <p>-</p>
                         </td>
                     </tr>
 					<tr>
@@ -1042,7 +1042,7 @@ switch ($checkedId) {
                             <p>+</p>
                         </td>
                         <td>
-                            <p><strong>-</strong></p>
+                            <p>-</p>
                         </td>
                     </tr>
 					<tr>
@@ -1061,7 +1061,7 @@ switch ($checkedId) {
                             <p>+</p>
                         </td>
                         <td>
-                            <p><strong>-</strong></p>
+                            <p>-</p>
                         </td>
                     </tr>
 					<tr>
@@ -1146,7 +1146,7 @@ switch ($checkedId) {
                             <p>+</p>
                         </td>
 						<td>
-                            <p><strong>-</strong></p>
+                            <p>-</p>
                         </td>
                     </tr>
 					<tr>
@@ -1279,7 +1279,7 @@ switch ($checkedId) {
                             <p>+</p>
                         </td>
 						<td>
-                            <p><strong>-</strong></p>
+                            <p>-</p>
                         </td>
                     </tr>
 					<tr>
@@ -1312,7 +1312,7 @@ switch ($checkedId) {
                             <p>+</p>
                         </td>
 						<td>
-                            <p><strong>-</strong></p>
+                            <p>-</p>
                         </td>
                     </tr>
 					<tr>
@@ -1323,7 +1323,7 @@ switch ($checkedId) {
                             <p>+</p>
                         </td>
 						<td>
-                            <p><strong>-</strong></p>
+                            <p>-</p>
                         </td>
                     </tr>
 					<tr>

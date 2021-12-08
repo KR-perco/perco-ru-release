@@ -115,8 +115,7 @@ if (intval($res->SelectedRowsCount()) > 0)
 				echo $elemets;
 			}*/
 			?>
-			</div>
-			<? console_log($content); ?>
+			</div> 
 			<?echo $content;?>
 		</div>
 </div>
