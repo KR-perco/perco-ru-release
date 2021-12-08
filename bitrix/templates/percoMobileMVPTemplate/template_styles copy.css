@@ -63,28 +63,21 @@ ul {
 }
 
 ul li {
-    /*list-style-image: url(/percoMobileMVP/img/list-disc.png);*/
+    /*list-style-image: url(bxlocal://list-disc.png);*/
     margin: 7px 0;
     padding-left: 10px;
     list-style: none;
 }
 
-.description ul li:before,
-.section-information ul li:before,
 .detail_text ul li:before,
 .text_items ul li:before,
-.text_item ul li:before,
-.tabs ul li:before {
+.text_item ul li:before {
     content: "\2022";
     color: #00295b;
     font-weight: bold;
     display: inline-block;
     width: 1em;
     margin-left: -1em;
-}
-
-.scroll ul li:before {
-    display: none;
 }
 
 table {
@@ -510,7 +503,7 @@ div.scrollmenu img {
 }
 
 #main_about_block {
-    background: url(/percoMobileMVP/img/banner_footer.png) no-repeat;
+    background: url(bxlocal://banner_footer.png) no-repeat;
     background-size: 100%;
     padding: 10px;
 }
@@ -570,7 +563,7 @@ div.scrollmenu img {
 
 
 /*.tabs label:before{
-    content: url(/percoMobileMVP/img/tabs-arrow.png);
+    content: url(bxlocal://tabs-arrow.png);
     position: absolute;
     width: 4px;
 	left: 5px;
@@ -580,7 +573,7 @@ div.scrollmenu img {
 	height: 15px;
 	content: '';
 	background-size: 3px 6px;
-    background-image: url('/percoMobileMVP/img/tabs-arrow.png');
+    background-image: url('bxlocal://tabs-arrow.png');
     position: absolute;
 	width: 3px;
 	height: 6px;
@@ -638,9 +631,10 @@ ul.lightSlider {
     color: #999 !important;
 }
 
-.mobile_none {
-    display: none !important;
-}
+
+/*.mobile_none{
+	display: none !important;
+}*/
 
 .contacts dt {
     margin: 16px 0 12px 0;
@@ -704,7 +698,7 @@ a,
 }
 
 .tabs label:before {
-    content: url(/percoMobileMVP/img/li.menu.png);
+    content: url(bxlocal://li.menu.png);
     position: absolute;
     width: 6px;
     left: 0;
@@ -716,11 +710,9 @@ a,
 
 /*end styles from template_styles of PERCo-template*/
 
-
-/* 
 .text_items ul li:before {
     display: none;
-} */
+}
 
 @media screen and (max-width: 550px) {
     h3 {
@@ -770,119 +762,3 @@ a,
 
 
 /* end styles for horizontal_scroll */
-
-
-/* gallery */
-
-#gallery img {
-    vertical-align: middle;
-}
-
-#gallery .scrollmenu {
-    margin: 10px;
-}
-
-#gallery .caption-container {
-    position: absolute;
-    bottom: 0px;
-    padding: 0px;
-    width: 100%;
-    z-index: 34;
-    background-color: #214288;
-    text-align: center;
-    color: white;
-    font-size: 14px;
-}
-
-#gallery #scroll {
-    position: relative;
-    margin: auto;
-    width: 100%;
-}
-
-#gallery #scroll .lSPager img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-}
-
-#gallery #scroll ul {
-    padding-left: 0;
-    display: flex;
-}
-
-#gallery #scroll ul li {
-    margin: auto;
-    padding-left: 0;
-    text-align: center;
-    list-style: none;
-}
-
-#gallery #scroll #scrollGallery li {
-    height: 550px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#gallery #scroll .lSAction>a {
-    background-repeat: no-repeat;
-    background-position: 10px 0px;
-    height: 45px;
-    width: 30px;
-}
-
-#gallery #scroll .lSAction>.lSPrev,
-#scroll .lSAction>.lSNext {
-    background-image: url("/percoMobileMVP/img/arrow.png");
-}
-
-#gallery #scroll .lSAction>.lSPrev,
-#scroll .lSAction>.lSNext {
-    background-position: 10px 0;
-}
-
-#gallery #scroll .lSAction>.lSPrev {
-    transform: rotate(180deg);
-}
-
-#gallery #scroll .lSPager {
-    flex-wrap: wrap;
-    justify-content: center;
-    transform: none !important;
-    width: auto !important;
-}
-
-#gallery #scroll .lSPager li {
-    width: 22% !important;
-    max-height: 125px;
-    align-self: center;
-    margin: 1% !important;
-    border: none;
-}
-
-#gallery #scroll .lSPager .active {
-    opacity: 0.4;
-}
-
-ul.lightSlider {
-    min-height: auto;
-}
-
-@media screen and (max-width: 650px) {
-    #gallery #scroll .lSPager img {
-        height: 90px;
-    }
-    #gallery #scroll #scrollGallery li {
-        height: 450px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    #gallery #scroll .lSPager img {
-        height: 60px;
-    }
-    #gallery #scroll #scrollGallery li {
-        height: 300px;
-    }
-}
