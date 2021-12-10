@@ -1,12 +1,7 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?>
 <div style="display: none;"><?echo 'cur template: "NewMobileTemplate > catalog > perco_structure > bitrix > catalog.section"'?></div>
 <?
-$this->setFrameMode(true);
-$this->addExternalJS("/scripts/lightgallery/js/lightgallery.min.js");
-$this->addExternalJS("/scripts/lightslider/js/lightslider.min.js");
-$this->addExternalJS("/scripts/lightgallery/js/lg-zoom.min.js");
-$this->addExternalCss("/scripts/lightgallery/css/lightgallery.min.css");
-$this->addExternalCss("/scripts/lightslider/css/lightslider.min.css");
+$this->setFrameMode(true); 
 
 $page = $APPLICATION->GetCurUri();
 $url = parse_url($page);

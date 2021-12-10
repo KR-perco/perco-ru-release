@@ -49,14 +49,7 @@ switch ($checkedId) {
             <span class="try">Попробовать&nbsp;</span>
         </a>
     </div>
-    <div class="col-3 hide-on-desktop">        
-        <a href="/percoMobileMVP/products/komplekty-po/">
-            <img src="/images/sistema-kontrolya-dostupa-perco-web/po-mounting-area.svg">
-            <span class="head-emulate">Программное обеспечение</span>
-            <span class="try">Перейти&nbsp;</span>
-        </a>
-    </div>
-    <div class="col-3 hide-on-percoMobile"> 
+    <div class="col-3">
         <a href="/products/po-sistemy-kontrolya-dostupa-perco-web/">
             <img src="/images/sistema-kontrolya-dostupa-perco-web/po-mounting-area.svg">
             <span class="head-emulate">Программное обеспечение</span>

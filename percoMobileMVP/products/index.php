@@ -50,7 +50,7 @@ $installerBlock = '<div class="workers-block">
                     <p>Видео</p>
                   </div>
                 </a>
-                <a href="/percoMobileMVP/offline/faq.html">
+                <a href="/percoMobileMVP/installer/faq">
                   <div class="">
                     <img src="/percoMobileMVP/img/section-faq.png" alt="faq" />
                     <p>FAQ</p>

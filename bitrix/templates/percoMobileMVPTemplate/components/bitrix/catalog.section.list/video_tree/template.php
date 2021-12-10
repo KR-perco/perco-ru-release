@@ -48,7 +48,7 @@ function getElements($iblock_id, $section_id, $archive, $with_image)
 			$keyImg = array_search(LANGUAGE_ID, $arProps["IMAGE"]["DESCRIPTION"]);
 
 			if ($keyName !== false){
-				$video_element .= '<div id="video_element">
+				$video_element .= '<div class="video_element">
 					<video controls="controls" poster="'.$arProps["IMAGE"]["VALUE"][$keyImg].'">
 						<source src="'.$arProps["FILE"]["VALUE"][$keyFile].'" type="video/mp4" />
 					</video>

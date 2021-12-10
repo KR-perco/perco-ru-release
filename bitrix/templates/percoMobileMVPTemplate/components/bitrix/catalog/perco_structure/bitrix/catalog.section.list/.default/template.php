@@ -34,7 +34,7 @@ if ($ar_props["PROPERTY_BANNER_VALUE"])
 		if ($arResult["SECTIONS_COUNT"] > 0) {
 			if ($arResult["SECTIONS_COUNT"] > 1) {
 				echo '<div class="menu-wrapper"><div class="scrollmenu" id="scrollmenu">';
-			
+				$index_vkladki = 0;
 				foreach($arResult["SECTIONS"] as $section)
 				{
 					$rsSection = CIBlockElement::GetList(
@@ -61,9 +61,9 @@ if ($ar_props["PROPERTY_BANNER_VALUE"])
 							break;
 					}
 				?>		
-					<a class="item <?if (($section["NAME"] == "Турникеты-триподы") || ($section["NAME"] == "Контроллеры") || ($section["NAME"] == "Система контроля доступа PERCo-Web") || ($section["NAME"] == "Комплексная система безопасности PERCo-S-20") || ($section["NAME"] == "Система безопасности PERCo-S-20 Школа")) echo "active";?>" data-filter="<?=$section["CODE"]?>"><?=$section["NAME"];?></a>
+					<a class="item <? if ($index_vkladki == 0) echo "active"; ?>" data-filter="<?=$section["CODE"]?>"><?=$section["NAME"];?></a>
 				<?
-					
+					$index_vkladki++;
 				}
 			}
 
@@ -78,12 +78,13 @@ if ($ar_props["PROPERTY_BANNER_VALUE"])
 			
 				echo '</div></div><div class="section-list">';
 
+				$index_vkladki = 0;
 				foreach($arResult["SECTIONS"] as $section)
 				{
 					$arr = Array("IBLOCK_ID"=> "60", "SECTION_ID"=> $section["ID"]);
 					$sectionCount = CIBlockSection::GetCount($arr);
 					if($sectionCount > 0 && $section["CODE"] != "identifikatory"){
-						?><div class="section <?if (($section["NAME"] == "ПО системы контроля доступа PERCo-Web") || ($section["NAME"] == "ПО комплексной системы безопасности PERCo-S-20") || ($section["NAME"] == "ПО системы безопасности для школ PERCo-S-20 Школа")) echo "active";?>" id="<?=$section["CODE"]?>" data-cat="<?=$section["CODE"]?>"><?
+						?><div class="section <? if ($index_vkladki == 0) echo "active"; ?>" id="<?=$section["CODE"]?>" data-cat="<?=$section["CODE"]?>"><?
 						
 						$rsParentSection = CIBlockSection::GetByID($section["ID"]);
 						if ($arParentSection = $rsParentSection->GetNext())
@@ -123,7 +124,7 @@ if ($ar_props["PROPERTY_BANNER_VALUE"])
 						}
 						?></div><?
 					}else{
-						?><div class="section <?if (($section["NAME"] == "Турникеты-триподы") || ($section["NAME"] == "Контроллеры") || ($section["NAME"] == "ПО системы контроля доступа PERCo-Web") || ($section["NAME"] == "ПО системы безопасности для школ PERCo-S-20 Школа")) echo "active";?>" id="<?=$section["CODE"]?>" data-cat="<?=$section["CODE"]?>"><?
+						?><div class="section <? if ($index_vkladki == 0) echo "active"; ?>" id="<?=$section["CODE"]?>" data-cat="<?=$section["CODE"]?>"><?
 						$arSelect = Array("ID", "IBLOCK_ID", "NAME", "CODE", "PREVIEW_TEXT", "PROPERTY_IMAGE_PREVIEW", "PROPERTY_IMAGE", "PROPERTY_IMAGE_SPECIFICATIONS", "PROPERTY_TEXT");
 						$arFilter = Array("IBLOCK_ID" => "60", 
 										"SECTION_ID"=> $section[ID], 
@@ -198,6 +199,7 @@ if ($ar_props["PROPERTY_BANNER_VALUE"])
 					}
 
 					
+					$index_vkladki++;
 				
 				}
 				if ($arResult["ELEMENTS"]){

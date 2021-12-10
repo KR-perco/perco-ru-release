@@ -16,6 +16,7 @@
 		"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
 		"PAGER_PARAMS_NAME" => $arParams["PAGER_PARAMS_NAME"],
 		"INSTANT_RELOAD" => "Y",
+		"DISPLAY_ELEMENT_COUNT" => "N",
 	),
 	$component
 );

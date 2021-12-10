@@ -36,7 +36,7 @@ $php_result = '<div class="tabIcons">
 		<a class="tabIcon__imgLink" href="/images/products/boom-barrier/komplekt/pult-radio-1000.jpg">
 			<img class="tabIcon__img" src="/images/products/boom-barrier/komplekt/gcr1.png">
 		</a>
-		<div class="tabIcon__text tabIcon__text_complect">Устройство радиоуправления GCR1</div>
+		<div class="tabIcon__text tabIcon__text_complect">Устройство радиоуправления двухканальное</div>
 		<div class="price">
 			<p>Цена <span class="price_rub">' . number_format($pultRadioupravleniyaPrice * $euro, 0, ",", " ") . ' &#8381;</span> со склада в Москве и Санкт-Петербурге</p>
 			<p>' . number_format($pultRadioupravleniyaPrice, 0, ",", " ") . ' € (по курсу ЦБ РФ на ' . date("d.m.y") . ')</p>
@@ -46,7 +46,7 @@ $php_result = '<div class="tabIcons">
 		<a class="tabIcon__imgLink" href="/images/products/boom-barrier/komplekt/brelok-1000.jpg">
 			<img class="tabIcon__img" src="/images/products/boom-barrier/komplekt/trinket-set.png">
 		</a>
-		<div class="tabIcon__text tabIcon__text_complect">Брелок GCR2</div>
+		<div class="tabIcon__text tabIcon__text_complect">Брелок радиоуправления</div>
 		<div class="price">
 			<p>Цена <span class="price_rub">' . number_format($brelokPrice * $euro, 0, ",", " ") . ' &#8381;</span> со склада в Москве и Санкт-Петербурге</p>
 			<p>' . number_format($brelokPrice, 0, ",", " ") . ' € (по курсу ЦБ РФ на ' . date("d.m.y") . ')</p>

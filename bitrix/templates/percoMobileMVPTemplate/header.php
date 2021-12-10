@@ -25,11 +25,10 @@ CMobile::Init();
 <?
 
 $APPLICATION->AddHeadScript("/scripts/jquery.min.js");
-$APPLICATION->AddHeadScript("/scripts/lightgallery/js/lightgallery.min.js");
-$APPLICATION->AddHeadScript("/scripts/lightgallery/js/lightgallery.min.js");
-$APPLICATION->AddHeadScript("/scripts/lightslider/js/lightslider.min.js");
+$APPLICATION->AddHeadScript("/scripts/lightgallery/js/lightgallery.min.js"); 
 $APPLICATION->AddHeadScript("/scripts/lightgallery/js/lg-zoom.min.js");
 $APPLICATION->SetAdditionalCSS("/scripts/lightgallery/css/lightgallery.min.css");
+$APPLICATION->AddHeadScript("/scripts/lightslider/js/lightslider.min.js");
 $APPLICATION->SetAdditionalCSS("/scripts/lightslider/css/lightslider.min.css");
 
 ?>

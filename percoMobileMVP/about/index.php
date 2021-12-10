@@ -102,6 +102,9 @@ CModule::IncludeModule('iblock');
 			margin-left: -15px;
 			margin-right: -15px;
 		}
+		.about__text ul {
+			flex: 1 1 100%;
+		}
 		.about__text li {
     		list-style-image: url(https://www.perco.ru/images/icons/list-disc.svg);
 		}
@@ -130,7 +133,7 @@ CModule::IncludeModule('iblock');
 		.about-title + .about-title { 
 			right: 17px; 
 		}
-		@media (max-width: 768px) {
+		@media (max-width: 1092px) {
 			.cell-12-sm {
 				max-width: 100%;
 				-ms-flex-preferred-size: 100%;

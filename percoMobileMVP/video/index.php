@@ -7,7 +7,7 @@ $APPLICATION->AddHeadScript("/scripts/url.min.js");
 ?>
 <script type="text/javascript">
   	app.setPageTitle({
-         title: "Видеофильмы"
+         title: "Видео"
       });
 </script>
 <style>

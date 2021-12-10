@@ -47,6 +47,7 @@ for($i=0; $i < count($arResult["PROPERTIES"]["TEXT"]["VALUE"]); $i++)
 			{
 				$arPropsImg = $ob->GetProperties();
 				$vkladka_content .= '<li class="img_item';
+				console_log($arPropsImg["FULL"]["VALUE"]);
 				if (!$arPropsImg["FULL"]["VALUE"])
 					$vkladka_content .= " anons_img";
 				$vkladka_content .= '">';
@@ -54,7 +55,7 @@ for($i=0; $i < count($arResult["PROPERTIES"]["TEXT"]["VALUE"]); $i++)
 				$keyPreviewImg = array_search(LANGUAGE_ID, $arPropsImg["PREVIEW_OPIS"]["DESCRIPTION"]);
 				
 				if($arPropsImg["FULL"]["VALUE"]){
-					$vkladka_content .='<img src="'.$arPropsImg["FULL"]["VALUE"].'" alt="'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'"/>
+					$vkladka_content .='<div class="anons_img"><img src="'.$arPropsImg["FULL"]["VALUE"].'" alt="'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'"/>
 										<div class="caption">'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'</div>';
 				}else{
 					$vkladka_content .='<img src="'.$arPropsImg["PREVIEW"]["VALUE"].'" alt="'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'"/>
@@ -335,16 +336,7 @@ if(!$_GET["F"])
 		$vkladka_menu = '<input name="vkladki" type="checkbox" id="video_info"><label id="label_video" for="video_info"><span class="dashed">Видео</span></label>';
 		$vkladka_content .= $vkladka_menu.'<div>'.$video.'</div>';
 	}
-// <- Добавление видео во вкладку
-// Добавление схемы во вкладку ->
-
-console_log($arProps);
-	// if ($video)
-	// {
-	// 	$vkladka_menu = '<input name="vkladki" type="checkbox" id="video_info"><label id="label_video" for="video_info"><span class="dashed">Видео</span></label>';
-	// 	$vkladka_content .= $vkladka_menu.'<div>'.$video.'</div>';
-	// }
-// <- Добавление схемы во вкладку
+// <- Добавление видео во вкладку 
 }
 if (substr_count($vkladka_content, "vkladki") > 1)
 	$content .= '<div class="tabs product-tabs">'.$vkladka_content.'</div>';

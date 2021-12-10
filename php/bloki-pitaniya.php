@@ -31,7 +31,7 @@ $products = array(
 		"name" => "К-Инженеринг БИРП 12/10",
 		"image" => "/images/products/bloki-pitaniya/K-Inzhenering-BIRP-12-10-0.jpg",
 		"description" => "",
-		"price" => "72"
+		"price" => "95"
 	),
 	"LRS-150-24 Blok pitaniya" => array(
 		"name" => "LRS-150-24 Блок питания",
