@@ -1,36 +1,20 @@
 window.onload = function() {
 
-    var img = document.querySelector('img')
 
-    function loaded() {
-        console.log('loaded')
-    }
-
-    if (img.complete) {
-        loaded()
-
-        $(".img_items").lightGallery({
-            selector: "a"
-        });
-        $(".newcolor").lightGallery({
-            selector: "a"
-        });
-        $("#shema").lightGallery({
-            selector: "a"
-        });
-        $("#sheme_skud").lightGallery({
-            selector: "a",
-            zoom: false,
-            download: false
-        });
-
-    } else {
-        img.addEventListener('load', loaded)
-        img.addEventListener('error', function() {
-            console.log('error')
-        })
-    }
-
+    $(".img_items").lightGallery({
+        selector: "a"
+    });
+    $(".newcolor").lightGallery({
+        selector: "a"
+    });
+    $("#shema").lightGallery({
+        selector: "a"
+    });
+    $("#sheme_skud").lightGallery({
+        selector: "a",
+        zoom: false,
+        download: false
+    });
 
     $(".video").lightGallery({
         selector: ".play",

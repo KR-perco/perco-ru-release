@@ -20,7 +20,6 @@ if ($ar_props["PROPERTY_BANNER_VALUE"])
 			<div class="banner_image" style="background-image: url('.$ar_props["PROPERTY_BANNER_VALUE"].');"></div>
 		</div>';
 
-	console_log($arResult['SECTION']['NAME']);
 ?>
 <div class="percoMobile_catalog" id="main_block">
 	<div id="content">
@@ -31,7 +30,7 @@ if ($ar_props["PROPERTY_BANNER_VALUE"])
 		?> 
 	<?
 	if ($arResult['SECTION']['NAME'] != 'Дополнительное оборудование' && $arResult['SECTION']['NAME'] != 'Система контроля доступа PERCo-Web' && $arResult['SECTION']['NAME'] != 'ПО комплексной системы безопасности PERCo-S-20' && $arResult['SECTION']['NAME'] != 'Система безопасности PERCo-S-20 Школа' && $arResult['SECTION']['NAME'] != 'Система для банкоматов PERCo-S-800') {
-		if ($arResult["SECTIONS_COUNT"] > 0) {
+		if ($arResult["SECTIONS_COUNT"] > 0) { 
 			if ($arResult["SECTIONS_COUNT"] > 1) {
 				echo '<div class="menu-wrapper"><div class="scrollmenu" id="scrollmenu">';
 				$index_vkladki = 0;
@@ -65,18 +64,35 @@ if ($ar_props["PROPERTY_BANNER_VALUE"])
 				<?
 					$index_vkladki++;
 				}
+				echo '</div></div>'; 
 			}
-
-			if ($arResult["ELEMENTS"]){
+ 
+			if ($arResult["ELEMENTS"] && ($curUrl == "/percoMobileMVP/products/po-sistemy-kontrolya-dostupa-perco-web/")){ 
+				echo '<div class="section-first"><div class="section">';
 				foreach($arResult["ELEMENTS"] as $element)
-				{
+					{
+						
+						$rsImage = CIBlockElement::GetProperty($element["IBLOCK_ID"], $element["ID"], array("sort" => "asc"), Array("CODE"=>"IMAGE_PREVIEW"));
+						$arImage = $rsImage->Fetch();
+						$rsDopname = CIBlockElement::GetProperty($element["IBLOCK_ID"], $element["ID"], array("sort" => "asc"), Array("CODE"=>"DOP_NAME"));
+						$arDopname = $rsDopname->Fetch();
 					?>
-					<a class="item" data-filter="<?=$element["CODE"]?>"><?=$element["NAME"];?></a>
+						<div class="element">
+							<a href="/percoMobileMVP/products/<?=$element["CODE"];?>.php">
+							
+								<img alt="<?=$element["NAME"];?>" src="<?=$arImage["VALUE"];?>" />
+								<h3><?=$element["NAME"]?></h3>
+								<p><?=$arDopname["VALUE"];?></p>
+							</a>
+						</div>
 					<?
 				}
+				echo '</div></div>';  
+				echo '<h2>Встроенное в контроллеры CT/L14, CL15, CR11 и CT13 программное обеспечение</h2>';  
 			} 
 			
-				echo '</div></div><div class="section-list">';
+
+				echo '<div class="section-list">';
 
 				$index_vkladki = 0;
 				foreach($arResult["SECTIONS"] as $section)
@@ -256,67 +272,9 @@ if ($ar_props["PROPERTY_BANNER_VALUE"])
 			<?
 			}
 			echo "</div>";
-		}
-	} else if ($arResult['SECTION']['NAME'] == 'Дополнительное оборудование') { ?>
-		<div class="section active">
-			<div class="element">
-				<a href="<?= $arResult["SECTIONS"][0]["SECTION_PAGE_URL"] ?>">
-					<img src="/images/products/beskontaktnye-karty-dostupa/cards.jpg" alt="<?= $arResult["SECTIONS"][0]["NAME"] ?>">
-					<h3><?= $arResult["SECTIONS"][0]["NAME"] ?></h3>
-					<p></p>
-				</a>
-			</div>
-			<div class="element">
-				<a href="<?= $arResult["SECTIONS"][1]["SECTION_PAGE_URL"] ?>">
-					<img src="/images/products/bloki-pitaniya/all.jpg" alt="<?= $arResult["SECTIONS"][1]["NAME"] ?>">
-					<h3><?= $arResult["SECTIONS"][1]["NAME"] ?></h3>
-					<p></p>
-				</a>
-			</div>
-			<?foreach($arResult['ELEMENTS'] as $elem) { ?>
-				<div class="element">
-				<?
-				$rsImage = CIBlockElement::GetProperty($arResult['SECTION']['IBLOCK_ID'], $elem['ID'], array("sort" => "asc"), Array("CODE"=>"IMAGE_PREVIEW"));
-				$arImage = $rsImage->Fetch();
-				?>
-					<a href="/percoDemo<?= $elem["DETAIL_PAGE_URL"] ?>">
-						<img src="<?= $arImage['VALUE'] ?>" alt="<?= $elem["NAME"] ?>">
-						<h3><?= $elem["NAME"] ?></h3>
-						<p></p>
-					</a>
-				</div>
-			<? } ?>
-		</div>
-	<? }/* else if ($arResult['SECTION']['NAME'] == 'Система контроля доступа PERCo-Web') { ?>
-		<h2 class="perco-web">Система контроля доступа<br><b>PERCo-Web</b></h2>
-		<div class="width_all">
-			<div class="banner_image" style="background-image: url(/images/banners/perco-web-new.jpg);"></div>
-		</div>
-	<? }*/ else if ($arResult['SECTION']['NAME'] == 'ПО комплексной системы безопасности PERCo-S-20') { ?>
-		<div class="section active">
-			<div class="element">
-				<a href="<?= $arResult["SECTIONS"][0]["SECTION_PAGE_URL"] ?>">
-					<img src="bxlocal://lokalnoe-po.jpg" alt="<?= $arResult["SECTIONS"][0]["NAME"] ?>">
-					<h3><?= $arResult["SECTIONS"][0]["NAME"] ?></h3>
-					<p></p>
-				</a>
-			</div>
-			<div class="element">
-				<a href="<?= $arResult["SECTIONS"][1]["SECTION_PAGE_URL"] ?>">
-					<img src="bxlocal://setevoe-po.jpg" alt="<?= $arResult["SECTIONS"][1]["NAME"] ?>">
-					<h3><?= $arResult["SECTIONS"][1]["NAME"] ?></h3>
-					<p></p>
-				</a>
-			</div>
-			<div class="element">
-				<a href="<?= $arResult["SECTIONS"][2]["SECTION_PAGE_URL"] ?>">
-					<img src="bxlocal://komplekty-po.jpg" alt="<?= $arResult["SECTIONS"][2]["NAME"] ?>">
-					<h3><?= $arResult["SECTIONS"][2]["NAME"] ?></h3>
-					<p></p>
-				</a>
-			</div>
-		</div>
-	<? } else if ($arResult['SECTION']['NAME'] == 'Система безопасности PERCo-S-20 Школа') { ?>
+		} 
+
+		} else if ($arResult['SECTION']['NAME'] == 'Система безопасности PERCo-S-20 Школа') { ?>
 		<h1>Система безопасности PERCo-S-20 Школа</h1>
 	<? } else if ($arResult['SECTION']['NAME'] == 'Система для банкоматов PERCo-S-800') { ?>
 		<h1>Система для банкоматов PERCo-S-800</h1>

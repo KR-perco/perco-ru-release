@@ -21,6 +21,7 @@ h1 {
 
 .section .element img {
     width: 100%;
+    background-color: #e2ebfa;
 }
 
 .section .element p {

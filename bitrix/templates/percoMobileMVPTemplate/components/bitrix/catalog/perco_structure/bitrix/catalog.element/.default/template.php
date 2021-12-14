@@ -1,14 +1,6 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
-CJSCore::Init(array("jquery"));
-$this->addExternalJS("/scripts/mobil/catalog.js");
-$this->addExternalJS("/scripts/lightgallery/js/lightgallery.min.js");
-$this->addExternalJS("/scripts/lightslider/js/lightslider.min.js");
-$this->addExternalJS("/scripts/lightgallery/js/lg-zoom.min.js");
-$this->addExternalCss("/scripts/lightgallery/css/lightgallery.min.css");
-$this->addExternalCss("/scripts/lightslider/css/lightslider.min.css");
-?>
-<div style="display: none;"><?echo 'cur template: "NewMobileTemplate > catalog > perco_structure > bitrix > catalog.element"'?></div>
-<?
+CJSCore::Init(array("jquery")); 
+$this->addExternalJS("/scripts/mobil/catalog.js"); 
 global $device;
 $page = $APPLICATION->GetCurUri();
 $url = parse_url($page);
@@ -25,11 +17,10 @@ function addkey($key, $sort)			// функция для сортировки т�
 	}
 	else
 		return $key;
-}
-
+} 
 // Основные вкладки ->
 for($i=0; $i < count($arResult["PROPERTIES"]["TEXT"]["VALUE"]); $i++)
-{
+{ 
 	$vkladka_menu = "";
 	$name = $arResult["PROPERTIES"]["TEXT"]["DESCRIPTION"][$i];
 	$vkladka_menu = '<input name="vkladki" type="checkbox"';
@@ -37,7 +28,7 @@ for($i=0; $i < count($arResult["PROPERTIES"]["TEXT"]["VALUE"]); $i++)
 	$vkladka_content .= $vkladka_menu.'<div><div class="text_items">'.html_entity_decode($arResult["PROPERTIES"]["TEXT"]["VALUE"][$i]["TEXT"]).'</div>';
 	if (in_array($name, $arResult["PROPERTIES"]["IMAGES_TEXT"]["DESCRIPTION"]))
 	{
-		$vkladka_content .= '<div class="scroll horizontal_scroll"><ul style="max-height: 270px;" id="img_items'.$i.'">';
+		$vkladka_content .= '<div class="scroll horizontal_scroll"><ul id="img_items'.$i.'">';
 		foreach(array_keys($arResult["PROPERTIES"]["IMAGES_TEXT"]["DESCRIPTION"], $name) as $keyValue)
 		{
 			$arFilter = Array("IBLOCK_ID"=>$arResult["PROPERTIES"]["IMAGES"]["LINK_IBLOCK_ID"], "ACTIVE"=>"Y", "ID" => $arResult["PROPERTIES"]["IMAGES_TEXT"]["VALUE"][$keyValue]);
@@ -46,8 +37,7 @@ for($i=0; $i < count($arResult["PROPERTIES"]["TEXT"]["VALUE"]); $i++)
 			if ($ob = $res->GetNextElement())
 			{
 				$arPropsImg = $ob->GetProperties();
-				$vkladka_content .= '<li class="img_item';
-				console_log($arPropsImg["FULL"]["VALUE"]);
+				$vkladka_content .= '<li class="img_item'; 
 				if (!$arPropsImg["FULL"]["VALUE"])
 					$vkladka_content .= " anons_img";
 				$vkladka_content .= '">';
@@ -55,8 +45,8 @@ for($i=0; $i < count($arResult["PROPERTIES"]["TEXT"]["VALUE"]); $i++)
 				$keyPreviewImg = array_search(LANGUAGE_ID, $arPropsImg["PREVIEW_OPIS"]["DESCRIPTION"]);
 				
 				if($arPropsImg["FULL"]["VALUE"]){
-					$vkladka_content .='<div class="anons_img"><img src="'.$arPropsImg["FULL"]["VALUE"].'" alt="'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'"/>
-										<div class="caption">'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'</div>';
+					$vkladka_content .='<div class="anons_img test_img"><img src="'.$arPropsImg["FULL"]["VALUE"].'" alt="'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'"/>
+										<div class="caption">'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'</div></div>';
 				}else{
 					$vkladka_content .='<img src="'.$arPropsImg["PREVIEW"]["VALUE"].'" alt="'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'"/>
 					<div class="caption">'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'</div>';
@@ -292,7 +282,7 @@ if(!$_GET["F"])
 		$vkladka_content .= '</div>';
 // <- Отображаем Гарантийный срок
 }
-// Загружаемые файлы ->
+// Загружаемые файлы -> 
 	if (($arProps["DOWNLOADS"]["VALUE"]) && ($url["query"] != "manager"))
 	{
 		echo($url["query"]);
@@ -318,7 +308,7 @@ if(!$_GET["F"])
 					$datezbor = $arPropDown["INSTAL_TIME"]["VALUE"];
 				else
 					$datezbor = printFileInfo($file, "date");
-				$download .= '<div class="icon"><img alt="Иконка" src="/images/icons/pdf.svg" /></div><div><a href="https://www.perco.ru'.$file.'">'.$name.'</a><p class="color">'.$AutoCadtitle.$fSize.' — '.$datezbor.'</p>';
+				$download .= '<div class="icon test444"><img alt="Иконка" src="/images/icons/pdf.svg" /></div><div><a href="https://www.perco.ru'.$file.'">'.$name.'</a><p class="color">'.$AutoCadtitle.$fSize.' — '.$datezbor.'</p>';
 				$download .= '</div></div>';
 			}
 		}

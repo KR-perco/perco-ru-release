@@ -1,7 +1,3 @@
-<!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
-<!-- lightgallery plugins -->
-<!-- <script src="/scripts/lightgallery/js/lg-thumbnail.min.js"></script>
-<script src="/scripts/lightgallery/js/lg-fullscreen.min.js"></script> -->
 <?
 if ($_GET["tab"] != '') $checkedId = $_GET["tab"];
 $checked = 'checked="checked"';
@@ -50,7 +46,7 @@ switch ($checkedId) {
         </a>
     </div>
     <div class="col-3 hide-on-desktop">        
-        <a href="/percoMobileMVP/products/komplekty-po/">
+        <a href="/percoMobileMVP/products/po-sistemy-kontrolya-dostupa-perco-web/">
             <img src="/images/sistema-kontrolya-dostupa-perco-web/po-mounting-area.svg">
             <span class="head-emulate">Программное обеспечение</span>
             <span class="try">Перейти&nbsp;</span>

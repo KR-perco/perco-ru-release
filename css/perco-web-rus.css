@@ -691,6 +691,10 @@ h3 {
     margin-right: 10%;
 }
 
+.two_blocks h2 {
+    font-size: 18px;
+}
+
 .bio .left_text {
     min-height: 400px;
     padding-top: 100px;

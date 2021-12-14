@@ -21,7 +21,7 @@
 			</div>
 			<p><a href="/video/gs04.mp4" title="Шлагбаум PERCo-GS04" download>Скачать</a> <?='('.printFileInfo('/video/gs04.mp4', "size").')';?> — <?='10.06.2020 12:48:00';?></p>
 		</div>
-		<a href="https://barrier.perco.ru/">
+		<a class="hide-on-percoMobile" href="https://barrier.perco.ru/">
 			<img class="vid-ban-block__img" src="/images/products/boom-barrier/shlagbaum-site-banner-545.jpg" alt="Шлагбаум PERCo-GS04">
 		</a>
 	</div>

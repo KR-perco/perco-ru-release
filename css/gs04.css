@@ -195,7 +195,7 @@ iframe {
     .iframe {
         inline-size: 545px;
         max-inline-size: 100%;
-        padding-block-end: 308px;
+        padding-block-end: 56%;
     }
     .vid-ban-block__img {
         max-inline-size: 100%;
@@ -227,7 +227,7 @@ iframe {
 
 .iframe {
     position: relative;
-    padding-block-end: 305px;
+    padding-block-end: 56%;
     width: 100%;
     height: 0;
 }
@@ -256,11 +256,12 @@ iframe {
     .iframe-wrap {
         inline-size: 100%;
         max-inline-size: 100%;
+        padding-bottom: 55px;
     }
     .iframe {
         inline-size: auto;
         max-inline-size: 100%;
-        padding-block-end: 308px;
+        padding-block-end: 56%;
     }
     .vid-ban-block__img {
         max-inline-size: 100%;

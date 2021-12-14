@@ -140,7 +140,7 @@ function GetDownloadFile($code, $image="")
 		else
 			$datezbor = printFileInfo($file, "date"); 
 		if (preg_match('/(.*percoMobile\/.*|.*percoDemo\/.*|.*percoMobileMVP\/.*)/', $_SERVER['REQUEST_URI'])) { 
-			$file = preg_replace('/^\/.*\//', 'bxlocal://', $file);
+			$file = preg_replace('/^\/.*\//', 'https://www.perco.ru/', $file);
 		}
 		if ($image == "Y")
 			$string .= '<div class="download_item_img"><a href="'.$file.'" target="_blank" '.$google.' download><div><img alt="'.$name.'" src="'.$imageSource.'"></div><span>'.$name.'</span></a><div class="color">'.$fSize.' — '.$datezbor.'</div>';

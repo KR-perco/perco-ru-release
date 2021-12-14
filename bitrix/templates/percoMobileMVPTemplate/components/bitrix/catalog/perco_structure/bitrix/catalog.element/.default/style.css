@@ -145,7 +145,6 @@
 }
 
 .main-picture li img {
-    object-fit: cover;
     max-height: 100%;
 }
 

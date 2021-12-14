@@ -9,6 +9,8 @@ $url = parse_url($page);
 $arFilter = Array("IBLOCK_CODE"=>"pages_".LANGUAGE_ID, "ACTIVE"=>"Y", "CODE" => $arResult["CODE"]);
 $arSelect = Array("ID", "IBLOCK_ID", "NAME", "DATE_ACTIVE_FROM", "TIMESTAMP_X", "PREVIEW_TEXT", "DETAIL_TEXT", "PROPERTY_*");
 $res = CIBlockElement::GetList(array(), $arFilter, false, Array(), $arSelect);
+ 
+
 if (intval($res->SelectedRowsCount()) > 0)
 {
 	$ob = $res->GetNextElement();
@@ -88,39 +90,30 @@ if (intval($res->SelectedRowsCount()) > 0)
 			<div class="include-part"> 	
 			<? if ($arResult['NAME'] == 'Система контроля доступа PERCo-Web') { ?>
 				<h1>Система контроля доступа PERCo-Web</h1>
-			<? }  
+			<?  
+		}  
 			if ($arProps["PHP"]["VALUE"]){
 				for($i=0; $i < count($arProps["PHP"]["VALUE"]); $i++){
 					include($_SERVER["DOCUMENT_ROOT"].$arProps["PHP"]["VALUE"][$i]); 
 				}
-			}
-			/*if($arResult["CODE"] == "karty-dostupa"){
-				$elemets = '<div class="section">';
-				foreach ($products as $product){
-					$elemets .= '<div class="element">
-									<a>
-										<img alt="'.$product['name'].'" src="/images/products/identifiers/'.$product['image'].'">
-										<h3>'.$product['name'].'</h3>
-										<p>'.$product['description'].'</p>
-										<p>'.$product['info'].'</p>
-									</a>
-								</div>';
-				}
-				$elemets .= '</div>';
-				echo $elemets;
-			}*/
-			?>
+			} 
+			if ($arResult['NAME'] == 'Система контроля доступа PERCo-Web') { ?> 
+				
+				<script> 
+				var vkladkiInputs = document.getElementsByTagName('input');
+  
+						for (let item of vkladkiInputs) {   
+							item.type = "checkbox"; 
+						} 
+				</script> 
+
+			<? } ?>
+			
 			</div> 
 			<?echo $content;?>
 		</div>
 </div>
 
-	<script> 
-			// var test = document.getElementsByTagName("a");
-			// for (let item of test) {  
-			// 	console.log(item.innerHTML = item.href);
-			// } 
-	</script>
 <?
 if ($url['path'] == '/percoMobile/products/sistema-dlya-bankomatov-perco-s-800/' || $url['path'] == '/percoMobileMVP/products/sistema-dlya-bankomatov-perco-s-800/') {
 $linkPrefix = (preg_match('/\/percoMobileMVP\//', $url['path']) == 1) ? '/percoMobileMVP/' : '/percoMobile/';

@@ -177,8 +177,8 @@ if (count($arResult["SECTIONS"]) > 0)
 				<div class="text_item"><span>Кронштейны</span>
 				<?
 				echo '<div class="price">
-					<p>Цена <span class="price_rub">'.getPriceRubFromEuro(119).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
-					<p>119 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
+					<p>Цена <span class="price_rub">'.getPriceRubFromEuro(128).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
+					<p>128 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
 					<p>Стойка BSP2</p>
 				</div>';
 				?>

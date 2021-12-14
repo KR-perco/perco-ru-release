@@ -133,6 +133,25 @@ CModule::IncludeModule('iblock');
 		.about-title + .about-title { 
 			right: 17px; 
 		}
+		.years, .text_on_map {
+			color: #fff;
+			position: absolute;
+			text-shadow: -1px -1px 0 #a1b2cb, 1px -1px 0 #a1b2cb, -1px 1px 0 #a1b2cb, 1px 1px 0 #02316b;
+		}
+		.about-content .icon {
+			position: relative;
+		}
+		.text_on_map { 
+			font-size: 28px;
+			left: 49px;
+			top: 5px;
+		}
+		.years { 
+			font-size: 28px;
+			left: auto;
+			top: 1px;
+			position: relative;
+		}
 		@media (max-width: 1092px) {
 			.cell-12-sm {
 				max-width: 100%;
@@ -143,11 +162,11 @@ CModule::IncludeModule('iblock');
 				font-size: 16px; 
 			}
 			.icon__item figure {
-				height: 39px;
-				width: 50px;
+				height: 50x;
+				width: 90px;
 				-webkit-box-flex: 0;
-				-ms-flex: 0 0 50px;
-				flex: 0 0 50px;
+				-ms-flex: 0 0 90px;
+				flex: 0 0 90px;
     			padding-top: 22px;
 			}
 			.icon-about-1 {
@@ -183,22 +202,22 @@ CModule::IncludeModule('iblock');
 		<div class="about__text_icons">
 			<div class="row">
 				<div class="icon__item cell-6 cell-12-sm">
-					<figure class="icon icon-about-1">33</figure><span class="icon__signature">33 года работы на рынке</span>
+					<figure class="icon icon-about-2"><span class="text_on_map">92</span></figure><span class="icon__signature"><p>Продажи<br>в 92 странах мира</p></span>
 				</div>
 				<div class="icon__item cell-6 cell-12-sm">
-					<figure class="icon icon-about-2"></figure><span class="icon__signature">Разветвленная дилерская сеть, сервисные центры во всех регионах России</span>
+					<figure class="icon icon-about-1"> <span class="years">33</span> </figure><span class="icon__signature">33 года работы на рынке</span>
 				</div>
 				<div class="icon__item cell-6 cell-12-sm">
 					<figure class="icon icon-about-3"></figure><span class="icon__signature">Современный завод по производству оборудования безопасности</span>
 				</div>
 				<div class="icon__item cell-6 cell-12-sm">
-					<figure class="icon icon-about-4"></figure><span class="icon__signature">Склады готовой продукции в Москве, Санкт‑Петербурге, Пскове и ЕС</span>
+					<figure class="icon icon-about-4"></figure><span class="icon__signature">400 дилеров<br>и 45 сервисных центров</span>
 				</div>
 				<div class="icon__item cell-6 cell-12-sm">
-					<figure class="icon icon-about-5"></figure><span class="icon__signature">5-летний гарантийный срок на оборудование</span>
+					<figure class="icon icon-about-5"></figure><span class="icon__signature">Гарантийный срок <br>на оборудование PERCo - 5 лет</span>
 				</div>
 				<div class="icon__item cell-6 cell-12-sm">
-					<figure class="icon icon-about-6"></figure><span class="icon__signature">Техническая поддержка и бесплатное обучение в Учебном центре</span>
+					<figure class="icon icon-about-6"></figure><span class="icon__signature">Техподдержка<br>и обучение</span>
 				</div>
 			</div> 
 		</div> 
