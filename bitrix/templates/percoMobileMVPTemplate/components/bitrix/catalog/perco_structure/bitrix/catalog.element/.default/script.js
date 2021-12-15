@@ -16,6 +16,11 @@ window.onload = function() {
         download: false
     });
 
+    $("#sheme_skud").lightGallery({
+        selector: "a",
+        zoom: false,
+        download: false
+    });
     $(".video").lightGallery({
         selector: ".play",
         zoom: false,

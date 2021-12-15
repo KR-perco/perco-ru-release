@@ -63,7 +63,7 @@ $APPLICATION->AddHeadScript("/scripts/pages/dokumentatsiya.js");
             </div>
             <div class="download_item">
                 <div class="icon"><img alt="Иконка" src="https://www.perco.ru/percoMobileMVP/img/pdf.png"></div>
-                <div><a href="https://www.perco.ru/download/catalogues-booklets/rus//buklet_skd.pdf">Система безопасности на предприятии. Буклет А5</a></div>
+                <div><a href="https://www.perco.ru/download/catalogues-booklets/rus/buklet_skd.pdf">Система безопасности на предприятии. Буклет А5</a></div>
             </div>
             <div class="download_item">
                 <div class="icon"><img alt="Иконка" src="https://www.perco.ru/percoMobileMVP/img/pdf.png"></div>

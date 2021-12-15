@@ -1,15 +1,25 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 CJSCore::Init(array("jquery")); 
+ 
+$APPLICATION->SetAdditionalCSS("/scripts/mobil/swiper.css"); 
+$this->addExternalJS("/scripts/mobil/swiper.min.js"); 
 $this->addExternalJS("/scripts/mobil/catalog.js"); 
 global $device;
 $page = $APPLICATION->GetCurUri();
 $url = parse_url($page);
 
+
 if ($arResult["PROPERTIES"]["CSS"]["VALUE"])
-	$APPLICATION->SetAdditionalCSS($arResult["PROPERTIES"]["CSS"]["VALUE"]); // подключение стилей
+	$APPLICATION->SetAdditionalCSS($arResult["PROPERTIES"]["CSS"]["VALUE"]); // подключение стилей  
+
+if ($arResult["PROPERTIES"]["JS"]["VALUE"]) {
+	if (strpos($arResult["NAME"], 'Шлагбаум GS04') !== false) { 
+		$this->addExternalJS($arResult["PROPERTIES"]["JS"]["VALUE"]);  
+	}
+}
 
 function addkey($key, $sort)			// функция для сортировки тех. характеристик
-{
+{ 
 	if(array_key_exists($key, $sort))
 	{
 		$key++;
@@ -18,6 +28,7 @@ function addkey($key, $sort)			// функция для сортировки т�
 	else
 		return $key;
 } 
+
 // Основные вкладки ->
 for($i=0; $i < count($arResult["PROPERTIES"]["TEXT"]["VALUE"]); $i++)
 { 
@@ -27,8 +38,8 @@ for($i=0; $i < count($arResult["PROPERTIES"]["TEXT"]["VALUE"]); $i++)
 	$vkladka_menu .= ' id="'.translitIt(strtolower($name)).'"><label for="'.translitIt(strtolower($name)).'"><span class="dashed">'.$name.'</span></label>';
 	$vkladka_content .= $vkladka_menu.'<div><div class="text_items">'.html_entity_decode($arResult["PROPERTIES"]["TEXT"]["VALUE"][$i]["TEXT"]).'</div>';
 	if (in_array($name, $arResult["PROPERTIES"]["IMAGES_TEXT"]["DESCRIPTION"]))
-	{
-		$vkladka_content .= '<div class="scroll horizontal_scroll"><ul id="img_items'.$i.'">';
+	{ 
+		$vkladka_content .= '<div class="scroll horizontal_scroll"><div class="dop-swiper-slider" id="img_items'.$i.'"><ul class="swiper-wrapper">';
 		foreach(array_keys($arResult["PROPERTIES"]["IMAGES_TEXT"]["DESCRIPTION"], $name) as $keyValue)
 		{
 			$arFilter = Array("IBLOCK_ID"=>$arResult["PROPERTIES"]["IMAGES"]["LINK_IBLOCK_ID"], "ACTIVE"=>"Y", "ID" => $arResult["PROPERTIES"]["IMAGES_TEXT"]["VALUE"][$keyValue]);
@@ -37,24 +48,30 @@ for($i=0; $i < count($arResult["PROPERTIES"]["TEXT"]["VALUE"]); $i++)
 			if ($ob = $res->GetNextElement())
 			{
 				$arPropsImg = $ob->GetProperties();
-				$vkladka_content .= '<li class="img_item'; 
+				$vkladka_content .= '<li class="swiper-slide img_item'; 
 				if (!$arPropsImg["FULL"]["VALUE"])
 					$vkladka_content .= " anons_img";
 				$vkladka_content .= '">';
 				$keyFullImg = array_search(LANGUAGE_ID, $arPropsImg["FULL_OPIS"]["DESCRIPTION"]);
-				$keyPreviewImg = array_search(LANGUAGE_ID, $arPropsImg["PREVIEW_OPIS"]["DESCRIPTION"]);
+				$keyPreviewImg = array_search(LANGUAGE_ID, $arPropsImg["PREVIEW_OPIS"]["DESCRIPTION"]); 
 				
-				if($arPropsImg["FULL"]["VALUE"]){
-					$vkladka_content .='<div class="anons_img test_img"><img src="'.$arPropsImg["FULL"]["VALUE"].'" alt="'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'"/>
-										<div class="caption">'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'</div></div>';
-				}else{
-					$vkladka_content .='<img src="'.$arPropsImg["PREVIEW"]["VALUE"].'" alt="'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'"/>
-					<div class="caption">'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'</div>';
-				}
+				// if($arPropsImg["FULL"]["VALUE"]){
+				// 	$vkladka_content .='<div class="anons_img test_img"><img src="'.$arPropsImg["FULL"]["VALUE"].'" alt="'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'"/>
+				// 						<div class="caption">'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'</div></div>';
+				// }else{
+				// 	$vkladka_content .='<img src="'.$arPropsImg["PREVIEW"]["VALUE"].'" alt="'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'"/>
+				// 	<div class="caption">'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'</div>';
+				// }
+				$vkladka_content .='<img src="'.$arPropsImg["PREVIEW"]["VALUE"].'" alt="'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'"/>
+				<div class="caption">'.$arPropsImg["PREVIEW_OPIS"]["VALUE"][$keyPreviewImg].'</div>';
 				$vkladka_content .= '</li>';
 			}
 		}
-		$vkladka_content .= '</ul></div>';
+		$vkladka_content .= '</ul> 
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div> 
+		</div>
+	  </div>';
 	}
 	$vkladka_content .= '</div>';
 }
@@ -87,7 +104,7 @@ if ($arResult["PROPERTIES"]["SPECIFICATIONS"]["VALUE"])
 				// $arIBlock = GetIBlockElement($val);
 				$keyFile = array_search(LANGUAGE_ID, $arIBlockProps["FILE"]["DESCRIPTION"]);
 				if ($keyFile === false)
-					continue;
+					continue; 
 				$vfile = pathinfo($arIBlockProps["FILE"]["VALUE"][$keyFile]);
 				$keyName = array_search(LANGUAGE_ID, $arIBlockProps["NAME"]["DESCRIPTION"]);
 				if ($arIBlockProps["POSTER"]["DESCRIPTION"])
@@ -308,7 +325,7 @@ if(!$_GET["F"])
 					$datezbor = $arPropDown["INSTAL_TIME"]["VALUE"];
 				else
 					$datezbor = printFileInfo($file, "date");
-				$download .= '<div class="icon test444"><img alt="Иконка" src="/images/icons/pdf.svg" /></div><div><a href="https://www.perco.ru'.$file.'">'.$name.'</a><p class="color">'.$AutoCadtitle.$fSize.' — '.$datezbor.'</p>';
+				$download .= '<div class="icon"><img alt="Иконка" src="/images/icons/pdf.svg" /></div><div><a href="https://www.perco.ru'.$file.'">'.$name.'</a><p class="color">'.$AutoCadtitle.$fSize.' — '.$datezbor.'</p>';
 				$download .= '</div></div>';
 			}
 		}
@@ -342,30 +359,28 @@ if ($arResult["PROPERTIES"]["PHP"]["VALUE"])		// Делаем вставки php
 		$content = str_ireplace($arResult["PROPERTIES"]["PHP"]["DESCRIPTION"][$i], $php_result, $content);
 	}
 } 
-
+ 
 $detailText = $arResult["DETAIL_TEXT"]; // делаем вставку файлов в детальное описание
 $detailText = preg_replace_callback("/\[download:(.+)\]/", "GetDownloadFile", $detailText);
-$detailText = preg_replace_callback("/\[downloadImg:(.+)\]/", "GetDownloadFileImg", $detailText);
+$detailText = preg_replace_callback("/\[downloadImg:(.+)\]/", "GetDownloadFileImg", $detailText); 
 
-if ($arResult["PROPERTIES"]["LINKS"]["VALUE"]) // Устанавливаем ссылки на фразы в детальном описании
-{
-	for($i=0; $i < count($arResult["PROPERTIES"]["LINKS"]["VALUE"]); $i++)
-	{
-		$matches = [];
-		preg_match("/\/[^\/]*\..*/", $arResult["PROPERTIES"]["LINKS"]["VALUE"][$i], $matches);
-		$url = str_replace("/", "\/", $matches[0]);
-		//var_dump($matches[0]);
-		//var_dump($arResult["PROPERTIES"]["LINKS"]["DESCRIPTION"][$i]);
-		$detailText = preg_replace('Программное обеспечение', '4334', $detailText, 1);
-	}
-}
-?>
-
+// if ($arResult["PROPERTIES"]["LINKS"]["VALUE"]) // Устанавливаем ссылки на фразы в детальном описании
+// { 
+// 	for($i=0; $i < count($arResult["PROPERTIES"]["LINKS"]["VALUE"]); $i++)
+// 	{ 
+// 		$matches = [];
+// 		preg_match("/\/[^\/]*\..*/", $arResult["PROPERTIES"]["LINKS"]["VALUE"][$i], $matches);
+// 		$url = str_replace("/", "\/", $matches[0]); 
+// 		$detailText = preg_replace('Программное обеспечение', '4334', $detailText, 1);  
+// 	}
+// }
+?> 
 <div id="content">
 	<h2><?=$arResult["NAME"]?> <?if ($arResult["PROPERTIES"]["DOP_NAME"]["VALUE"]) echo $arResult["PROPERTIES"]["DOP_NAME"]["VALUE"];?></h2>
 	<?if (count($arResult["PROPERTIES"]["IMAGE"]["VALUE"]) > 1){ ?>
 		<div class="main-picture">
-			<ul id="main-slider">
+			<div id="main-slider">
+  				<ul class="swiper-wrapper">
 				<?
 				$resImg = CIBlockElement::GetList(array("SORT"=>"ASC"), Array("IBLOCK_ID"=>$arResult["PROPERTIES"]["IMAGE"]["LINK_IBLOCK_ID"], "ACTIVE"=>"Y", "ID" => $arResult["PROPERTIES"]["IMAGE"]["VALUE"][0]), false, false, array("ID", "NAME", "PROPERTY_PREVIEW", "PROPERTY_FULL"));
 				$img_val = $resImg->Fetch();
@@ -374,20 +389,25 @@ if ($arResult["PROPERTIES"]["LINKS"]["VALUE"]) // Устанавливаем с�
 					$resImg = CIBlockElement::GetList(array("SORT"=>"ASC"), Array("IBLOCK_ID"=>$arResult["PROPERTIES"]["IMAGE"]["LINK_IBLOCK_ID"], "ACTIVE"=>"Y", "ID" => $val), false, false, array("ID", "NAME", "PROPERTY_PREVIEW", "PROPERTY_FULL"));
 					$img_val = $resImg->Fetch();
 					?>
-					<li data-thumb="<?=$img_val["PROPERTY_PREVIEW_VALUE"]?>" data-src="<?=$img_val["PROPERTY_FULL_VALUE"]?>"><img alt="<?=$arResult["NAME"]?>" src="<?=$img_val["PROPERTY_PREVIEW_VALUE"]?>"></li>
+					<li class="swiper-slide" data-thumb="<?=$img_val["PROPERTY_PREVIEW_VALUE"]?>" data-src="<?=$img_val["PROPERTY_FULL_VALUE"]?>"><img alt="<?=$arResult["NAME"]?>" src="<?=$img_val["PROPERTY_PREVIEW_VALUE"]?>"></li>
 					<?
 				}
 				if ($arProps["SHEMA"]["VALUE"]){
 					?>
-						<li data-thumb="<?=$arProps["SHEMA"]["VALUE"]?>" data-src="<?=$arProps["SHEMA"]["VALUE"]?>"><img class="sheme" alt="sheme" src="<?=$arProps["SHEMA"]["VALUE"]?>"/></li>
+						<li class="swiper-slide" data-thumb="<?=$arProps["SHEMA"]["VALUE"]?>" data-src="<?=$arProps["SHEMA"]["VALUE"]?>"><img class="sheme" alt="sheme" src="<?=$arProps["SHEMA"]["VALUE"]?>"/></li>
 					<?
 				}
 
 				?>
-			</ul>
+				</ul>
+				
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>	
 		</div>
 	<?}else{
 		?><div class="main-picture"><img alt="<?=$arResult["NAME"]?>" src="<?=$arResult["PROPERTIES"]["IMAGE"]["VALUE"][0]?>"></div><?
+		 
 	}			
 	?>
 	
@@ -399,7 +419,7 @@ if ($arResult["PROPERTIES"]["LINKS"]["VALUE"]) // Устанавливаем с�
 			<?=$arResult["PREVIEW_TEXT"]?>
 		</div>
 		<?if($arResult["DETAIL_TEXT"]){?>
-		<div class="detail_text">
+		<div class="detail_text"> 
 			<?=$detailText?>
 		</div>
 		<?}?>
@@ -497,5 +517,37 @@ if (worker == 'manager') {
 	document.getElementById('price').style.display = "none";
 	document.getElementById('horizontal_scroll').style.display = "none";
 	document.getElementById('label_video').style.display = "none";
-}
+} 
+
+	function swioersInit(idSwiper, slidesSwiper) {
+
+		var docImgcount = $(idSwiper + " .swiper-wrapper .swiper-slide").length;
+		let swiperOptions = {}; 
+
+		if (docImgcount > 1) { 
+			swiperOptions = { 
+				slidesPerView: 1,
+				loop: true,
+				speed: 300, 
+				autoplay: false,
+				navigation: {
+					nextEl: idSwiper + ' .swiper-button-next',
+					prevEl: idSwiper + ' .swiper-button-prev',
+				}, 
+			} 
+			var swiper = new Swiper(idSwiper, swiperOptions); 
+		} 
+
+	}
+
+	 
+	var swipersCountID = $(".swiper-wrapper").length - 1;
+	if ($(".swiper-wrapper").length > 1) {
+		$(".swiper-wrapper").each(function( i ) { 
+			swioersInit("#img_items"+i); 
+		});
+	} else if ($(".swiper-wrapper").length == 1){  
+		swioersInit("#img_items"+swipersCountID); 
+	}
+
 </script> 

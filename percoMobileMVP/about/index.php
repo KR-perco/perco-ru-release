@@ -202,7 +202,7 @@ CModule::IncludeModule('iblock');
 		<div class="about__text_icons">
 			<div class="row">
 				<div class="icon__item cell-6 cell-12-sm">
-					<figure class="icon icon-about-2"><span class="text_on_map">92</span></figure><span class="icon__signature"><p>Продажи<br>в 92 странах мира</p></span>
+					<figure class="icon icon-about-2"><span class="text_on_map">92</span></figure><span class="icon__signature"><p>Продажив 92 странах мира</p></span>
 				</div>
 				<div class="icon__item cell-6 cell-12-sm">
 					<figure class="icon icon-about-1"> <span class="years">33</span> </figure><span class="icon__signature">33 года работы на рынке</span>
@@ -211,13 +211,13 @@ CModule::IncludeModule('iblock');
 					<figure class="icon icon-about-3"></figure><span class="icon__signature">Современный завод по производству оборудования безопасности</span>
 				</div>
 				<div class="icon__item cell-6 cell-12-sm">
-					<figure class="icon icon-about-4"></figure><span class="icon__signature">400 дилеров<br>и 45 сервисных центров</span>
+					<figure class="icon icon-about-4"></figure><span class="icon__signature">400 дилерови 45 сервисных центров</span>
 				</div>
 				<div class="icon__item cell-6 cell-12-sm">
-					<figure class="icon icon-about-5"></figure><span class="icon__signature">Гарантийный срок <br>на оборудование PERCo - 5 лет</span>
+					<figure class="icon icon-about-5"></figure><span class="icon__signature">Гарантийный срок на оборудование PERCo - 5 лет</span>
 				</div>
 				<div class="icon__item cell-6 cell-12-sm">
-					<figure class="icon icon-about-6"></figure><span class="icon__signature">Техподдержка<br>и обучение</span>
+					<figure class="icon icon-about-6"></figure><span class="icon__signature">Техподдержкаи обучение</span>
 				</div>
 			</div> 
 		</div> 

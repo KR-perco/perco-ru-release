@@ -18,7 +18,7 @@ $ar_props = $res->Fetch();
 if ($ar_props["PROPERTY_BANNER_VALUE"])
 	echo '<div class="width_all">
 			<div class="banner_image" style="background-image: url('.$ar_props["PROPERTY_BANNER_VALUE"].');"></div>
-		</div>';
+		</div>'; 
 
 ?>
 <div class="percoMobile_catalog" id="main_block">
@@ -184,8 +184,8 @@ if ($ar_props["PROPERTY_BANNER_VALUE"])
 								
 								<div class="element">
 									<a href="/percoMobileMVP/products/karty-dostupa/">
-										<img alt="Бесконтактные карты доступа" src="/images/products/controllers/card_small.jpg">
-										<h3>Бесконтактные карты доступа</h3>
+										<img alt="Карты. Брелоки. Метки." src="/images/products/controllers/card_small.jpg">
+										<h3>Карты. Брелоки. Метки.</h3>
 									</a>
 								</div>
 							
@@ -243,6 +243,13 @@ if ($ar_props["PROPERTY_BANNER_VALUE"])
 				echo '</div>'; 
 
 		}else{
+			
+			if ($arResult["SECTION"]["CODE"] == "karty-dostupa")
+			{
+				?> 
+				
+				<?
+			}
 			if($arResult["SECTION"]["NAME"] == "Система для банкоматов PERCo-S-800"){
 				?>
 				<?/*<div class="menu-wrapper">
@@ -253,24 +260,47 @@ if ($ar_props["PROPERTY_BANNER_VALUE"])
 				<?
 			}
 			echo '<div class="section">';
-			foreach($arResult["ELEMENTS"] as $element)
-			{
-				
-				$rsImage = CIBlockElement::GetProperty($element["IBLOCK_ID"], $element["ID"], array("sort" => "asc"), Array("CODE"=>"IMAGE_PREVIEW"));
-				$arImage = $rsImage->Fetch();
-				$rsDopname = CIBlockElement::GetProperty($element["IBLOCK_ID"], $element["ID"], array("sort" => "asc"), Array("CODE"=>"DOP_NAME"));
-				$arDopname = $rsDopname->Fetch();
-			?>
-				<div class="element">
-					<a href="/percoMobileMVP/products/<?=$element["CODE"];?>.php">
+			
+			if ($arResult["SECTION"]["CODE"] != "karty-dostupa") { // *В картах доступа элементы не кликабельные
+				foreach($arResult["ELEMENTS"] as $element)
+				{
 					
-						<img alt="<?=$element["NAME"];?>" src="<?=$arImage["VALUE"];?>" />
-						<h3><?=$element["NAME"]?></h3>
-						<p><?=$arDopname["VALUE"];?></p>
-					</a>
-				</div>
-			<?
+					$rsImage = CIBlockElement::GetProperty($element["IBLOCK_ID"], $element["ID"], array("sort" => "asc"), Array("CODE"=>"IMAGE_PREVIEW"));
+					$arImage = $rsImage->Fetch();
+					$rsDopname = CIBlockElement::GetProperty($element["IBLOCK_ID"], $element["ID"], array("sort" => "asc"), Array("CODE"=>"DOP_NAME"));
+					$arDopname = $rsDopname->Fetch();
+				?>
+					<div class="element">
+						<a href="/percoMobileMVP/products/<?=$element["CODE"];?>.php">
+						
+							<img alt="<?=$element["NAME"];?>" src="<?=$arImage["VALUE"];?>" />
+							<h3><?=$element["NAME"]?></h3>
+							<p><?=$arDopname["VALUE"];?></p>
+						</a>
+					</div>
+				<?
+				}
+			} else {
+				foreach($arResult["ELEMENTS"] as $element)
+				{
+					
+					$rsImage = CIBlockElement::GetProperty($element["IBLOCK_ID"], $element["ID"], array("sort" => "asc"), Array("CODE"=>"IMAGE_PREVIEW"));
+					$arImage = $rsImage->Fetch();
+					$rsDopname = CIBlockElement::GetProperty($element["IBLOCK_ID"], $element["ID"], array("sort" => "asc"), Array("CODE"=>"DOP_NAME"));
+					$arDopname = $rsDopname->Fetch();
+				?>
+					<div class="element">
+						<div>
+						
+							<img alt="<?=$element["NAME"];?>" src="<?=$arImage["VALUE"];?>" />
+							<h3><?=$element["NAME"]?></h3>
+							<p><?=$arDopname["VALUE"];?></p>
+						</div>
+					</div>
+				<?
+				}
 			}
+			
 			echo "</div>";
 		} 
 

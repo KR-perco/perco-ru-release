@@ -181,10 +181,6 @@ switch ($checkedId){
 					</noindex>
 				</li>
 				<li>
-					<noindex>GSM-Информ (<a href="http://www.gsm-inform.ru" target="_blank"
-							rel="nofollow">www.gsm-inform.ru</a>)</noindex>
-				</li>
-				<li>
 					<noindex>Билайн (<a href="http://www.beeline.ru" target="_blank" rel="nofollow">www.beeline.ru</a>).
 						Контактное лицо: +7 (968) 970-70-07 (Зудиленков
 						Вадим) <a href="mailto:vzudilenkov@beeline.ru">VZudilenkov@beeline.ru</a></noindex>
@@ -221,11 +217,7 @@ switch ($checkedId){
 				</li>
 			</ul>
 			<span class="boldZag">Казахстан</span>
-			<ul>
-				<li>
-					<noindex>QuickTelecom KZ (<a href="http://www.sms1.kz" target="_blank"
-							rel="nofollow">www.sms1.kz</a>)</noindex>
-				</li>
+			<ul> 
 				<li>
 					<noindex>КазИнфоТех АЦП (<a href="http://kazinfoteh.kz" target="_blank"
 							rel="nofollow">kazinfoteh.kz</a>). Контактное лицо: +7 (777) 007-93-83 (Ковалева
@@ -250,11 +242,7 @@ switch ($checkedId){
 					<noindex>АльфаSMS (<a href="http://www.alphasms.com.ua" target="_blank"
 							rel="nofollow">www.alphasms.com.ua</a>)</noindex>
 				</li>
-
-				<li>
-					<noindex>SpeedSMS (<a href="http://www.speedsms.com.ua" target="_blank"
-							rel="nofollow">www.speedsms.com.ua</a>)</noindex>
-				</li>
+ 
 			</ul>
 		</div>
 
@@ -466,11 +454,7 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Arra
 				<li>
 					<noindex>SMSЦентр (<a href="http://www.smsc.ru" target="_blank" rel="nofollow">www.smsc.ru</a>)
 					</noindex>
-				</li>
-				<li>
-					<noindex>GSM-Информ (<a href="http://www.gsm-inform.ru" target="_blank"
-							rel="nofollow">www.gsm-inform.ru</a>)</noindex>
-				</li>
+				</li> 
 				<li>
 					<noindex>Билайн (<a href="http://www.beeline.ru" target="_blank" rel="nofollow">www.beeline.ru</a>).
 						Контактное лицо: +7 (968) 970-70-07 (Зудиленков
@@ -508,11 +492,7 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Arra
 				</li>
 			</ul>
 			<span class="boldZag">Казахстан</span>
-			<ul>
-				<li>
-					<noindex>QuickTelecom KZ (<a href="http://www.sms1.kz" target="_blank"
-							rel="nofollow">www.sms1.kz</a>)</noindex>
-				</li>
+			<ul> 
 				<li>
 					<noindex>КазИнфоТех АЦП (<a href="http://kazinfoteh.kz" target="_blank"
 							rel="nofollow">kazinfoteh.kz</a>). Контактное лицо: +7 (777) 007-93-83 (Ковалева
@@ -537,11 +517,7 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Arra
 					<noindex>АльфаSMS (<a href="http://www.alphasms.com.ua" target="_blank"
 							rel="nofollow">www.alphasms.com.ua</a>)</noindex>
 				</li>
-
-				<li>
-					<noindex>SpeedSMS (<a href="http://www.speedsms.com.ua" target="_blank"
-							rel="nofollow">www.speedsms.com.ua</a>)</noindex>
-				</li>
+ 
 			</ul>
 		</div>
 		<input type="radio" id="<?=translitIt(strtolower("ПО S-20 Школа"));?>" <? echo $checkedThree ?> name="vkladki">
@@ -645,11 +621,7 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Arra
 				<li>
 					<noindex>SMSЦентр (<a href="http://www.smsc.ru" target="_blank" rel="nofollow">www.smsc.ru</a>)
 					</noindex>
-				</li>
-				<li>
-					<noindex>GSM-Информ (<a href="http://www.gsm-inform.ru" target="_blank"
-							rel="nofollow">www.gsm-inform.ru</a>)</noindex>
-				</li>
+				</li> 
 				<li>
 					<noindex>Билайн (<a href="http://www.beeline.ru" target="_blank" rel="nofollow">www.beeline.ru</a>).
 						Контактное лицо: +7 (968) 970-70-07 (Зудиленков
@@ -687,11 +659,7 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Arra
 				</li>
 			</ul>
 			<span class="boldZag">Казахстан</span>
-			<ul>
-				<li>
-					<noindex>QuickTelecom KZ (<a href="http://www.sms1.kz" target="_blank"
-							rel="nofollow">www.sms1.kz</a>)</noindex>
-				</li>
+			<ul> 
 				<li>
 					<noindex>КазИнфоТех АЦП (<a href="http://kazinfoteh.kz" target="_blank"
 							rel="nofollow">kazinfoteh.kz</a>). Контактное лицо: +7 (777) 007-93-83 (Ковалева
@@ -716,11 +684,7 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Arra
 					<noindex>АльфаSMS (<a href="http://www.alphasms.com.ua" target="_blank"
 							rel="nofollow">www.alphasms.com.ua</a>)</noindex>
 				</li>
-
-				<li>
-					<noindex>SpeedSMS (<a href="http://www.speedsms.com.ua" target="_blank"
-							rel="nofollow">www.speedsms.com.ua</a>)</noindex>
-				</li>
+ 
 			</ul>
 		</div>
 

@@ -100,11 +100,16 @@ if (intval($res->SelectedRowsCount()) > 0)
 			if ($arResult['NAME'] == 'Система контроля доступа PERCo-Web') { ?> 
 				
 				<script> 
-				var vkladkiInputs = document.getElementsByTagName('input');
-  
-						for (let item of vkladkiInputs) {   
-							item.type = "checkbox"; 
-						} 
+					// фикс не работающих в приложении ссылок
+					var linksToDownload = document.querySelectorAll(".list_files a"); 
+					for (let link of linksToDownload) {  
+						link.removeAttribute("download"); 
+					}
+					// переделали гармошку с radio на checkbox
+					var vkladkiInputs = document.getElementsByTagName('input'); 
+					for (let item of vkladkiInputs) {
+						item.type = "checkbox";
+					} 
 				</script> 
 
 			<? } ?>

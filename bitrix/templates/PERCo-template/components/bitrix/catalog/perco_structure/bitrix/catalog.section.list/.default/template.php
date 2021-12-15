@@ -288,43 +288,75 @@ if (count($arResult["SECTIONS"]) > 0)
 }
 else
 {
-	echo '<div id="secel_list">';
-	foreach($arResult["ELEMENTS"] as $element)
-	{
-		$rsImage = CIBlockElement::GetProperty($element["IBLOCK_ID"], $element["ID"], array("sort" => "asc"), Array("CODE"=>"IMAGE_PREVIEW"));
-		$arImage = $rsImage->Fetch();
-		$rsDopname = CIBlockElement::GetProperty($element["IBLOCK_ID"], $element["ID"], array("sort" => "asc"), Array("CODE"=>"DOP_NAME"));
-		$arDopname = $rsDopname->Fetch();
-		$dopname = "";
-		$new_product = "";
-		if ($element["DATE_ACTIVE_FROM"])
+	echo '<div id="secel_list">';  
+	if ($arResult["SECTION"]["CODE"] != "karty-dostupa") {
+		foreach($arResult["ELEMENTS"] as $element)
 		{
-			$dateActive = new DateTime(date("Y-m-d", strtotime($element["DATE_ACTIVE_FROM"])));
-			$today = new DateTime(date("Y-m-d"));
-			$interval = $dateActive->diff($today);
-			if ($interval->format("%a") < 92)
-				$new_product = '<div class="new_product">'.GetMessage("NEW").'</div>';
-			if ($dateActive > $today)
-				continue;
+			$rsImage = CIBlockElement::GetProperty($element["IBLOCK_ID"], $element["ID"], array("sort" => "asc"), Array("CODE"=>"IMAGE_PREVIEW"));
+			$arImage = $rsImage->Fetch();
+			$rsDopname = CIBlockElement::GetProperty($element["IBLOCK_ID"], $element["ID"], array("sort" => "asc"), Array("CODE"=>"DOP_NAME"));
+			$arDopname = $rsDopname->Fetch();
+			$dopname = "";
+			$new_product = "";
+			if ($element["DATE_ACTIVE_FROM"])
+			{
+				$dateActive = new DateTime(date("Y-m-d", strtotime($element["DATE_ACTIVE_FROM"])));
+				$today = new DateTime(date("Y-m-d"));
+				$interval = $dateActive->diff($today);
+				if ($interval->format("%a") < 92)
+					$new_product = '<div class="new_product">'.GetMessage("NEW").'</div>';
+				if ($dateActive > $today)
+					continue;
+			}
+			if ($arDopname["VALUE"])
+				$dopname = '<p class="dop_name">'.$arDopname["VALUE"].'</p>';
+			$free = '';
+			if ($element["NAME"] == "PERCo-WB «Базовый пакет ПО»" || $element["NAME"] == "PERCo-WM-04 Интеграция с внешними системами" || $element["NAME"] == "PERCo-WBE «Базовый пакет встроенного ПО»"){
+				$free = '<p class="free">БЕСПЛАТНО</p>';
+			}
+	?>
+		<div class="secel_item secel_item_3">
+			<a href="<?=str_ireplace("_com", "", $element["DETAIL_PAGE_URL"]);?>">
+				<div class="image_icon">
+					<img alt="<?=$element["NAME"];?>" src="<?=$arImage["VALUE"];?>" />
+					<?=$new_product;?>
+				</div>
+				<div class="text_item"><span><?=$element["NAME"];?></span><?=$dopname;?><?=$free;?><?if (LANGUAGE_ID == "ru") echo getPriceProduct($element["IBLOCK_ID"], $element["ID"], $arImage["VALUE"]);?></div>
+			</a>
+		</div>
+	<?
 		}
-		if ($arDopname["VALUE"])
-			$dopname = '<p class="dop_name">'.$arDopname["VALUE"].'</p>';
-		$free = '';
-		console_log($element);
-		if ($element["NAME"] == "PERCo-WB «Базовый пакет ПО»" || $element["NAME"] == "PERCo-WM-04 Интеграция с внешними системами" || $element["NAME"] == "PERCo-WBE «Базовый пакет встроенного ПО»"){
-			$free = '<p class="free">БЕСПЛАТНО</p>';
+	} else { // если $arResult["SECTION"]["CODE"] == "karty-dostupa"
+		// вывод только для секции "Карты доступа"/"Карты. Брелоки. Метки."
+		foreach($arResult["ELEMENTS"] as $element)
+		{
+			$rsImage = CIBlockElement::GetProperty($element["IBLOCK_ID"], $element["ID"], array("sort" => "asc"), Array("CODE"=>"IMAGE_PREVIEW"));
+			$arImage = $rsImage->Fetch();
+			
+			$rsDopname = CIBlockElement::GetProperty($element["IBLOCK_ID"], $element["ID"], array("sort" => "asc"), Array("CODE"=>"DOP_NAME"));
+			$arDopname = $rsDopname->Fetch();
+			$dopname = "";
+			
+			if ($arDopname["VALUE"])
+				$dopname = '<p class="dop_name">'.$arDopname["VALUE"].'</p>'; 
+	?>
+		<div class="secel_item secel_item_4">
+			<div><!-- // некликабельные элементы  -->
+				<div class="image_icon">
+					<img alt="<?=$element["NAME"];?>" src="<?=$arImage["VALUE"];?>" /> 
+				</div>
+				<div class="text_item">
+					<span>
+						<?=$element["NAME"];?>
+					</span>
+					<?if (LANGUAGE_ID == "ru") echo getPriceProduct($element["IBLOCK_ID"], $element["ID"], $arImage["VALUE"]);?>
+					<div class="price"><?=$dopname;?></div> <!-- // только здесь так выводим вторую допстрочку  -->
+				</div>
+				
+		</div>
+		</div>
+	<?
 		}
-?>
-	<div class="secel_item secel_item_3">
-		<a href="<?=str_ireplace("_com", "", $element["DETAIL_PAGE_URL"]);?>">
-			<div class="image_icon">
-				<img alt="<?=$element["NAME"];?>" src="<?=$arImage["VALUE"];?>" />
-				<?=$new_product;?>
-			</div>
-			<div class="text_item"><span><?=$element["NAME"];?></span><?=$dopname;?><?=$free;?><?if (LANGUAGE_ID == "ru") echo getPriceProduct($element["IBLOCK_ID"], $element["ID"], $arImage["VALUE"]);?></div>
-		</a>
-	</div>
-<?
 	}
 	// console_log($arParams['SECTION_CODE']);
 	

@@ -49,16 +49,16 @@ select:not(:first-child) { display: none; }
 			</div> -->
 			<h2>Сертификаты системы качества PERCo</h2>
 			<div class="download_item">
-				<div class="icon"><img alt="Иконка" src="https://www.perco.ru/percoMobileMVP/doc/pdf.png"></div>
-				<div><a href="https://www.perco.ru/percoMobileMVP/doc/Certificates_IQNet.pdf">Сертификат IQNet</a></div>
+				<div class="icon"><img alt="Иконка" src="https://www.perco.ru/percoMobileMVP/img/pdf.png"></div>
+				<div><a href="https://www.perco.ru/download/certificates/rus/Certificates_IQNet.pdf" >Сертификат IQNet</a></div> 
 			</div>
 			<div class="download_item">
-				<div class="icon"><img alt="Иконка" src="https://www.perco.ru/percoMobileMVP/doc/pdf.png"></div>
-				<div><a href="https://www.perco.ru/percoMobileMVP/doc/Certificates_ACCREDIA.pdf">Сертификат ACCREDIA/ТЕСТ-С</a></div>
+				<div class="icon"><img alt="Иконка" src="https://www.perco.ru/percoMobileMVP/img/pdf.png"></div>
+				<div><a href="https://www.perco.ru/download/certificates/rus/Certificates_ACCREDIA.pdf" >Сертификат ACCREDIA/ТЕСТ-С</a></div>
 			</div>
 			<div class="download_item">
-				<div class="icon"><img alt="Иконка" src="https://www.perco.ru/percoMobileMVP/doc/pdf.png"></div>
-				<div><a href="https://www.perco.ru/percoMobileMVP/doc/gost-iso-9001-2015.pdf">Сертификат ГОСТ ISO9001-2015 (ISO9001:2015)</a></div>
+				<div class="icon"><img alt="Иконка" src="https://www.perco.ru/percoMobileMVP/img/pdf.png"></div>
+				<div><a href="https://www.perco.ru/download/certificates/rus/gost-iso-9001-2015.pdf" >Сертификат ГОСТ ISO9001-2015 (ISO9001:2015)</a></div>
 			</div>
 			<!-- <h2 style="display: none;">Технический каталог оборудования</h2>
 			<div class="download_item" style="display: none;">

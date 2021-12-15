@@ -9,13 +9,7 @@ $APPLICATION->AddHeadScript("/scripts/url.min.js");
   	app.setPageTitle({
          title: "Видео"
       });
-</script>
-<style>
-#video_element video{
-	width: 100%;
-	height: 140px;
-}
-</style>
+</script> 
 <div id="content">
 	<h2>Выбор раздела</h2>
 	<div id="select_documents" >

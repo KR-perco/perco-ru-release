@@ -85,6 +85,7 @@
     width: 100%;
     position: relative;
     text-align: center;
+    overflow: hidden;
 }
 
 .main-picture ul {
@@ -299,6 +300,49 @@ iframe.lg-object {
 
 .lg-object.lg-image {
     background: white;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    content: ""!important;
+    background: url(/images/icons/arrow_grey.svg) no-repeat center center transparent;
+    height: 48px;
+    width: 23px;
+}
+
+.swiper-button-prev:after {
+    transform: scaleX(-1);
+}
+
+.dop-swiper-slider {
+    position: relative;
+}
+
+.dop-swiper-slider img {
+    max-width: 75%;
+}
+
+.dop-swiper-slider ul {
+    padding: 0;
+}
+
+.dop-swiper-slider ul li {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dop-swiper-slider .swiper-button-next,
+.dop-swiper-slider .swiper-button-prev {
+    display: none;
+}
+
+.dop-swiper-slider.swiper-container-initialized .swiper-button-next,
+.dop-swiper-slider.swiper-container-initialized .swiper-button-prev {
+    display: flex;
 }
 
 @media screen and (max-width: 900px) {
