@@ -1010,6 +1010,23 @@ function sendReminderMailPercoNewProducts() {
 	return 'sendReminderMailPercoNewProducts();';
 }
 
+
+function sendReminderMailIR19() {
+	if(CModule::IncludeModule('subscribe')) {
+		$response = '';
+		$letterId = 905;
+		$cPosting = new CPosting;
+		$post = CPosting::GetByID($letterId);
+		if(($post_arr = $post->Fetch()))
+			$aEmail = CPosting::GetEmails($post_arr);
+		$response = var_export($aEmail, true);
+		$cPosting->ChangeStatus($letterId, "P");
+		$response .= var_export($cPosting->SendMessage($letterId, 16), true);
+		mail('klimov.rv@ya.ru', 'Агент отправки рассылки Начались продажи нового мультиформатного считывателя', $response);
+	}
+	return 'sendReminderMailIR19();';
+}
+
 function console_log($data)
 {
   echo '<script>';

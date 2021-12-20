@@ -1,12 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-CModule::IncludeModule('iblock');
-
-$APPLICATION->AddHeadScript("/scripts/lightgallery/js/lightgallery.min.js");
-$APPLICATION->AddHeadScript("/scripts/lightslider/js/lightslider.min.js");
-$APPLICATION->AddHeadScript("/scripts/lightgallery/js/lg-zoom.min.js");
-$APPLICATION->SetAdditionalCSS("/scripts/lightgallery/css/lightgallery.min.css");
-$APPLICATION->SetAdditionalCSS("/scripts/lightslider/css/lightslider.min.css");
+CModule::IncludeModule('iblock'); 
 
 ?> 
 <script>

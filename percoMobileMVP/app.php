@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=320">
-
-    <!-- <script type="text/javascript" src="__deviceload__/cordova.js"></script>
-    <script type="text/javascript" src="bitrix_mobile_core.js"></script> -->
-
-    <link href="template_styles.css" rel="stylesheet" type="text/css">
-</head>
-
-<body>
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php"); ?> 
     <script>
         app.setPageTitle({
             title: "О приложении"
@@ -40,6 +24,4 @@
         </div>
     </div>
 
-</body>
-
-</html>
+<? require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
