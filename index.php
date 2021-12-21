@@ -7,11 +7,12 @@ $APPLICATION->SetPageProperty("keywords", "системы безопасност
 
 $APPLICATION->AddHeadScript("/scripts/pages/main.js"); // подключение скриптов
 $APPLICATION->SetAdditionalCSS("/css/glavnaya.css"); // подключение стилей
+$APPLICATION->AddHeadScript("/scripts/snow.js"); // Новый Год
 ?>
 
 <div id="main_banner">
 	<ul id="slider">
-	<li>
+		<li>
 			<a href="/products/shlagbaum/">
 				<div class="text_banner">
 					<span></span>

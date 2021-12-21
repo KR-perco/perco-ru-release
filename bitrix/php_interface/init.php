@@ -1014,7 +1014,7 @@ function sendReminderMailPercoNewProducts() {
 function sendReminderMailIR19() {
 	if(CModule::IncludeModule('subscribe')) {
 		$response = '';
-		$letterId = 905;
+		$letterId = 906; // ID рассылки
 		$cPosting = new CPosting;
 		$post = CPosting::GetByID($letterId);
 		if(($post_arr = $post->Fetch()))
@@ -1022,7 +1022,7 @@ function sendReminderMailIR19() {
 		$response = var_export($aEmail, true);
 		$cPosting->ChangeStatus($letterId, "P");
 		$response .= var_export($cPosting->SendMessage($letterId, 16), true);
-		mail('klimov.rv@ya.ru', 'Агент отправки рассылки Начались продажи нового мультиформатного считывателя', $response);
+		mail('mailingperco@gmail.com', 'Агент отправки рассылки Начались продажи нового мультиформатного считывателя', $response);
 	}
 	return 'sendReminderMailIR19();';
 }
