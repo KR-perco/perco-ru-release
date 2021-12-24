@@ -308,7 +308,7 @@ foreach($arResult["MONTH"] as $arWeek)	// проходимся по месяцу
 	</div>
 <?
 }
-
+// console_log($arResult);
 if ($CountEventsAll < 2)
 	$viewButton = false;
 else
@@ -326,19 +326,38 @@ arSeminarsDiv = [];
 arSeminarsDiv = [<?php echo "'" . implode("','", $arSeminarsDiv) . "'"; ?>];
 
  
-if (<?php echo $arResult["currentMonth"]?> == 11) { 
+
+if ((<?php echo $arResult["currentMonth"]?> == 11) && (<?php echo $arResult["currentYear"]?> == 2021)) { 
 	var div29894 = document.getElementById("div29894"); 
 	if (div29894.parentNode) {
 		for (let index = 0; index < 7; index++) { 
 				div29894.parentNode.removeChild(div29894.parentNode.lastChild); 
 		}
-	}
-//   node.parentNode.removeChild(node); 
+	} 
 }
-if (<?php echo $arResult["currentMonth"]?> == 12) { 
-	var htmlString = `<tbody> <tr> <td id="div29891" onmouseover="seminarsView('info29891');" onmouseout="seminarsHide('info29891');" onclick="goPage('29891', 'month=11&amp;year=2021');" class="event" colspan="" style="overflow: hidden;"> <table> <tbody> <tr> <td colspan="" style="border: none; padding: 0 0 5px 0;"> <div style="width: 100%;" class="vebinar"> <p style="line-height: 21px; padding: 0 0 0 5px; margin: 0px; font-weight: 600; display:block; cursor: pointer;"><img class="inf" alt="Информация" src="/images/icons/inform-blue.svg"> Вебинар </p></div></td></tr></tbody> </table> <div id="info29891" class="viewEvents" style="display: none; bottom: -51px;"> <span class="spanBlock"><b class="head_b"><ul><li style="list-style-image:url(/images/e-learning/schedule-list-02.png);">Вебинар «Способы идентификации в системах PERCо» </li></ul></b></span> </div></td><td id="div29894" onmouseover="seminarsView('info29894');" onmouseout="seminarsHide('info29894');" onclick="goPage('29894', 'month=11&amp;year=2021');" class="event" colspan="4" style="overflow: hidden;"> <table> <tbody> <tr> <td colspan="4" style="border: none; padding: 0 0 5px 0;"> <div style="width: 100%;" class="seminarvucentre"> <p style="line-height: 21px; padding: 0 0 0 5px; margin: 0px; font-weight: 600; display:block; cursor: pointer;"><img class="inf" alt="Информация" src="/images/icons/inform.svg"> Семинар в онлайн формате </p></div></td></tr></tbody> </table> <div id="info29894" class="viewEvents" style="display: none; bottom: -158px;"> <span class="spanBlock"> <b class="head_b"> Семинар в онлайн формате<ul> <li>«Обзор систем и оборудования PERCo»</li><li>«Практические навыки по работе в системах PERCo»</li><li>«Получение практических навыков в работе с системой PERCo-Web»</li><li>«Сертификация «Авторизованный инсталлятор»»</li></ul> </b> </span> </div></td><td class="event"></td><td class="event"></td></tr></tbody>`
-	console.log(document.querySelector('.event-calendar .week-row').childNodes[3].innerHTML = htmlString);
+if ((<?php echo $arResult["currentMonth"]?> == 12) && (<?php echo $arResult["currentYear"]?> == 2021)) { 
+	var htmlString = `<tbody> <tr> <td id="div29891" onmouseover="seminarsView('info29891');" onmouseout="seminarsHide('info29891');" onclick="goPage('29891', 'month=11&amp;year=2021');" class="event" colspan="" style="overflow: hidden;"> <table> <tbody> <tr> <td colspan="" style="border: none; padding: 0 0 5px 0;"> <div style="width: 100%;" class="vebinar"> <p style="line-height: 21px; padding: 0 0 0 5px; margin: 0px; font-weight: 600; display:block; cursor: pointer;"><img class="inf" alt="Информация" src="/images/icons/inform-blue.svg"> Вебинар </p></div></td></tr></tbody> </table> <div id="info29891" class="viewEvents" style="display: none; bottom: -51px;"> <span class="spanBlock"><b class="head_b"><ul><li style="list-style-image:url(/images/e-learning/schedule-list-02.png);">Вебинар «Способы идентификации в системах PERCо» </li></ul></b></span> </div></td><td id="div29894" onmouseover="seminarsView('info29894');" onmouseout="seminarsHide('info29894');" onclick="goPage('29894', 'month=11&amp;year=2021');" class="event" colspan="4" style="overflow: hidden;"> <table> <tbody> <tr> <td colspan="4" style="border: none; padding: 0 0 5px 0;"> <div style="width: 100%;" class="seminarvucentre"> <p style="line-height: 21px; padding: 0 0 0 5px; margin: 0px; font-weight: 600; display:block; cursor: pointer;"><img class="inf" alt="Информация" src="/images/icons/inform.svg"> Семинар в онлайн формате </p></div></td></tr></tbody> </table> <div id="info29894" class="viewEvents" style="display: none; bottom: -158px;"> <span class="spanBlock"> <b class="head_b"> Семинар в онлайн формате<ul> <li>«Обзор систем и оборудования PERCo»</li><li>«Практические навыки по работе в системах PERCo»</li><li>«Получение практических навыков в работе с системой PERCo-Web»</li><li>«Сертификация «Авторизованный инсталлятор»»</li></ul> </b> </span> </div></td><td class="event"></td><td class="event"></td></tr></tbody>`;
+	document.querySelector('.event-calendar .week-row').childNodes[3].innerHTML = htmlString;
 }
+
+
+if ((<?php echo $arResult["currentMonth"]?> == 1) && (<?php echo $arResult["currentYear"]?> == 2022)) { 
+	var div30257 = document.getElementById("div30257"); 
+	div30257.querySelector(".seminarvucentre > p").textContent = "Семинар в очном формате";
+
+	var info30257 = document.getElementById("info30257"); 
+	info30257.querySelector(".head_b").innerHTML = `<b class="head_b"> Семинар в очном формате <ul> <li>«Обзор систем и оборудования PERCo»</li> <li>«Практические навыки по работе в системах PERCo»</li> <li>«Получение практических навыков в работе с системой PERCo-Web»</li> <li>«Сертификация «Авторизованный администратор»</li> </ul> </b>`;
+	
+}
+if ((<?php echo $arResult["currentMonth"]?> == 2) && (<?php echo $arResult["currentYear"]?> == 2022)) { 
+	var div30379 = document.getElementById("div30379"); 
+	div30379.querySelector(".seminarvucentre > p").textContent = "Семинар в очном формате";
+
+	var info30379 = document.getElementById("info30379"); 
+	info30379.querySelector(".head_b").innerHTML = `<b class="head_b"> Семинар в очном формате <ul> <li>«Обзор систем и оборудования PERCo»</li> <li>«Практические навыки по работе в системах PERCo»</li> <li>«Получение практических навыков в работе с системой PERCo-Web»</li> <li>«Сертификация «Авторизованный администратор»»</li> </ul> </b>`;
+	
+}
+
 </script>
 <?
 if ($page == "all")
