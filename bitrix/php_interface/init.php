@@ -1011,10 +1011,10 @@ function sendReminderMailPercoNewProducts() {
 }
 
 
-function sendReminderMailIR19() {
+function sendReminderMailIntersec2022() {
 	if(CModule::IncludeModule('subscribe')) {
 		$response = '';
-		$letterId = 906; // ID рассылки
+		$letterId = 927; // ID рассылки
 		$cPosting = new CPosting;
 		$post = CPosting::GetByID($letterId);
 		if(($post_arr = $post->Fetch()))
@@ -1022,9 +1022,9 @@ function sendReminderMailIR19() {
 		$response = var_export($aEmail, true);
 		$cPosting->ChangeStatus($letterId, "P");
 		$response .= var_export($cPosting->SendMessage($letterId, 16), true);
-		mail('mailingperco@gmail.com', 'Агент отправки рассылки Начались продажи нового мультиформатного считывателя', $response);
+		mail('mailingperco@gmail.com', 'Агент отправки рассылки PERCo invites you to Intersec-2022', $response);
 	}
-	return 'sendReminderMailIR19();';
+	return 'sendReminderMailIntersec2022();';
 }
 
 function console_log($data)

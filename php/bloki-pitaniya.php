@@ -13,13 +13,13 @@ $products = array(
 		"name" => "К-Инженеринг БИРП 24/6",
 		"image" => "/images/products/bloki-pitaniya/K-Inzhenering-BIRP-24-6-0.jpg",
 		"description" => "",
-		"price" => "86"
+		"price" => "96"
 	),
 	"K-Inzhenering BIRP-24-2-5" => array(
 		"name" => "К-Инженеринг БИРП 24/2,5",
 		"image" => "/images/products/bloki-pitaniya/K-Inzhenering-BIRP-24-2-5.jpg",
 		"description" => "",
-		"price" => "64"
+		"price" => "76"
     ),
 	"K-Inzhenering BIRP-12-2-5" => array(
 		"name" => "К-Инженеринг БИРП 12-2,5/7",
