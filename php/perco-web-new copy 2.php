@@ -45,14 +45,14 @@ switch ($checkedId) {
             <span class="try">Попробовать&nbsp;</span>
         </a>
     </div>
-    <div class="col-3 hide-on-desktop">        
+    <div class="col-3 hide-on-desktop">
         <a href="/percoMobileMVP/products/po-sistemy-kontrolya-dostupa-perco-web/">
             <img src="/images/sistema-kontrolya-dostupa-perco-web/po-mounting-area.svg">
             <span class="head-emulate">Программное обеспечение</span>
             <span class="try">Перейти&nbsp;</span>
         </a>
     </div>
-    <div class="col-3 hide-on-percoMobile"> 
+    <div class="col-3 hide-on-percoMobile">
         <a href="/products/po-sistemy-kontrolya-dostupa-perco-web/">
             <img src="/images/sistema-kontrolya-dostupa-perco-web/po-mounting-area.svg">
             <span class="head-emulate">Программное обеспечение</span>
@@ -60,13 +60,13 @@ switch ($checkedId) {
         </a>
     </div>
     <div class="col-3 hide-on-desktop">
-        <a href="/percoMobileMVP/products/kontrollery-schityvateli/"> 
+        <a href="/percoMobileMVP/products/kontrollery-schityvateli/">
             <img src="/images/sistema-kontrolya-dostupa-perco-web/reader-mounting-area.svg">
             <span class="head-emulate">Оборудование</span>
             <span class="try">Перейти&nbsp;</span>
         </a>
     </div>
-    <div class="col-3 hide-on-percoMobile">        
+    <div class="col-3 hide-on-percoMobile">
         <a href="/products/kontrollery-schityvateli/">
             <img src="/images/sistema-kontrolya-dostupa-perco-web/reader-mounting-area.svg">
             <span class="head-emulate">Оборудование</span>
@@ -78,7 +78,7 @@ switch ($checkedId) {
     <div class="video-left iframe">
         <iframe src="https://www.youtube.com/embed/krK_t2QV-8Q?showinfo=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <p class="text-right">Система контроля доступа PERCo-Web - это удобный инструмент для эффективного управления предприятием.
+    <p class="text-right text-right111">Система контроля доступа PERCo-Web - это удобный инструмент для эффективного управления предприятием.
         Система предназначена для усиления безопасности и повышения дисциплины труда персонала. СКУД PERCo-Web позволяет
         организовать защиту от доступа посторонних, разграничение прав доступа сотрудников и посетителей и учет рабочего
         времени сотрудников. В качестве идентификаторов в системе контроля и управления доступом используются биометрические данные, карты доступа с
@@ -244,6 +244,38 @@ switch ($checkedId) {
                     </p>
                 </div>
             </div>
+
+
+            <!-- лево шаблон начало -->
+            <!-- <div class="two_blocks">
+                <div class="left_text">
+                    <h2>Охранно-пожарная сигнализация</h2>
+
+                    <p>
+                        В СКУД PERCo-Web реализована возможность интеграции с ОПС. Интеграция системы PERCo-Web с ИСО «Орион» позволяет организовать мониторинг и управление устройствами ОПС в интерфейсе СКУД, задавать реакции на события и реализовать визуальное отображение охранных и пожарных зон, разделов, реле на плане помещений.
+                    </p>
+                </div>
+                <div class="into_img">
+                    <img src="/images/products/po/wm-07_page.jpg" alt="Охранно-пожарная сигнализация">
+                </div>
+            </div> -->
+            <!-- лево шаблон конец -->
+
+            <!-- право шаблон начало -->
+            <!-- <div class="two_blocks">
+                <div class="into_img">
+                    <img src="/images/products/perco-web/monitoring.jpg" alt="Мониторинг">
+                </div>
+                <div class="text">
+                    <h2>Мониторинг</h2>
+                    <p>
+                        <strong>На мониторах сотрудников службы безопасности отображается графический план объекта с указанием технических средств защиты.</strong><br>
+                        При возникновении тревожной ситуации дежурный сотрудник получает сигнал и принимает необходимые меры. Например, в случае пожара открывает двери, в случае проникновения посторонних устанавливает режим «Закрыто».
+                    </p>
+                </div>
+            </div> -->
+            <!-- право шаблон конец -->
+
             <div class="two_blocks">
                 <div class="left_text">
                     <h2>Видеонаблюдение</h2> 
@@ -511,8 +543,9 @@ switch ($checkedId) {
         </div> -->
         <h2 class="hide-on-percoMobile">Возможности программного обеспечения</h2>
         <div class="hide-on-percoMobile" id="horizontal_scroll">
-            <ul id="scrollGallery">
-                <li> 
+            <ul id="scrollGallery"> 
+
+                <li>
                     <!-- Нумерация по порядку -->
                     <!-- // 1 // -->
                     <h3>Вход в систему</h3>
@@ -525,7 +558,7 @@ switch ($checkedId) {
                             систему по своему паролю.</p>
                     </div>
                 </li>
-                <li> 
+                <li>
                     <!-- // 2 // -->
                     <h3>Создание учетных данных</h3>
                     <img alt="Создание учетных данных" src="/images/products/perco-web/slides/2new.jpg">
@@ -801,7 +834,7 @@ switch ($checkedId) {
         </div>
 
     </div>
- 
+
     <input name="vkladki" type="radio" <?= $checkedThree ?> id="uznat-bolshe"><label for="uznat-bolshe"><span class="dashed">Выбор
             ПО</span></label>
     <div class="text_items">

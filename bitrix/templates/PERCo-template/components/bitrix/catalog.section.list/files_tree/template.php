@@ -74,8 +74,7 @@ if (!function_exists("getElements"))
 					$name = $arProps["NAME"]["VALUE"][$keyName];
 					$file = $arProps["FILE"]["VALUE"][$keyFile];
 					$image = $arProps["IMAGE"]["VALUE"][$keyImage];
-					
-				console_log($arProps["NAME"]["VALUE"]); 
+					 
 				// console_log($arProps);
 
 					if ($keyFile === false)
