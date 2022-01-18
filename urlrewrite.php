@@ -16,6 +16,14 @@ $arUrlRewrite=array (
     'PATH' => '/desktop_app/router.php',
     'SORT' => 100,
   ),
+  19 => 
+  array (
+    'CONDITION' => '#^/percoMobileMVP/products/(.*)#',
+    'RULE' => '',
+    'ID' => 'bitrix:catalog',
+    'PATH' => '/percoMobileMVP/products/details.php',
+    'SORT' => 100,
+  ),
   2 => 
   array (
     'CONDITION' => '#^/fotogalereya/(.*).php(.*)#',
@@ -40,14 +48,6 @@ $arUrlRewrite=array (
     'PATH' => '/percoDemo/products/details.php',
     'SORT' => 100,
   ),
-  19 => 
-  array (
-    'CONDITION' => '#^/percoMobileMVP/products/(.*)#',
-    'RULE' => '',
-    'ID' => 'bitrix:catalog',
-    'PATH' => '/percoMobileMVP/products/details.php',
-    'SORT' => 100,
-  ),
   3 => 
   array (
     'CONDITION' => '#^/novosti/articles/(.*)/#',
@@ -60,6 +60,14 @@ $arUrlRewrite=array (
   array (
     'CONDITION' => '#^(.*)/video/(.*).php(.*)#',
     'RULE' => '/o-kompanii/video/details.php?CODE=$2',
+    'ID' => '',
+    'PATH' => '',
+    'SORT' => 100,
+  ),
+  8 => 
+  array (
+    'CONDITION' => '#^/novosti/(.*).php(.*)#',
+    'RULE' => '/novosti/details.php?ELEMENT_CODE=$1',
     'ID' => '',
     'PATH' => '',
     'SORT' => 100,
@@ -84,14 +92,6 @@ $arUrlRewrite=array (
   array (
     'CONDITION' => '#^/resheniya/(.*)/.*#',
     'RULE' => '/resheniya/details.php?ELEMENT_CODE=$1',
-    'ID' => '',
-    'PATH' => '',
-    'SORT' => 100,
-  ),
-  8 => 
-  array (
-    'CONDITION' => '#^/novosti/(.*).php(.*)#',
-    'RULE' => '/novosti/details.php?ELEMENT_CODE=$1',
     'ID' => '',
     'PATH' => '',
     'SORT' => 100,

@@ -8,9 +8,9 @@ $APPLICATION->SetPageProperty("keywords", "системы безопасност
 $APPLICATION->AddHeadScript("/scripts/pages/main.js"); // подключение скриптов
 $APPLICATION->SetAdditionalCSS("/css/glavnaya.css"); // подключение стилей
 
-$APPLICATION->AddHeadScript("/scripts/snow.js"); // Новый Год - снежинки на баннера
-$APPLICATION->AddHeadScript("/scripts/libs/fancybox/fancybox.umd.js"); // Новый Год - Для всплывающего окна с видео - подключение скрипта
-$APPLICATION->SetAdditionalCSS("/css/libs/fancybox.css"); // Новый Год - Для всплывающего окна с видео - подключение стилей
+// $APPLICATION->AddHeadScript("/scripts/snow.js"); 						// Новый Год - снежинки на баннере
+// $APPLICATION->AddHeadScript("/scripts/libs/fancybox/fancybox.umd.js"); 	// Новый Год - Для всплывающего окна с видео - подключение скрипта
+// $APPLICATION->SetAdditionalCSS("/css/libs/fancybox.css"); 				// Новый Год - Для всплывающего окна с видео - подключение стилей
  
 ?>
 <div id="main_banner">
@@ -122,7 +122,7 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "section_icons", A
 </div>
 <div id="picture_banner">
 	<h2>Актуально</h2>
-	<div id="banners" <?if($device!="desktop") echo 'class="bmob"';?>>
+	<div id="banners" <?if($device!="desktop") echo 'class="bmob"';?>> 
 		<div class="banner_item" style="position: relative;">
 			<div style="position: relative">
 				<a href="/products/sistema-kontrolya-dostupa-perco-web/" style="position: relative">
@@ -286,41 +286,5 @@ $APPLICATION->IncludeComponent(
 		</div>
 	</div>
 </div>
-
-
-<style>
-	.fancybox__content {
-		padding: 0;
-		margin: 0;
-		outline: none;
-	}
-	.fancybox__content>.carousel__button.is-close {
-		top: -70px;
-	}
-	.video-el {
-		width: 100%;
-	}
-	body:not(.is-using-mouse) .fancybox__container :focus {
-		box-shadow: none;
-	}
-
-	.fancybox__backdrop { 
-		background: rgba(18, 32, 51, 0.7);
-	}
-	@media screen and (max-width: 830px){
-		.fancybox__slide {
-			padding: 0;
-		}
-		
-	}
-</style>
-
-<div id="popup-content" style="display: none;" class="">
-	<div class="modal-video" style="max-height: 536px;height: 0;overflow: hidden;padding-bottom: 56%;width: 100%;"> 
-		<video class="video-el" poster="/video/new-year/new_year_card_prev.jpg" id="ny-vid" muted="muted" preload="auto" playsinline="playsinline">
-			<source src="/video/new-year/new_year_card.mp4"/>
-		</video>
-	</div> 
-</div>   
-
+ 
 <? require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

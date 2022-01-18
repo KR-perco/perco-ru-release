@@ -120,21 +120,23 @@ $(function() {
 
     const video = document.getElementById('ny-vid');
 
-    video.oncanplay = (event) => {
-        asyncPlay(video);
-        var displayed = vars.getCookie("NY_displayed");
-        if (displayed === null) {
-            vars.setCookie("NY_displayed", true, 365);
-            Fancybox.show([{ src: "#popup-content", type: "inline" }], {
-                on: {
-                    done: (fancybox, slide) => {
-                        video.onended = function() {
-                            fancybox.close();
-                        };
+    if (video !== null) {
+        video.oncanplay = (event) => {
+            asyncPlay(video);
+            var displayed = vars.getCookie("NY_displayed");
+            if (displayed === null) {
+                vars.setCookie("NY_displayed", true, 365);
+                Fancybox.show([{ src: "#popup-content", type: "inline" }], {
+                    on: {
+                        done: (fancybox, slide) => {
+                            video.onended = function() {
+                                fancybox.close();
+                            };
+                        }
                     }
-                }
-            });
-        }
-    };
+                });
+            }
+        };
+    }
 
 });
