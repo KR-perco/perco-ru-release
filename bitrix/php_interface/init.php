@@ -726,23 +726,26 @@ class SendEmail
 		}
 		
 		// Подставим так же имя и компанию, если рассылка именная
+		// Доработать отказоустойчивость  
+		//  - если файл базы не корректен - отменять рассылку
+		//  - если email не встречается в базе - подставлять другой шаблон либо не отправлять
 		
-		// $file = file_get_contents('../../sendmail-imennaya-2.json'); // Открыть файл
-		// $maillist = json_decode($file, true); // Декодировать в массив
-		// unset($file); // Очистить переменную $file
+		$file = file_get_contents('../../sendmail-imennaya-20-01-2022.json'); // Открыть файл
+		$maillist = json_decode($file, true); // Декодировать в массив
+		unset($file); // Очистить переменную $file
 		
-		// $NAME_RECIPIENT = "NAME_RECIPIENT";
-		// $COMPANY_RECIPIENT = "вашу компанию";
+		$NAME_RECIPIENT = "NAME_RECIPIENT";
+		$COMPANY_RECIPIENT = "вашу компанию";
 
-		// foreach ($maillist['maillist'] as $recipient) { 
-		// 	if ($recipient["mail"] == $arFields["EMAIL"]) { 
-		// 		$NAME_RECIPIENT = $recipient['fio'];
-		// 		$COMPANY_RECIPIENT = $recipient['company'];
-		// 	}
-		//   } 
+		foreach ($maillist['maillist'] as $recipient) { 
+			if ($recipient["mail"] == $arFields["EMAIL"]) { 
+				$NAME_RECIPIENT = $recipient['fio'];
+				// $COMPANY_RECIPIENT = $recipient['company'];
+			}
+		  } 
 		$arFields["BODY"] = str_replace("#ID#", $ID, $arFields["BODY"]);
 		$arFields["BODY"] = str_replace("#CONFIRM_CODE#", $CONFIRM_CODE, $arFields["BODY"]);
-		// $arFields["BODY"] = str_replace("#NAMERECIPIENT#", $NAME_RECIPIENT, $arFields["BODY"]);
+		$arFields["BODY"] = str_replace("#NAMERECIPIENT#", $NAME_RECIPIENT, $arFields["BODY"]);
 		// $arFields["BODY"] = str_replace("#COMPANYRECIPIENT#", $COMPANY_RECIPIENT, $arFields["BODY"]);
 		return $arFields;
 	}
