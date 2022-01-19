@@ -5,6 +5,8 @@ $APPLICATION->SetPageProperty("title", "Склад и завод в Пскове
 $APPLICATION->SetPageProperty("description", "Склад и завод в Пскове");
 $APPLICATION->SetPageProperty("keywords", "");
 $APPLICATION->ShowTitle(false, false);
+
+include 'secret.php'; 
 ?>
 <style type="text/css">
 .bx-yandex-view-map {
@@ -22,8 +24,7 @@ if ($_REQUEST["map"] == "yandex")
 	$options = array("ENABLE_SCROLL_ZOOM", "ENABLE_DBLCLICK_ZOOM", "ENABLE_DRAGGING");
 }
 elseif ($_REQUEST["map"] == "google")
-{
-	$google = "AIzaSyCFHN1XhrSfBpHfr9CEhLLUNSUqr3_aIf8";
+{ 
 	$lat = 57.84435682077121;
 	$lon = 28.304274808938974;
 	$map = "ROADMAP";
