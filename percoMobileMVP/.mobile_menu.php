@@ -44,7 +44,7 @@ $items = array(
 	array(
 		"text" => "О приложении",
 		"data-url" => SITE_DIR."percoMobileMVP/app.php",
-		"id"=>"app.html",
+		"id"=>"app.php",
 		"image"=>"img/menu-app.png",
 	),
 );
