@@ -2,6 +2,13 @@
 <?
 $aMenuLinks = Array(
 	Array(
+		"Новое в товарах", 
+		"/podderzhka/proektirovshchikam-i-installyatoram/novoe.php", 
+		Array(), 
+		Array("IMAGE"=>"/images/icons/novoe-v-tovarah.svg"), 
+		"" 
+	),
+	Array(
 		"Каталоги и буклеты", 
 		"/podderzhka/katalogi-i-buklety.php", 
 		Array(), 
@@ -15,13 +22,13 @@ $aMenuLinks = Array(
 		Array("IMAGE"=>"/images/icons/services.svg"),
 		""
 	),
-	Array(
-		"Проверка статуса обращения в ДСО", 
-		"/podderzhka/proverka-statusa-obrascheniya-v-dso.php", 
-		Array(), 
-		Array("IMAGE"=>"/images/icons/services.svg"),
-		""
-	),
+	// Array(
+	// 	"Проверка статуса обращения в ДСО", 
+	// 	"/podderzhka/proverka-statusa-obrascheniya-v-dso.php", 
+	// 	Array(), 
+	// 	Array("IMAGE"=>"/images/icons/services.svg"),
+	// 	""
+	// ),
 	Array(
 		"Список сервисных центров", 
 		"/podderzhka/spisok-servisnykh-tsentrov.php", 

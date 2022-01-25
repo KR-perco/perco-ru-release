@@ -3,12 +3,6 @@
 $price_res = getCurrency("EUR");
 
 $products = array(
-    "Blok pitaniya HRP-300-24" => array(
-		"name" => "HRP-300-24 Блок питания",
-		"image" => "/images/products/bloki-pitaniya/00_HRP-300-24_catalog.jpg",
-		"description" => "",
-		"price" => "95"
-    ),
     "Poliservis BRP-24-9-TI" => array(
 		"name" => "Полисервис БРП-24-9-ТИ",
 		"image" => "/images/products/bloki-pitaniya/Poliservis-BRP-24-9-TI.jpg",
@@ -39,6 +33,12 @@ $products = array(
 		"description" => "",
 		"price" => "95"
 	),
+    "Blok pitaniya HRP-300-24" => array(
+		"name" => "HRP-300-24 Блок питания",
+		"image" => "/images/products/bloki-pitaniya/00_HRP-300-24_catalog.jpg",
+		"description" => "",
+		"price" => "95"
+    ),
 	"LRS-150-24 Blok pitaniya" => array(
 		"name" => "LRS-150-24 Блок питания",
 		"image" => "/images/products/bloki-pitaniya/LS-100-24.jpg",

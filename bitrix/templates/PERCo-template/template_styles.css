@@ -845,7 +845,7 @@ div.blue-header {
 .cookie-warning {
     display: none;
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
     bottom: 0px;
     width: 100%;
     background-color: #fff;
