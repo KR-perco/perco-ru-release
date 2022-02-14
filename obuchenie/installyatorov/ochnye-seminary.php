@@ -1,10 +1,10 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->AddChainItem("Очные семинары в Учебном центре", "");
-$APPLICATION->SetPageProperty("title", "Очные семинары в Учебном центре PERCo для пользователей");
+$APPLICATION->AddChainItem("Семинары в Учебном центре", "");
+$APPLICATION->SetPageProperty("title", "Семинары в Учебном центре PERCo для пользователей");
 $APPLICATION->SetPageProperty("description", "Цель семинара – ознакомление слушателей с принципами построения единой системы безопасности PERCo-S-20, ее потребительскими свойствами");
 $APPLICATION->SetPageProperty("keywords", "семинары безопасности, обучающие системам безопасности");
-$APPLICATION->SetTitle("Очные семинары в Учебном центре Санкт-Петербурга");
+$APPLICATION->SetTitle("Семинары в Учебном центре Санкт-Петербурга");
 
 $APPLICATION->SetAdditionalCSS("/css/seminary-v-uchebnom-centre.css"); // подключение стилей
 $APPLICATION->AddHeadScript("/scripts/pages/seminary-v-uchebnom-centre.js"); // подключение скриптов
@@ -29,7 +29,7 @@ $APPLICATION->AddHeadScript("/scripts/pages/seminary-v-uchebnom-centre.js"); // 
 		</div>
 	</div>
 	<div style="padding-top: 15px">
-		<p>Очные обучающие семинары проводятся на базе Учебного центра в главном офисе PERCo в Санкт-Петербурге. С графиком проведения семинаров и с программами обучения можно ознакомиться в разделе ниже. </p>
+		<p>Обучающие семинары проводятся на базе Учебного центра в главном офисе PERCo в Санкт-Петербурге. С графиком проведения семинаров и с программами обучения можно ознакомиться в разделе ниже. </p>
 	</div>
 
 	
