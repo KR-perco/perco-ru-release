@@ -1,0 +1,31 @@
+.scroll-menu img{
+	width: 24px;
+	margin-right: 4px;
+	vertical-align: bottom;
+}
+
+.scroll-btn {
+	display: inline-block;
+	padding: 7px 0;
+    margin: 7px 12px 7px 0;
+	outline: none;
+	cursor: pointer;
+	text-decoration: none;
+	color: #214289;
+	background-color: none;
+	border-bottom: 2px solid #fff;
+}
+
+.scroll-btn.active {
+	border-bottom: 2px solid #214289;
+}
+
+@media screen and (max-width: 720px) {
+	.scroll-menu img {
+		width: 20px;
+	}
+
+	.scroll-btn {
+		margin: 0 4px;
+	}
+}

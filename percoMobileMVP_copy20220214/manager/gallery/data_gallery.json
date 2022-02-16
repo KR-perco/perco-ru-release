@@ -1,0 +1,1219 @@
+{
+    "biznes_centry": [{
+            "NAME": "Скоростные проходы ST-02, офис компании Агидель, Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-02-biznes-tsentr-dekostroy-moskva_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-02-biznes-tsentr-dekostroy-moskva.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-02, офис компании Агидель, Москва"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, бизнес-центр “Фили Град”, Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-biznes-tsentr-fili-grad-moskva_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-biznes-tsentr-fili-grad-moskva.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, бизнес-центр “Фили Град”, Москва"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01 в составе системы контроля доступа PERCo, бизнес-центр West East, Одинцово, Московская область",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-v-sostave-sistemy-kontrolya-dostupa-perco-biznes-tsentr-west-east-odintsov_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-v-sostave-sistemy-kontrolya-dostupa-perco-biznes-tsentr-west-east-odintsov.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01 в составе системы контроля доступа PERCo, бизнес-центр West East, Одинцово, Московская область"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, JEG Tower, Филиппины",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-tower-filippiny_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-tower-filippiny_958.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, JEG Tower, Филиппины"
+            }
+        }, {
+            "NAME": "Турникеты-триподы TTR-04.1, бизнес-центр «Велка», Саратов",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/turnikety-tripody/turnikety-tripody-ttr-04-1-biznes-tsentr-velka-saratov_272.jpg",
+                "VALUE": "/images/gallery/products/turnikety-tripody/turnikety-tripody-ttr-04-1-biznes-tsentr-velka-saratov_1476.jpg",
+                "DESCRIPTION": "Турникеты-триподы TTR-04.1, бизнес-центр «Велка», Саратов"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, автоматические калитки WMD-05S, картоприемник IC05, бизнес-центр Renaissance Fontanka, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/kalitki/skorostnye-prokhody-st-01-avtomaticheskie-kalitki-wmd-05s-kartopriemnik-ic05-biznes-tsentr-renaissan_272.jpg",
+                "VALUE": "/images/gallery/products/kalitki/skorostnye-prokhody-st-01-avtomaticheskie-kalitki-wmd-05s-kartopriemnik-ic05-biznes-tsentr-renaissan_1577.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, автоматические калитки WMD-05S, картоприемник IC05, бизнес-центр Renaissance Fontanka, Санкт-Петербург"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, территория бизнес-центра",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prohody-ST-01-territoriya-biznes-centra_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prohody-ST-01-territoriya-biznes-centra.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, территория бизнес-центра"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, бизнес-центр, Латвия",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-ofis-kompanii-riga_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-ofis-kompanii-riga_1000.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, бизнес-центр, Латвия"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, ограждения серии BH, бизнес-центр «РГР», Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-ograzhdeniya-serii-bh-biznes-tsentr-skakovaya-moskva_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-ograzhdeniya-serii-bh-biznes-tsentr-skakovaya-moskva_1000.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, ограждения серии BH, бизнес-центр «РГР», Москва"
+            }
+        }, {
+            "NAME": "Тумбовые турникеты TTD-03.1S, ограждения серии BH, бизнес-центр «Петровско-Разумовский, 28»",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-ttd-03-1s-ograzhdeniya-serii-bh-biznes-tsentr-petrovsko-razumovskiy-28_272.jpg",
+                "VALUE": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-ttd-03-1s-ograzhdeniya-serii-bh-biznes-tsentr-petrovsko-razumovskiy-28_1000.jpg",
+                "DESCRIPTION": "Тумбовые турникеты TTD-03.1S, ограждения серии BH, бизнес-центр «Петровско-Разумовский, 28»"
+            }
+        }, {
+            "NAME": "Электронные проходные KTС01, бизнес-центр «Высота», Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/elektronnye-prohodnye/elektronnye-prokhodnye-kts01-biznes-tsentr-vysota-moskva_272.jpg",
+                "VALUE": "/images/gallery/products/elektronnye-prohodnye/elektronnye-prokhodnye-kts01-biznes-tsentr-vysota-moskva_1000.jpg",
+                "DESCRIPTION": "Электронные проходные KTС01, бизнес-центр «Высота», Москва"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, бизнес-центр «Галерея 76», Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-biznes-tsentr-galereya-76-moskva_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-biznes-tsentr-galereya-76-moskva_1000.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, бизнес-центр «Галерея 76», Москва"
+            }
+        }
+
+    ],
+    "promyshlennye-predpriyatiya": [
+
+        {
+            "NAME": "Полноростовый турникет RTD-16.2 с крышей RTC-16,  завод Trane, Франция",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/polurostovye-rotornye-turnikety/Zavod-trane-Franciya-272.jpg",
+                "VALUE": "/images/gallery/products/polurostovye-rotornye-turnikety/Zavod-trane-Franciya.jpg",
+                "DESCRIPTION": "Полноростовый турникет RTD-16.2 с крышей RTC-16,  завод Trane, Франция"
+            }
+        }, {
+            "NAME": "Тумбовые турникеты TB01, ИЦ Буревестник, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-tb01-its-burevestnik-sankt-peterburg_272.jpg",
+                "VALUE": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-tb01-its-burevestnik-sankt-peterburg_1000.jpg",
+                "DESCRIPTION": "Тумбовые турникеты TB01, ИЦ Буревестник, Санкт-Петербург"
+            }
+        }, {
+            "NAME": "Турникеты-триподы TTR-04.1, завод Wrigley, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/turnikety-tripody/turnikety-tripody-ttr-04-1-zavod-wrigley-sankt-peterburg_272.jpg",
+                "VALUE": "/images/gallery/products/turnikety-tripody/turnikety-tripody-ttr-04-1-zavod-wrigley-sankt-peterburg_1504.jpg",
+                "DESCRIPTION": "Турникеты-триподы TTR-04.1, завод Wrigley, Санкт-Петербург"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, аэрокосмический концерн Safran, Франция",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-fabrika-po-proizvodstvu-vnutrisamoletnykh-peregorodok-safran-frantsiya_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-fabrika-po-proizvodstvu-vnutrisamoletnykh-peregorodok-safran-frantsiya_1333.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, аэрокосмический концерн Safran, Франция"
+            }
+        }, {
+            "NAME": "Полноростовый роторный турникет RTD-15, Винзавод, Новая Зеландия",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/polurostovye-rotornye-turnikety/polnorostovyy-rotornyy-turniket-rtd-15-vinzavod-novaya-zelandiya_272.jpg",
+                "VALUE": "/images/gallery/products/polurostovye-rotornye-turnikety/polnorostovyy-rotornyy-turniket-rtd-15-vinzavod-novaya-zelandiya_750.jpg",
+                "DESCRIPTION": "Полноростовый роторный турникет RTD-15, Винзавод, Новая Зеландия"
+            }
+        }, {
+            "NAME": "Полноростовые роторные турникеты RTD-15, завод BSH, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/polurostovye-rotornye-turnikety/polnorostovye-rotornye-turnikety-rtd-15-zavod-bsh-sankt-peterburg_272.jpg",
+                "VALUE": "/images/gallery/products/polurostovye-rotornye-turnikety/polnorostovye-rotornye-turnikety-rtd-15-zavod-bsh-sankt-peterburg_1482.jpg",
+                "DESCRIPTION": "Полноростовые роторные турникеты RTD-15, завод BSH, Санкт-Петербург"
+            }
+        }, {
+            "NAME": "Полноростовый роторный турникет RTD-16, завод «Энергомаш» Калуга",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/polurostovye-rotornye-turnikety/polnorostovyy-rotornyy-turniket-RTD-16-zavod-«energomash»-kaluga_272.jpg",
+                "VALUE": "/images/gallery/products/polurostovye-rotornye-turnikety/polnorostovyy-rotornyy-turniket-RTD-16-zavod-«energomash»-kaluga.jpg",
+                "DESCRIPTION": "Полноростовый роторный турникет RTD-16, завод «Энергомаш» Калуга"
+            }
+        }, {
+            "NAME": "Полноростовые роторные турникеты RTD-15, завод Caterpillar, Ленинградская область",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/polurostovye-rotornye-turnikety/polnorostovye-rotornye-turnikety-RTD-15-zavod-Caterpillar-leningradskaya-oblastj_272.jpg",
+                "VALUE": "/images/gallery/products/polurostovye-rotornye-turnikety/polnorostovye-rotornye-turnikety-RTD-15-zavod-Caterpillar-leningradskaya-oblastj.jpg",
+                "DESCRIPTION": "Полноростовые роторные турникеты RTD-15, завод Caterpillar, Ленинградская область"
+            }
+        }, {
+            "NAME": "Полноростовый роторный турникет RTD-20, Завод ZF Friedrichshafen AG, Сербия",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/polurostovye-rotornye-turnikety/polnorostovyy-rotornyy-turniket-RTD-20-zavod-ZF-Friedrichshafen-AG-serbiya_272.jpg",
+                "VALUE": "/images/gallery/products/polurostovye-rotornye-turnikety/polnorostovyy-rotornyy-turniket-RTD-20-zavod-ZF-Friedrichshafen-AG-serbiya.jpg",
+                "DESCRIPTION": "Полноростовый роторный турникет RTD-20, Завод ZF Friedrichshafen AG, Сербия"
+            }
+        }, {
+            "NAME": "Турникеты-триподы T-5, Икеа, Чехия",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/turnikety-tripody/turnikety-tripody_T-5_ikea_chehiya_272.jpg",
+                "VALUE": "/images/gallery/products/turnikety-tripody/turnikety-tripody_T-5_ikea_chehiya.jpg",
+                "DESCRIPTION": "Турникеты-триподы T-5, Икеа, Чехия"
+            }
+        }, {
+            "NAME": "Электронные проходные KT05, ограждения серии BH, «Термотрон-Завод», Брянск",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/elektronnye-prohodnye/elektronnye-prokhodnye-kt-05-4a-ograzhdeniya-serii-bh-termatron_272.jpg",
+                "VALUE": "/images/gallery/products/elektronnye-prohodnye/elektronnye-prokhodnye-kt-05-4a-ograzhdeniya-serii-bh-termatron_1000.jpg",
+                "DESCRIPTION": "Электронные проходные KT05, ограждения серии BH, «Термотрон-Завод», Брянск"
+            }
+        }, {
+            "NAME": "Полноростовые роторные турникеты RTD-20, полноростовая калитка WHD-16, завод «Мираторг», Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/polnorostovye-turnikety-i-polnorostovye-kalitki/polnorostovye-rotornye-turnikety-rtd-15-polnorostovaya-kalitka-whd-15-miratorg-sankt-peterburg_272.jpg",
+                "VALUE": "/images/gallery/products/polnorostovye-turnikety-i-polnorostovye-kalitki/polnorostovye-rotornye-turnikety-rtd-15-polnorostovaya-kalitka-whd-15-miratorg-sankt-peterburg_1000.jpg",
+                "DESCRIPTION": "Полноростовые роторные турникеты RTD-20, полноростовая калитка WHD-16, завод «Мираторг», Санкт-Петербург"
+            }
+        }
+    ],
+    "sportivnye-i-razvlekatelnye-obekty": [
+
+        {
+            "NAME": "Турникеты-триподы TTR-04.1, ипподром, Ирландия",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/turnikety-tripody/Ippodrom-Irlandiya-272.jpg",
+                "VALUE": "/images/gallery/products/turnikety-tripody/Ippodrom-Irlandiya.jpg",
+                "DESCRIPTION": "Турникеты-триподы TTR-04.1, ипподром, Ирландия"
+            }
+        }, {
+            "NAME": "Турникет-трипод TTR-08A, спортивный клуб SportivaLife, Голландия",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/turnikety-tripody/FK-SportivaLife-Gollandiya-272.jpg",
+                "VALUE": "/images/gallery/products/turnikety-tripody/FK-SportivaLife-Gollandiya.jpg",
+                "DESCRIPTION": "Турникет-трипод TTR-08A, спортивный клуб SportivaLife, Голландия"
+            }
+        }, {
+            "NAME": "Турникет-трипод TTR-08A, спортивный клуб The Track, Албания",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/turnikety-tripody/FK-the-Track-Tirana-Albaniya-272.jpg",
+                "VALUE": "/images/gallery/products/turnikety-tripody/FK-the-Track-Tirana-Albaniya.jpg",
+                "DESCRIPTION": "Турникет-трипод TTR-08A, спортивный клуб The Track, Албания"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, спортивный клуб «Дубровка Фитнес», Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/FK-Dubrovka-fitnes-Moskva-272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/FK-Dubrovka-fitnes-Moskva.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, спортивный клуб «Дубровка Фитнес», Москва"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01 со встроенным картоприемником, ограждения BH02, cпорткомплекс «Акватория ЗИЛ», Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-so-vstroennym-kartopriemnikom-ograzhdeniya-bh02-cportkompleks-akvatoriya-z-2_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-so-vstroennym-kartopriemnikom-ograzhdeniya-bh02-cportkompleks-akvatoriya-z-2.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01 со встроенным картоприемником, ограждения BH02, cпорткомплекс «Акватория ЗИЛ», Москва"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01 со встроенным картоприемником, ограждения BH02, cпорткомплекс «Акватория ЗИЛ», Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-so-vstroennym-kartopriemnikom-ograzhdeniya-bh02-cportkompleks-akvatoriya-z_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-so-vstroennym-kartopriemnikom-ograzhdeniya-bh02-cportkompleks-akvatoriya-z.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01 со встроенным картоприемником, ограждения BH02, cпорткомплекс «Акватория ЗИЛ», Москва"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, ограждения BH02, Дворец игровых видов спорта «Содружество», Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-ograzhdeniya-bh02-dvorets-igrovykh-vidov-sporta-sodruzhestvo-moskva_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-ograzhdeniya-bh02-dvorets-igrovykh-vidov-sporta-sodruzhestvo-moskva.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, ограждения BH02, Дворец игровых видов спорта «Содружество», Москва"
+            }
+        }, {
+            "NAME": "Турникеты-триподы TTR-04CW, парк аттракционов “Диво Остров”, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/turnikety-tripody/turnikety-tripody-ttr-04cw-park-attraktsionov-divo-ostrov-moskva_272.jpg",
+                "VALUE": "/images/gallery/products/turnikety-tripody/turnikety-tripody-ttr-04cw-park-attraktsionov-divo-ostrov-moskva.jpg",
+                "DESCRIPTION": "Турникеты-триподы TTR-04CW, парк аттракционов “Диво Остров”, Санкт-Петербург"
+            }
+        }, {
+            "NAME": "Тумбовый турникет TTR-08A. Спортивно-развлекательный центр Leisure Complex at Lough Lannagh , Ирландия",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/tumbovye-turnikety/tumbovyy-turniket-ttr-08a-sportivno-razvlekatelnyy-tsentr-leisure-complex-at-lough-lannagh-irlandiya_272.jpg",
+                "VALUE": "/images/gallery/products/tumbovye-turnikety/tumbovyy-turniket-ttr-08a-sportivno-razvlekatelnyy-tsentr-leisure-complex-at-lough-lannagh-irlandiya.jpg",
+                "DESCRIPTION": "Тумбовый турникет TTR-08A. Спортивно-развлекательный центр Leisure Complex at Lough Lannagh , Ирландия"
+            }
+        }, {
+            "NAME": "Турникет-трипод TTR-08А, фитнес-клуб Lijfkracht, Нидерланды",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/turnikety-tripody/turniket-tripod-ttr-08a-fitnes-klub-lijfkracht-niderlandy_272.jpg",
+                "VALUE": "/images/gallery/products/turnikety-tripody/turniket-tripod-ttr-08a-fitnes-klub-lijfkracht-niderlandy_1000.jpg",
+                "DESCRIPTION": "Турникет-трипод TTR-08А, фитнес-клуб Lijfkracht, Нидерланды"
+            }
+        }, {
+            "NAME": "Турникет-трипод TTR-08А, ограждения BH02, фитнес-клуб Like, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/turnikety-tripody/turniket-tripod-ttr-08a-ograzhdeniya-bh02-fitnes-klub-like-sankt-peterburg_272.jpg",
+                "VALUE": "/images/gallery/products/turnikety-tripody/turniket-tripod-ttr-08a-ograzhdeniya-bh02-fitnes-klub-like-sankt-peterburg_1477.jpg",
+                "DESCRIPTION": "Турникет-трипод TTR-08А, ограждения BH02, фитнес-клуб Like, Санкт-Петербург"
+            }
+        }, {
+            "NAME": "Турникет-трипод TTR-08A, парк развлечений Parc du Futuroscope, Франция",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/turnikety-tripody/turniket-tripod-ttr-08a-park-razvlecheniy-parc-du-futuroscope-frantsiya_272.jpg",
+                "VALUE": "/images/gallery/products/turnikety-tripody/turniket-tripod-ttr-08a-park-razvlecheniy-parc-du-futuroscope-frantsiya_751.jpg",
+                "DESCRIPTION": "Турникет-трипод TTR-08A, парк развлечений Parc du Futuroscope, Франция"
+            }
+        }
+    ],
+    "gosudarstvennye-uchrezhdeniya": [
+
+        {
+            "NAME": "Тумбовые турникеты TTD-03.1, Национальный исследовательский технологический университет, Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/tumbovye-turnikety/MISiS-272.jpg",
+                "VALUE": "/images/gallery/products/tumbovye-turnikety/MISiS.jpg",
+                "DESCRIPTION": "Тумбовые турникеты TTD-03.1, Национальный исследовательский технологический университет, Москва"
+            }
+        }, {
+            "NAME": "Тумбовые турникеты TTD-08A, Королевское абба́тство Фонтевро́, Франция",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-ttd-08a-korolevskoe-abba-tstvo-fontevro-frantsiya_272.jpg",
+                "VALUE": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-ttd-08a-korolevskoe-abba-tstvo-fontevro-frantsiya_710.jpg",
+                "DESCRIPTION": "Тумбовые турникеты TTD-08A, Королевское абба́тство Фонтевро́, Франция"
+            }
+        }, {
+            "NAME": "Скоростной проход ST-01, калитка WHD-06, бассейновое водное управление, Марокко",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnoy-prokhod-st-01-i-kalitka-whd-06-basseynoe-vodnoe-upravlenie-cyc-macca-marokko_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnoy-prokhod-st-01-i-kalitka-whd-06-basseynoe-vodnoe-upravlenie-cyc-macca-marokko_1000.jpg",
+                "DESCRIPTION": "Скоростной проход ST-01, калитка WHD-06, бассейновое водное управление, Марокко"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, Московская государственная экспертиза, Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-moskovskaya-gosudarstvennaya-ekspertiza-moskva_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-moskovskaya-gosudarstvennaya-ekspertiza-moskva_1000.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, Московская государственная экспертиза, Москва"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, калитки WMD-06, административное здание, Приморский край",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-kalitki-wmd-06-administrativnoe-zdanie-primorskiy-kray_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-kalitki-wmd-06-administrativnoe-zdanie-primorskiy-kray_1000.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, калитки WMD-06, административное здание, Приморский край"
+            }
+        }, {
+            "NAME": "Электронная проходная KT02, ограждения серии BH, административное здание, Барнаул",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/elektronnye-prohodnye/elektronnaya-prokhodnaya-kt-02-ograzhdeniya-serii-bh-administrativnoe-zdanie-barnaul_272.jpg",
+                "VALUE": "/images/gallery/products/elektronnye-prohodnye/elektronnaya-prokhodnaya-kt-02-ograzhdeniya-serii-bh-administrativnoe-zdanie-barnaul_1000.jpg",
+                "DESCRIPTION": "Электронная проходная KT02, ограждения серии BH, административное здание, Барнаул"
+            }
+        }, {
+            "NAME": "Полноростовый роторный турникет RTD-15, Центр трудовой миграции, Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/polnorostovyy-rotornyy-turniket-rtd-15-tsentr-trudovoy-migratsii-moskva_272.jpg",
+                "VALUE": "/images/gallery/polnorostovyy-rotornyy-turniket-rtd-15-tsentr-trudovoy-migratsii-moskva_1000.jpg",
+                "DESCRIPTION": "Полноростовый роторный турникет RTD-15, Центр трудовой миграции, Москва"
+            }
+        }, {
+            "NAME": "Тумбовый турникет-трипод TTD-03.1S, Центр трудовой миграции, Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/tumbovyy-turniket-tripod-ttd-03-1s-tsentr-trudovoy-migratsii-moskva_272.jpg",
+                "VALUE": "/images/gallery/tumbovyy-turniket-tripod-ttd-03-1s-tsentr-trudovoy-migratsii-moskva_1000.jpg",
+                "DESCRIPTION": "Тумбовый турникет-трипод TTD-03.1S, Центр трудовой миграции, Москва"
+            }
+        }, {
+            "NAME": "Роторный полноростовый турникет RTD-16.2, Министерство Экономики и Финансов, Уагадугу, Буркина-Фасо ",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/polnorostovye-turnikety-i-polnorostovye-kalitki/rotornyy-polnorostovyy-turniket-rtd-16-2-ministerstvo-ekonomiki-i-finansov-uagadugu-burkina-faso_272.jpg",
+                "VALUE": "/images/gallery/products/polnorostovye-turnikety-i-polnorostovye-kalitki/rotornyy-polnorostovyy-turniket-rtd-16-2-ministerstvo-ekonomiki-i-finansov-uagadugu-burkina-faso_1000.jpg",
+                "DESCRIPTION": "Роторный полноростовый турникет RTD-16.2, Министерство Экономики и Финансов, Уагадугу, Буркина-Фасо "
+            }
+        }, {
+            "NAME": "Роторные турникеты RTD-15, Центр трудовой миграции, Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/rtd-15-centr-trudovoi-migracii-msk_272.jpg",
+                "VALUE": "/images/gallery/rtd-15-centr-trudovoi-migracii-msk_550.jpg",
+                "DESCRIPTION": "Роторные турникеты RTD-15, Центр трудовой миграции, Москва"
+            }
+        }, {
+            "NAME": "Калитка WMD-06, государственное учреждение, Глазго, Шотландия",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/wmd-06-gos-uchrezhdenie-glazgo_272.jpg",
+                "VALUE": "/images/gallery/wmd-06-gos-uchrezhdenie-glazgo_550.jpg",
+                "DESCRIPTION": "Калитка WMD-06, государственное учреждение, Глазго, Шотландия"
+            }
+        }, {
+            "NAME": "Электронные проходные KT02, картоприемник IC02 и ограждения BH02, Администрация города Серпухов",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/kt-02-ic-02-bh-02-administraciya-serpuhov_272.jpg",
+                "VALUE": "/images/gallery/kt-02-ic-02-bh-02-administraciya-serpuhov_550.jpg",
+                "DESCRIPTION": "Электронные проходные KT02, картоприемник IC02 и ограждения BH02, Администрация города Серпухов"
+            }
+        }
+    ],
+    "muzei-i-teatry": [{
+        "NAME": "Скоростные проходы ST-01, музей современного искусства Фонтевро́",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-muzey-sovremennogo-iskusstva-fontevraud-frantsiya_272.jpg",
+            "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-muzey-sovremennogo-iskusstva-fontevraud-frantsiya_700.jpg",
+            "DESCRIPTION": "Скоростные проходы ST-01, музей современного искусства Фонтевро́"
+        }
+    }, {
+        "NAME": "Скоростные проходы ST-01, Центр Fotografiska, Эстония",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prohody-ST-01-centr-Fotografiska-estoniya_272.jpg",
+            "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prohody-ST-01-centr-Fotografiska-estoniya.jpg",
+            "DESCRIPTION": "Скоростные проходы ST-01, Центр Fotografiska, Эстония"
+        }
+    }, {
+        "NAME": "Турникет-трипод TTR-07, Музей сидра, Франция",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/products/turnikety-tripody/turniket-tripod-ttr-07-muzey-sidra-ispaniya_272.jpg",
+            "VALUE": "/images/gallery/products/turnikety-tripody/turniket-tripod-ttr-07-muzey-sidra-ispaniya_1000.jpg",
+            "DESCRIPTION": "Турникет-трипод TTR-07, Музей сидра, Франция"
+        }
+    }, {
+        "NAME": "Турникет-трипод TTR-08A и ограждение полуростовое BH02, Екатерининский дворец, Санкт-Петербург",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/turniket-tripod-ttr-08a-i-ograzhdenie-polurostovoe-bh02-ekaterininskiy-dvorets-sankt-peterburg_272.jpg",
+            "VALUE": "/images/gallery/turniket-tripod-ttr-08a-i-ograzhdenie-polurostovoe-bh02-ekaterininskiy-dvorets-sankt-peterburg_1000.jpg",
+            "DESCRIPTION": "Турникет-трипод TTR-08A и ограждение полуростовое BH02, Екатерининский дворец, Санкт-Петербург"
+        }
+    }, {
+        "NAME": "Турникет-трипод T-5, Амфитеатр города Пула, Хорватия",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/turniket-tripod-t-5-amfiteatr-goroda-pula-khorvatiya_272.jpg",
+            "VALUE": "/images/gallery/turniket-tripod-t-5-amfiteatr-goroda-pula-khorvatiya_1000.jpg",
+            "DESCRIPTION": "Турникет-трипод T-5, Амфитеатр города Пула, Хорватия"
+        }
+    }, {
+        "NAME": "Автоматическая калитка WMD-06, музей железных дорог России, Санкт-Петербург",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/avtomaticheskaya-kalitka-wmd-06-muzey-zheleznykh-dorog-rossii-sankt-peterburg_272.jpg",
+            "VALUE": "/images/gallery/avtomaticheskaya-kalitka-wmd-06-muzey-zheleznykh-dorog-rossii-sankt-peterburg_1000.jpg",
+            "DESCRIPTION": "Автоматическая калитка WMD-06, музей железных дорог России, Санкт-Петербург"
+        }
+    }, {
+        "NAME": " Турникеты-триподы TTR-08A, замок Шамбор, Луар и Шер, Франция",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/products/turnikety-tripody/turnikety-tripody-ttr-08a-zamok-shabor-luar-i-sher-frantsiya_272.jpg",
+            "VALUE": "/images/gallery/products/turnikety-tripody/turnikety-tripody-ttr-08a-zamok-shabor-luar-i-sher-frantsiya_1000.jpg",
+            "DESCRIPTION": " Турникеты-триподы TTR-08A, замок Шамбор, Луар и Шер, Франция"
+        }
+    }, {
+        "NAME": "Турникеты-триподы TTR-08A, Царское Село, Санкт-Петербург",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/ttr-08a-carskoe-selo-spb_272.jpg",
+            "VALUE": "/images/gallery/ttr-08a-carskoe-selo-spb_550.jpg",
+            "DESCRIPTION": "Турникеты-триподы TTR-08A, Царское Село, Санкт-Петербург"
+        }
+    }, {
+        "NAME": "Тумбовый турникет TTD-03.1, музей Арктики и Антарктики, Санкт-Петербург",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/ttd-03.1-musei-arktiki-i-antarktiki-spb_272.jpg",
+            "VALUE": "/images/gallery/ttd-03.1-musei-arktiki-i-antarktiki-spb_550.jpg",
+            "DESCRIPTION": "Тумбовый турникет TTD-03.1, музей Арктики и Антарктики, Санкт-Петербург"
+        }
+    }, {
+        "NAME": "Турникеты-триподы TTR-04.1 и ограждения BH02, Эрмитаж, Санкт-Петербург",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/ttr-04.1-i-bh02-ermitazh-spb_272.jpg",
+            "VALUE": "/images/gallery/ttr-04.1-i-bh02-ermitazh-spb_550.jpg",
+            "DESCRIPTION": "Турникеты-триподы TTR-04.1 и ограждения BH02, Эрмитаж, Санкт-Петербург"
+        }
+    }, {
+        "NAME": "Автоматические калитки WMD-05, ГрандМакетРоссия, Санкт-Петербург",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/wmd-05-grandmaketrossiya_272.jpg",
+            "VALUE": "/images/gallery/wmd-05-grandmaketrossiya_550.jpg",
+            "DESCRIPTION": "Автоматические калитки WMD-05, ГрандМакетРоссия, Санкт-Петербург"
+        }
+    }, {
+        "NAME": "Автоматические калитки WMD-05, Мариинский театр, Санкт-Петербург",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/wmd-05_mariinskii-teatr_spb_272.jpg",
+            "VALUE": "/images/gallery/wmd-05_mariinskii-teatr_spb_550.jpg",
+            "DESCRIPTION": "Автоматические калитки WMD-05, Мариинский театр, Санкт-Петербург"
+        }
+    }],
+    "shkoly": [
+
+        {
+            "NAME": "Скоростные проходы ST-01, спортивная школа № 23, Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-sportivnaya-shkola-23-moskva_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-sportivnaya-shkola-23-moskva.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, спортивная школа № 23, Москва"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, бизнес-школа Emlyon, Франция",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-biznes-shkola-emlyon-frantsiya_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-biznes-shkola-emlyon-frantsiya_1378.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, бизнес-школа Emlyon, Франция"
+            }
+        }, {
+            "NAME": "Турникеты-триподы TTR-04.1, скоростные проходы ST-01, школа жилого комплекса Green City, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/turnikety-tripody/turnikety-tripody-ttr-04-1-skorostnye-prokhody-st-01-shkola-zhilogo-kompleksa-green-city-sankt-peter_272.jpg",
+                "VALUE": "/images/gallery/products/turnikety-tripody/turnikety-tripody-ttr-04-1-skorostnye-prokhody-st-01-shkola-zhilogo-kompleksa-green-city-sankt-peter_1000.jpg",
+                "DESCRIPTION": "Турникеты-триподы TTR-04.1, скоростные проходы ST-01, школа жилого комплекса Green City, Санкт-Петербург"
+            }
+        }, {
+            "NAME": "Тумбовые турникеты TB01, автоматические калитки WMD-05S, ограждения BH02, школа № 66, Екатеринбург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-tb01-avtomaticheskie-kalitki-wmd-05s-ograzhdeniya-bh02-shkola-66-ekaterinburg_272.jpg",
+                "VALUE": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-tb01-avtomaticheskie-kalitki-wmd-05s-ograzhdeniya-bh02-shkola-66-ekaterinburg_1333.jpg",
+                "DESCRIPTION": "Тумбовые турникеты TB01, автоматические калитки WMD-05S, ограждения BH02, школа № 66, Екатеринбург"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, школа «Южный город», Самара",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-shkola-yuzhnyy-gorod-samara_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-shkola-yuzhnyy-gorod-samara_1333.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, школа «Южный город», Самара"
+            }
+        }, {
+            "NAME": "Электронные проходные KT02, ограждения BH02, школа № 155, Красноярск",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/elektronnye-prohodnye/elektronnye-prokhodnye-kt02-ograzhdeniya-bh02-shkola-155-krasnoyarsk_272.jpg",
+                "VALUE": "/images/gallery/products/elektronnye-prohodnye/elektronnye-prokhodnye-kt02-ograzhdeniya-bh02-shkola-155-krasnoyarsk_1429.jpg",
+                "DESCRIPTION": "Электронные проходные KT02, ограждения BH02, школа № 155, Красноярск"
+            }
+        }, {
+            "NAME": "Электронные проходные KT02, ограждения BH02, школа № 11, Видное",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/elektronnye-prohodnye/elektronnye-prokhodnye-kt02-ograzhdeniya-bh02-shkola-11-vidnoe_272.jpg",
+                "VALUE": "/images/gallery/products/elektronnye-prohodnye/elektronnye-prokhodnye-kt02-ograzhdeniya-bh02-shkola-11-vidnoe_1000.jpg",
+                "DESCRIPTION": "Электронные проходные KT02, ограждения BH02, школа № 11, Видное"
+            }
+        }, {
+            "NAME": "Электронные проходные KT05, ограждения серии BH, автоматическая калитка WMD-05, школа, Краснодар",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/elektronnye-prohodnye/elektronnye-prohodnye-KT05-ograzhdeniya-serii-BH-avtomaticheskaya-kalitka-WMD-05-shkola-krasnodar_272.jpg",
+                "VALUE": "/images/gallery/products/elektronnye-prohodnye/elektronnye-prohodnye-KT05-ograzhdeniya-serii-BH-avtomaticheskaya-kalitka-WMD-05-shkola-krasnodar.jpg",
+                "DESCRIPTION": "Электронные проходные KT05, ограждения серии BH, автоматическая калитка WMD-05, школа, Краснодар"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01 в составе системы безопасности S-20, Академия цифровых технологий, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/st-01-akademiya-tsifrovykh-tekhnologiy-spb-272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/st-01-akademiya-tsifrovykh-tekhnologiy-spb-1000.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01 в составе системы безопасности S-20, Академия цифровых технологий, Санкт-Петербург"
+            }
+        }, {
+            "NAME": "Электронные проходные KT02, школа, Полесск",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/elektronnye-prohodnye/elektronnye-prokhodnye-kt-02-shkola-polessk_272.jpg",
+                "VALUE": "/images/gallery/products/elektronnye-prohodnye/elektronnye-prokhodnye-kt-02-shkola-polessk_1000.jpg",
+                "DESCRIPTION": "Электронные проходные KT02, школа, Полесск"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, школа № 3, Самарская область",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-shkola-3-samarskaya-oblast_2_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-shkola-3-samarskaya-oblast_2_1000.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, школа № 3, Самарская область"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, школа № 3, Самарская область",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-shkola-3-samarskaya-oblast_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-shkola-3-samarskaya-oblast_1000.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, школа № 3, Самарская область"
+            }
+        }
+    ],
+    "vuzy": [
+
+        {
+            "NAME": "Скоростные проходы ST-01, студенческое общежитие Cork Street, Ирландия",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st01-studencheskoe-obshchezhitie-cork-street-irlandiya_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st01-studencheskoe-obshchezhitie-cork-street-irlandiya.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, студенческое общежитие Cork Street, Ирландия"
+            }
+        }, {
+            "NAME": "Тумбовые турникеты TTD-08А, ограждения BH02, проектный институт Газпрома, Воронеж",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-ttd-08a-ograzhdeniya-bh02-proektnyy-institut-gazproma-voronezh_272.jpg",
+                "VALUE": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-ttd-08a-ograzhdeniya-bh02-proektnyy-institut-gazproma-voronezh_1590.jpg",
+                "DESCRIPTION": "Тумбовые турникеты TTD-08А, ограждения BH02, проектный институт Газпрома, Воронеж"
+            }
+        }, {
+            "NAME": "Тумбовые турникеты TTD-08A, Российский педагогический университет им. Герцена, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-ttd-08a-rossiyskiy-pedagogicheskiy-universitet-im-gertsena-sankt-peterburg_272.jpg",
+                "VALUE": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-ttd-08a-rossiyskiy-pedagogicheskiy-universitet-im-gertsena-sankt-peterburg_1778.jpg",
+                "DESCRIPTION": "Тумбовые турникеты TTD-08A, Российский педагогический университет им. Герцена, Санкт-Петербург"
+            }
+        }, {
+            "NAME": "Тумбовые турникеты TTD-08A, ЛЭТИ, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-ttd-08a-leti-sankt-peterburg_272.jpg",
+                "VALUE": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-ttd-08a-leti-sankt-peterburg_1500.jpg",
+                "DESCRIPTION": "Тумбовые турникеты TTD-08A, ЛЭТИ, Санкт-Петербург"
+            }
+        }, {
+            "NAME": "Тумбовые турникеты TTD-08A, автоматические калитки WMD-05S, Иезуитский университет ITESO, Мексика",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-ttd-08a-avtomaticheskie-kalitki-wmd-05s-iezuitskiy-universitet-iteso-meksika_272.jpg",
+                "VALUE": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-ttd-08a-avtomaticheskie-kalitki-wmd-05s-iezuitskiy-universitet-iteso-meksika_1778.jpg",
+                "DESCRIPTION": "Тумбовые турникеты TTD-08A, автоматические калитки WMD-05S, Иезуитский университет ITESO, Мексика"
+            }
+        }, {
+            "NAME": "Полноростовый роторный турникет RTD-16, Смольный институт РАО, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/polurostovye-rotornye-turnikety/polnorostovyy-rotornyy-turniket-RTD-16-smoljnyy-institut-rao-sankt-peterburg_272.jpg",
+                "VALUE": "/images/gallery/products/polurostovye-rotornye-turnikety/polnorostovyy-rotornyy-turniket-RTD-16-smoljnyy-institut-rao-sankt-peterburg.jpg",
+                "DESCRIPTION": "Полноростовый роторный турникет RTD-16, Смольный институт РАО, Санкт-Петербург"
+            }
+        }, {
+            "NAME": "Полноростовый роторный турникет RTD-16, Академический университет РАН, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/polnorostovye-turnikety-i-polnorostovye-kalitki/polnorostovyy-rotornyy-turnikety-rtd-16-litsey-fiziko-tekhnicheskoy-shkoly-sankt-peterburg_272.jpg",
+                "VALUE": "/images/gallery/products/polnorostovye-turnikety-i-polnorostovye-kalitki/polnorostovyy-rotornyy-turnikety-rtd-16-litsey-fiziko-tekhnicheskoy-shkoly-sankt-peterburg_1000.jpg",
+                "DESCRIPTION": "Полноростовый роторный турникет RTD-16, Академический университет РАН, Санкт-Петербург"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, Российская академия народного хозяйства, Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-rossiyskaya-akademiya-narodnogo-khozyaystva-rankhigs-moskva_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-rossiyskaya-akademiya-narodnogo-khozyaystva-rankhigs-moskva_1000.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, Российская академия народного хозяйства, Москва"
+            }
+        }, {
+            "NAME": "Турникеты-триподы TTR-08А, Ингушский государственный университет, Назрань",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/turnikety-tripody/turnikety-tripody-ttr-08-fgbou-vo-inggu-nazran_272.jpg",
+                "VALUE": "/images/gallery/products/turnikety-tripody/turnikety-tripody-ttr-08-fgbou-vo-inggu-nazran_1000.jpg",
+                "DESCRIPTION": "Турникеты-триподы TTR-08А, Ингушский государственный университет, Назрань"
+            }
+        }, {
+            "NAME": "Тумбовый турникет-трипод TBC01, Челябинский государственный промышленно гуманитарный техникум",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/tumbovyy-turniket-tripod-ttd-03-1g-chelyabinskiy-gosudarstvennyy-promyshlenno-gumanitarnyy-tekhnikum_272.jpg",
+                "VALUE": "/images/gallery/tumbovyy-turniket-tripod-ttd-03-1g-chelyabinskiy-gosudarstvennyy-promyshlenno-gumanitarnyy-tekhnikum_1000.jpg",
+                "DESCRIPTION": "Тумбовый турникет-трипод TBC01, Челябинский государственный промышленно гуманитарный техникум"
+            }
+        }, {
+            "NAME": "Тумбовый турникет-трипод TTD-03.1G, Университет Народного Хозяйства, Алматы",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/tumbovyy-turniket-tripod-ttd-03-1g-universitet-narodnogo-khozyaystva-almaty_272.jpg",
+                "VALUE": "/images/gallery/tumbovyy-turniket-tripod-ttd-03-1g-universitet-narodnogo-khozyaystva-almaty_1000.jpg",
+                "DESCRIPTION": "Тумбовый турникет-трипод TTD-03.1G, Университет Народного Хозяйства, Алматы"
+            }
+        }, {
+            "NAME": "Тумбовые турникеты-триподы TB01.1, Российский Международный Олимпийский Университет, Сочи",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/tumbovye-turnikety-tripody-tb01-1-rossiyskiy-mezhdunarodnyy-olimpiyskiy-universitet-sochi_272.jpg",
+                "VALUE": "/images/gallery/tumbovye-turnikety-tripody-tb01-1-rossiyskiy-mezhdunarodnyy-olimpiyskiy-universitet-sochi_1000.jpg",
+                "DESCRIPTION": "Тумбовые турникеты-триподы TB01.1, Российский Международный Олимпийский Университет, Сочи"
+            }
+        }
+    ],
+    "ofisy-kompaniy": [
+
+        {
+            "NAME": "Скоростные проходы ST-11, офис нефтегазовой компании, Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st11-lukoyl-moskva-272х187.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st11-lukoyl-moskva-full.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-11, офис нефтегазовой компании, Москва"
+            }
+        }, {
+            "NAME": "RAKEZ главный офис, Рас-эль-Хайма, ОАЭ",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/st-01-v-ekonomicheskoy-zone-ras-el-khayma-oae-272х187.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/st-01-v-ekonomicheskoy-zone-ras-el-khayma-oae-full.jpg",
+                "DESCRIPTION": "RAKEZ главный офис, Рас-эль-Хайма, ОАЭ"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, автоматическая калитка WMD-06, Blue Tower, Дубай, ОАЭ",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/OAE-Dubaj-HHHR-Tower-(-Blue-Tower)-272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/OAE-Dubaj-HHHR-Tower-(-Blue-Tower).jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, автоматическая калитка WMD-06, Blue Tower, Дубай, ОАЭ"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, офис компании Hovione, Португалия",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/Ofis-firmy-Hovione-Portugaliya-272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/Ofis-firmy-Hovione-Portugaliya.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, офис компании Hovione, Португалия"
+            }
+        }, {
+            "NAME": "Шлагбаум GS04, Сокольнический Вал, Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/shlagbaum/shlagbaum-gs04-sokolnicheskiy-val-moskva_272.jpg",
+                "VALUE": "/images/gallery/products/shlagbaum/shlagbaum-gs04-sokolnicheskiy-val-moskva.jpg",
+                "DESCRIPTION": "Шлагбаум GS04, Сокольнический Вал, Москва"
+            }
+        }, {
+            "NAME": "Автоматическая калитка WMD-06, главный офис компании JYSK,Брабранд, Дания",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/kalitki/avtomaticheskaya-kalitka-wmd-06-glavnyy-ofis-kompanii-jysk-brabrand-daniya_272.jpg",
+                "VALUE": "/images/gallery/products/kalitki/avtomaticheskaya-kalitka-wmd-06-glavnyy-ofis-kompanii-jysk-brabrand-daniya.jpg",
+                "DESCRIPTION": "Автоматическая калитка WMD-06, главный офис компании JYSK,Брабранд, Дания"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, офис SetlGroup, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st01-ofis-setlgroup-sankt-peterburg_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st01-ofis-setlgroup-sankt-peterburg.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, офис SetlGroup, Санкт-Петербург"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, офис компании Latécoère, Франция",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-ofis-kompanii-lat-co-re-frantsiya-2_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-ofis-kompanii-lat-co-re-frantsiya-2_1000.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, офис компании Latécoère, Франция"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, офис компании Latécoère, Франция",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-ofis-kompanii-lat-co-re-frantsiya-1_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-ofis-kompanii-lat-co-re-frantsiya-1_1000.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, офис компании Latécoère, Франция"
+            }
+        }, {
+            "NAME": "Тумбовые турникеты TTD-03.2S, офис группы компаний «Яндекс Маркет», Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-ttd-03-2s-ofis-gruppy-kompaniy-yandeks-market-moskva_272.jpg",
+                "VALUE": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-ttd-03-2s-ofis-gruppy-kompaniy-yandeks-market-moskva_1778.jpg",
+                "DESCRIPTION": "Тумбовые турникеты TTD-03.2S, офис группы компаний «Яндекс Маркет», Москва"
+            }
+        }, {
+            "NAME": "Скоростной проход ST-02, НИПИ «Каспиймунайгаз», Казахстан",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/skorostnoy-prokhod-st02-nipi-kaspiymunaygaz-kazakhstan_272.jpg",
+                "VALUE": "/images/gallery/skorostnoy-prokhod-st02-nipi-kaspiymunaygaz-kazakhstan_1000.jpg",
+                "DESCRIPTION": "Скоростной проход ST-02, НИПИ «Каспиймунайгаз», Казахстан"
+            }
+        }, {
+            "NAME": "Электронные проходные KT02, киностудия «Союзмультфильм», Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/elektronnye-prohodnye/elektronnye-prohodnye-KT02-kinostudiya-«soyuzmuljtfiljm»-moskva_272.jpg",
+                "VALUE": "/images/gallery/products/elektronnye-prohodnye/elektronnye-prohodnye-KT02-kinostudiya-«soyuzmuljtfiljm»-moskva.jpg",
+                "DESCRIPTION": "Электронные проходные KT02, киностудия «Союзмультфильм», Москва"
+            }
+        }
+    ],
+    "transportnye-obekty": [
+
+        {
+            "NAME": "Скоростные проходы ST-01, морской порт, Сингапур",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st01-morskoy-port-singapur_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st01-morskoy-port-singapur_1000.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, морской порт, Сингапур"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-02, Аэропорт Внуково, Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/skorostnye-prokhody-st02-aeroport-vnukovo-moskva_272.jpg",
+                "VALUE": "/images/gallery/skorostnye-prokhody-st02-aeroport-vnukovo-moskva_1000.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-02, Аэропорт Внуково, Москва"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, Аэропорт, Красноярск",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/skorostnye-prokhody-st-01-aeroport-krasnoyarsk_272.jpg",
+                "VALUE": "/images/gallery/skorostnye-prokhody-st-01-aeroport-krasnoyarsk_1000.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, Аэропорт, Красноярск"
+            }
+        }, {
+            "NAME": "Калитка полуавтоматическая WHD-05, Аэропорт Толмачёво, Новосибирск",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/kalitka-poluavtomaticheskaya-whd-05-aeroport-tolmachyevo-novosibirsk_272.jpg",
+                "VALUE": "/images/gallery/kalitka-poluavtomaticheskaya-whd-05-aeroport-tolmachyevo-novosibirsk_1000.jpg",
+                "DESCRIPTION": "Калитка полуавтоматическая WHD-05, Аэропорт Толмачёво, Новосибирск"
+            }
+        }, {
+            "NAME": "Калитка автоматическая WMD-05, Аэропорт Пулково, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/kalitka-avtomaticheskaya-wmd-05-aeroport-pulkovo-sankt-peterburg_272.jpg",
+                "VALUE": "/images/gallery/kalitka-avtomaticheskaya-wmd-05-aeroport-pulkovo-sankt-peterburg_1000.jpg",
+                "DESCRIPTION": "Калитка автоматическая WMD-05, Аэропорт Пулково, Санкт-Петербург"
+            }
+        }, {
+            "NAME": "Калитка WMD-06, РЖД, Финляндский вокзал, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/kalitki/kalitka-wmd-06-rzhd-finlyandskiy-vokzal-sankt-peterburg_272.jpg",
+                "VALUE": "/images/gallery/products/kalitki/kalitka-wmd-06-rzhd-finlyandskiy-vokzal-sankt-peterburg_1200.jpg",
+                "DESCRIPTION": "Калитка WMD-06, РЖД, Финляндский вокзал, Санкт-Петербург"
+            }
+        }, {
+            "NAME": "Полноростовый турникет RTD-15, порт Muuga, Таллинн",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/rtd-15-port-muuga-tallinn_272.jpg",
+                "VALUE": "/images/gallery/rtd-15-port-muuga-tallinn_550.jpg",
+                "DESCRIPTION": "Полноростовый турникет RTD-15, порт Muuga, Таллинн"
+            }
+        }, {
+            "NAME": "Турникет-трипод TTR-04CW, Метромост, Сараево",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/ttr-04cw-metromost-saraevo_272.jpg",
+                "VALUE": "/images/gallery/ttr-04cw-metromost-saraevo_550.jpg",
+                "DESCRIPTION": "Турникет-трипод TTR-04CW, Метромост, Сараево"
+            }
+        }, {
+            "NAME": "Калитка WHD-05, морской порт, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/whd-05-morskoj-port-spb_272.jpg",
+                "VALUE": "/images/gallery/whd-05-morskoj-port-spb_550.jpg",
+                "DESCRIPTION": "Калитка WHD-05, морской порт, Санкт-Петербург"
+            }
+        }, {
+            "NAME": "Полноростовые турникеты RTD-15, морской порт, Триест, Италия",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/rtd-15-sea-port-triest_272.jpg",
+                "VALUE": "/images/gallery/rtd-15-sea-port-triest_550.jpg",
+                "DESCRIPTION": "Полноростовые турникеты RTD-15, морской порт, Триест, Италия"
+            }
+        }, {
+            "NAME": "Полноростовые роторные турникеты RTD-15, морской порт, Ростов-на-Дону",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/rtd-15_morskoi-port_rostov-na-donu_272.jpg",
+                "VALUE": "/images/gallery/rtd-15_morskoi-port_rostov-na-donu_384.jpg",
+                "DESCRIPTION": "Полноростовые роторные турникеты RTD-15, морской порт, Ростов-на-Дону"
+            }
+        }, {
+            "NAME": "Калитки WHD-04R. Международный аэропорт Пулково-2, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/kalitki/perco-pulkovo-2-270.jpg",
+                "VALUE": "/images/gallery/products/kalitki/perco-pulkovo-2-550.jpg",
+                "DESCRIPTION": "Калитки WHD-04R. Международный аэропорт Пулково-2, Санкт-Петербург"
+            }
+        }
+    ],
+    "medicinskie-uchrezhdeniya": [{
+        "NAME": "Турникет-трипод TTR-04 со считывателем серии IR, Федеральный центр нейрохирургии, Тюмень. Установка компании ТМК «Пилот».",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/products/turnikety-tripody/TTR-04_001_272х187.jpg",
+            "VALUE": "/images/gallery/products/turnikety-tripody/TTR-04_001_full.jpg",
+            "DESCRIPTION": "Турникет-трипод TTR-04 со считывателем серии IR, Федеральный центр нейрохирургии, Тюмень. Установка компании ТМК «Пилот»."
+        }
+    }, {
+        "NAME": "Тумбовые турникеты TTD-10А, Городская клиническая больница им. Юдина, Москва",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-ttd-10a-gorodskaya-klinicheskaya-bolnitsa-im-yudina-moskva_272.jpg",
+            "VALUE": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-ttd-10a-gorodskaya-klinicheskaya-bolnitsa-im-yudina-moskva.jpg",
+            "DESCRIPTION": "Тумбовые турникеты TTD-10А, Городская клиническая больница им. Юдина, Москва"
+        }
+    }, {
+        "NAME": "Полноростовый роторный турникет RTD-16, городская больница № 40 Санкт-Петербург",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/products/polurostovye-rotornye-turnikety/polnorostovyy-rotornyy-turniket-RTD-16-gorodskaya-boljnica-№-40-sankt-peterburg_272.jpg",
+            "VALUE": "/images/gallery/products/polurostovye-rotornye-turnikety/polnorostovyy-rotornyy-turniket-RTD-16-gorodskaya-boljnica-№-40-sankt-peterburg.jpg",
+            "DESCRIPTION": "Полноростовый роторный турникет RTD-16, городская больница № 40 Санкт-Петербург"
+        }
+    }, {
+        "NAME": "Скоростной проход ST-01, ограждения серии BH, Мариинская больница, Санкт-Петербург",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-mariinskaya-bolnitsa-sankt-peterburg_2_272.jpg",
+            "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-mariinskaya-bolnitsa-sankt-peterburg_2_1000.jpg",
+            "DESCRIPTION": "Скоростной проход ST-01, ограждения серии BH, Мариинская больница, Санкт-Петербург"
+        }
+    }, {
+        "NAME": "Электронная проходная KT02 и ограждение полуростовое BH02, Елизаветинская больница, Санкт-Петербург",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/elektronnaya-prokhodnaya-kt02-i-ograzhdenie-polurostovoe-bh02-elizavetinskaya-bolnitsa-sankt-peterbu_272.jpg",
+            "VALUE": "/images/gallery/elektronnaya-prokhodnaya-kt02-i-ograzhdenie-polurostovoe-bh02-elizavetinskaya-bolnitsa-sankt-peterbu_1000.jpg",
+            "DESCRIPTION": "Электронная проходная KT02 и ограждение полуростовое BH02, Елизаветинская больница, Санкт-Петербург"
+        }
+    }, {
+        "NAME": "Скоростные проходы ST-01, Центр хирургии глаза им. Федорова, Москва (Установка СЕК-ГРУПП, Москва)",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/st-01-centr-hirurgii-glaza-msk_272.jpg",
+            "VALUE": "/images/gallery/st-01-centr-hirurgii-glaza-msk_550.jpg",
+            "DESCRIPTION": "Скоростные проходы ST-01, Центр хирургии глаза им. Федорова, Москва (Установка СЕК-ГРУПП, Москва)"
+        }
+    }, {
+        "NAME": "Скоростные проходы ST-01, картоприемник IC02, ограждения BH02, Ленинградская областная клиническая больница",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/st-01-ic02-bh-02-hospital_272.jpg",
+            "VALUE": "/images/gallery/st-01-ic02-bh-02-hospital_550.jpg",
+            "DESCRIPTION": "Скоростные проходы ST-01, картоприемник IC02, ограждения BH02, Ленинградская областная клиническая больница"
+        }
+    }, {
+        "NAME": "Турникет-трипод T-5, городская больница №20, Санкт-Петербург",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/t-5-hospital-20-spb_272.jpg",
+            "VALUE": "/images/gallery/t-5-hospital-20-spb_550.jpg",
+            "DESCRIPTION": "Турникет-трипод T-5, городская больница №20, Санкт-Петербург"
+        }
+    }, {
+        "NAME": "Тумбовые турникеты TTD-03.1S и ограждения BH02, поликлиника, Москва",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/ttd-03.1s-i-bh02-poliklinika-moskva_272.jpg",
+            "VALUE": "/images/gallery/ttd-03.1s-i-bh02-poliklinika-moskva_550.jpg",
+            "DESCRIPTION": "Тумбовые турникеты TTD-03.1S и ограждения BH02, поликлиника, Москва"
+        }
+    }, {
+        "NAME": "Турникеты-триподы TTR-04.1 и ограждения BH02, ФМИЦ Лазарева, Санкт-Петербург",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/ttr-04.1-i-bh02-fmic-almazova-spb_272.jpg",
+            "VALUE": "/images/gallery/ttr-04.1-i-bh02-fmic-almazova-spb_550.jpg",
+            "DESCRIPTION": "Турникеты-триподы TTR-04.1 и ограждения BH02, ФМИЦ Лазарева, Санкт-Петербург"
+        }
+    }, {
+        "NAME": "Электронные проходные KT02 и ограждения BH02 на проходной в Краевом Клиническом Центре Охраны Материнства и Детства, Владивосток.",
+        "TYPE_PRODUCT": ["Турникеты-триподы"],
+        "TYPE_OBJECT": "Бизнес-центры",
+        "FULL": {
+            "VALUE_THUMB": "/images/gallery/products/elektronnye-prohodnye/prohodnye-perco-kt02-i-ograzhdeniya-bh01-na-prohodnoj-v-kraevom-klinicheskom-centre-ohrany-materinstva-i-detstva.jpg",
+            "VALUE": "/images/gallery/products/elektronnye-prohodnye/elektronnye-prohodnye-perco-kt02-i-ograzhdeniya-bh01-na-prohodnoj-v-kraevom-klinicheskom-centre-ohrany-materinstva-i-detstva.jpg",
+            "DESCRIPTION": "Электронные проходные KT02 и ограждения BH02 на проходной в Краевом Клиническом Центре Охраны Материнства и Детства, Владивосток."
+        }
+    }],
+    "prochie": [
+
+        {
+            "NAME": "Скоростные проходы ST-01, Luminor Bank, Латвия",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-luminor-bank-latviya_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-luminor-bank-latviya_1000.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, Luminor Bank, Латвия"
+            }
+        }, {
+            "NAME": "Автоматические калитки WMD-05S, жилой комплекс Green City, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/kalitki/wmd-05s-zhiloy-kompleks-green-city-sankt-peterburg_272.jpg",
+                "VALUE": "/images/gallery/products/kalitki/avtomaticheskie-kalitki-wmd-05s-zhiloy-kompleks-green-city-sankt-peterburg_1642.jpg",
+                "DESCRIPTION": "Автоматические калитки WMD-05S, жилой комплекс Green City, Санкт-Петербург"
+            }
+        }, {
+            "NAME": "Тумбовые турникеты TTD-08A, зоологический сад Green Planet, ОАЭ",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-ttd-08a-zoologicheskiy-sad-green-planet-oae_272.jpg",
+                "VALUE": "/images/gallery/products/tumbovye-turnikety/tumbovye-turnikety-ttd-08a-zoologicheskiy-sad-green-planet-oae_1778.jpg",
+                "DESCRIPTION": "Тумбовые турникеты TTD-08A, зоологический сад Green Planet, ОАЭ"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, коворкинг SOK, Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-kovorking-sok-moskva_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-kovorking-sok-moskva_1458.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, коворкинг SOK, Москва"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, автоматические калитки WMD-06, частный дом престарелых Belmont Village, Мексика",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-avtomaticheskie-kalitki-wmd-06-chastnyy-dom-prestarelykh-belmont-village-meksika_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-avtomaticheskie-kalitki-wmd-06-chastnyy-dom-prestarelykh-belmont-village-meksika_1778.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, автоматические калитки WMD-06, частный дом престарелых Belmont Village, Мексика"
+            }
+        }, {
+            "NAME": "Полноростовые роторные турникеты RTD-16 и RTD-20, музей-заповедник Павловск, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/polurostovye-rotornye-turnikety/polnorostovye-rotornye-turnikety-rtd-16-i-rtd-20-muzey-zapovednik-pavlovsk-sankt-peterburg_272.jpg",
+                "VALUE": "/images/gallery/products/polurostovye-rotornye-turnikety/polnorostovye-rotornye-turnikety-rtd-16-i-rtd-20-muzey-zapovednik-pavlovsk-sankt-peterburg_1478.jpg",
+                "DESCRIPTION": "Полноростовые роторные турникеты RTD-16 и RTD-20, музей-заповедник Павловск, Санкт-Петербург"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, жилой комплекс «Мосфильмовский», Москва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-zhk-mosfilmovskaya-moskva_272.jpg",
+                "VALUE": "/images/gallery/products/skorostnye-prokhody/skorostnye-prokhody-st-01-zhk-mosfilmovskaya-moskva_1000.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, жилой комплекс «Мосфильмовский», Москва"
+            }
+        }, {
+            "NAME": "Считыватель IR10, территория бизнес-центра, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/products/kontrollery-schityvateli/schityvatel-ir-10-territoriya-bts_272.jpg",
+                "VALUE": "/images/gallery/products/kontrollery-schityvateli/schityvatel-ir-10-territoriya-bts_1000.jpg",
+                "DESCRIPTION": "Считыватель IR10, территория бизнес-центра, Санкт-Петербург"
+            }
+        }, {
+            "NAME": "Тумбовый турникет-трипод TB, Территория офиса",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/tumbovyy-turniket-tripod-tb-territoriya-ofisa_272.jpg",
+                "VALUE": "/images/gallery/tumbovyy-turniket-tripod-tb-territoriya-ofisa_1000.jpg",
+                "DESCRIPTION": "Тумбовый турникет-трипод TB, Территория офиса"
+            }
+        }, {
+            "NAME": "Ограждение полуростовое BH02, Гипермаркет спортивных товаров Декатлон, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/ograzhdenie-polurostovoe-bh02-gipermarket-sportivnykh-tovarov-dekatlon-sankt-peterburg_272.jpg",
+                "VALUE": "/images/gallery/ograzhdenie-polurostovoe-bh02-gipermarket-sportivnykh-tovarov-dekatlon-sankt-peterburg_1000.jpg",
+                "DESCRIPTION": "Ограждение полуростовое BH02, Гипермаркет спортивных товаров Декатлон, Санкт-Петербург"
+            }
+        }, {
+            "NAME": "Скоростные проходы ST-01, Экспофорум, Санкт-Петербург",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/st-01-expoforum-spb_272.jpg",
+                "VALUE": "/images/gallery/st-01-expoforum-spb_550.jpg",
+                "DESCRIPTION": "Скоростные проходы ST-01, Экспофорум, Санкт-Петербург"
+            }
+        }, {
+            "NAME": "Турникеты-триподы TTR-08A, торговый центр «GEDIMINO 9», Вильнюс, Литва",
+            "TYPE_PRODUCT": ["Турникеты-триподы"],
+            "TYPE_OBJECT": "Бизнес-центры",
+            "FULL": {
+                "VALUE_THUMB": "/images/gallery/ttr-08a-tc-gedimino-9-vilnus_272.jpg",
+                "VALUE": "/images/gallery/ttr-08a-tc-gedimino-9-vilnus_550.jpg",
+                "DESCRIPTION": "Турникеты-триподы TTR-08A, торговый центр «GEDIMINO 9», Вильнюс, Литва"
+            }
+        }
+
+    ]
+}

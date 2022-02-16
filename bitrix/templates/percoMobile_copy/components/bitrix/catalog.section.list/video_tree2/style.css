@@ -1,0 +1,13 @@
+.elements_list {
+	display: flex;
+	flex-wrap: wrap;
+}
+.video  {
+	margin: 0 40px 10px 0;
+	width: 196px;
+}
+.new_files {
+	color: #D10024;
+	font-weight: bold;
+	margin-right: 5px;
+}
