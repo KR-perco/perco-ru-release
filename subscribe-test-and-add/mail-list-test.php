@@ -1,8 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("title", "Страница для тестов и вывода тестовых данных | PERCo");
-$APPLICATION->SetPageProperty("description", "Тест ссписка расылки"); 
-$APPLICATION->SetTitle("Тест ссписка рассылки | PERCo");
+$APPLICATION->SetPageProperty("title", "Страница для вывода тестовых данных | PERCo");
+$APPLICATION->SetPageProperty("description", "Тест списка расылки"); 
+$APPLICATION->SetTitle("Тест списка рассылки | PERCo");
   
 ?>
 <?

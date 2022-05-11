@@ -165,9 +165,8 @@ if ($arResult["PROPERTIES"]["SPECIFICATIONS"]["VALUE"])
 		$shema_video = '<div class="shema_video">'.$video.$shemaskud.'</div>';
 // Цена ->
 	if ($arProps["PRICE"]["VALUE"] && LANGUAGE_ID == "ru")
-	{
-		GetRate();
-		global $price_res;
+	{  
+		$price_res = getCurrency(CURRENCY_SWITCH);
 		$price = $price_res * $arProps["PRICE"]["VALUE"];
 		if ($arProps["PRICE"]["VALUE"] >= 1)
 			$drob = 0;
@@ -176,11 +175,11 @@ if ($arResult["PROPERTIES"]["SPECIFICATIONS"]["VALUE"])
 		if (stripos($arResult["PROPERTIES"]["IMAGE_PREVIEW"]["VALUE"], "/po/") === false)
 			$price_text = "со склада в Москве и Санкт-Петербурге";
 		$price_result = '<div id="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-				<p>Цена '.$price_text.' <meta itemprop="priceCurrency" content="EUR" /><span itemprop="price" content="'.$arProps["PRICE"]["VALUE"].'">'.number_format($arProps["PRICE"]["VALUE"], $drob, ".", " ").'</span> €</p>';
+				<p>Цена '.$price_text.' <span class="price_eur"><meta itemprop="priceCurrency" content="EUR" /><span itemprop="price" content="'.$arProps["PRICE"]["VALUE"].'">'.number_format($arProps["PRICE"]["VALUE"], $drob, ".", " ").'</span> €</span></p>';
 		if ($price == 0)
-			$price_result .= "<p>в рублях по курсу ЦБ РФ</p>";
+			$price_result .= "<p> <span class='po_cb'>в рублях по курсу ЦБ РФ</span></p>";
 		else
-			$price_result .= '<p><span class="price_rub">'.number_format($price, 0, ",", " ").'</span> &#8381;</span> (по ЦБ РФ на '.date("d.m.y").')</p>';
+			$price_result .= '<p><span class="price_rub">'.number_format($price, 0, ",", " ").' &#8381;</span> <span class="po_cb">(по ЦБ РФ на '.date("d.m.y").')</span></p>';
 		$price_result .= '</div>';
 	}
 // <- Цена

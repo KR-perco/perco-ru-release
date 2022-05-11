@@ -1,6 +1,6 @@
 <?
 
-$euro = getCurrency("EUR");
+$euro = getCurrency(CURRENCY_SWITCH);
 $stoikaStrelyPrice = 46;
 $stoikaFotoelementaPrice = 13;
 $fotoelementPrice = 38;

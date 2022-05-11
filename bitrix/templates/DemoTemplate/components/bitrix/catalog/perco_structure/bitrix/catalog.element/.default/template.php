@@ -268,7 +268,7 @@ if ($arProps["REVIEW"]["VALUE"])
 	{
 		//GetRate();
 		//global $price_res;
-		$price_res = getCurrency("EUR");
+		$price_res = getCurrency(CURRENCY_SWITCH);
 		$price = $price_res * $arProps["PRICE"]["VALUE"];
 		if ($arProps["PRICE"]["VALUE"] >= 10)
 			$drob = 0;

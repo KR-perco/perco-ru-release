@@ -399,11 +399,11 @@ CModule::IncludeModule('iblock');
                             <dl>
                                 <dd class="addres">194021, Россия, Санкт-Петербург,<br> Политехническая ул., д. 4, корпус 2, строение 1<br> 9:00–18:00 (мск), по рабочим дням</dd>
                             </dl>
-                            <p style="padding-left: 40px; margin: 30px 50px 15px 40px;">
+                            <!-- <p style="padding-left: 40px; margin: 30px 50px 15px 40px;">
                                 <a href="https://www.youtube.com/percoru" rel="nofollow" target="_blank"><img alt="youtube" src="/images/icons/you.svg" width="30px" height="30px"></a>
 
                                 <a href="https://www.instagram.com/perco_com/" style="margin-right: 10px;" rel="nofollow" target="_blank"><img alt="twitter" src="/images/icons/inst.svg" width="30px" height="30px"></a>
-                            </p>
+                            </p> -->
                         </div>
                         <input type="radio" id="uae" name="vyborProd">
                         <label for="uae"><span class="dashed">ОАЭ</span></label>
@@ -423,11 +423,11 @@ CModule::IncludeModule('iblock');
                             <dl>
                                 <dd class="addres">Burlington Tower, Business Bay, Dubai, UAE<br>8:00 – 17:00, Воскресенье – Четверг</dd>
                             </dl>
-                            <p style="padding-left: 40px; margin: 30px 50px 15px 40px;">
+                            <!-- <p style="padding-left: 40px; margin: 30px 50px 15px 40px;">
                                 <a href="https://www.youtube.com/percoru" rel="nofollow" target="_blank"><img alt="youtube" src="/images/icons/you.svg" width="30px" height="30px"></a>
 
                                 <a href="https://www.instagram.com/perco_com/" style="margin-right: 10px;" rel="nofollow" target="_blank"><img alt="twitter" src="/images/icons/inst.svg" width="30px" height="30px"></a>
-                            </p>
+                            </p> -->
                         </div>
                     </div>
                 </div>

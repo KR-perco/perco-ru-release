@@ -83,7 +83,6 @@ if (!empty($arResult["ITEMS"]))
 			switch ($arItem["IBLOCK_SECTION_ID"])
 			{
 				case "1532":
-					//$seminarName[0]  = "ИНТЕРНЕТ-СЕМИНАР";
 					$seminarName[0]  = "ВЕБИНАР";
 					$seminarName[1] = 'class="internet_seminar"';
 					$seminar_id = "vebinar";
@@ -92,14 +91,22 @@ if (!empty($arResult["ITEMS"]))
 					$reg_link[1] = "/client/registration/vebinar.php?ID=".$arItem["ID"];
 					break;
 				case "1533":
-					//$seminarName[0] = "ОЧНЫЙ СЕМИНАР В УЧЕБНОМ ЦЕНТРЕ САНКТ-ПЕТЕРБУРГА";
-					$seminarName[0] = "СЕМИНАР В ОНЛАЙН ФОРМАТЕ";
+					$seminarName[0] = "ОЧНЫЙ СЕМИНАР В УЧЕБНОМ ЦЕНТРЕ САНКТ-ПЕТЕРБУРГА";
 					$seminarName[1] = 'class="ochnyi"';
 					$seminar_id = "seminarvucentre";
 					$seminar_class = "pskov";
 					$reg_link[0] = "Подать заявку";
 					$reg_link[1] = "/client/company/zayavka/";
 					//$reg_link[2] = "<br />(возможно только для авторизованных компаний)";
+					break;
+				// Онлайн семинары
+				case "2430": 
+					$seminarName[0]  = "ИНТЕРНЕТ-СЕМИНАР";
+					$seminarName[1] = 'class="online_seminar"';
+					$seminar_id = "online_seminar";
+					$seminar_class = "block_sem-online";
+					$reg_link[0] = "Записаться";
+					$reg_link[1] = "/client/registration/online-seminary.php?ID=".$arItem["ID"];
 					break;
 			}
 			if ($kto)

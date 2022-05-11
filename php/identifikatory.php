@@ -1,6 +1,6 @@
 <?
 $APPLICATION->SetPageProperty("description", 'Бесконтактные карты используются в системах контроля доступа для идентификации. В системах PERCo применяются бесконтактные карты доступа форматов EMM, HID (HID ProxCard II, ISO prox II; EM-Marin IL-05ELR, ЕМ4100) и MIFARE.');
-$price_res = getCurrency("EUR");
+$price_res = getCurrency(CURRENCY_SWITCH);
 
 $products = array(
     "beskontaktnyy-brelok-plastik-abs-em-marin" => array(
@@ -84,40 +84,5 @@ $products = array(
 		"price" => "0.1"
 	)
 );
-
-$date = ' € (по курсу ЦБ РФ на '.date("d.m.Y").')';
-$elemetsList = "";
-
-foreach ($products as $product){
-	if ($price_res){
-		$rubls = round($product['price'] * $price_res, 2);
-		$rus_price = '<p>Цена <span class="price_rub">'.$rubls.' &#8381;</span> со склада в Москве и Санкт-Петербурге</p>';
-	}
-	$elemetsList .= '
-	<style>
-		a.nohover:hover, .text_item span:hover{
-			cursor:auto !important;
-		}
-	</style>
-
-	<div class="secel_item">
-		<a class="nohover">
-							<div class="image_icon">
-								<img alt="'.$product['name'].'" src="/images/products/identifiers/'.$product['image'].'">
-							</div>
-							<div class="text_item">
-								<span style="text-decoration: none;">'.$product['name'].'</span>
-								<div class="price">
-									'.$rus_price.'
-									<p>'.$product['price'].$date.'</p>
-									<p>'.$product['description'].'</p>
-									<p>'.$product['info'].'</p>
-								</div>
-							</div>
-						</a>
-					</div>';
-
-}
-
-$php_result = '<div id="secel_list">'.$elemetsList.'</div>';
+include 'draw_product_cards.php'; 
 ?> 

@@ -43,7 +43,7 @@ $(function() {
                 $(element).attr("checked", false);
         });
     });
-    if (url("path") != "/podderzhka/servisnoe-obsluzhivanie.php") {
+    if (url("path") != "/podderzhka/servisnoe-obsluzhivanie.php" && url("path") != "/kontakty") {
         var min_width = false;
         if (window.innerWidth < 900 && min_width == false) {
             min_width = true;
@@ -137,7 +137,6 @@ $(function() {
         }
     }
 
-    console.log(isCookie);
     if (location.hostname == "www.perco.ru") {
         if (isCookie == undefined) {
             document.getElementById('cookie-warning').style.display = "block";
@@ -188,8 +187,6 @@ $(document).ready(function() {
         $('div.col-table').toggleClass('smaller', 200);
         $('div.col-table').toggleClass('col-table-rotate');
     });
-
-
 
 
     function upSize(elements) {

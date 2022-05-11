@@ -133,7 +133,7 @@ $linkPrefix = (preg_match('/\/percoMobileMVP\//', $url['path']) == 1) ? '/percoM
 				<span>Контроллер управления доступом SC-820</span>
 				<div class="price">
 					<p style="">SC-820. Цена <span class="price_rub">11 387 ₽</span> со склада в Москве и Санкт-Петербурге</p>
-					<p>137 € (по курсу ЦБ РФ на 07.12.21)</p>
+					<p>137 € <span class="po_cb">(по курсу ЦБ РФ на 07.12.21)</span></p>
 				</div>
 			</div>
 		</a>
@@ -147,7 +147,7 @@ $linkPrefix = (preg_match('/\/percoMobileMVP\//', $url['path']) == 1) ? '/percoM
 				<span>Считыватель банковских карт RMC01</span>
 				<div class="price">
 					<p style="">RMC01. Цена <span class="price_rub">19 033 ₽</span> со склада в Москве и Санкт-Петербурге</p>
-					<p>229 € (по курсу ЦБ РФ на 07.12.21)</p>
+					<p>229 € <span class="po_cb">(по курсу ЦБ РФ на 07.12.21)</span></p>
 				</div>
 			</div>
 		</a>
@@ -162,7 +162,7 @@ $linkPrefix = (preg_match('/\/percoMobileMVP\//', $url['path']) == 1) ? '/percoM
 				<div class="price">
 					<p style="">Promix-RR.MC.02. Цена <span class="price_rub">7 813 ₽</span> со склада в Москве и Санкт-Петербурге</p>
 					
-					<p>94 € (по курсу ЦБ РФ на 07.12.21)</p>
+					<p>94 € <span class="po_cb">(по курсу ЦБ РФ на 07.12.21)</span></p>
 				</div>
 			</div>
 		</a>

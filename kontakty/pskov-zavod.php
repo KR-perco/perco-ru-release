@@ -17,14 +17,16 @@ include 'secret.php';
 <?
 if ($_REQUEST["map"] == "yandex")
 { 
-	$lat = 57.84435682077121;
-	$lon = 28.304274808938974;
+	$apiKey = $yandexMapAPI;
+	$lat = 57.844569;
+	$lon = 28.303882;
 	$map = "MAP";
 	$controls = array("ZOOM", "TYPECONTROL", "SCALELINE");
 	$options = array("ENABLE_SCROLL_ZOOM", "ENABLE_DBLCLICK_ZOOM", "ENABLE_DRAGGING");
 }
 elseif ($_REQUEST["map"] == "google")
 { 
+	$apiKey = $google;
 	$lat = 57.84435682077121;
 	$lon = 28.304274808938974;
 	$map = "ROADMAP";
@@ -44,11 +46,11 @@ $text_placemark = '<b>Завод PERCo</b><br />Псков, ул. Леона П�
 $arMap[] = array('TEXT' => $text_placemark,
 	'LON' => $lon,
 	'LAT' => $lat,
-	'MARK' => "/images/icons/perco-logo-zavod.png",
+	'MARK' => $geoPointer,
 	'MARK_WIDTH' => 97,
 	'MARK_HEIGHT' => 67,
-	'OFFSET_WIDTH' => -32,
-	'OFFSET_HEIGHT' => -66
+	'OFFSET_WIDTH' => -39,
+	'OFFSET_HEIGHT' => -53
 );
 $lat_c = ($lat + 57.84435682077121)/2;
 $lon_c = ($lon + 28.304274808938974)/2;
@@ -79,14 +81,14 @@ switch($device)
 }
 $APPLICATION->IncludeComponent(
 	"bitrix:map.".$_REQUEST["map"].".view",
-	"",
+	"fullWindow",
 	Array(
-		"API_KEY" => $google,
+		"API_KEY" => $apiKey,
 		"INIT_MAP_TYPE" => $map,
 		"MAP_DATA" => serialize(array(
 				$_REQUEST["map"].'_lat' => $lat_c,
 				$_REQUEST["map"].'_lon' => $lon_c,
-				$_REQUEST["map"].'_scale' => 15,
+				$_REQUEST["map"].'_scale' => 16,
 				'PLACEMARKS' => $arMap,
 			)
 		),

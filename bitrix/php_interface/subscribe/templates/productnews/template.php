@@ -42,7 +42,7 @@ $date = strftime("%B %Y", time());
 
 		<div style="height:40px; background:#214288; clear: both">
 			<div style="float:left; width: 20%; text-align:center; margin-top: 7px;">
-				<a href="mailto:market@perco.ru" target="_blank" style="text-decoration: none">
+				<a href="mailto:mail@perco.ru" target="_blank" style="text-decoration: none">
 					<img src="https://www.perco.ru/images/subscribe/new/mail.png" width="25px"/>
 				</a>
 			</div>

@@ -52,9 +52,6 @@ foreach($arResult as $item)
     $line .='</tr>';
 }
 
-
-
-
 $table = '<table class="field_jurnal" width="100%" border="1" cellspacing="0" cellpadding="0">
             <thead>
                 <tr>

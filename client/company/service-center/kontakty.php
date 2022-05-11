@@ -84,7 +84,7 @@ $APPLICATION->SetTitle("Контакты");
         <td colspan="2"><p>Вопросы, связанные с покупкой и комплектацией изделий PERCo:</p>
           <p>Call-центр: 8-800-333-52-53<br />
             Телефон: +7 (812) 247-04-57<br />
-            E-mail: <a href="mailto:market@perco.ru" >market@perco.ru</a> </p></td>
+            E-mail: <a href="mailto:mail@perco.ru" >mail@perco.ru</a> </p></td>
       </tr>
     </tbody>
   </table>

@@ -20,7 +20,7 @@ function getPriceRubFromEuro($priceEuro) {
 		$drob = 0;
 	else
 		$drob = 2;
-	$price_res = getCurrency("EUR");
+	$price_res = getCurrency(CURRENCY_SWITCH);
 	$price = $price_res * $priceEuro;
 	$priceRub = number_format($price, $drob, ",", " ");
 
@@ -32,7 +32,7 @@ function getPriceProduct($iblockID, $elementID, $imgSrc = "")
 {
 	global $APPLICATION;
 	//global $price_res;
-	$price_res = getCurrency("EUR");
+	$price_res = getCurrency(CURRENCY_SWITCH);
 	$priceText = "";
 	$price_text = "";
 	$rsPrice = CIBlockElement::GetProperty($iblockID, $elementID, array("sort" => "asc"), Array("CODE"=>"SPECIFICATIONS"));
@@ -59,7 +59,7 @@ function getPriceProduct($iblockID, $elementID, $imgSrc = "")
 				//<p style="">'.$arFieldsPrice["NAME"].'. Цена <span class="price_rub">'.number_format($price, 0, ",", " ").' &#8381;</span> '.$price_text.'</p>
 				$priceText = '<div class="price">
 						<p style="">Цена <span class="price_rub">'.number_format($price, 0, ",", " ").' &#8381;</span> '.$price_text.'</p>
-						<p>'.number_format($arPropsPrice["PRICE"]["VALUE"], $drob, ".", " ").' € (по курсу ЦБ РФ на '.date("d.m.y").')</p>';
+						<p class="price_eur">'.number_format($arPropsPrice["PRICE"]["VALUE"], $drob, ".", " ").' € <span class="po_cb">(по курсу ЦБ РФ на '.date("d.m.y").')</span></p>';
 				if ($arPropsPrice["PRICE"]["DESCRIPTION"])
 					$priceText .= "<p>".$arPropsPrice["PRICE"]["DESCRIPTION"]."</p>";
 				$priceText .= '</div>';
@@ -105,7 +105,7 @@ if (count($arResult["SECTIONS"]) > 0)
 					/*if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 24177) {
 						echo '<div class="price">
 						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(0.39).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
-						<p>0.39 € (по курсу ЦБ РФ на 22.10.2019)</p>
+						<p>0.39 € <span class="po_cb">(по курсу ЦБ РФ на 22.10.2019)</span></p>
 						<p>Бесконтактная карта доступа EM-Marin</p>
 						<!--<p>Рабочая частота: 125 КГц</p>-->
 					</div>';
@@ -113,14 +113,14 @@ if (count($arResult["SECTIONS"]) > 0)
 					if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 24176) {
 						echo '<div class="price">
 						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(37).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
-						<p>37 € (по курсу ЦБ РФ на 22.10.2019)</p>
+						<p>37 € <span class="po_cb">(по курсу ЦБ РФ на 22.10.2019)</span></p>
 						<p>К-Инженеринг БИРП 12-2,5/7</p>
 					</div>';
 					}*/
 					if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 24177) {
 						echo '<div class="price">
 						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(0.18).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
-						<p>0.18 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
+						<p class="price_eur">0.18 € <span class="po_cb">(по курсу ЦБ РФ на '.date("d.m.y").')</span></p>
 						<p>Бесконтактная карта доступа EM-Marin</p>
 						<!--<p>Рабочая частота: 125 КГц</p>-->
 					</div>';
@@ -128,35 +128,35 @@ if (count($arResult["SECTIONS"]) > 0)
 					if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 24176) {
 						echo '<div class="price">
 						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(34).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
-						<p>34 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
+						<p class="price_eur">34 € <span class="po_cb">(по курсу ЦБ РФ на '.date("d.m.y").')</span></p>
 						<p>К-Инженеринг БИРП 12-2,5/7</p>
 					</div>';
 					}//22.10.2019
 					if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 27022) {
 						echo '<div class="price">
 						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(761).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
-						<p>761 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
+						<p class="price_eur">761 € <span class="po_cb">(по курсу ЦБ РФ на '.date("d.m.y").')</span></p>
 						<p>ZKTeco FaceDepot-7B</p>
 					</div>';
 					}
 					if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 28202) {
 						echo '<div class="price">
 						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(5).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
-						<p>5 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
+						<p class="price_eur">5 € <span class="po_cb">(по курсу ЦБ РФ на '.date("d.m.y").')</span></p>
 						<p>Дверные ручки</p>
 					</div>';
 					}
 					if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 28203) {
 						echo '<div class="price">
 						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(0.7).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
-						<p>0.7 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
+						<p class="price_eur">0.7 € <span class="po_cb">(по курсу ЦБ РФ на '.date("d.m.y").')</span></p>
 						<p>Анкер FWB 6 Fisher (с винтом M 6 x 40 DIN 965 (цинк, потай)</p>
 					</div>';
 					}
 					if ($arSection["IBLOCK_ID"] == 64 && $arSection["ID"] == 28755) {
 						echo '<div class="price">
 						<p>Цена <span class="price_rub">'.getPriceRubFromEuro(128).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
-						<p>128 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
+						<p class="price_eur">128 € <span class="po_cb">(по курсу ЦБ РФ на '.date("d.m.y").')</span></p>
 						<p>Стойка BSP2</p>
 					</div>';
 					}
@@ -178,7 +178,7 @@ if (count($arResult["SECTIONS"]) > 0)
 				<?
 				echo '<div class="price">
 					<p>Цена <span class="price_rub">'.getPriceRubFromEuro(128).' ₽</span> со склада в Москве и Санкт-Петербурге</p>
-					<p>128 € (по курсу ЦБ РФ на '.date("d.m.y").')</p>
+					<p>128 € <span class="po_cb">(по курсу ЦБ РФ на '.date("d.m.y").')</p>
 					<p>Стойка BSP2</p>
 				</div>';
 				?>

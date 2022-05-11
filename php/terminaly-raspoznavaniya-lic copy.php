@@ -1,5 +1,5 @@
 <?
-$price_res = getCurrency("EUR");
+$price_res = getCurrency(CURRENCY_SWITCH);
 
 console_log("element php");
 console_log($arResult);
@@ -42,7 +42,7 @@ $products = array(
 	),
 );
 
-$date = ' € (по курсу ЦБ РФ на '.date("d.m.Y").')';
+$date = ' €  <span class="po_cb">(по курсу ЦБ РФ на '.date("d.m.Y").')</span>';
 $elemetsList = "";
 
 foreach ($products as $product){

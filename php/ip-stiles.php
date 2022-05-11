@@ -1,6 +1,5 @@
 <?
-GetRate();
-global $price_res; 
+$price_res = getCurrency(CURRENCY_SWITCH);
 
 $wm01_price = 1379;
 $wm017_price = 1222;
@@ -28,10 +27,10 @@ if ($price_res == 0)
 else
 	$php_result .= "<p>*Расчет произведен по курсу ЦБ РФ на " . date("d.m.Y") . "</p>";
 	
-$wm01 = $wm01_price_rub.'<p>'.number_format($wm01_price, 0, ',', ' ').' (по курсу ЦБ РФ на '.date("d.m.Y").') </p>';
-$wm017 = $wm017_price_rub.'<p>'.number_format($wm017_price, 0, ',', ' ').' (по курсу ЦБ РФ на '.date("d.m.Y").')</p>';
-$sp13 = $sp13_price_rub.'<p>'.number_format($sp13_price, 0, ',', ' ').' (по курсу ЦБ РФ на '.date("d.m.Y").')</p>';
-$ss01 = $ss01_price_rub.'<p>'.number_format($ss01_price, 0, ',', ' ').' (по курсу ЦБ РФ на '.date("d.m.Y").')</p>';
+$wm01 = $wm01_price_rub.'<p class="price_eur">'.number_format($wm01_price, 0, ',', ' ').' € <span class="po_cb"> (по курсу ЦБ РФ на '.date("d.m.Y").') </span></p>';
+$wm017 = $wm017_price_rub.'<p class="price_eur">'.number_format($wm017_price, 0, ',', ' ').' € <span class="po_cb"> (по курсу ЦБ РФ на '.date("d.m.Y").')</span></p>';
+$sp13 = $sp13_price_rub.'<p class="price_eur">'.number_format($sp13_price, 0, ',', ' ').' € <span class="po_cb"> (по курсу ЦБ РФ на '.date("d.m.Y").')</span></p>';
+$ss01 = $ss01_price_rub.'<p class="price_eur">'.number_format($ss01_price, 0, ',', ' ').' € <span class="po_cb"> (по курсу ЦБ РФ на '.date("d.m.Y").')</span></p>';
 
 $php_result = '<div id="secel_list">
 					<div class="secel_item">

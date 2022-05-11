@@ -1,4 +1,8 @@
 <?
+
+// define("CURRENCY_SWITCH", "EUR");
+define("CURRENCY_SWITCH", "PUE");
+
 /*
 You can place here your functions and event handlers
 
@@ -162,7 +166,7 @@ function GetRate()
 		"bitrix:currency.rates",
 		"price",
 		Array(
-			"arrCURRENCY_FROM" => array("EUR"),
+			"arrCURRENCY_FROM" => array(CURRENCY_SWITCH),
 			"CURRENCY_BASE" => "RUB",
 			"RATE_DAY" => "",
 			"SHOW_CB" => "Y",
@@ -820,7 +824,7 @@ function get_price_podpis($id, $model)
 		"bitrix:currency.rates",
 		"price",
 		Array(
-			"arrCURRENCY_FROM" => array("EUR"),
+			"arrCURRENCY_FROM" => array(CURRENCY_SWITCH),
 			"CURRENCY_BASE" => "RUB",
 			"RATE_DAY" => "",
 			"SHOW_CB" => "Y",
@@ -843,7 +847,7 @@ function get_price_podpis($id, $model)
 	{
 		echo '<div class="price">';
 		echo '<p>'.$model.'. Цена <span class="price_rub">'.number_format($arPrice["VALUE"]*$price_res, 0, ",", "&nbsp;").' руб.</span> со склада в Пскове</p>';
-		echo '<p>'.number_format($arPrice["VALUE"], $drob, ",", "&nbsp;").' € (по курсу ЦБ РФ на '.date("d.m.y").')</p>';
+		echo '<p class="price_eur">'.number_format($arPrice["VALUE"], $drob, ",", "&nbsp;").' € <span class="po_cb">(по курсу ЦБ РФ на '.date("d.m.y").')</span></p>';
 		if ($arPrice["DESCRIPTION"])
 			echo "<p>".$arPrice["DESCRIPTION"]."</p>";
 		echo '</div>';
@@ -935,7 +939,8 @@ function GetRateFromCBR($CURRENCY)
 
 function getCurrency($curName)
 {
-	$priceAr = CCurrency::GetByID($curName);
+	CModule::IncludeModule('currency'); 
+	$priceAr = CCurrency::GetByID($curName); 
 	$price_res = $priceAr['CURRENT_BASE_RATE'];
 	return $price_res;
 }
@@ -1032,6 +1037,46 @@ function sendReminderMailIntersec2022() {
 	}
 	return 'sendReminderMailIntersec2022();';
 }
+
+
+
+
+AddEventHandler("search", "BeforeIndex", Array("RemoveFromSearchIndex", "BeforeIndexHandler"));
+
+class RemoveFromSearchIndex
+{ 
+    function BeforeIndexHandler($arFields)
+    {
+
+		if(!CModule::IncludeModule("iblock")) 
+			return $arFields;
+
+		// $filename = $_SERVER["DOCUMENT_ROOT"].'/delete-from-index.txt';
+
+		// $counter1 = 0; 
+		
+		$arSelect = Array("ID", "NAME", "IBLOCK_ID"); 
+		$arFilter = Array("SECTION_ID" => "2298", "ACTIVE"=>"Y");  //  Удаляем из индекса раздел c "Карты. Брелоки. Метки." (реальными id раздела в "идентификаторах") - id 2298 
+		$res = CIBlockElement::GetList(Array(), $arFilter, $arSelect);
+		while($ob = $res->GetNextElement())
+		{
+			if($arFields["MODULE_ID"] == "iblock" && $arFields["PARAM2"] == 60) //  ID инфоблока "Каталог" - 60 
+			{
+				// $counter1++;
+				$arObFields = $ob->GetFields(); 
+				if($arObFields["ID"] == $arFields["ITEM_ID"]) {
+
+					// file_put_contents($filename,  "\n # - ".$counter1."\n ITEM_ID - ".$arFields["ITEM_ID"]."\n arObFields_ID ".$arObFields["ID"]."\n IBLOCK_SECTION_ID ".$arObFields["IBLOCK_SECTION_ID"], FILE_APPEND );
+					$arFields["BODY"]='';
+					$arFields["TITLE"]='';
+				}
+			}
+		}
+		
+		return $arFields; // вернём изменения
+	} 
+}
+
 
 function console_log($data)
 {

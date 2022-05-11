@@ -27,16 +27,15 @@ $APPLICATION->SetTitle("Заявка на очное обучение");
 </div>
 <div id="content">
 	<h1><?$APPLICATION->ShowTitle(false, false)?></h1>
-<?
+<? 
 $APPLICATION->IncludeComponent("bitrix:news.list", "seminari_stud_form", Array(
 	"IBLOCK_TYPE" => "edu",	// Тип информационного блока (используется только для проверки)
-	"IBLOCK_ID" => "46",	// Код информационного блока
-	"PARENT_SECTION" => "1533",	// ID раздела
+	"IBLOCK_ID" => "46",	// Код информационного блока 
 	"SORT_BY1" => "DATE_ACTIVE_TO",	// Поле для первой сортировки
 	"SORT_ORDER1" => "ASC",	// Направление для первой сортировки
 	"SORT_BY2" => "SORT",	// Поле для второй сортировки
-	"SORT_ORDER2" => "ASC",	// Направление для второй сортировки
-	"FILTER_NAME" => "",	// Фильтр
+	"SORT_ORDER2" => "ASC",	// Направление для второй сортировки 
+	"NEWS_COUNT" => "500",	// лимит на страницу
 	"FIELD_CODE" => array(	// Поля
 		0 => "",
 		1 => "",

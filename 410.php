@@ -57,7 +57,7 @@ unset($file); // Очистить переменную $file
 	// "QR_VC_FNAME" => "PERCo Системы безопасности",
 	// "QR_VC_LNAME" => "",
 	// "QR_VC_TEL" => "8-800-333-52-53",
-	// "QR_VC_EMAIL" => "market@perco.ru",
+	// "QR_VC_EMAIL" => "mail@perco.ru",
 	// "QR_VC_COMPANY" => "",
 	// "QR_VC_TITLE" => "",
 	// "QR_VC_ADR" => "",

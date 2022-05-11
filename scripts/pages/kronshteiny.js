@@ -764,8 +764,8 @@
 							<div class="text_item">
 								<span>${kronshtein.name}</span>
 								<div class="price">
-									<p style="">Цена <span class="price_rub">${kronshtein.priceRubles} ₽</span> со склада в Москве и Санкт-Петербурге</p>
-									<p>${kronshtein.price} € (по курсу ЦБ РФ на ${window.date})</p>
+									<p style="">Цена <span class="price_rub">${(kronshtein.priceRubles).toLocaleString('ru')} ₽</span> со склада в Москве и Санкт-Петербурге</p>
+									<p class="price_eur">${kronshtein.price} €  <span class="po_cb">(по курсу ЦБ РФ на ${window.date})</span></p>
 								</div>
 							</div>
 						</a>
@@ -804,8 +804,8 @@
 								<div class="text_item">
 									<span>${kronshtein.name}</span>
 									<div class="price">
-										<p style="">Цена <span class="price_rub">${kronshtein.priceRubles} ₽</span> со склада в Москве и Санкт-Петербурге</p>
-										<p>${kronshtein.price} € (по курсу ЦБ РФ на ${window.date})</p>
+										<p style="">Цена <span class="price_rub">${(kronshtein.priceRubles).toLocaleString('ru')} ₽</span> со склада в Москве и Санкт-Петербурге</p>
+										<p class="price_eur">${kronshtein.price} €  <span class="po_cb">(по курсу ЦБ РФ на ${window.date})</span></p>
 									</div>
 								</div>
 							</a>

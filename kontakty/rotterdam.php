@@ -20,6 +20,7 @@ include 'secret.php';
 <?
 if ($_REQUEST["map"] == "yandex")
 {
+	$apiKey = $yandexMapAPI;
 	$lat = 51.8848441;
 	$lon = 4.615007;
 	$map = "MAP";
@@ -28,6 +29,7 @@ if ($_REQUEST["map"] == "yandex")
 }
 elseif ($_REQUEST["map"] == "google")
 { 
+	$apiKey = $google;
 	$lat = 51.8848441;
 	$lon = 4.615007;
 	$map = "ROADMAP";
@@ -71,7 +73,7 @@ $APPLICATION->IncludeComponent(
 	"bitrix:map.".$_REQUEST["map"].".view",
 	"",
 	Array(
-		"API_KEY" => $google,
+		"API_KEY" => $apiKey,
 		"INIT_MAP_TYPE" => "MAP",
 		"MAP_DATA" => serialize(array(
 				$_REQUEST["map"].'_lat' => $lat,

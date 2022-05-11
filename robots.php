@@ -36,6 +36,7 @@ Disallow: /registration/?*
 Disallow: /o-kompanii/svodnye-dannye-o-rezultatakh-provedeniya-spetsialnoy-otsenki-usloviy-truda.php
 Disallow: /test/?*
 Disallow: /subscribe-test-and-add/?*
+Disallow: /perco?*
 Disallow: /images/svodnye-vedomosti/1/svodnaya-vedomost-sout-31-05-2017-1.jpg
 Disallow: /images/svodnye-vedomosti/1/svodnaya-vedomost-sout-31-05-2017-2.jpg
 Disallow: /images/svodnye-vedomosti/2/svodnaya-vedomost-sout-28-08-2017.jpg
@@ -101,6 +102,7 @@ Disallow: /registration/?*
 Disallow: /o-kompanii/svodnye-dannye-o-rezultatakh-provedeniya-spetsialnoy-otsenki-usloviy-truda.php
 Disallow: /test/?*
 Disallow: /subscribe-test-and-add/?*
+Disallow: /perco?*
 Disallow: /images/svodnye-vedomosti/1/svodnaya-vedomost-sout-31-05-2017-1.jpg
 Disallow: /images/svodnye-vedomosti/1/svodnaya-vedomost-sout-31-05-2017-2.jpg
 Disallow: /images/svodnye-vedomosti/2/svodnaya-vedomost-sout-28-08-2017.jpg
@@ -166,6 +168,7 @@ Disallow: /registration/?*
 Disallow: /o-kompanii/svodnye-dannye-o-rezultatakh-provedeniya-spetsialnoy-otsenki-usloviy-truda.php
 Disallow: /test/?*
 Disallow: /subscribe-test-and-add/?*
+Disallow: /perco?*
 Disallow: /images/svodnye-vedomosti/1/svodnaya-vedomost-sout-31-05-2017-1.jpg
 Disallow: /images/svodnye-vedomosti/1/svodnaya-vedomost-sout-31-05-2017-2.jpg
 Disallow: /images/svodnye-vedomosti/2/svodnaya-vedomost-sout-28-08-2017.jpg
@@ -203,6 +206,7 @@ User-agent: Yandex
 Disallow: /o-kompanii/svodnye-dannye-o-rezultatakh-provedeniya-spetsialnoy-otsenki-usloviy-truda.php
 Disallow: /test/?*
 Disallow: /subscribe-test-and-add/?*
+Disallow: /perco?*
 Disallow: /images/svodnye-vedomosti/1/svodnaya-vedomost-sout-31-05-2017-1.jpg
 Disallow: /images/svodnye-vedomosti/1/svodnaya-vedomost-sout-31-05-2017-2.jpg
 Disallow: /images/svodnye-vedomosti/2/svodnaya-vedomost-sout-28-08-2017.jpg

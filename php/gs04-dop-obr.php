@@ -9,7 +9,7 @@ $php_result = '<div class="tabIcons">
 		<div class="tabIcon__text tabIcon__text_complect">Опорная стойка стрелы шлагбаума GBS1</div>
 		<div class="price">
 			<p>Цена <span class="price_rub">' . number_format($stoikaStrelyPrice * $euro, 0, ",", " ") . ' &#8381;</span> со склада в Москве и Санкт-Петербурге</p>
-			<p>' . number_format($stoikaStrelyPrice, 0, ",", " ") . ' € (по курсу ЦБ РФ на ' . date("d.m.y") . ')</p>
+			<p class="price_eur">' . number_format($stoikaStrelyPrice, 0, ",", " ") . ' €  <span class="po_cb">(по курсу ЦБ РФ на ' . date("d.m.y") . ')</span></p>
 		</div>
 	</div>
 	<div class="tabIcon tabIcon_complect">
@@ -19,7 +19,7 @@ $php_result = '<div class="tabIcons">
 		<div class="tabIcon__text tabIcon__text_complect">Стойка для фотоэлемента безопасности GDS1</div>
 		<div class="price">
 			<p>Цена <span class="price_rub">' . number_format($stoikaFotoelementaPrice * $euro, 0, ",", " ") . ' &#8381;</span> со склада в Москве и Санкт-Петербурге</p>
-			<p>' . number_format($stoikaFotoelementaPrice, 0, ",", " ") . ' € (по курсу ЦБ РФ на ' . date("d.m.y") . ')</p>
+			<p class="price_eur">' . number_format($stoikaFotoelementaPrice, 0, ",", " ") . ' €  <span class="po_cb">(по курсу ЦБ РФ на ' . date("d.m.y") . ')</span></p>
 		</div>
 	</div>
 	<div class="tabIcon tabIcon_complect">
@@ -29,7 +29,7 @@ $php_result = '<div class="tabIcons">
 		<div class="tabIcon__text tabIcon__text_complect">Фотоэлемент GD1</div>
 		<div class="price">
 			<p>Цена <span class="price_rub">' . number_format($fotoelementPrice * $euro, 0, ",", " ") . ' &#8381;</span> со склада в Москве и Санкт-Петербурге</p>
-			<p>' . number_format($fotoelementPrice, 0, ",", " ") . ' € (по курсу ЦБ РФ на ' . date("d.m.y") . ')</p>
+			<p class="price_eur">' . number_format($fotoelementPrice, 0, ",", " ") . ' €  <span class="po_cb">(по курсу ЦБ РФ на ' . date("d.m.y") . ')</span></p>
 		</div>
 	</div>
 	<div class="tabIcon tabIcon_complect">
@@ -39,7 +39,7 @@ $php_result = '<div class="tabIcons">
 		<div class="tabIcon__text tabIcon__text_complect">Устройство радиоуправления двухканальное</div>
 		<div class="price">
 			<p>Цена <span class="price_rub">' . number_format($pultRadioupravleniyaPrice * $euro, 0, ",", " ") . ' &#8381;</span> со склада в Москве и Санкт-Петербурге</p>
-			<p>' . number_format($pultRadioupravleniyaPrice, 0, ",", " ") . ' € (по курсу ЦБ РФ на ' . date("d.m.y") . ')</p>
+			<p class="price_eur">' . number_format($pultRadioupravleniyaPrice, 0, ",", " ") . ' €  <span class="po_cb">(по курсу ЦБ РФ на ' . date("d.m.y") . ')</span></p>
 		</div>
 	</div>
 	<div class="tabIcon tabIcon_complect">
@@ -49,7 +49,7 @@ $php_result = '<div class="tabIcons">
 		<div class="tabIcon__text tabIcon__text_complect">Брелок радиоуправления</div>
 		<div class="price">
 			<p>Цена <span class="price_rub">' . number_format($brelokPrice * $euro, 0, ",", " ") . ' &#8381;</span> со склада в Москве и Санкт-Петербурге</p>
-			<p>' . number_format($brelokPrice, 0, ",", " ") . ' € (по курсу ЦБ РФ на ' . date("d.m.y") . ')</p>
+			<p class="price_eur">' . number_format($brelokPrice, 0, ",", " ") . ' €  <span class="po_cb">(по курсу ЦБ РФ на ' . date("d.m.y") . ')</span></p>
 		</div>
 	</div>
 	<div class="tabIcon tabIcon_complect">
@@ -59,7 +59,7 @@ $php_result = '<div class="tabIcons">
 		<div class="tabIcon__text tabIcon__text_complect">Монтажная пластина GM1</div>
 		<div class="price">
 			<p>Цена <span class="price_rub">' . number_format($plastinaPrice * $euro, 0, ",", " ") . ' &#8381;</span> со склада в Москве и Санкт-Петербурге</p>
-			<p>' . number_format($plastinaPrice, 0, ",", " ") . ' € (по курсу ЦБ РФ на ' . date("d.m.y") . ')</p>
+			<p class="price_eur">' . number_format($plastinaPrice, 0, ",", " ") . ' €  <span class="po_cb">(по курсу ЦБ РФ на ' . date("d.m.y") . ')</span></p>
 		</div>
 	</div>
 	<div class="tabIcon tabIcon_complect">
@@ -69,7 +69,7 @@ $php_result = '<div class="tabIcons">
 		<div class="tabIcon__text tabIcon__text_complect">Пульт дистанционного управления PERCo-H6/4</div>
 		<div class="price">
 			<p>Цена <span class="price_rub">' . number_format($pultDistancionnogoUpravleniyaPrice * $euro, 0, ",", " ") . ' &#8381;</span> со склада в Москве и Санкт-Петербурге</p>
-			<p>' . number_format($pultDistancionnogoUpravleniyaPrice, 0, ",", " ") . ' € (по курсу ЦБ РФ на ' . date("d.m.y") . ')</p>
+			<p class="price_eur">' . number_format($pultDistancionnogoUpravleniyaPrice, 0, ",", " ") . ' €  <span class="po_cb">(по курсу ЦБ РФ на ' . date("d.m.y") . ')</span></p>
 		</div>
 	</div>
 	<div class="tabIcon tabIcon_complect">
@@ -79,7 +79,7 @@ $php_result = '<div class="tabIcons">
 		<div class="tabIcon__text tabIcon__text_complect">Светофор ИС-1/24</div>
 		<div class="price">
 			<p>Цена <span class="price_rub">' . number_format($svetoforPrice * $euro, 0, ",", " ") . ' &#8381;</span> со склада в Москве и Санкт-Петербурге</p>
-			<p>' . number_format($svetoforPrice, 0, ",", " ") . ' € (по курсу ЦБ РФ на ' . date("d.m.y") . ')</p>
+			<p class="price_eur">' . number_format($svetoforPrice, 0, ",", " ") . ' €  <span class="po_cb">(по курсу ЦБ РФ на ' . date("d.m.y") . ')</span></p>
 		</div>
 	</div>
 	<div class="tabIcon tabIcon_complect">
@@ -89,7 +89,7 @@ $php_result = '<div class="tabIcons">
 		<div class="tabIcon__text tabIcon__text_complect">Датчик индукционной петли M1H</div>
 		<div class="price">
 			<p>Цена <span class="price_rub">' . number_format($datchikPrice * $euro, 0, ",", " ") . ' &#8381;</span> со склада в Москве и Санкт-Петербурге</p>
-			<p>' . number_format($datchikPrice, 0, ",", " ") . ' € (по курсу ЦБ РФ на ' . date("d.m.y") . ')</p>
+			<p class="price_eur">' . number_format($datchikPrice, 0, ",", " ") . ' €  <span class="po_cb">(по курсу ЦБ РФ на ' . date("d.m.y") . ')</span></p>
 		</div>
 	</div>
 	<div class="tabIcon tabIcon_complect">
@@ -99,7 +99,7 @@ $php_result = '<div class="tabIcons">
 		<div class="tabIcon__text tabIcon__text_complect">Светодиодная лента для дополнительной подсветки стрелы шлагбаума PERCo-GBO3.0</div>
 		<div class="price">
 			<p>Цена <span class="price_rub">' . number_format($svetLenta30Price * $euro, 0, ",", " ") . ' &#8381;</span> со склада в Москве и Санкт-Петербурге</p>
-			<p>' . number_format($svetLenta30Price, 0, ",", " ") . ' € (по курсу ЦБ РФ на ' . date("d.m.y") . ')</p>
+			<p class="price_eur">' . number_format($svetLenta30Price, 0, ",", " ") . ' €  <span class="po_cb">(по курсу ЦБ РФ на ' . date("d.m.y") . ')</span></p>
 		</div>
 	</div>
 	<div class="tabIcon tabIcon_complect">
@@ -109,7 +109,7 @@ $php_result = '<div class="tabIcons">
 		<div class="tabIcon__text tabIcon__text_complect">Светодиодная лента для дополнительной подсветки стрелы шлагбаума PERCo-GBO4.3</div>
 		<div class="price">
 			<p>Цена <span class="price_rub">' . number_format($svetLenta43Price * $euro, 0, ",", " ") . ' &#8381;</span> со склада в Москве и Санкт-Петербурге</p>
-			<p>' . number_format($svetLenta43Price, 0, ",", " ") . ' € (по курсу ЦБ РФ на ' . date("d.m.y") . ')</p>
+			<p class="price_eur">' . number_format($svetLenta43Price, 0, ",", " ") . ' €  <span class="po_cb">(по курсу ЦБ РФ на ' . date("d.m.y") . ')</span></p>
 		</div>
 	</div>
 	<div class="tabIcon tabIcon_complect">
@@ -119,7 +119,7 @@ $php_result = '<div class="tabIcons">
 		<div class="tabIcon__text tabIcon__text_complect">Ограждение для стойки шлагбаума GM3</div>
 		<div class="price">
 			<p>Цена <span class="price_rub">' . number_format($ograjdeniePrice * $euro, 0, ",", " ") . ' &#8381;</span> со склада в Москве и Санкт-Петербурге</p>
-			<p>' . number_format($ograjdeniePrice, 0, ",", " ") . ' € (по курсу ЦБ РФ на ' . date("d.m.y") . ')</p>
+			<p class="price_eur">' . number_format($ograjdeniePrice, 0, ",", " ") . ' €  <span class="po_cb">(по курсу ЦБ РФ на ' . date("d.m.y") . ')</span></p>
 		</div>
 	</div>
 	<div class="tabIcon tabIcon_complect">
@@ -129,7 +129,7 @@ $php_result = '<div class="tabIcons">
 		<div class="tabIcon__text tabIcon__text_complect">Стойка для считывателя GM4</div>
 		<div class="price">
 			<p>Цена <span class="price_rub">' . number_format($stoikaSchityvatelyaPrice * $euro, 0, ",", " ") . ' &#8381;</span> со склада в Москве и Санкт-Петербурге</p>
-			<p>' . number_format($stoikaSchityvatelyaPrice, 0, ",", " ") . ' € (по курсу ЦБ РФ на ' . date("d.m.y") . ')</p>
+			<p class="price_eur">' . number_format($stoikaSchityvatelyaPrice, 0, ",", " ") . ' €  <span class="po_cb">(по курсу ЦБ РФ на ' . date("d.m.y") . ')</span></p>
 		</div>
 	</div>
 	<div class="tabIcon tabIcon_complect">
@@ -139,7 +139,7 @@ $php_result = '<div class="tabIcons">
 		<div class="tabIcon__text tabIcon__text_complect">Кодовая панель Tantos TS-KBD-EM2 Metal</div>
 		<div class="price">
 			<p>Цена <span class="price_rub">' . number_format($kodovyaPanelPrice * $euro, 0, ",", " ") . ' &#8381;</span> со склада в Москве и Санкт-Петербурге</p>
-			<p>' . number_format($kodovyaPanelPrice, 0, ",", " ") . ' € (по курсу ЦБ РФ на ' . date("d.m.y") . ')</p>
+			<p class="price_eur">' . number_format($kodovyaPanelPrice, 0, ",", " ") . ' €  <span class="po_cb">(по курсу ЦБ РФ на ' . date("d.m.y") . ')</span></p>
 		</div>
 	</div> 
 </div>';

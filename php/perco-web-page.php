@@ -99,11 +99,7 @@ switch ($checkedId) {
                     <p>
                         Сервер СКУД может быть установлен на компьютеры с различными операционными системами: Windows, Linux. Система контроля доступа PERCo-Web работает с системой управления базами данных MySQL и имеет
                         возможность подключения к уже имеющейся базе.
-                    </p>
-
-                    </p>
-
-
+                    </p>  
                 </div>
                 <div class="into_img">
                     <img alt="Web-технологии" src="/images/products/perco-web/web-technology.jpg">

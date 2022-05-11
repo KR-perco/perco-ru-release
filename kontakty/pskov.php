@@ -20,6 +20,7 @@ include 'secret.php';
 <?
 if ($_REQUEST["map"] == "yandex")
 {
+	$apiKey = $yandexMapAPI;
 	$lat = 57.834232;
 	$lon = 28.304282;
 	$map = "MAP";
@@ -28,6 +29,7 @@ if ($_REQUEST["map"] == "yandex")
 }
 elseif ($_REQUEST["map"] == "google")
 { 
+	$apiKey = $google;
 	$lat = 57.8350352;
 	$lon = 28.3037491;
 	$map = "ROADMAP";
@@ -46,7 +48,7 @@ $text_placemark = '<b>Склад в Пскове</b><br />ул. Леона По�
 $arMap[] = array('TEXT' => $text_placemark,
 	'LON' => $lon,
 	'LAT' => $lat,
-	'MARK' => "/images/icons/perco-logo-sklad.png",
+	'MARK' => $geoPointer,
 	'MARK_WIDTH' => 97,
 	'MARK_HEIGHT' => 67,
 	'OFFSET_WIDTH' => -32,
@@ -61,14 +63,14 @@ if ($_REQUEST["map"] == "yandex")
 }
 elseif ($_REQUEST["map"] == "google")
 {
-	$lat = 57.84386601371021;
-	$lon = 28.30501230544183;
+	$lat = 57.84435682077121;
+	$lon = 28.304274808938974;
 }
 $text_placemark = '<b>Завод в Пскове</b><br />Псков, ул. Леона Поземского 123в<br />Телефон: +7 (8112) 79-47-00';
 $arMap[] = array('TEXT' => $text_placemark,
 	'LON' => $lon,
 	'LAT' => $lat,
-	'MARK' => "/images/icons/perco-logo-zavod.png",
+	'MARK' => $geoPointer,
 	'MARK_WIDTH' => 97,
 	'MARK_HEIGHT' => 67,
 	'OFFSET_WIDTH' => -32,
@@ -91,14 +93,15 @@ switch($device)
 }
 $APPLICATION->IncludeComponent(
 	"bitrix:map.".$_REQUEST["map"].".view",
-	"",
+	"fullWindow",
 	Array(
-		"API_KEY" => $google,
+		"API_KEY" => $apiKey,
 		"INIT_MAP_TYPE" => $map,
 		"MAP_DATA" => serialize(array(
 				$_REQUEST["map"].'_lat' => $lat_c,
 				$_REQUEST["map"].'_lon' => $lon_c,
-				$_REQUEST["map"].'_scale' => 14,
+				$_REQUEST["map"].'_scale' => 15,
+				// $_REQUEST["map"].'_scale' => 14, if mobile
 				'PLACEMARKS' => $arMap,
 			)
 		),

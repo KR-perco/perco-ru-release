@@ -15,6 +15,7 @@ $CountWDay = 0;	// счетчик дней недели
 $CountEvents = 0;	// счетчик событий за день
 $seminar = "";	// класс для семинара
 $seminarsType = array();	// массив классов для семинаров, если несколько в 1 день, используется для комбинирования фонов ячейки
+$seminarsHeader = ""; // обобщающий заголовок
 $id = array();	// массив идентификаторов блоков для визуализации и упрощения управления
 $info = [];	// массив с идентификаторами семинаров, нужен для установки идентификатора первого события в день
 $arWDay = array();	// массив с короткими названиями дней недели
@@ -25,6 +26,10 @@ $seminarEndMessage = "МЕРОПРИЯТИЕ ЗАВЕРШЕНО";
 $combEventSpb = array();
 $combEventPscov = array();
 $array_comb = array();
+
+
+$pervie_zanyatiya_vmnogodnevnom = array("Обзор систем и оборудования PERCo", "Особенности монтажа оборудования PERCo"); 
+$format_provedeniya = array("2430", "1533"); 
 
 
 if (stripos($_SERVER['REQUEST_URI'], '/polzovateley/')!== false)
@@ -101,8 +106,7 @@ foreach($arResult["MONTH"] as $arWeek)	// проходимся по месяцу
 
 	<table class="seminars">
 		<tbody>
-			<tr>
-
+			<tr> 
 <?
 	$seminarFirstCell = false;
 	foreach($arWeek as $arDay)	// проходимся по неделе выбирая дни
@@ -115,14 +119,16 @@ foreach($arResult["MONTH"] as $arWeek)	// проходимся по месяцу
 		//два семинара
 		foreach($arDay["events"] as $arEvent)	// проходимся по дню выбирая события
 		{
+			// console_log("[".$arEvent["DATE_ACTIVE_TO"]."] ".$arEvent["title"]. " - ".$arEvent["seminar"]);
 			$CountEvents++;
 			$seminar_date = $arEvent["DATE_ACTIVE_TO"];	// дата семинара
 			if (strtotime($seminar_date) > strtotime(date("d.m.Y H:i")) && $CountEvents == 1)
 				$CountEventsAll++;
 			if ($arEvent["city"])
-				$arCity[$arDay["day"]] = $arEvent["city"];
+				$arCity[$arDay["day"]] = $arEvent["city"]; 
 			switch($arEvent["seminar"])
 			{
+				// Вебинары
 				case 1532:
 					$seminar = 'vebinar';
 					$imageInf = '<img class="inf" alt="Информация" src="/images/icons/inform-blue.svg">';
@@ -130,9 +136,12 @@ foreach($arResult["MONTH"] as $arWeek)	// проходимся по месяцу
 					$id[$arEvent["seminarID"]][1] = "vebinar_div" . $arEvent["seminarID"];
 					$info[] = $arEvent["seminarID"];
 					$seminarsType[] = $seminar;
+					$seminarsHeader = "Вебинар";
 					$seminarName[0]  = "Интернет-семинар";
 					$seminarName[1] = 'style="list-style-image:url(/images/e-learning/schedule-list-02.png);"';
+					
 					break;
+				// Семинары в учебном центре Санкт-Петербурга
 				case 1533:
 					$seminar = 'seminarvucentre';
 					$imageInf = '<img class="inf" alt="Информация" src="/images/icons/inform.svg">'; 
@@ -140,7 +149,29 @@ foreach($arResult["MONTH"] as $arWeek)	// проходимся по месяцу
 					$id[$arEvent["seminarID"]][1] = "seminarvucentre_div" . $arEvent["seminarID"];
 					$info[] = $arEvent["seminarID"];
 					$seminarsType[] = $seminar;
-					$seminarName[0] = "Семинар в онлайн формате"; //"Очный семинар в учебном центре Санкт-Петербурга";
+					$seminarsHeader = "Семинар в Санкт-Петербурге";
+					$seminarName[0] = "Очный семинар в учебном центре Санкт-Петербурга";
+					$seminarName[1] = 'style="list-style-image:url(/images/e-learning/schedule-list-01.png);"';
+					foreach($arEvent["combined"] as $arComb){
+						for ($i=0; $i<5; $i++){ 
+							for ($j=0; $j<7; $j++){ 
+								if ( ($arComb == ($arWeek[$i]["events"][$j]["seminarID"]) ) && ( $arComb != NULL ) ){
+									array_push($combEventPscov, $arWeek[$i]["events"][$j]["title"]);
+								}
+							}
+						}
+					}
+					break; 
+				// Онлайн семинары
+				case 2430: 
+					$seminar = 'seminar_online';
+					$imageInf = '<img class="inf" alt="Информация" src="/images/icons/inform.svg">'; 
+					$id[$arEvent["seminarID"]][0] = "seminarvucentre_id" . $arEvent["seminarID"];
+					$id[$arEvent["seminarID"]][1] = "seminarvucentre_div" . $arEvent["seminarID"];
+					$info[] = $arEvent["seminarID"];
+					$seminarsType[] = $seminar;
+					$seminarsHeader = "Семинар в онлайн формате";
+					$seminarName[0] = "";
 					$seminarName[1] = 'style="list-style-image:url(/images/e-learning/schedule-list-01.png);"';
 					foreach($arEvent["combined"] as $arComb){
 						for ($i=0; $i<5; $i++){ 
@@ -156,6 +187,8 @@ foreach($arResult["MONTH"] as $arWeek)	// проходимся по месяцу
 					$seminar = "";
 					break;
 			}
+			
+			console_log($arEvent);
 			$seminar_title[$id[$arEvent["seminarID"]][0]] = "<li " . $seminarName[1] . ">" . $seminarName[0] . " «" . $arEvent["title"] . "»</li>";
 			if ( ( $seminar == "seminarvucentre" ) or ( $seminar == "seminarvucentreNoA" ) ){
 					$seminar_city = "Город: " . $arEvent["city"] . ".";
@@ -168,31 +201,9 @@ foreach($arResult["MONTH"] as $arWeek)	// проходимся по месяцу
 			if(in_array("all", $arEvent["kto"]))
 				$page = "all";
 		}
-		/*if(strtotime($seminar_date) < strtotime(date("d.m.Y H:i")))
-		{
-			switch ($seminar)
-			{
-				case "seminarvucentre":
-					$seminar = "seminarvucentreNoA";
-					break;
-				case "vebinar":
-					$seminar = "vebinarNoA";
-					break;
-			}
-		}*/
-		
-		/*if ($type == 'seminar' && $eventsNumber == 2 && $seminarFirstCell) {
-			echo 'first seminar';
-		} else if ($type == 'seminar' && $eventsNumber == 2 && !$seminarFirstCell) {
-			echo 'next seminar';
-		} else {
-			echo 'other';
-		}*/
-		/*if ($arEvent['DATE_ACTIVE_TO'] == '16.06.2020 10:00:00') {
-			echo '456';
-		}*/
 		if ($eventsNumber <2) {
-			if (($seminar == "vebinar") or ($arEvent["title"] == "Обзор систем и оборудования PERCo")) {?>
+			if (($seminar == "vebinar") or (in_array($arEvent["title"], $pervie_zanyatiya_vmnogodnevnom))) {?>
+			
 			<td 
 				<?if($info != NULL) { ?>
 					id="div<?=$info[0];?>" 
@@ -205,28 +216,20 @@ foreach($arResult["MONTH"] as $arWeek)	// проходимся по месяцу
 								} else { ?>goPage('<?=$info[0];?>', '<?=$parMonth;?>');<? } ?>" <? } 
 							} elseif ($seminar != NULL) { echo 'class="' . $seminar . '"'; }?>
 					class="event" 
-					colspan="<?if($arEvent["title"] == "Обзор систем и оборудования PERCo"){echo "4";} ?>"
+					colspan="<?if($arEvent["title"] == "Обзор систем и оборудования PERCo"){echo "4";} elseif ($arEvent["title"] == "Особенности монтажа оборудования PERCo") {echo "5";} ?>"
 					style="overflow: hidden;"
 			>
 				<table>
 					<?foreach($arDay["events"] as $arEvent){
-						if (($seminar == "vebinar") or ($arEvent["title"] == "Обзор систем и оборудования PERCo")) {	?>
+						if (($seminar == "vebinar") or (in_array($arEvent["title"], $pervie_zanyatiya_vmnogodnevnom))) {	?>
 						<tr>
-							<td colspan="<?if($arEvent["title"] == "Обзор систем и оборудования PERCo"){echo "4";} ?>"
+							<td colspan="<?if($arEvent["title"] == "Обзор систем и оборудования PERCo"){echo "4";} elseif ($arEvent["title"] == "Особенности монтажа оборудования PERCo") {echo "5";} ?>"
 								style="border: none; padding: 0 0 5px 0;"
 							>
 								<div style="width: 100%;" 
 									class="<?=$seminar;?>">
-									<p style="line-height: 21px; padding: 0 0 0 5px; margin: 0px; font-weight: 600;  display:block; cursor: pointer;"><?=$imageInf;?>
-										
-									<?if ($seminar == "vebinar"){
-										?>
-											Вебинар
-										<?
-									}else{
-										?>Семинар в онлайн формате <?/*Семинар в <?echo $arEvent["city"];?>е*/?><?
-									}
-									?>
+									<p style="line-height: 21px; padding: 0 0 0 5px; margin: 0px; font-weight: 600;  display:block; cursor: pointer;"><?=$imageInf;?> 
+									<?=$seminarsHeader?> 
 									</p>
 								</div>
 							</td>
@@ -249,17 +252,27 @@ foreach($arResult["MONTH"] as $arWeek)	// проходимся по месяцу
 							$tmpDate = explode(" ", $seminar_date);
 							if ($seminar_title)
 							{
-								if ( $arEvent["city"] == "Санкт-Петербург" )
+								if (in_array($arEvent["seminar"], $format_provedeniya)) 
 								{?>
 									<span class="spanBlock">
 										<b class="head_b">
-										<? echo "Семинар в онлайн формате"; //"Очный семинар в учебном центре Санкт-Петербурга";?>
-										<ul>
-											<li>«Обзор систем и оборудования PERCo»</li>
-											<li>«Практические навыки по работе в системах PERCo»</li>
-											<li>«Получение практических навыков в работе с системой PERCo-Web»</li>
-											<li>«Сертификация «Авторизованный <?=$tema?>»»</li>
-										</ul>
+										<? if ($arEvent["seminar"] == "2430") {  ?>
+											<ul>
+												<li>«Обзор систем и оборудования PERCo»</li>
+												<li>«Практические навыки по работе в системах PERCo»</li>
+												<li>«Получение практических навыков в работе с системой PERCo-Web»</li>
+												<li>«Сертификация «Авторизованный <?=$tema?>»»</li>
+											</ul> 
+										<? } elseif ($arEvent["seminar"] == "1533") { ?>
+											Очный семинар в учебном центре Санкт-Петербурга
+											<ul>
+												<li>«Особенности монтажа оборудования PERCo»</li>
+												<li>«Практические навыки по монтажу турникетов и пусконаладка системы PERCo-S-20»</li>
+												<li>«Практические навыки по работе в системах PERCo-S-20 и PERCo-Web»</li>
+												<li>«Практические навыки по работе в системе PERCo-Web»</li>
+												<li>«Сертификация «Авторизованный <?=$tema?>»»</li>
+											</ul> 
+										<? } ?>
 										</b>
 									</span>
 								<?}
@@ -323,40 +336,7 @@ CountSel = 0;
 arSeminars = [];
 arSeminars = [<?php echo "'" . implode("','", $arSeminars) . "'"; ?>];
 arSeminarsDiv = [];
-arSeminarsDiv = [<?php echo "'" . implode("','", $arSeminarsDiv) . "'"; ?>];
-
- 
-
-if ((<?php echo $arResult["currentMonth"]?> == 11) && (<?php echo $arResult["currentYear"]?> == 2021)) { 
-	var div29894 = document.getElementById("div29894"); 
-	if (div29894.parentNode) {
-		for (let index = 0; index < 7; index++) { 
-				div29894.parentNode.removeChild(div29894.parentNode.lastChild); 
-		}
-	} 
-}
-if ((<?php echo $arResult["currentMonth"]?> == 12) && (<?php echo $arResult["currentYear"]?> == 2021)) { 
-	var htmlString = `<tbody> <tr> <td id="div29891" onmouseover="seminarsView('info29891');" onmouseout="seminarsHide('info29891');" onclick="goPage('29891', 'month=11&amp;year=2021');" class="event" colspan="" style="overflow: hidden;"> <table> <tbody> <tr> <td colspan="" style="border: none; padding: 0 0 5px 0;"> <div style="width: 100%;" class="vebinar"> <p style="line-height: 21px; padding: 0 0 0 5px; margin: 0px; font-weight: 600; display:block; cursor: pointer;"><img class="inf" alt="Информация" src="/images/icons/inform-blue.svg"> Вебинар </p></div></td></tr></tbody> </table> <div id="info29891" class="viewEvents" style="display: none; bottom: -51px;"> <span class="spanBlock"><b class="head_b"><ul><li style="list-style-image:url(/images/e-learning/schedule-list-02.png);">Вебинар «Способы идентификации в системах PERCо» </li></ul></b></span> </div></td><td id="div29894" onmouseover="seminarsView('info29894');" onmouseout="seminarsHide('info29894');" onclick="goPage('29894', 'month=11&amp;year=2021');" class="event" colspan="4" style="overflow: hidden;"> <table> <tbody> <tr> <td colspan="4" style="border: none; padding: 0 0 5px 0;"> <div style="width: 100%;" class="seminarvucentre"> <p style="line-height: 21px; padding: 0 0 0 5px; margin: 0px; font-weight: 600; display:block; cursor: pointer;"><img class="inf" alt="Информация" src="/images/icons/inform.svg"> Семинар в онлайн формате </p></div></td></tr></tbody> </table> <div id="info29894" class="viewEvents" style="display: none; bottom: -158px;"> <span class="spanBlock"> <b class="head_b"> Семинар в онлайн формате<ul> <li>«Обзор систем и оборудования PERCo»</li><li>«Практические навыки по работе в системах PERCo»</li><li>«Получение практических навыков в работе с системой PERCo-Web»</li><li>«Сертификация «Авторизованный инсталлятор»»</li></ul> </b> </span> </div></td><td class="event"></td><td class="event"></td></tr></tbody>`;
-	document.querySelector('.event-calendar .week-row').childNodes[3].innerHTML = htmlString;
-}
-
-
-if ((<?php echo $arResult["currentMonth"]?> == 1) && (<?php echo $arResult["currentYear"]?> == 2022)) { 
-	var div30257 = document.getElementById("div30257"); 
-	div30257.querySelector(".seminarvucentre > p").textContent = "Семинар в очном формате";
-
-	var info30257 = document.getElementById("info30257"); 
-	info30257.querySelector(".head_b").innerHTML = `<b class="head_b"> Семинар в очном формате <ul> <li>«Обзор систем и оборудования PERCo»</li> <li>«Практические навыки по работе в системах PERCo»</li> <li>«Получение практических навыков в работе с системой PERCo-Web»</li> <li>«Сертификация «Авторизованный администратор»</li> </ul> </b>`;
-	
-}
-if ((<?php echo $arResult["currentMonth"]?> == 2) && (<?php echo $arResult["currentYear"]?> == 2022)) { 
-	var div30379 = document.getElementById("div30379"); 
-	div30379.querySelector(".seminarvucentre > p").textContent = "Семинар в очном формате";
-
-	var info30379 = document.getElementById("info30379"); 
-	info30379.querySelector(".head_b").innerHTML = `<b class="head_b"> Семинар в очном формате <ul> <li>«Обзор систем и оборудования PERCo»</li> <li>«Практические навыки по работе в системах PERCo»</li> <li>«Получение практических навыков в работе с системой PERCo-Web»</li> <li>«Сертификация «Авторизованный администратор»»</li> </ul> </b>`;
-	
-}
+arSeminarsDiv = [<?php echo "'" . implode("','", $arSeminarsDiv) . "'"; ?>]; 
 
 </script>
 <?
@@ -382,11 +362,15 @@ if ($page == "all")
 ?>
 	<div class="description_block">
 		<div class="description_item">
-			<div style="width: 40px; height: 30px; background-color: #49639b" ></div>
+			<div class="seminarvucentre legend-marker" ></div>
 			<div class="text_block">Семинары в учебном центре в Санкт-Петербурга</div>
 		</div>
 		<div class="description_item">
-			<div style="width: 40px; height: 30px; background-color: #d5d9dd" ></div>
+			<div class="vebinar legend-marker" ></div>
+			<div class="text_block">Вебинары</div>
+		</div>
+		<div class="description_item">
+			<div class="seminar_online legend-marker" ></div>
 			<div class="text_block">Интернет-семинары</div>
 		</div>
 	</div>

@@ -20,16 +20,18 @@ include 'secret.php';
 <?
 if ($_REQUEST["map"] == "yandex")
 {
+	$apiKey = $yandexMapAPI;
 	$lat = 59.4057986;
-	$lon = 24.650899;
+	$lon = 24.651399;
 	$map = "MAP";
 	$controls = array("ZOOM", "TYPECONTROL", "SCALELINE");
 	$options = array("ENABLE_SCROLL_ZOOM", "ENABLE_DBLCLICK_ZOOM", "ENABLE_DRAGGING");
 }
 elseif ($_REQUEST["map"] == "google")
 { 
+	$apiKey = $google;
 	$lat = 59.4057986;
-	$lon = 24.650899;
+	$lon = 24.651799;
 	$map = "ROADMAP";
 	$controls = array(
 		0 => "SMALL_ZOOM_CONTROL",
@@ -46,7 +48,7 @@ $text_placemark = '<b>Склад в Таллинне</b><br />45 Akadeemia str.'
 $arMap[] = array('TEXT' => $text_placemark,
 	'LON' => $lon,
 	'LAT' => $lat,
-	'MARK' => "/images/icons/perco-logo.png",
+	'MARK' => $geoPointer,
 	'MARK_WIDTH' => 75,
 	'MARK_HEIGHT' => 59,
 	'OFFSET_WIDTH' => -24,
@@ -69,14 +71,14 @@ switch($device)
 }
 $APPLICATION->IncludeComponent(
 	"bitrix:map.".$_REQUEST["map"].".view",
-	"",
+	"fullWindow",
 	Array(
-		"API_KEY" => $google,
+		"API_KEY" => $apiKey,
 		"INIT_MAP_TYPE" => "MAP",
 		"MAP_DATA" => serialize(array(
 				$_REQUEST["map"].'_lat' => $lat,
 				$_REQUEST["map"].'_lon' => $lon,
-				$_REQUEST["map"].'_scale' => 15,
+				$_REQUEST["map"].'_scale' => 17,
 				'PLACEMARKS' => $arMap,
 			)
 		),

@@ -33,9 +33,10 @@
 <?
 	$APPLICATION->SetAdditionalCSS('/css/kronshteiny.css');
 	$APPLICATION->AddHeadScript('/scripts/pages/kronshteiny.js');
+	$curr_switch = round(getCurrency(CURRENCY_SWITCH)); 
 ?>
 <script>
-	window.euro = <?= round(getCurrency("EUR")) ?>;
+	window.euro = <?= $curr_switch ?>;
 	window.date = '<?= date('d.m.y'); ?>';
 </script>
 

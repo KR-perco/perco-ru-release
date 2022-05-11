@@ -66,6 +66,8 @@ if (!function_exists("getElements"))
 			{ 
 				$arFields = $ar->GetFields();
 				$arProps = $ar->GetProperties(); 
+
+				console_log($arFields);
 				if (is_array($arProps["FILE"]["DESCRIPTION"]))
 				{
 					$keyName = array_search($GLOBALS['LANG'], $arProps["NAME"]["DESCRIPTION"]);

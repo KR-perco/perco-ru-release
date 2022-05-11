@@ -2,9 +2,9 @@ $(function() {
     $("#horizontal_scroll > #scrollGallery").lightSlider({
         item: 1,
         pager: false,
-        loop: false,
+        loop: true,
         adaptiveHeight: true,
-        arrowsGray: true
+        arrowsGray: false
     });
     $('#video-gallery').lightGallery({
         zoom: true,

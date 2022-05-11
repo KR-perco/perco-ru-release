@@ -16,19 +16,19 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Интернет-семинары", 
+		"Вебинары", 
 		"/obuchenie/installyatorov/vebinary.php", 
 		Array(), 
 		Array(), 
 		"" 
 	),
-	Array(
-		"Выездные семинары ", 
-		"/obuchenie/installyatorov/vyezdnye-seminary.php", 
-		Array(), 
-		Array(), 
-		"" 
-	),
+	// Array(
+	// 	"Онлайн-семинары", 
+	// 	"/obuchenie/installyatorov/online-seminary.php", 
+	// 	Array(), 
+	// 	Array(), 
+	// 	"" 
+	// ),
 	Array(
 		"Самостоятельное обучение", 
 		"/obuchenie/installyatorov/samoobuchenie.php", 

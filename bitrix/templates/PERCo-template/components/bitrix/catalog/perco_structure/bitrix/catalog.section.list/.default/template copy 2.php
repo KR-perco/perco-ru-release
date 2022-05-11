@@ -19,7 +19,7 @@ function getPriceRubFromEuro($priceEuro) {
 		$drob = 0;
 	else
 		$drob = 2;
-	$price_res = getCurrency("EUR");
+	$price_res = getCurrency(CURRENCY_SWITCH);
 	$price = $price_res * $priceEuro;
 	$priceRub = number_format($price, $drob, ".", " ");
 
@@ -31,7 +31,7 @@ function getPriceProduct($iblockID, $elementID, $imgSrc = "")
 {
 	global $APPLICATION;
 	//global $price_res;
-	$price_res = getCurrency("EUR");
+	$price_res = getCurrency(CURRENCY_SWITCH);
 	$priceText = "";
 	$price_text = "";
 	$rsPrice = CIBlockElement::GetProperty($iblockID, $elementID, array("sort" => "asc"), Array("CODE"=>"SPECIFICATIONS"));

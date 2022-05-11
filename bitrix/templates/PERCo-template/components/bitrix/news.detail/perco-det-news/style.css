@@ -1,21 +1,31 @@
 .news-date {
-	color: #929497;
-	margin-top: 20px;
+    color: #929497;
+    margin-top: 20px;
 }
+
 .news-imges {
-	align-items: flex-start;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	margin-top: 20px;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
 }
-.news-imges img { margin: 0 10px; }
+
+.news-imges img {
+    margin: 0 10px;
+}
+
 .viborkom {
     background: rgba(0, 0, 0, 0) url(/images/icons/galka.gif) no-repeat scroll center center;
 }
+
+.news-imges img {
+    margin-bottom: 17px;
+}
+
 @media screen and (max-width: 720px) {
-	.news-imges img {
-		margin: auto;
-		max-width: 340px;
-	}
+    .news-imges img {
+        margin: auto;
+        max-width: 340px;
+    }
 }

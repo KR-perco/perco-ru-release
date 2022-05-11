@@ -6,23 +6,27 @@
 	$twitter = '//'.SITE_SERVER_NAME.'/redirect.php?site='.GetMessage("TWITTER").'&hash='.$hash;
 	$hash = hash_hmac('md5', GetMessage("INSTAGRAM"), $key, false);
 	$instagram = '//'.SITE_SERVER_NAME.'/redirect.php?site='.GetMessage("INSTAGRAM").'&hash='.$hash;
+	$hash = hash_hmac('md5', GetMessage("TELEGRAM"), $key, false);
+	$telegram = '//'.SITE_SERVER_NAME.'/redirect.php?site='.GetMessage("TELEGRAM").'&hash='.$hash; 
+	$hash = hash_hmac('md5', GetMessage("ZEN"), $key, false);
+	$dzen = '//'.SITE_SERVER_NAME.'/redirect.php?site='.GetMessage("ZEN").'&hash='.$hash; 
 ?>
 	</main>
 	<footer itemscope itemtype="https://schema.org/WPFooter">
 		<div id="footer_content">
 			<div id="footer_logo"><? include($_SERVER["DOCUMENT_ROOT"]."/images/icons/logo.svg");?></div>
 			<div id="phone">
-				<img alt="<?GetMessage("PHONE_TEXT");?>" src="/images/icons/phone.svg" width="20" height="20"/> <a href="tel:<?=str_replace('-', '', str_replace(')', '', str_replace('(', '', str_replace(' ', '', GetMessage("PHONE")))));?>" class="footer-tel"><?=GetMessage("PHONE");?></a>
+				<p><a href="tel:<?=GetMessage("PHONE");?>"><img alt="<?GetMessage("PHONE_TEXT");?>" src="/images/icons/phone.svg" width="20" height="20"/> <span class="hide-xs"> <?=GetMessage("PHONE");?></span></a></p>
 			</div>
 			<div id="socseti">
-				<a href="<?=$youtube;?>" target="_blank" rel="nofollow">
+				<!-- <a href="$youtube;" target="_blank" rel="nofollow">
 					<img alt="youtube" src="/images/icons/youtube.svg" width="48" height="20"/>
+				</a> -->
+				<a href="<?=$dzen;?>" target="_blank" rel="nofollow">
+					<img alt="dzen" src="/images/icons/dzen-white.svg" width="25" height="20"/>
 				</a>
-				<a href="<?=$instagram;?>" target="_blank" rel="nofollow">
-					<img alt="instagram" src="/images/icons/instagram.svg" width="25" height="20"/>
-				</a>
-				<a href="<?=$server.GetMessage("RSS")?>rss.php" target="_blank">
-					<img alt="RSS" src="/images/icons/rss.svg" width="20" height="20"/>
+				<a href="<?=$telegram;?>" target="_blank" rel="nofollow">
+					<img alt="telegram" src="/images/icons/telegram-white.svg" width="25" height="20"/>
 				</a>
 			</div>
 			<div id="sitemap"><a href="/<?=translitIt(strtolower(GetMessage("SITEMAP")));;?>.php"><img alt="<?=GetMessage("SITEMAP");?>" src="/images/icons/sitemap.svg" width="28" height="26"/><span><?=GetMessage("SITEMAP");?></span></a></div>
@@ -52,4 +56,26 @@
 		</div>
 	</div>
 </body>
+
+	<!-- Дополнительная аналитика -->
+	<?if((SITE_ID == "s1")){?>
+		<!-- Plausible -->
+		<script defer data-domain="perco.ru" src="https://plausible.io/js/plausible.js"></script>
+
+		<!-- Matomo -->
+		<script>
+		var _paq = window._paq = window._paq || [];
+		/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+		_paq.push(['trackPageView']);
+		_paq.push(['enableLinkTracking']);
+		(function() {
+			var u="https://perco.matomo.cloud/";
+		_paq.push(['setTrackerUrl', u+'matomo.php']);
+		_paq.push(['setSiteId', '1']);
+		var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+		g.async=true; g.src='//cdn.matomo.cloud/perco.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+		})();
+		</script>
+		<!-- End Matomo Code -->
+	<?}?>
 </html>

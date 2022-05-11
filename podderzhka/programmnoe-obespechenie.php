@@ -231,7 +231,7 @@ switch ($checkedId){
 						rel="nofollow">info@sigmasms.ru</a></noindex>
 				</li>
 			</ul>
-			<span class="boldZag">Украина</span>
+			<!-- <span class="boldZag">Украина</span>
 			<ul>
 				<li>
 					<noindex>TurboSMS (<a href="http://www.turbosms.ua" target="_blank"
@@ -243,7 +243,7 @@ switch ($checkedId){
 							rel="nofollow">www.alphasms.com.ua</a>)</noindex>
 				</li>
  
-			</ul>
+			</ul> -->
 		</div>
 
 		<input type="radio" id="<?=translitIt(strtolower("ПО PERCo-S-20"));?>" <? echo $checkedSecond ?>name="vkladki">
@@ -716,7 +716,7 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "files_tree", Arra
 				<tr>
 					<td style="border: none;">Версия прошивки:</td>
 					<td style="border: none;">
-						<p>CR11, CL15, CT13, CT/L14 - <span class="color">2.2.1.17</span></p>
+						<p>CR11, CL15, CT13, CT/L14 - <span class="color">2.2.1.28</span></p>
 					</td>
 				</tr>
 			</table>

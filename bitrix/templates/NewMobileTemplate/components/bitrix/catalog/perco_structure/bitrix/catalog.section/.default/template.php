@@ -131,7 +131,7 @@ $linkPrefix = (preg_match('/\/percoDemo\//', $url['path']) == 1) ? '/percoDemo/'
 				<span>Контроллер управления доступом SC-820</span>
 				<div class="price">
 					<p style="">SC-820. Цена <span class="price_rub">10 747 ₽</span> со склада в Москве и Санкт-Петербурге</p>
-					<p>137 € (по курсу ЦБ РФ на 25.05.20)</p>
+					<p>137 € <span class="po_cb">(по курсу ЦБ РФ на 25.05.20)</span></p>
 				</div>
 			</div>
 		</a>
@@ -145,7 +145,7 @@ $linkPrefix = (preg_match('/\/percoDemo\//', $url['path']) == 1) ? '/percoDemo/'
 				<span>Считыватель банковских карт RMC01</span>
 				<div class="price">
 					<p style="">RMC01. Цена <span class="price_rub">13 571 ₽</span> со склада в Москве и Санкт-Петербурге</p>
-					<p>173 € (по курсу ЦБ РФ на 25.05.20)</p>
+					<p>173 € <span class="po_cb">(по курсу ЦБ РФ на 25.05.20)</span></p>
 				</div>
 			</div>
 		</a>
@@ -159,7 +159,7 @@ $linkPrefix = (preg_match('/\/percoDemo\//', $url['path']) == 1) ? '/percoDemo/'
 				<span>Считыватель банковских карт Promix-RR.MC.02</span>
 				<div class="price">
 					<p style="">Promix-RR.MC.02. Цена <span class="price_rub">7 374 ₽</span> со склада в Москве и Санкт-Петербурге</p>
-					<p>94 € (по курсу ЦБ РФ на 25.05.20)</p>
+					<p>94 € <span class="po_cb">(по курсу ЦБ РФ на 25.05.20)</span></p>
 				</div>
 			</div>
 		</a>

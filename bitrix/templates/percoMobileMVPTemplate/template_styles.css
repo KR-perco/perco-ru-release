@@ -951,3 +951,11 @@ ul.lightSlider {
         height: 300px;
     }
 }
+
+.price_eur {
+    display: none;
+}
+
+.po_cb {
+    display: none;
+}

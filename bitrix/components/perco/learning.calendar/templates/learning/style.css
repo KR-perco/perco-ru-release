@@ -32,6 +32,11 @@ td div.seminarvucentreNoA p {
     background-color: #d5d9dd;
 }
 
+.seminar_online {
+    background-color: #6b918f;
+    color: white;
+}
+
 .seminarvucentre p,
 .seminarvucentrespb p {
     padding-left: 5px;
@@ -214,16 +219,22 @@ td>div>div {
     display: flex;
     font-size: 12px;
     margin: 20px auto;
-    width: 500px;
+    width: 600px;
 }
 
 .description_item .text_block {
-    padding-left: 5px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
 }
 
 .description_item {
     display: flex;
-    margin-right: 10px;
+    flex: 1 1 33.333%;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .description_item>img {
@@ -290,7 +301,6 @@ div.viewEvents {
 }
 
 @media screen and (max-width: 770px) {
-
     td>div:first-child,
     .description_block {
         width: auto;
@@ -302,19 +312,89 @@ div.viewEvents {
         vertical-align: middle;
     }
 }
+
 td.event p img.inf {
-	padding:5px;
-	padding-top:10px;
-	display:none;
-	width:22px;
-	height:22px;
+    padding: 5px;
+    padding-top: 10px;
+    display: none;
+    width: 22px;
+    height: 22px;
 }
+
 @media screen and (max-width: 440px) {
     td.event p {
         /*display: none;*/
         font-size: 0;
     }
-	td.event p img.inf {
-		display:block;
-	}
+    td.event p img.inf {
+        display: block;
+    }
+}
+
+.event:hover {
+    z-index: 15;
+}
+
+.event .display_with_css {
+    display: block;
+    z-index: 5;
+    position: relative;
+    width: 331.8px;
+    padding: 0 5px;
+    top: 45px;
+    background-color: #49639b;
+    color: white;
+    border: 0px;
+    font-weight: bold;
+}
+
+.event:nth-child(1) .display_with_css {
+    width: 417.8px;
+}
+
+.event .display_with_css.seminar_online {
+    background-color: #d5d9dd;
+    color: #414042;
+    padding: 1px 5px 0;
+}
+
+.event .display_with_css .spanBlock {
+    display: none;
+}
+
+.event:hover .display_with_css .spanBlock {
+    display: block;
+    position: absolute;
+    left: -10px;
+    top: 30px;
+}
+
+.display_with_css .spanBlock .seminarvucentre {
+    border: 1px solid #999999;
+    background-color: #ebf0fa;
+    padding: 10px;
+}
+
+.table-to-flex .seminars tr {
+    display: flex;
+    height: 100%;
+}
+
+.table-to-flex .seminars td {
+    flex: 1 1 14.28%;
+}
+
+
+/* 
+#div30778 {
+    width: 0px;
+    height: 90px;
+    padding-top: 18px;
+    margin-bottom: -18px;
+} */
+
+.legend-marker {
+    width: 40px;
+    height: 30px;
+    flex: 0 0 40px;
 }

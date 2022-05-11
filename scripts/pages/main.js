@@ -38,19 +38,19 @@ $(function() {
         return origFn.apply(this, arguments);
     }
 
-    if (LANGUAGE_ID == `ru`) {
-        document.querySelector(`.head-tel`).addEventListener(`click`, function(e) {
-            ga('send', 'event', { 'eventCategory': 'number', 'eventAction': 'click', 'eventLabel': '8 (800) 333-52-53' });
-        });
+    // if (LANGUAGE_ID == `ru`) {
+    //     document.querySelector(`.head-tel`).addEventListener(`click`, function(e) {
+    //         ga('send', 'event', { 'eventCategory': 'number', 'eventAction': 'click', 'eventLabel': '8 (800) 333-52-53' });
+    //     });
 
-        document.querySelector(`.head-tel2`).addEventListener(`click`, function(e) {
-            ga('send', 'event', { 'eventCategory': 'number', 'eventAction': 'click', 'eventLabel': '8 (812) 247-04-57' });
-        });
+    //     document.querySelector(`.head-tel2`).addEventListener(`click`, function(e) {
+    //         ga('send', 'event', { 'eventCategory': 'number', 'eventAction': 'click', 'eventLabel': '8 (812) 247-04-57' });
+    //     });
 
-        document.querySelector(`.footer-tel`).addEventListener(`click`, function(e) {
-            ga('send', 'event', { 'eventCategory': 'number', 'eventAction': 'click', 'eventLabel': '8 (800) 333-52-53 footer' });
-        });
-    }
+    //     document.querySelector(`.footer-tel`).addEventListener(`click`, function(e) {
+    //         ga('send', 'event', { 'eventCategory': 'number', 'eventAction': 'click', 'eventLabel': '8 (800) 333-52-53 footer' });
+    //     });
+    // }
 
 
 

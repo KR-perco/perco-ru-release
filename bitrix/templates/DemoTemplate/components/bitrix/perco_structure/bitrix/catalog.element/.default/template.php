@@ -169,9 +169,9 @@ if ($arResult["PROPERTIES"]["SPECIFICATIONS"]["VALUE"])
 		$price_result = '<div id="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 				<p>Цена '.$price_text.' <meta itemprop="priceCurrency" content="EUR" /><span itemprop="price" content="'.$arProps["PRICE"]["VALUE"].'">'.number_format($arProps["PRICE"]["VALUE"], $drob, ".", " ").'</span> €</p>';
 		if ($price == 0)
-			$price_result .= "<p>в рублях по курсу ЦБ РФ</p>";
+			$price_result .= "<p><span class='po_cb'>в рублях по курсу ЦБ РФ</span></p>";
 		else
-			$price_result .= '<p><span class="price_rub">'.number_format($price, 0, ",", " ").'</span> &#8381;</span> (по ЦБ РФ на '.date("d.m.y").')</p>';
+			$price_result .= '<p><span class="price_rub">'.number_format($price, 0, ",", " ").'</span> &#8381;</span> <span class="po_cb">(по ЦБ РФ на '.date("d.m.y").')</span></p>';
 		$price_result .= '</div>';
 	}
 // <- Цена

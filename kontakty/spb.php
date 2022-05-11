@@ -17,14 +17,16 @@ include 'secret.php';
 <?
 if ($_REQUEST["map"] == "yandex")
 {
-	$lat = 59.992191;
-	$lon = 30.35357;
+	$apiKey = $yandexMapAPI;
+	$lat = 59.992060;
+	$lon = 30.353490;
 	$map = "MAP";
 	$controls = array("ZOOM", "TYPECONTROL", "SCALELINE");
 	$options = array("ENABLE_SCROLL_ZOOM", "ENABLE_DBLCLICK_ZOOM", "ENABLE_DRAGGING");
 }
 elseif ($_REQUEST["map"] == "google")
 { 
+	$apiKey = $google;
 	$lat = 59.992168;
 	$lon = 30.353522;
 	$map = "ROADMAP";
@@ -48,11 +50,11 @@ if ($_REQUEST["type"] == "offise") {
 $arMap[] = array('TEXT' => $text_placemark,
 	'LON' => $lon,
 	'LAT' => $lat,
-	'MARK' => "/images/icons/perco-logo.png",
+	'MARK' => $geoPointer,
 	'MARK_WIDTH' => 75,
 	'MARK_HEIGHT' => 59,
-	'OFFSET_WIDTH' => -24,
-	'OFFSET_HEIGHT' => -58
+	'OFFSET_WIDTH' => -39,
+	'OFFSET_HEIGHT' => -53
 );
 switch($device)
 {
@@ -69,16 +71,17 @@ switch($device)
 		$max_height = "600";
 		break;
 }
+
 $APPLICATION->IncludeComponent(
 	"bitrix:map.".$_REQUEST["map"].".view",
-	"",
+	"fullWindow",
 	Array(
-		"API_KEY" => $google,
+		"API_KEY" => $apiKey,
 		"INIT_MAP_TYPE" => "MAP",
 		"MAP_DATA" => serialize(array(
 				$_REQUEST["map"].'_lat' => $lat,
 				$_REQUEST["map"].'_lon' => $lon,
-				$_REQUEST["map"].'_scale' => 15,
+				$_REQUEST["map"].'_scale' => 17,
 				'PLACEMARKS' => $arMap,
 			)
 		),
@@ -89,5 +92,6 @@ $APPLICATION->IncludeComponent(
 		"MAP_ID" => ""
 	),
 false
-);?>
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/epilog_after.php");?>
+);
+
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/epilog_after.php");?>

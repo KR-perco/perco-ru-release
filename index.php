@@ -123,66 +123,42 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "section_icons", A
 <div id="picture_banner">
 	<h2>Актуально</h2>
 	<div id="banners" <?if($device!="desktop") echo 'class="bmob"';?>> 
-		<div class="banner_item" style="position: relative;">
+	<div class="banner_item" style="position: relative;">
 			<div style="position: relative">
 				<a href="/products/sistema-kontrolya-dostupa-perco-web/" style="position: relative">
 					<img title="PERCo-Web" alt="PERCo-Web – система контроля доступа с web-интерфейсом" src="/images/banners/banner-percoweb-v2.jpg">
-					<div>PERCo-Web – система контроля доступа</div>
+					<div class="banner_item__title">PERCo-Web – система контроля доступа</div>
 				</a>
 			</div>
 		</div>
 		<div class="banner_item">
 			<a href="https://barrier.perco.ru">
 				<img title="Шлагбаум PERCo" alt="Шлагбаум GS04" src="/images/banners/boom-barrier-product.gif">
-				<div>Шлагбаум PERCo</div>
+				<div class="banner_item__title">Шлагбаум PERCo</div>
 			</a>
-		</div>
-		<?/*<div class="banner_item">
-			<a href="/products/biometricheskie-kontrollery-i-schityvateli/">
-				<img title="Биометрия в системах PERCo" alt="Биометрия в системах PERCo" src="/images/banners/banner-bio.jpg">
-				<div>Биометрия в системах PERCo</div>
-			</a>
-		</div>*/?>
+		</div> 
 		<div class="banner_item">
-			<a href="/products/pirometr-at01.php">
-				<img title="Контроль температуры" alt="Контроль температуры" src="/images/banners/banner-kontrol-temperatury.jpg">
-				<div>Контроль температуры</div>
+			<a href="https://t.me/perco_com">
+				<img title="Канал PERCo в Telegram" alt="Канал PERCo в Telegram" src="/images/banners/welcome-to-telegram.jpg">
+				<div class="banner_item__title">Канал PERCo в Telegram</div>
 			</a>
-		</div>
-		<?/*<div class="banner_item">
-			<span href="/products/smartfony-s-nfc-modulem.php" style="color: #214288;">
-				<img alt="С новым годом" src="/images/banners/ny-2021.jpg">
-				<div>С Новым годом!</div>
-			</span>
-		</div>*/?>
-		<!--div class="banner_item" style="display:none;">
-			<a href="/products/sistema-bezopasnosti-perco-s-20-shkola/">
-				<img title="Система безопасности для школ" alt="Система безопасности для школ" src="/images/banners/banner-school.jpg">
-				<div>Система безопасности для школ</div>
-			</a>
-		</div-->
-		<!--div class="banner_item">
-			<a href="/podderzhka/proektirovshchikam-i-installyatoram/konkurs.php">
-				<img title="Конкурс «Лучшее видео»" alt="Конкурс «Лучшее видео»" src="/images/banners/banner-konkurs-video.jpg">
-				<div>Конкурс «Лучшее видео»</div>
-			</a>
-		</div-->
+		</div> 
 		<div class="banner_item">
 			<a href="/podderzhka/proektirovshchikam-i-installyatoram/">
 				<img title="Проектировщикам и инсталляторам" alt="Проектировщикам и инсталляторам" src="/images/banners/banner-install.jpg">
-				<div>Проектировщикам и инсталляторам</div>
+				<div class="banner_item__title">Проектировщикам и инсталляторам</div>
 			</a>
 		</div>
 		<div class="banner_item">
 			<a href="/obuchenie/">
 				<img title="Подготовка специалистов и сертификация" alt="Подготовка специалистов и сертификация" src="/images/banners/banner-obuchenie.jpg">
-				<div>Подготовка специалистов в Учебном центре PERCo</div>
+				<div class="banner_item__title">Подготовка специалистов в Учебном центре PERCo</div>
 			</a>
 		</div>
 		<div class="banner_item">
-			<a href="https://www.youtube.com/channel/UChZJeHXWSHQuRvXokuGPBFw">
-				<img title="Канал PERCo на YouTube" alt="Канал PERCo на YouTube" src="/images/banners/banner-youtube.jpg">
-				<div>Канал PERCo на YouTube</div>
+			<a href="/products/pirometr-at01.php">
+				<img title="Контроль температуры" alt="Контроль температуры" src="/images/banners/banner-kontrol-temperatury.jpg">
+				<div>Контроль температуры</div>
 			</a>
 		</div>
 

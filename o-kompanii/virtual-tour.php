@@ -7,13 +7,21 @@ $APPLICATION->SetPageProperty("keywords", "Виртуальный, тур, оф�
 $APPLICATION->SetTitle("Виртуальный тур");
 $APPLICATION->SetPageProperty("bodyItemtype", "AboutPage"); 
 
-$APPLICATION->SetAdditionalCSS("/css/o-kompanii.css"); // подключение стилей
-$APPLICATION->AddHeadScript("/scripts/pages/o-kompanii.js"); // подключение скриптов
+$APPLICATION->SetAdditionalCSS("/css/o-kompanii.css"); // подключение стилей 
 $APPLICATION->AddHeadScript("/scripts/lightgallery/js/lg-video.min.js"); // подключение скриптов
 $APPLICATION->AddHeadScript("/scripts/virtual-tour/pano2vr_player.js"); // подключение скриптов
 $APPLICATION->AddHeadScript("/scripts/virtual-tour/skin.js"); // подключение скриптов
 $APPLICATION->AddHeadScript("/scripts/virtual-tour/pano2vrgyro.js"); // подключение скриптов
 ?> 
+<script>    
+pano = new pano2vrPlayer("virtual-tour");
+			// add the skin object
+			skin = new pano2vrSkin(pano);
+			// load the configuration
+			window.addEventListener("load", function() {
+			    pano.readConfigUrlAsync("../scripts/virtual-tour/pano.xml", function() { /* gyro=new pano2vrGyro(pano,"container"); */ });
+			});
+			</script>
 <div id="container">
 	<div id="content">
 		<h1> Виртуальный тур </h1>

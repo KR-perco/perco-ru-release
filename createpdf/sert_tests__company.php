@@ -83,19 +83,7 @@ function createSert($ID, $txt, $datecomp, $sert_pole, $logoFile, $sert, $textCol
 
 	SetUserField ("USER", $ID, $sert_pole, $filepath);
 	unlink($file_name);
-
-	// echo "<br>"; 
-	
-	// if ($txt_width <= $withToBreakLine)
-	// 	echo "111111111111111111";
-	// else if ($txt_width > 95 && $txt_width < $withToBreakLine )
-	// 	echo "2222222222222222222";
-	// else 
-	// 	echo "3333333333333333333";
-	// echo "<br>----------";
-	// echo $txt_width;
-	// echo "<br>";
-	// echo '<a href='.$pr.' target="_blank">Готовый сертификат</a>';
+ 
 	echo '<a href='.$pr.' target="_blank">Готовый сертификат</a>';
 
 	$rsCompanySert = CUser::GetByID($ID);

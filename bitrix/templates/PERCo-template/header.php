@@ -28,7 +28,8 @@ switch(LANGUAGE_ID)
 		$year_company .= GetMessage("YEARS");
 		break;
 }
-$country_company = "92";
+$country_company = "92"; 
+$price_res = getCurrency(CURRENCY_SWITCH);
 $device = is_device();
 ?>
 <?
@@ -120,7 +121,10 @@ if ($USER->IsAdmin())
 					</div>
 				</div>
 				<div>
-					<div id="change_lang">
+					<div id="course" class="hide show-flex-md course_white">
+						у.е. = <?= round($price_res, 5) ?>₽
+					</div>
+					<div id="change_lang"> 
 <?
 $APPLICATION->IncludeComponent("bitrix:news.list", "muiNav", array(
 	"IBLOCK_TYPE" => "raznoe",
@@ -187,9 +191,14 @@ $APPLICATION->IncludeComponent("bitrix:search.form", "perco_search", array(
 	"PAGE" => "/".translitIt(strtolower(GetMessage("SEARCH"))).".php",
 	"USE_SUGGEST" => "N"
 	),
-false);
+false); 
 ?>
 					</div>
+					<?if((SITE_ID == "s1")){?>
+					<div id="course" class="hide-md">
+						у.е. = <?= round($price_res, 5) ?>₽
+					</div>
+					<?}?>
 				</div>
 			</div>
 <? $APPLICATION->IncludeComponent(
